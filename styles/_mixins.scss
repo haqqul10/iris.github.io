@@ -1,0 +1,8 @@
+@mixin tombol {
+    background: $gradienColor;
+    border-radius: 6px;
+    padding: 15px 48px;
+    border: none;
+    width: 100%;
+    margin-top: 32px;
+}
