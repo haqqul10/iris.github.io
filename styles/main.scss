@@ -6,13 +6,213 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+// home page
+.body-homepage{
+    background-color: $color3;
+}
+.navbar-homepage{
+    background-color: $color1;
+
+    .container{
+        width: 1044px;
+    }
+    .collapse{
+        .btn-getstarted{
+            padding: 10px 28px;
+            background-color: $color6;
+            border: 1px solid $color6;
+            border-radius: 5px;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        .btn-login{
+            padding: 10px 28px;
+            background-color: transparent;
+            border-radius: 5px;
+            border: 1px solid $color6;
+            color: $color6 !important;
+            margin-top: 10px;
+        }
+    }
+}
+
+// jumbotron
+.jumbotron{
+    background-image: url(../images/homepage/background.png);
+    background-size: cover ;
+    height: 675px;
+    overflow: hidden;
+
+    .container{
+        width: 1044px;
+    }
+
+    .display-4{
+        color: white;
+        font-weight: 500;
+        margin-top: 90px;
+        line-height: 60px;
+    }
+    .lead{
+        color: $graytext;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+    .btn-primary{
+        background: $gradienColor;
+        border-radius: 5px;
+        padding: 12px 16px;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 32px;
+
+        &:hover{
+            opacity: 0.8;
+        }       
+    }
+    img{
+        margin-top: 120px;
+    }
+}
+
+.container-content{
+    position: relative;
+
+    // info panel
+    .info-panel{
+        background-color: $color2;
+        margin-top: -180px;
+        position: relative;
+        z-index: 1;
+        height: 170px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        .form-control{
+            background-color: $color1;
+            padding: 12px 16px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .dropdown{
+            .btn-secondary{
+                background-color: $color1;
+                border: none;
+                padding: 12px 14px;
+                border-radius: 5px;
+                color: $graytext;
+                margin-left: 35px;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+
+            .dropdown-item{
+                // background-color: $color2;
+                color: $graytext;
+
+                &:hover{
+                    color: white;
+                    background-color: $color3;
+                }
+            }
+            .dropdown-menu {
+                background-color: $color1;
+            }
+        }
+
+        .btn-findstore{
+            background-color: $color6;
+            border-radius: 5px;
+            padding: 10px 25px;
+            border: none;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .card-shop{
+        margin-top: 80px;
+        margin-bottom: 100px;
+        .card{
+            border: 1px solid #33275C;
+            border-radius: 5px;
+            margin: 10px;
+            .card-header{
+                background-color: $color2;
+                color: white;
+                padding-top: 20px;
+
+                img{
+                    margin-right: 20px;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    width: 80px;
+                    height: 40px;
+                }
+
+                .card-title{
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+                .card-text{
+                    color: $graytext;
+                }
+            }
+            .card-body{
+                padding: 0;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .card-footer{
+                background-color: $color2;
+                padding: 10px;
+                .card-text{
+                    color: $graytext;
+                    font-size: 14;
+                    margin-bottom: 2px;
+                    margin-left: 10px;
+                }
+                .card-title{
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: white;
+                    margin-left: 10px;
+                }
+                .btn-primary{
+                    background-color: rgba(101, 78, 179, 0.5);
+                    padding: 12px 16px;
+                    border: none;
+                    margin-right: 10px;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
 // dashboard
 .dashboard{
     background-color: $color1;
 }
 
 // navbar
-.navbar{
+.navbar-dashboard{
     background-color: $color2;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -194,7 +394,7 @@ footer{
     background-color: $color1;
 
     .container{
-        padding-top: 60px;
+        padding-top: 40px;
         height: 100vh;
         .left{
             background-color: $color2;
@@ -260,7 +460,7 @@ footer{
 .waiting-container{
     .container{
         height: 100vh;
-        padding-top: 80px;
+        padding-top: 65px;
         .waiting-list{
             background-color: $color2;
             padding-left: 40px;
@@ -322,5 +522,88 @@ footer{
         color: white;
         text-align: center;
         margin-top: 40%;
+    }
+}
+
+
+// Desktop Version
+@media (min-width: 992px) {
+
+    // login
+    .login-container{
+        .container{
+            padding-top: 70px;
+        }
+    }
+
+    // waiting list
+    .waiting-container{
+        .container{
+            padding-top: 80px;
+        }
+    }
+
+    // homepage
+    .navbar-homepage{
+        background-color: transparent;
+        padding-top: 20px;
+        .nav-item{
+            padding-left: 30px;
+        }
+
+        .collapse{
+            .btn-getstarted{
+                margin-right: 8px;
+            }
+            .btn-login{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .jumbotron{
+        margin-top: -80px;
+
+        .display-4{
+            margin-top: 150px;
+            font-weight: 700;
+            font-size: 50px;
+        }
+        .lead{
+            font-size: 18px;
+        }
+        .btn-primary{
+            padding: 14px 24px;
+            font-size: 18px;
+        }
+    }
+
+    .container-content{
+        width: 1044px;
+
+        // info panel
+        .info-panel{
+            margin-top: -60px;
+            height: 114px;
+            margin-left: 0px;
+            margin-right: 0px;
+
+            .form-control{
+                margin-left: 10px;
+            }
+
+            .dropdown{
+                .btn-secondary{
+                    padding: 12px 16px;
+                }
+            }
+        }
+
+        // card
+        .card-shop{
+            .card{
+                margin: 0px;
+            }
+        }
     }
 }

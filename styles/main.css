@@ -3,25 +3,233 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.body-homepage {
+  background-color: #2B2252;
+}
+
+.navbar-homepage {
+  background-color: #1B143C;
+}
+
+.navbar-homepage .container {
+  width: 1044px;
+}
+
+.navbar-homepage .collapse .btn-getstarted {
+  padding: 10px 28px;
+  background-color: #7963FA;
+  border: 1px solid #7963FA;
+  border-radius: 5px;
+}
+
+.navbar-homepage .collapse .btn-getstarted:hover {
+  opacity: 0.8;
+}
+
+.navbar-homepage .collapse .btn-login {
+  padding: 10px 28px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #7963FA;
+  color: #7963FA !important;
+  margin-top: 10px;
+}
+
+.jumbotron {
+  background-image: url(../images/homepage/background.png);
+  background-size: cover;
+  height: 675px;
+  overflow: hidden;
+}
+
+.jumbotron .container {
+  width: 1044px;
+}
+
+.jumbotron .display-4 {
+  color: white;
+  font-weight: 500;
+  margin-top: 90px;
+  line-height: 60px;
+}
+
+.jumbotron .lead {
+  color: #BBB9C5;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.jumbotron .btn-primary {
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border-radius: 5px;
+  padding: 12px 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 32px;
+}
+
+.jumbotron .btn-primary:hover {
+  opacity: 0.8;
+}
+
+.jumbotron img {
+  margin-top: 120px;
+}
+
+.container-content {
+  position: relative;
+}
+
+.container-content .info-panel {
+  background-color: #221B4A;
+  margin-top: -180px;
+  position: relative;
+  z-index: 1;
+  height: 170px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.container-content .info-panel .form-control {
+  background-color: #1B143C;
+  padding: 12px 16px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.container-content .info-panel .dropdown .btn-secondary {
+  background-color: #1B143C;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 5px;
+  color: #BBB9C5;
+  margin-left: 35px;
+}
+
+.container-content .info-panel .dropdown .btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.container-content .info-panel .dropdown .dropdown-item {
+  color: #BBB9C5;
+}
+
+.container-content .info-panel .dropdown .dropdown-item:hover {
+  color: white;
+  background-color: #2B2252;
+}
+
+.container-content .info-panel .dropdown .dropdown-menu {
+  background-color: #1B143C;
+}
+
+.container-content .info-panel .btn-findstore {
+  background-color: #7963FA;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: none;
+}
+
+.container-content .info-panel .btn-findstore:hover {
+  opacity: 0.8;
+}
+
+.container-content .card-shop {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.container-content .card-shop .card {
+  border: 1px solid #33275C;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.container-content .card-shop .card .card-header {
+  background-color: #221B4A;
+  color: white;
+  padding-top: 20px;
+}
+
+.container-content .card-shop .card .card-header img {
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.container-content .card-shop .card .card-header .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.container-content .card-shop .card .card-header .card-text {
+  color: #BBB9C5;
+}
+
+.container-content .card-shop .card .card-body {
+  padding: 0;
+}
+
+.container-content .card-shop .card .card-body img {
+  width: 100%;
+}
+
+.container-content .card-shop .card .card-footer {
+  background-color: #221B4A;
+  padding: 10px;
+}
+
+.container-content .card-shop .card .card-footer .card-text {
+  color: #BBB9C5;
+  font-size: 14;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.container-content .card-shop .card .card-footer .card-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-left: 10px;
+}
+
+.container-content .card-shop .card .card-footer .btn-primary {
+  background-color: rgba(101, 78, 179, 0.5);
+  padding: 12px 16px;
+  border: none;
+  margin-right: 10px;
+}
+
+.container-content .card-shop .card .card-footer .btn-primary:hover {
+  opacity: 0.8;
+}
+
 .dashboard {
   background-color: #1B143C;
 }
 
-.navbar {
+.navbar-dashboard {
   background-color: #221B4A;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.navbar .navbar-nav .nav-item {
+.navbar-dashboard .navbar-nav .nav-item {
   margin-right: 30px;
 }
 
-.navbar .navbar-nav .nav-item img {
+.navbar-dashboard .navbar-nav .nav-item img {
   margin-right: 10px;
 }
 
-.navbar .navbar-nav .nav-item .active {
+.navbar-dashboard .navbar-nav .nav-item .active {
   background-color: #7963FA;
   border-radius: 6px;
   padding: 10px 16px;
@@ -183,7 +391,7 @@ footer a {
 }
 
 .login-container .container {
-  padding-top: 60px;
+  padding-top: 40px;
   height: 100vh;
 }
 
@@ -258,7 +466,7 @@ footer a {
 
 .waiting-container .container {
   height: 100vh;
-  padding-top: 80px;
+  padding-top: 65px;
 }
 
 .waiting-container .container .waiting-list {
@@ -334,5 +542,60 @@ footer a {
   color: white;
   text-align: center;
   margin-top: 40%;
+}
+
+@media (min-width: 992px) {
+  .login-container .container {
+    padding-top: 70px;
+  }
+  .waiting-container .container {
+    padding-top: 80px;
+  }
+  .navbar-homepage {
+    background-color: transparent;
+    padding-top: 20px;
+  }
+  .navbar-homepage .nav-item {
+    padding-left: 30px;
+  }
+  .navbar-homepage .collapse .btn-getstarted {
+    margin-right: 8px;
+  }
+  .navbar-homepage .collapse .btn-login {
+    margin-top: 0;
+  }
+  .jumbotron {
+    margin-top: -80px;
+  }
+  .jumbotron .display-4 {
+    margin-top: 150px;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+  .jumbotron .btn-primary {
+    padding: 14px 24px;
+    font-size: 18px;
+  }
+  .container-content {
+    width: 1044px;
+  }
+  .container-content .info-panel {
+    margin-top: -60px;
+    height: 114px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container-content .info-panel .form-control {
+    margin-left: 10px;
+  }
+  .container-content .info-panel .dropdown .btn-secondary {
+    padding: 12px 16px;
+  }
+  .container-content .card-shop .card {
+    margin: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
