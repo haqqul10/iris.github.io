@@ -21,12 +21,16 @@ body{
             // padding: 12px 16px;
             background-color: $color6;
             border: 1px solid $color6;
+            // border-color: $color6;
             border-radius: 5px;
             width: 125px;
             height: 43px;
             &:hover{
                 opacity: 0.8;
-                transition: 0.5s;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: 1px solid $color6;
+                color: white !important;
             }
         }
         .btn-login{
@@ -40,11 +44,12 @@ body{
             height: 43px;
 
             &:hover{
-                background-color: $color6;
+                background: $gradienColor;
                 border: 1px solid $color6;
                 border-radius: 5px;
-                color: white !important;
-                transition: 0.4s;
+                color:gainsboro !important;
+                transition: 0.3s;
+                opacity: 0.8s;
             }
         }
     }
@@ -76,18 +81,19 @@ body{
     }
     .btn-primary{
         background: $gradienColor;
-        border-radius: px;
+        // border-radius: px;
         padding: 16px 24px;
-        border: none;
+        border: 1px solid transparent;
         font-size: 16px;
         font-weight: 500;
         margin-top: 32px;
-        width: 148px;
+        width: 150px;
         height: 54px;
 
         &:hover{
             opacity: 0.8;
-            transition: 0.4s;
+            transition: 0.3s;
+            border: 1px solid $color6;
         }       
     }
     img{
@@ -114,6 +120,10 @@ body{
             border: none;
             color: white;
             border-radius: 5px;
+
+            &:focus{
+                box-shadow: 0 0 0 1px $color6;
+            }
         }
 
         .dropdown{
@@ -127,9 +137,8 @@ body{
                 margin-left: 35px;
                 // height: 43px;
 
-                &:hover{
-                    opacity: 0.8;
-                    transition: 0.4s;
+                &:focus{
+                    box-shadow: 0 0 0 1px $color6;
                 }
             }
 
@@ -153,13 +162,15 @@ body{
             border-radius: 5px;
             // padding: 12px 16px;
             text-align: center;
-            border: none;
+            border: 1px solid $color6;
             width: 119px;
-            height: 43px;
+            height: 45px;
 
             &:hover{
                 opacity: 0.8;
-                transition: 0.4s;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: 1px solid $color6;
             }
         }
     }
@@ -220,15 +231,19 @@ body{
                     background-color: rgba(101, 78, 179, 0.5);
                     padding: 9px 16px;
                     text-align: center;
-                    border: none;
+                    border: 1px solid rgba(101, 78, 179, 0.5);
                     margin-right: 10px;
                     margin-top: 6px;
-                    width: 104px;
+                    width: 105px;
                     height: 43px;
 
                     &:hover{
-                        opacity: 0.8;
-                        transition: 0.4s;
+                        background: $gradienColor;
+                        border: 1px solid $color6;
+                        border-radius: 5px;
+                        color: $grayScale !important;
+                        transition: 0.3s;
+                        opacity: 0.8s;
                     }
                 }
             }
