@@ -25,6 +25,8 @@ body {
 
 .navbar-homepage .collapse .btn-getstarted:hover {
   opacity: 0.8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navbar-homepage .collapse .btn-login {
@@ -35,6 +37,15 @@ body {
   margin-top: 10px;
   width: 75px;
   height: 43px;
+}
+
+.navbar-homepage .collapse .btn-login:hover {
+  background-color: #7963FA;
+  border: 1px solid #7963FA;
+  border-radius: 5px;
+  color: white !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .jumbotron {
@@ -76,6 +87,8 @@ body {
 
 .jumbotron .btn-primary:hover {
   opacity: 0.8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .jumbotron img {
@@ -115,6 +128,8 @@ body {
 
 .container-content .info-panel .dropdown .btn-secondary:hover {
   opacity: 0.8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .container-content .info-panel .dropdown .dropdown-item {
@@ -124,6 +139,8 @@ body {
 .container-content .info-panel .dropdown .dropdown-item:hover {
   color: white;
   background-color: #2B2252;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .container-content .info-panel .dropdown .dropdown-menu {
@@ -141,6 +158,8 @@ body {
 
 .container-content .info-panel .btn-findstore:hover {
   opacity: 0.8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .container-content .card-shop {
@@ -219,6 +238,8 @@ body {
 
 .container-content .card-shop .card .card-footer .btn-primary:hover {
   opacity: 0.8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .dashboard {
@@ -306,8 +327,6 @@ body {
 
 .checkout .table-content {
   background-color: #221B4A;
-  padding: 0;
-  width: 965px;
 }
 
 .checkout .paginition {
@@ -572,6 +591,16 @@ footer a {
   }
   .navbar-dashboard {
     height: 80px;
+  }
+  .card-dashboard .container {
+    padding-left: 0px;
+  }
+  .checkout .container .announcements {
+    margin-left: 23px;
+    width: 320px;
+  }
+  .checkout .container .table-content {
+    width: 965px;
   }
   .navbar-homepage {
     background-color: transparent;
