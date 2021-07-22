@@ -1,6 +1,23 @@
-@import 'fonts';
+// @import 'fonts';
 @import 'variables';
 @import 'mixins';
+
+@font-face {
+  font-family: 'Larsseit-bold';
+  src: url('../libraries/font-bold/Larsseit-Bold.eot') format('eot'), /* IE6-IE8 */
+       url('../libraries/font-bold/Larsseit-Bold.svg') format('svg'), /* Super Modern Browsers */
+       url('../libraries/font-bold/Larsseit-Bold.ttf') format('ttf'), /* Pretty Modern Browsers */
+       url('../libraries/font-bold/Larsseit-Bold.woff')  format('woff'), /* Safari, Android, iOS */
+       url('../libraries/font-bold/Larsseit-Bold.woff2') format('woff2'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Larsseit-medium';
+  src: url('../libraries/font-medium/Larsseit-Medium.eot') format('eot'), /* IE6-IE8 */
+       url('../libraries/font-medium/Larsseit-Medium.svg') format('svg'), /* Super Modern Browsers */
+       url('../libraries/font-medium/Larsseit-Medium.ttf') format('ttf'), /* Pretty Modern Browsers */
+       url('../libraries/font-medium/Larsseit-Medium.woff')  format('woff'), /* Safari, Android, iOS */
+       url('../libraries/font-medium/Larsseit-Medium.woff2') format('woff2'); /* Legacy iOS */
+}
 
 body{
     font-family: 'Inter', sans-serif;
@@ -117,7 +134,7 @@ body{
         font-weight: 700;
         margin-top: 41px;
         line-height: 36px;
-        font-family: 'Larsseit';
+        font-family: 'Larsseit-bold';
         font-size: 36px;
     }
     .lead{
@@ -661,7 +678,7 @@ footer{
     .container{
         padding-top: 40px;
         .left{
-            background-color: $color2;            
+            background-color: $color2;
         }
         .right{
             background-color: $color2;
@@ -669,6 +686,10 @@ footer{
             padding-right: 40px;
             padding-left: 40px;
 
+            h4{
+                font-family: 'Larsseit-medium';
+                font-size: 24px;
+            }
             .form-control{
                 // width: 470px;
                 padding: 12px 16px;
@@ -746,8 +767,28 @@ footer{
 }
 
 // waiting
+.body-waiting{
+    background-image:$gradienBg;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .waiting-container{
+    position: relative;
     padding-bottom: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1144px;
+    width: 100%;
+
+    .login-illustrasi{
+        position: absolute;
+        top: 0;
+        left: auto;
+        bottom: 0;
+        right: -50px;
+        width: 900px;
+    }
     .container{
         padding-top: 65px;
 
@@ -755,13 +796,25 @@ footer{
             background-color: $color2;
             padding-left: 40px;
             padding-right: 40px;
-        
+            
+            @media (min-width: 768px) {
+                flex: 0 0 auto;
+                width: 522px;
+                }
             .form-control{
                 padding: 12px 16px;
-                border: none;
+                border: 1px solid $color2;
                 background-color: #1B143C;
                 border-radius: 6px;
                 color: white;
+                &:focus{
+                    box-shadow: 0 0 0 0;
+                    border-image-slice: 1;
+                    border-width: 1;
+                    // border: 1px solid #1B143C;
+                    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                    border-radius: 6px;
+                }
             }
             .form-check-input{
                 background-color: $color1;
@@ -805,13 +858,52 @@ footer{
 }
 
 // success
+.body-success{
+    background-image:$gradienBg;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .container-success{
-    height: 100vh;
+    position: relative;
+    padding-bottom: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1144px;
+    width: 100%;
+
+    .login-illustrasi{
+        position: absolute;
+        top: 0;
+        left: auto;
+        bottom: 0;
+        right: -200px;
+        width: 900px;
+    }
+    .container{
+        padding-top: 200px;
+        margin-bottom: 200px;
+        
+    }
     .card{
+        height: 380px;
+        position: relative;
+        z-index: 5;
         background-color: $color1;
         color: white;
         text-align: center;
-        margin-top: 40%;
+        .card-body{
+            .card-title{
+                font-family: 'Larsseit-medium';
+                font-size: 20px;
+                line-height: 130%;
+            }
+            .card-text{
+                font-size: 14px;
+                line-height: 115%;
+                color: #BBB9C5;
+            }
+        }
     }
 }
 
@@ -830,6 +922,23 @@ footer{
     .waiting-container{
         .container{
             padding-top: 70px;
+        }
+    }
+
+    // success
+    .container-success{
+        .card{
+            width: 522px;
+            height: 432px;
+            .card-body{
+                .card-title{
+                    font-family: 'Larsseit-medium';
+                    font-size: 24px;
+                }
+                .card-text{
+                    font-size: 16px;
+                }
+            }
         }
     }
 
