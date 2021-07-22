@@ -19,67 +19,75 @@
   <body class="body-homepage">
 
     <!-- halaman navbar -->
-    <nav class="navbar navbar-homepage navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="images/login/Logo.png" alt="Iris" width="86f">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Discover</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Analytics</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
-              </li>
-            </ul>
-            <a href="" class="nav-link btn-getstarted text-white"> Get Started </a>
-            <a href="" class="nav-link btn-login text-white"> Login </a>
+    <main class="content-homepage">
+      <div class="container-homepage">
+        <nav class="navbar navbar-homepage navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="images/login/Logo.png" alt="Iris" width="86f">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse collapse-text" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Discover</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Analytics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Help</a>
+                </li>
+              </ul>
+              <a href="" class="nav-link btn-getstarted text-white"> Get Started </a>
+              <a href="" class="nav-link btn-login text-white"> Login </a>
+            </div>
           </div>
-        </div>
-      </nav>
-    <!-- akhir halaman navbar -->
-    
-    <!-- jumbotron -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <h1 class="display-4">The perfect <br> account shop for <br> your botting needs</h1>
-            <p class="lead">Iris helps you generate shoe and sneakers product <br> around the web and provide complete analytics.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-          </div>
-          <div class="col-12 col-md-6 d-none d-lg-block">
-            <img src="images/homepage/Group 769.png" alt="" width="667">
+        </nav>
+        <!-- akhir halaman navbar -->
+
+        <img src="./images/homepage/Ellipse.png" alt="" class="ellipe">
+        
+        <!-- jumbotron -->
+        <div class="jumbotron">
+          <div class="container">
+              <div class="row jumbotron-row">
+                <div class="col-12 col-md-6 text-center text-lg-start">
+                  <h1 class="display-4">The perfect <br> account shop for <br> your botting needs</h1>
+                  <p class="lead">Iris helps you generate shoe and sneakers product <br> around the web and provide complete analytics.</p>
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+                </div>
+                <div class="col-12 col-md-6 d-flex header-illustration">
+                  <img src="images/homepage/Header-Illustration.png" alt="">
+                </div>
+              </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- akhir jumbotron -->
+      <!-- akhir jumbotron -->
+    </main>
 
     <!-- container -->
     <div class="container container-content">
 
     <!-- Info Panel -->
       <div class="row align-items-center justify-content-center info-panel">
-        <div class="col-12 col-md-6">
-          <form class="form-inline">
-           <input class="form-control" type="search" placeholder="Search store" aria-label="Search">
+        <div class="col-12 col-md-4 col-lg-6">
+          <form>
+            <img src="./images/icons/search.svg" alt="">
+            <input class="form-control" type="search" placeholder="Search store" aria-label="Search">
           </form>
         </div>
-        <div class="col-4 col-md-4 col-lg-2 d-flex justify-content-center">
+        <div class="col-12 col-md-4 col-lg-2 d-lg-flex justify-content-center">
           <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
               Select Category
+              <img src="./images/icons/chevron-down.svg" alt="" class="img-fluid pe-2">
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -88,10 +96,11 @@
             </ul>
           </div>
         </div>
-        <div class="col-4 col-md-4 col-lg-2 d-flex justify-content-center">
-          <div class="dropdown">
+        <div class="col-12 col-md-4 col-lg-2 d-lg-flex justify-content-lg-center justify-content-sm-end">
+          <div class="dropdown ms-lg-3">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
               Shoes Type
+              <img src="./images/icons/chevron-down.svg" alt="" class="img-fluid pe-2">
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -100,7 +109,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-4 col-md-4 col-lg-2 d-flex justify-content-center">
+        <div class="col-12 col-md-4 col-lg-2 d-lg-flex justify-content-center">
           <a href="" class="nav-link btn-findstore text-white"> Find Store </a>
         </div>
       </div>
