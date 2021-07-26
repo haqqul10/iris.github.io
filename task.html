@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
 
+    <!-- icon bootstrap -->
+
     <!-- MyCSS -->
     <link rel="stylesheet" href="styles/main.css">
 
@@ -15,11 +17,11 @@
 
     <title>Task</title>
   </head>
-  <body class="dashboard">
+  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
 
     <!-- halaman navbar -->
       <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
-        <div class="container ps-0">
+        <div class="container">
           <a class="navbar-brand" href="#">
             <img src="images/login/Logo.png" alt="Iris" width="80">
           </a>
@@ -51,15 +53,19 @@
       <!-- Card -->
       <section class="task-judul">
         <div class="container">
-          <div class="row mt-4 justify-content-end">
-            <div class="col-6 text-white">
+          <div class="row mt-4">
+            <div class="col-12 col-md-7 text-white">
               <h2>Your Task</h2>
               <p>Manage and Create Task</p>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-5 d-flex flex-right">
               <div class="btn-group">
-                <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <form>
+                  <img src="./images/icons/search.svg" alt="">
+                  <input class="form-control" type="search" placeholder="Search by Modules" aria-label="Search">
+                </form>
                 <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                  <img src="./images/icons/chevron-down.png" alt="" class="img-fluid w-50">
                   <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
@@ -71,9 +77,17 @@
                 </ul>
               </div>
               <div class="input-group">
-                <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.png" alt="" width="30"></span>
+               <a href="">
+                 <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.png" alt="" width="30"></span>
+              </a> 
               </div>
               <a href="" class="btn btn-primary"> New Task </a>
+            </div>
+            <div class="col-1">
+              
+            </div>
+            <div class="col-2">
+              
             </div>
           </div>
         </div>
@@ -88,7 +102,7 @@
               <div class="row">
                 <div class="col">
                   <table class="table text-white" id="example" class="display" style="width:100%;">
-                    <thead style="background-color: #33275C;">
+                    <thead style="background-color: #33275C; border-radius: 6px;">
                       <tr>
                         <th><input type="checkbox" class="form-check-input" id="checkAll"></th>
                         <th>Item</th>
@@ -106,7 +120,7 @@
                         <td>40</td>
                         <td>nike</td>
                         <td>jonh</td>
-                        <td><span class="badge bg-success">Success</span></td>
+                        <td><span class="badge bg-success">Completed</span></td>
                         <td>
                           <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
@@ -118,7 +132,7 @@
                         <td>40</td>
                         <td>nike</td>
                         <td>jonh</td>
-                        <td><span class="badge bg-warning">Success</span></td>
+                        <td><span class="badge bg-warning">On Progress</span></td>
                         <td>
                           <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
@@ -130,7 +144,187 @@
                         <td>40</td>
                         <td>nike</td>
                         <td>jonh</td>
-                        <td><span class="badge bg-danger">Success</span></td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Cancel</span></td>
                         <td>
                           <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
@@ -169,22 +363,37 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="libraries/bootstrap/js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="libraries/jquery/jquery-3.5.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="libraries/jquery/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+    <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
 
     <script>
-      $("#checkAll").change(function () {
-          $("input:checkbox").prop('checked', $(this).prop("checked"));
+      // $("#checkAll").change(function () {
+      //     $("input:checkbox").prop('checked', $(this).prop("checked"));
+      // });
+
+      $('#checkAll').click(function (e) {
+          $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
+          e.stopImmediatePropagation();
       });
+
       $(document).ready(function() {
           $('#example').DataTable( {
-              "paging":   true,
+              "pageLength": 7,
+              "sScrollX": "auto",
               searching: false,
-              bInfo: false,
-              "lengthChange": false
+              bInfo: true,
+              "lengthChange": false,
+              "pagingType": "simple_numbers",
+               oLanguage: {
+                  oPaginate: {
+                      sNext: '<span class="pagination-default"><img src="./images/icons/Right.png" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
+                      sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.png" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+                  }
+              }
+              
           } );
       } );
     </script>
