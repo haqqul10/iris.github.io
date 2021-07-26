@@ -405,12 +405,29 @@ body{
         background-position-x: -200px;
     }
     .container-fluid{
+        overflow: hidden;
         height: 100vh;
         padding-top: 130px;
         position: relative;
         
+        .pattern{
+            position: absolute;
+            left: -260px;
+            right: 0;
+            text-align: center;
+            top: -180px;
+            bottom: 0;
+            margin: auto;
+            width: 920px;
+
+        }
+
+        .illustration-404{
+            width: 234px;
+            margin-top: 90px;
+        }
         .display-4{
-            margin-top: 0px;
+            margin-top: 20px;
             font-size: 25px;
             font-weight: 400;
             padding-bottom: 12px;
@@ -457,6 +474,7 @@ body{
                 background-color: $color6;
                 border-radius: 6px;
                 padding: 10px 16px;
+                
             }
         }
     }
@@ -493,6 +511,7 @@ body{
             .card-title{
                 font-size: 30px;
                 color: white;
+                font-weight: 600;
             }
     
             .card-text{
@@ -521,6 +540,8 @@ body{
                 padding: 10px 16px;
                 border: none;
                 width: 100%;
+                font-weight: 600;
+                line-height: 125%;
             }
         }
 
@@ -542,9 +563,10 @@ body{
 
     .table-content{
         background-color: $color2;
-        // // padding: 0;
-        // position: relative;
-        // height: 400px;
+
+        h5{
+            margin-left: 0px;
+        }
     }
 
     .paginition{
@@ -552,20 +574,23 @@ body{
         padding: 6px 5px;
         margin-bottom: 10px;
         border-radius: 6px;
-        margin-right: 25px;
         
         
         .nav-pills{
             .nav-item{
+                #pills-home-tab{
+                    margin-left: 7px;
+                }
                 .nav-link{
                     color: white;
                     font-size: 14px;
                     font-weight: 600;
-                    width: 125px;
+                    // width: 125px;
+                    width: 100%;
                 }
                 .nav-link.active{
                     background-color: $color6;
-                    width: 125px;
+                    width: 100%;
                 }
             }
         }
@@ -589,22 +614,40 @@ body{
             border: none;
             color: black;
             width: 100%;
+            font-weight: 600;
         }
     }
-          
-    // table{
-    //     position: relative;
-    // }
-    // table tbody {
-    //     position: absolute;
-    //     overflow-x: hidden;
-    //     overflow-y: scroll;
-    //     height: 200px;
-    //     // display: block;
-    // }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: white; 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: white;
+    }
+    .scroll1{
+        max-width: auto;
+        .scroll2{
+            min-width: auto;
+        }
+    }             
     .table {
         // position: relative;
         padding-left: 40px;
+
 
         .form-check-input {
             background-color: transparent;
@@ -613,10 +656,6 @@ body{
 
         tbody{
             vertical-align: 0;
-            // position: absolute;
-            // overflow-x: hidden;
-            // overflow-y: scroll;
-            // height: 200px;
         }
         th {
             border-style: none;
@@ -630,7 +669,6 @@ body{
             padding-left: 30px;
             border-color: $gray;
         }
-
     }
 }
 
@@ -647,6 +685,52 @@ footer{
         text-decoration: none;
         font-size: 14px;
         font-weight: 400;
+    }
+}
+
+// Task
+.task-judul{
+    .container{
+        padding: 0;
+        h2{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        p{
+            color: #BBB9C5;
+        }
+    }
+}
+
+.task-cart{
+    .table-content{
+        background-color: $color2;
+        .table {
+            // position: relative;
+            padding-left: 40px;
+
+
+            .form-check-input {
+                background-color: transparent;
+                border-color: $gray;
+            }
+
+            tbody{
+                vertical-align: 0;
+            }
+            th {
+                border-style: none;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+            }
+            td{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 30px;
+                border-color: $gray;
+            }
+        }
     }
 }
 
@@ -679,12 +763,14 @@ footer{
         padding-top: 40px;
         .left{
             background-color: $color2;
+            border-radius: 0px 6px 6px 0px;
         }
         .right{
             background-color: $color2;
             padding-top: 40px;
             padding-right: 40px;
             padding-left: 40px;
+            border-radius: 0px 6px 6px 0px;
 
             h4{
                 font-family: 'Larsseit-medium';
@@ -786,16 +872,40 @@ footer{
         top: 0;
         left: auto;
         bottom: 0;
-        right: -50px;
+        right: -200px;
         width: 900px;
     }
     .container{
         padding-top: 65px;
 
+        .form-password{
+                position: relative;
+
+                #togglePassword{
+                    position: absolute;
+                    top: 23%;
+                    right: 0;
+                    // left: 0;
+                    bottom: 0;
+                }
+                #NewTogglePassword{
+                    position: absolute;
+                    top: 23%;
+                    right: 0;
+                    // left: 0;
+                    bottom: 0;
+                }
+            }
+
         .waiting-list{
             background-color: $color2;
             padding-left: 40px;
             padding-right: 40px;
+
+            h4{
+                font-size: 24px;
+                font-family: 'Larsseit-medium';
+            }
             
             @media (min-width: 768px) {
                 flex: 0 0 auto;
@@ -807,6 +917,7 @@ footer{
                 background-color: #1B143C;
                 border-radius: 6px;
                 color: white;
+                -webkit-appearance: none;
                 &:focus{
                     box-shadow: 0 0 0 0;
                     border-image-slice: 1;
@@ -932,7 +1043,6 @@ footer{
             height: 432px;
             .card-body{
                 .card-title{
-                    font-family: 'Larsseit-medium';
                     font-size: 24px;
                 }
                 .card-text{
@@ -960,6 +1070,10 @@ footer{
     .card-dashboard{
         .container{
             padding-left: 0px;
+            h2{
+                font-size: 32px;
+                font-weight: 600;
+            }
         }
     }
 
@@ -972,6 +1086,26 @@ footer{
             
             .table-content{
                 width: 965px;
+
+                h5{
+                    margin-left: 20px;
+                }
+            }
+        }
+        .paginition{
+            margin-right: 25px;
+            .nav-pills{
+                .nav-item{
+                    #pills-home-tab{
+                        margin-left: 0px;
+                    }
+                    .nav-link{
+                        width: 125px;
+                    }
+                    .nav-link.active{
+                        width: 125px;
+                    }
+                }
             }
         }
     }
@@ -1080,15 +1214,6 @@ footer{
     // 404
     .body-404{
         .navbar-homepage{
-            .container-fluid{
-                .display-4{
-                    margin-top: -60px;
-                    font-size: 32px;
-                }
-                .lead{
-                    font-size: 18px;
-               }
-            }
             .navbar-collapse{
                 position: relative;
                 top: auto;
@@ -1099,6 +1224,23 @@ footer{
                 padding-right: 0px;
                 padding-bottom: 0px;
             }
+        }
+        .container-fluid{
+            .pattern{
+                width: 1440px;
+                top: -100px;
+                left: 0;
+            }
+            .illustration-404{
+                width: 470px;
+            }
+            .display-4{
+                margin-top: 20px;
+                font-size: 32px;
+            }
+            .lead{
+                font-size: 18px;
+           }
         }
 
         .ellipe-1{

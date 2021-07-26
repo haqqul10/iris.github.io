@@ -420,13 +420,30 @@ body {
 }
 
 .body-404 .container-fluid {
+  overflow: hidden;
   height: 100vh;
   padding-top: 130px;
   position: relative;
 }
 
+.body-404 .container-fluid .pattern {
+  position: absolute;
+  left: -260px;
+  right: 0;
+  text-align: center;
+  top: -180px;
+  bottom: 0;
+  margin: auto;
+  width: 920px;
+}
+
+.body-404 .container-fluid .illustration-404 {
+  width: 234px;
+  margin-top: 90px;
+}
+
 .body-404 .container-fluid .display-4 {
-  margin-top: 0px;
+  margin-top: 20px;
   font-size: 25px;
   font-weight: 400;
   padding-bottom: 12px;
@@ -502,6 +519,7 @@ body {
 .card-dashboard .card .card-body .card-title {
   font-size: 30px;
   color: white;
+  font-weight: 600;
 }
 
 .card-dashboard .card .card-body .card-text {
@@ -531,6 +549,8 @@ body {
   padding: 10px 16px;
   border: none;
   width: 100%;
+  font-weight: 600;
+  line-height: 125%;
 }
 
 .card-dashboard .card .card-backgroud {
@@ -551,24 +571,31 @@ body {
   background-color: #221B4A;
 }
 
+.checkout .table-content h5 {
+  margin-left: 0px;
+}
+
 .checkout .paginition {
   background-color: #33275C;
   padding: 6px 5px;
   margin-bottom: 10px;
   border-radius: 6px;
-  margin-right: 25px;
+}
+
+.checkout .paginition .nav-pills .nav-item #pills-home-tab {
+  margin-left: 7px;
 }
 
 .checkout .paginition .nav-pills .nav-item .nav-link {
   color: white;
   font-size: 14px;
   font-weight: 600;
-  width: 125px;
+  width: 100%;
 }
 
 .checkout .paginition .nav-pills .nav-item .nav-link.active {
   background-color: #7963FA;
-  width: 125px;
+  width: 100%;
 }
 
 .checkout .card {
@@ -590,6 +617,35 @@ body {
   border: none;
   color: black;
   width: 100%;
+  font-weight: 600;
+}
+
+.checkout ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.checkout ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.checkout ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.checkout ::-webkit-scrollbar-thumb:window-inactive {
+  background: white;
+}
+
+.checkout .scroll1 {
+  max-width: auto;
+}
+
+.checkout .scroll1 .scroll2 {
+  min-width: auto;
 }
 
 .checkout .table {
@@ -636,6 +692,50 @@ footer a {
   font-weight: 400;
 }
 
+.task-judul .container {
+  padding: 0;
+}
+
+.task-judul .container h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.task-judul .container p {
+  color: #BBB9C5;
+}
+
+.task-cart .table-content {
+  background-color: #221B4A;
+}
+
+.task-cart .table-content .table {
+  padding-left: 40px;
+}
+
+.task-cart .table-content .table .form-check-input {
+  background-color: transparent;
+  border-color: #5D6180;
+}
+
+.task-cart .table-content .table tbody {
+  vertical-align: 0;
+}
+
+.task-cart .table-content .table th {
+  border-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.task-cart .table-content .table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  border-color: #5D6180;
+}
+
 .body-login {
   background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
   overflow-x: hidden;
@@ -667,6 +767,7 @@ footer a {
 
 .login-container .container .left {
   background-color: #221B4A;
+  border-radius: 0px 6px 6px 0px;
 }
 
 .login-container .container .right {
@@ -674,6 +775,7 @@ footer a {
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
+  border-radius: 0px 6px 6px 0px;
 }
 
 .login-container .container .right h4 {
@@ -786,7 +888,7 @@ footer a {
   top: 0;
   left: auto;
   bottom: 0;
-  right: -50px;
+  right: -200px;
   width: 900px;
 }
 
@@ -794,10 +896,33 @@ footer a {
   padding-top: 65px;
 }
 
+.waiting-container .container .form-password {
+  position: relative;
+}
+
+.waiting-container .container .form-password #togglePassword {
+  position: absolute;
+  top: 23%;
+  right: 0;
+  bottom: 0;
+}
+
+.waiting-container .container .form-password #NewTogglePassword {
+  position: absolute;
+  top: 23%;
+  right: 0;
+  bottom: 0;
+}
+
 .waiting-container .container .waiting-list {
   background-color: #221B4A;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.waiting-container .container .waiting-list h4 {
+  font-size: 24px;
+  font-family: 'Larsseit-medium';
 }
 
 @media (min-width: 768px) {
@@ -815,6 +940,7 @@ footer a {
   background-color: #1B143C;
   border-radius: 6px;
   color: white;
+  -webkit-appearance: none;
 }
 
 .waiting-container .container .waiting-list .form-control:focus {
@@ -939,7 +1065,6 @@ footer a {
     height: 432px;
   }
   .container-success .card .card-body .card-title {
-    font-family: 'Larsseit-medium';
     font-size: 24px;
   }
   .container-success .card .card-body .card-text {
@@ -960,12 +1085,31 @@ footer a {
   .card-dashboard .container {
     padding-left: 0px;
   }
+  .card-dashboard .container h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
   .checkout .container .announcements {
     margin-left: 23px;
     width: 320px;
   }
   .checkout .container .table-content {
     width: 965px;
+  }
+  .checkout .container .table-content h5 {
+    margin-left: 20px;
+  }
+  .checkout .paginition {
+    margin-right: 25px;
+  }
+  .checkout .paginition .nav-pills .nav-item #pills-home-tab {
+    margin-left: 0px;
+  }
+  .checkout .paginition .nav-pills .nav-item .nav-link {
+    width: 125px;
+  }
+  .checkout .paginition .nav-pills .nav-item .nav-link.active {
+    width: 125px;
   }
   .content-homepage {
     height: 675px;
@@ -1048,13 +1192,6 @@ footer a {
   .container-content .card-shop .card {
     margin: 0px;
   }
-  .body-404 .navbar-homepage .container-fluid .display-4 {
-    margin-top: -60px;
-    font-size: 32px;
-  }
-  .body-404 .navbar-homepage .container-fluid .lead {
-    font-size: 18px;
-  }
   .body-404 .navbar-homepage .navbar-collapse {
     position: relative;
     top: auto;
@@ -1064,6 +1201,21 @@ footer a {
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+  }
+  .body-404 .container-fluid .pattern {
+    width: 1440px;
+    top: -100px;
+    left: 0;
+  }
+  .body-404 .container-fluid .illustration-404 {
+    width: 470px;
+  }
+  .body-404 .container-fluid .display-4 {
+    margin-top: 20px;
+    font-size: 32px;
+  }
+  .body-404 .container-fluid .lead {
+    font-size: 18px;
   }
   .body-404 .ellipe-1 {
     background-position-x: 600px;

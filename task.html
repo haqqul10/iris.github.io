@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+
+    <title>Task</title>
+  </head>
+  <body class="dashboard">
+
+    <!-- halaman navbar -->
+      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+        <div class="container ps-0">
+          <a class="navbar-brand" href="#">
+            <img src="images/login/Logo.png" alt="Iris" width="80">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/Icon-dashboard.png" alt="" width="20" class="pb-1"> Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"> <img src="images/icons/Icon=Task.png" alt="" width="20" class="pb-1">Task</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"> <img src="images/icons/Icon-realise.png" alt="" width="20" class="pb-1">Releases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.html"> <img src="images/icons/Icon-proxies.png" alt="" width="20" class="pb-1">Proxies</a>
+              </li>
+            </ul>
+            <a href="" class="nav-link"> <img src="images/icons/Icon=Notification.png" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+            <a href="" class="nav-link text-white"> <img src="images/icons/Mask Group.png" alt="" width="40" class="pe-2 pb-1"> Rizki Agus</a>
+          </div>
+        </div>
+      </nav>
+      <!-- akhir halaman navbar -->
+
+      <!-- Card -->
+      <section class="task-judul">
+        <div class="container">
+          <div class="row mt-4 justify-content-end">
+            <div class="col-6 text-white">
+              <h2>Your Task</h2>
+              <p>Manage and Create Task</p>
+            </div>
+            <div class="col-6">
+              <div class="btn-group">
+                <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.png" alt="" width="30"></span>
+              </div>
+              <a href="" class="btn btn-primary"> New Task </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir Card -->
+
+      <!-- checkout -->
+      <section class="task-cart">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 table-content">
+              <div class="row">
+                <div class="col">
+                  <table class="table text-white" id="example" class="display" style="width:100%;">
+                    <thead style="background-color: #33275C;">
+                      <tr>
+                        <th><input type="checkbox" class="form-check-input" id="checkAll"></th>
+                        <th>Item</th>
+                        <th>Size</th>
+                        <th>Store</th>
+                        <th>Profil</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-success">Success</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-warning">Success</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td><img src="images/icons/Group 703.png" alt="" width="35"> Air Force 1</td>
+                        <td>40</td>
+                        <td>nike</td>
+                        <td>jonh</td>
+                        <td><span class="badge bg-danger">Success</span></td>
+                        <td>
+                          <a href=""><img src="./images/icons/Icon=Edit.png" alt="" width="20"></a>
+                          <a href=""><img src="./images/icons/Icon=Trash.png" alt="" width="20"></a>
+                        </td>
+                      </tr> 
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir checkout -->
+
+      <!-- footer -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="row justify-content-between text-white">
+            <div class="col">
+              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="" class="pe-4">Status</a>
+              <a href="">Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- akhir footer -->
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/bootstrap/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+      $("#checkAll").change(function () {
+          $("input:checkbox").prop('checked', $(this).prop("checked"));
+      });
+      $(document).ready(function() {
+          $('#example').DataTable( {
+              "paging":   true,
+              searching: false,
+              bInfo: false,
+              "lengthChange": false
+          } );
+      } );
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
