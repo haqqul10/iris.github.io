@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" style="overflow-x: hidden;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+
+    <title>Profile</title>
+  </head>
+  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+
+    <!-- halaman navbar -->
+      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/icons/Logo.svg" alt="Iris" width="80">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> <img src="images/icons/task.svg" alt="" width="20" class="pb-1">Task</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1">Releases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.html"> <img src="images/icons/proxy.svg" alt="" width="20" class="pb-1">Proxies</a>
+              </li>
+            </ul>
+            <a href="" class="nav-link"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+            <a href="" class="nav-link text-white"> <img src="images/icons/Mask Group.png" alt="" width="40" class="pe-2 pb-1"> Rizki Agus</a>
+          </div>
+        </div>
+      </nav>
+      <!-- akhir halaman navbar -->
+
+      <!-- Card -->
+      <section class="card-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col mt-3 text-white">
+              <h2>Profile</h2>
+              <p>Your Profle Information in Here</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir Card -->
+
+      <section class="profile">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 your-profile-left">
+              <div class="row judul-profile">
+                <div class="col">
+                  <p class="text-white">Your Profile</p>
+                </div>
+                <div class="col">
+                  <form>
+                    <img src="./images/icons/search.svg" alt="">
+                    <input class="form-control" type="search" placeholder="Search Profile" aria-label="Search">
+                  </form>
+                </div>
+              </div>
+              <div class="row table-profile">
+                <div class="col">
+                  <table class="table text-white" id="example" class="" style="width:100%;">
+                    <thead style="background-color: #33275C; border-radius: 6px;">
+                      <tr>
+                        <th>Profile Name</th>
+                        <th>Card Number</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Iqbal</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>zain</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>fadli</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>hasbi</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>fajar</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>wildan</td>
+                        <td>0909032209</td>
+                        <td>
+                          <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                        </td>
+                      </tr> 
+                    </tbody>
+                  </table>
+                  <div class="action-knob text-center">
+                    <a href="" class="btn btn-primary">Create New Profile</a>
+                    <a href="" class="btn btn-danger">Delete All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-8 your-profile-right">
+              <div class="row profile-information">
+                <!-- profile information left -->
+                <div class="col-12 col-lg-6 profile-information-left">
+                  <p class="text-white">Profile Information</p>
+                  
+                  <div class="stepwizard">
+                    <div class="progress center-block">
+                      <div class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 13%">
+                      </div>
+                    </div>
+
+                    <div class="stepwizard-row setup-panel">
+                      <div class="stepwizard-step col-xs-3">
+                        <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                        <p>
+                          <small>Step 1</small> <br>
+                          <span>Profile</span>
+                        </p>
+                      </div>
+                      <div class="stepwizard-step col-xs-3">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>
+                          <small>Step 2</small> <br>
+                          <span>Shipping</span>
+                        </p>
+                      </div>
+                      <div class="stepwizard-step col-xs-3">
+                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        <p>
+                          <small>Step 3</small> <br>
+                          <span>Billing</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="text-white setup-content" id="step-1">
+                    <div class="mb-4">
+                      <label for="profilname" class="form-label mb-3">Profile Name</label>
+                      <input type="text" class="form-control" id="profilname" placeholder="Profile Name" >
+                    </div>
+                    <div class="mb-4">
+                      <label for="Email" class="form-label mb-3">Email</label>
+                      <input type="email" class="form-control" id="Email" placeholder="Email" >
+                    </div>
+                    <div class="mb-4">
+                      <label for="phonenumber" class="form-label mb-3">Phone Number</label>
+                      <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" >
+                    </div>
+                    <div class="mb-4">
+                      <label for="webhook" class="form-label mb-3">Webhook</label>
+                      <input type="text" class="form-control" id="webhook" placeholder="Webhook" >
+                    </div>
+                    <div class="pager float-end">
+                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                      <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
+                    </div>
+                  </form>
+                  
+
+                  <form id="step-2" class="text-white setup-content">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <label for="firtsname" class="form-label">Firts Name</label>
+                        <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="address1" class="form-label mb-3">Address 1</label>
+                        <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                      </div>
+                      <div class="mb-3">
+                        <label for="address2" class="form-label mb-3">Address 2</label>
+                        <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" class="form-control" id="country" placeholder="Country">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State">
+                      </div>
+                      <div class="col-6 col-md-6 mt-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                      </div>
+                      <div class="col-6 col-md-6 mt-3">
+                        <label for="zipcode" class="form-label">Zipcode</label>
+                        <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                      </div>
+                    </div>
+                    <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
+                    </div>
+                    <div class="pager float-end">
+                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                      <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
+                    </div>
+                  </form>
+
+                  <form action="" id="step-3" class="setup-content text-white">
+                    <div class="row">
+                      <div class="col-6 col-md-6">
+                        <label for="firtsname" class="form-label">Firts Name</label>
+                        <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="address1" class="form-label mb-3">Address 1</label>
+                        <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                      </div>
+                      <div class="mb-3">
+                        <label for="address2" class="form-label mb-3">Address 2</label>
+                        <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" class="form-control" id="country" placeholder="Country">
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State">
+                      </div>
+                      <div class="col-6 col-md-6 mt-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                      </div>
+                      <div class="col-6 col-md-6 mt-3">
+                        <label for="zipcode" class="form-label">Zipcode</label>
+                        <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                      </div>
+                    </div>
+                    <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
+                    </div>
+                    <div class="pager float-end">
+                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                      <a class="arrow-right" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
+                    </div>
+                  </form>
+                </div>
+                <!-- akhir profile information left -->
+
+                <!-- profile information right -->
+                <div class="col-12 col-lg-6 profile-information-right">
+                  <p class="text-white">Card Information</p>
+                  <p class="text-white text-title">Your Card</p>
+                  <div class="card text-white">
+                    <img src="./images/profile/Group 732.png" class="" alt="...">
+                    <div class="card-img-overlay">
+                      <div class="tittle">
+                        <div class="row ps-3 pe-3 pt-2">
+                          <div class="col">
+                            <h5 class="card-title">Jonh week</h5>
+                          </div>
+                          <div class="col d-flex justify-content-end">
+                            <img src="./images/icons/Logo.svg" alt="" class="img-fluid" style="width: 71px; height: 33px;">
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        <p class="ps-3">4241 &emsp; 9214 &emsp; 7219 &emsp; 3456 </p>
+                      </p>
+                      <div class="card-text-name pt-4">
+                        <div class="row ps-3 pe-3">
+                          <div class="col-5">
+                            <p>Card Holder</p>
+                          </div>
+                          <div class="col-4 d-flex justify-content-center">
+                            <p>Expiry</p>
+                          </div>
+                          <div class="col-3 d-flex justify-content-end">
+                            <p>cvv</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-text-name-profile">
+                        <div class="row ps-3 pe-3 pt-0">
+                          <div class="col-5">
+                            <p>Johns Smith</p>
+                          </div>
+                          <div class="col-4 d-flex justify-content-center">
+                            <p>12/26</p>
+                          </div>
+                          <div class="col-3 d-flex justify-content-end">
+                            <p>314</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form class="row text-white pt-4">
+                    <div class="mb-3">
+                      <label for="Card Number" class="form-label mb-3">Card Number</label>
+                      <input type="email" class="form-control" id="Card Number" placeholder="Card Number">
+                    </div>
+                    <div class="col-6 col-md-6">
+                      <label for="Card Expiration" class="form-label">Card Expiration</label>
+                      <input type="text" class="form-control" id="Card Expiration" placeholder="Card Expiration">
+                    </div>
+                    <div class="col-6 col-md-6">
+                      <label for="CVV" class="form-label">CVV</label>
+                      <input type="text" class="form-control" id="CVV" placeholder="CVV">
+                    </div>
+                    <p class="text-mute">*Keep your card info is safe when shipping</p>
+                    <a href="" class=" btn btn-success"> Save Profile </a>
+                  </form>
+                </div>
+                <!-- akhir profile information right -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="row justify-content-between text-white">
+            <div class="col">
+              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="" class="pe-4">Status</a>
+              <a href="">Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- akhir footer -->
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="libraries/bootstrap/js/bootstrap.js"></script>
+    <script src="libraries/jquery/jquery-3.5.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="libraries/jquery/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script> -->
+    <!-- <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script> -->
+
+    <script>
+      $(document).ready(function() {
+
+        var navListItems = $('div.setup-panel div a'),
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn'),
+        allPrevBtn = $('.prevBtn');
+
+        allWells.hide();
+
+        navListItems.click(function(e) {
+          e.preventDefault();
+          var $target = $($(this).attr('href')),
+            $item = $(this);
+          var nextStepWizard = $(this).text();
+
+          if (nextStepWizard == 1)
+            $('.stepwizard .progress-bar').animate({
+              width: '0%'
+            }, 0);
+          if (nextStepWizard == 2)
+            $('.stepwizard .progress-bar').animate({
+              width: '50%'
+            }, 0);
+          if (nextStepWizard == 3)
+            $('.stepwizard .progress-bar').animate({
+              width: '100%'
+            }, 0);
+
+
+          if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-success').addClass('btn-default');
+            //navListItems.addClass('btn-default');
+            $item.addClass('btn-success');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+          }
+        });
+
+        allNextBtn.click(function() {
+          var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+
+          $(".form-group").removeClass("has-error");
+          for (var i = 0; i < curInputs.length; i++) {
+            if (!curInputs[i].validity.valid) {
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+          }
+
+          if (isValid) {
+            nextStepWizard.removeAttr('disabled').trigger('click');
+          }
+        });
+
+
+        allPrevBtn.click(function() {
+          var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+          prevStepWizard.removeAttr('disabled').trigger('click');
+        });
+
+
+        $('div.setup-panel div a.btn-success').trigger('click');
+      });
+
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
