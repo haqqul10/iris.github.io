@@ -950,6 +950,7 @@ footer a {
   background-color: #221B4A;
   border-radius: 6px;
   padding: 0;
+  padding-bottom: 32px;
 }
 
 .profile .your-profile-left .judul-profile {
@@ -1082,7 +1083,6 @@ footer a {
 
 .profile .your-profile-right .profile-information {
   border-radius: 6px;
-  margin-left: 0;
   background-color: #221B4A;
   margin-top: 25px;
   /*form styles*/
@@ -1092,6 +1092,7 @@ footer a {
   padding-left: 32px;
   padding-top: 32px;
   padding-right: 32px;
+  padding-bottom: 32px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left p {
@@ -1206,15 +1207,11 @@ footer a {
   padding-top: 32px;
   padding-right: 32px;
   position: relative;
+  padding-bottom: 32px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right::after {
-  position: absolute;
-  border-left: 1px solid #5D6180;
-  height: 720px;
-  bottom: 30px;
-  left: 0;
-  content: "";
+  content: none;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right p {
@@ -1252,6 +1249,10 @@ footer a {
   text-transform: uppercase;
   line-height: 125%;
   letter-spacing: 0.08em;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .card .card-text-name-profile .detail-profile {
+  margin-top: -17px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right .card .card-text-name-profile p {
@@ -1738,6 +1739,17 @@ footer a {
   .profile .your-profile-right .profile-information {
     margin-left: 32px;
     margin-top: auto;
+  }
+  .profile .your-profile-right .profile-information .profile-information-right::after {
+    position: absolute;
+    border-left: 1px solid #5D6180;
+    height: 720px;
+    bottom: 30px;
+    left: 0;
+    content: "";
+  }
+  .profile .your-profile-right .profile-information .profile-information-right .card .card-text-name-profile .detail-profile {
+    margin-top: -10px;
   }
   .content-homepage {
     height: 675px;

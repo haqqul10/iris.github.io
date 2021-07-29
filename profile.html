@@ -63,8 +63,8 @@
 
       <section class="profile">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-4 your-profile-left">
+          <div class="row justify-content-center">
+            <div class="col-11 col-lg-4 your-profile-left">
               <div class="row judul-profile">
                 <div class="col">
                   <p class="text-white">Your Profile</p>
@@ -138,7 +138,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-8 your-profile-right">
+            <div class="col-11 col-lg-8 your-profile-right">
               <div class="row profile-information">
                 <!-- profile information left -->
                 <div class="col-12 col-lg-6 profile-information-left">
@@ -174,76 +174,76 @@
                       </div>
                     </div>
                   </div>
-                  <form class="text-white setup-content" id="step-1">
-                    <div class="mb-4">
-                      <label for="profilname" class="form-label mb-3">Profile Name</label>
-                      <input type="text" class="form-control" id="profilname" placeholder="Profile Name" >
-                    </div>
-                    <div class="mb-4">
-                      <label for="Email" class="form-label mb-3">Email</label>
-                      <input type="email" class="form-control" id="Email" placeholder="Email" >
-                    </div>
-                    <div class="mb-4">
-                      <label for="phonenumber" class="form-label mb-3">Phone Number</label>
-                      <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" >
-                    </div>
-                    <div class="mb-4">
-                      <label for="webhook" class="form-label mb-3">Webhook</label>
-                      <input type="text" class="form-control" id="webhook" placeholder="Webhook" >
-                    </div>
-                    <div class="pager float-end">
-                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
-                      <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
-                    </div>
-                  </form>
+
+                    <form id="step-1" class="text-white setup-content">
+                      <div class="mb-4">
+                        <label for="profilname" class="form-label mb-3">Profile Name</label>
+                        <input type="text" class="form-control" id="profilname" placeholder="Profile Name" >
+                      </div>
+                      <div class="mb-4">
+                        <label for="Email" class="form-label mb-3">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Email" >
+                      </div>
+                      <div class="mb-4">
+                        <label for="phonenumber" class="form-label mb-3">Phone Number</label>
+                        <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" >
+                      </div>
+                      <div class="mb-4">
+                        <label for="webhook" class="form-label mb-3">Webhook</label>
+                        <input type="text" class="form-control" id="webhook" placeholder="Webhook" >
+                      </div>
+                      <div class="pager float-end">
+                        <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                        <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
+                      </div>
+                    </form>
                   
+                    <form id="step-2" class="text-white setup-content">
+                      <div class="row">
+                        <div class="col-6 col-md-6">
+                          <label for="firtsname" class="form-label">Firts Name</label>
+                          <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="lastname" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                        </div>
+                        <div class="mb-3 mt-3">
+                          <label for="address1" class="form-label mb-3">Address 1</label>
+                          <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="address2" class="form-label mb-3">Address 2</label>
+                          <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="country" class="form-label">Country</label>
+                          <input type="text" class="form-control" id="country" placeholder="Country">
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="state" class="form-label">State</label>
+                          <input type="text" class="form-control" id="state" placeholder="State">
+                        </div>
+                        <div class="col-6 col-md-6 mt-3">
+                          <label for="city" class="form-label">City</label>
+                          <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                        <div class="col-6 col-md-6 mt-3">
+                          <label for="zipcode" class="form-label">Zipcode</label>
+                          <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                        </div>
+                      </div>
+                      <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
+                      </div>
+                      <div class="pager float-end">
+                        <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                        <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
+                      </div>
+                    </form>
 
-                  <form id="step-2" class="text-white setup-content">
-                    <div class="row">
-                      <div class="col-6 col-md-6">
-                        <label for="firtsname" class="form-label">Firts Name</label>
-                        <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
-                      </div>
-                      <div class="col-6 col-md-6">
-                        <label for="lastname" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
-                      </div>
-                      <div class="mb-3 mt-3">
-                        <label for="address1" class="form-label mb-3">Address 1</label>
-                        <input type="text" class="form-control" id="address1" placeholder="Address 1">
-                      </div>
-                      <div class="mb-3">
-                        <label for="address2" class="form-label mb-3">Address 2</label>
-                        <input type="text" class="form-control" id="address2" placeholder="Address 2">
-                      </div>
-                      <div class="col-6 col-md-6">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="country" placeholder="Country">
-                      </div>
-                      <div class="col-6 col-md-6">
-                        <label for="state" class="form-label">State</label>
-                        <input type="text" class="form-control" id="state" placeholder="State">
-                      </div>
-                      <div class="col-6 col-md-6 mt-3">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="City">
-                      </div>
-                      <div class="col-6 col-md-6 mt-3">
-                        <label for="zipcode" class="form-label">Zipcode</label>
-                        <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
-                      </div>
-                    </div>
-                    <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
-                    </div>
-                    <div class="pager float-end">
-                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
-                      <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
-                    </div>
-                  </form>
-
-                  <form action="" id="step-3" class="setup-content text-white">
+                  <form id="step-3" class="setup-content text-white">
                     <div class="row">
                       <div class="col-6 col-md-6">
                         <label for="firtsname" class="form-label">Firts Name</label>
@@ -324,7 +324,7 @@
                         </div>
                       </div>
                       <div class="card-text-name-profile">
-                        <div class="row ps-3 pe-3 pt-0">
+                        <div class="row ps-3 pe-3 pt-0 detail-profile">
                           <div class="col-5">
                             <p>Johns Smith</p>
                           </div>
