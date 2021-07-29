@@ -42,7 +42,7 @@ body{
     position: relative;
     .ellipe{
         position: absolute;
-        top: 0;
+        top: -185px;
         left: auto;
         bottom: 0;
         right: -300px;
@@ -54,6 +54,7 @@ body{
     z-index: 5;
     .container{
         width: 1044px;
+        position: relative;
     }
 
     .navbar-toggler{
@@ -82,6 +83,7 @@ body{
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
+            background-color: $color2;
     }
     // .collapse{
         .btn-getstarted{
@@ -102,6 +104,7 @@ body{
             border-radius: 5px;
             border: 1px solid $color6;
             margin-top: 10px;
+            color: $color6 !important;
 
             &:hover{
                 background: $gradienColor;
@@ -122,11 +125,13 @@ body{
     position: relative;
     z-index: 1;
     .container{
+        padding-bottom: 149px;
         // width: 1044px;
-
         .jumbotron-row{
             flex-direction: column-reverse;
         }
+            
+        
     }
 
     .display-4{
@@ -151,7 +156,7 @@ body{
         border: none;
         font-size: 16px;
         font-weight: 500;
-        margin-top: 32px;
+        margin-top: 35px;
         width: 150px;
         height: 54px;
 
@@ -183,6 +188,7 @@ body{
         height: 250px;
         margin-left: 5px;
         margin-right: 5px;
+        border-radius: 6px;
 
         .input-group{
             // border: none;
@@ -204,12 +210,14 @@ body{
                 border: 1px solid transparent;
                 color: white;
                 border-radius: 5px; 
-                padding-left: 10%;
-    
+                padding-left: 13%;
+                // position: relative;
+                
                 &:focus{
+                    // border: 1px solid linear-gradient(to left, #743ad5, #d53a9d);
                     box-shadow: 0 0 0 0;
-                    border-radius: 5px;
-                    border: 1px solid $color1;
+                    border-radius: 6px;
+                    border: 1px solid;
                     border-image-slice: 6;
                     border-width: 1;
                     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -234,10 +242,11 @@ body{
                 color: $graytext;
                 width: 100%;
                 color: rgba(255, 255, 255, 0.5);
+                text-align: left;       
                 &:focus{
                     box-shadow: 0 0 0 0;
                     border-radius: 5px;
-                    border: 1px solid transparent;
+                    border: 1px solid $color1;
                     border-image-slice: 6;
                     border-width: 1;
                     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -245,7 +254,10 @@ body{
 
                 &::after{
                     border: none;
-                    // background-image: url(../images/icons/chevron-down.svg);
+                }
+
+                img{
+                    float: right;
                 }
             }
 
@@ -1328,7 +1340,7 @@ footer{
 
     .login-illustrasi{
         position: absolute;
-        top: 0;
+        top: -185px;
         left: auto;
         bottom: 0;
         right: -300px;
@@ -1445,7 +1457,7 @@ footer{
 
     .login-illustrasi{
         position: absolute;
-        top: 0;
+        top: -185px;
         left: auto;
         bottom: 0;
         right: -200px;
@@ -1562,7 +1574,7 @@ footer{
 
     .login-illustrasi{
         position: absolute;
-        top: 0;
+        top: -185px;
         left: auto;
         bottom: 0;
         right: -200px;
@@ -1767,11 +1779,14 @@ footer{
 
     // homepage
     .content-homepage{
-        height: 675px;
+        height: 745px;
     }
     .navbar-homepage{
         background-color: transparent;
         padding-top: 30px;
+        .container{
+            width: 1044px;
+        }
         .nav-item{
             padding-left: 30px;
         }
@@ -1783,6 +1798,7 @@ footer{
             padding-left: 0px;
             padding-right: 0px;
             padding-bottom: 0px;
+            background-color: transparent;
         }
 
         .collapse{
@@ -1805,13 +1821,15 @@ footer{
 
             .jumbotron-row{
                 flex-direction: unset;
+                
             }
         }
         .display-4{
             font-weight: 700;
             font-size: 60px;
-            margin-top: 90px;
+            margin-top: 65px;
             line-height: 60px;
+            margin-bottom: 16px;
         }
         .lead{
             font-size: 18px;
@@ -1826,6 +1844,7 @@ footer{
         }
 
         img{
+            margin-top: 50px;
             width: 667px;
             height: 100%;
         }
@@ -1854,6 +1873,10 @@ footer{
                     margin-left: 35px;
                     // width: 165px;
                     width: auto;
+
+                    img{
+                        float: none;
+                    }
                 }
             }
         }

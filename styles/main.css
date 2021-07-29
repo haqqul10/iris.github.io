@@ -36,7 +36,7 @@ body {
 
 .container-homepage .ellipe {
   position: absolute;
-  top: 0;
+  top: -185px;
   left: auto;
   bottom: 0;
   right: -300px;
@@ -50,6 +50,7 @@ body {
 
 .navbar-homepage .container {
   width: 1044px;
+  position: relative;
 }
 
 .navbar-homepage .navbar-toggler {
@@ -78,6 +79,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+  background-color: #221B4A;
 }
 
 .navbar-homepage .btn-getstarted {
@@ -100,6 +102,7 @@ body {
   border-radius: 5px;
   border: 1px solid #7963FA;
   margin-top: 10px;
+  color: #7963FA !important;
 }
 
 .navbar-homepage .btn-login:hover {
@@ -118,6 +121,10 @@ body {
 .jumbotron {
   position: relative;
   z-index: 1;
+}
+
+.jumbotron .container {
+  padding-bottom: 149px;
 }
 
 .jumbotron .container .jumbotron-row {
@@ -150,7 +157,7 @@ body {
   border: none;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 32px;
+  margin-top: 35px;
   width: 150px;
   height: 54px;
 }
@@ -186,6 +193,7 @@ body {
   height: 250px;
   margin-left: 5px;
   margin-right: 5px;
+  border-radius: 6px;
 }
 
 .container-content .info-panel .input-group .input-group-text {
@@ -209,14 +217,14 @@ body {
   border: 1px solid transparent;
   color: white;
   border-radius: 5px;
-  padding-left: 10%;
+  padding-left: 13%;
 }
 
 .container-content .info-panel form .form-control:focus {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
-  border-radius: 5px;
-  border: 1px solid #1B143C;
+  border-radius: 6px;
+  border: 1px solid;
   border-image-slice: 6;
   border-width: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -238,13 +246,14 @@ body {
   color: #BBB9C5;
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
+  text-align: left;
 }
 
 .container-content .info-panel .dropdown .btn-secondary:focus {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 1px solid #1B143C;
   border-image-slice: 6;
   border-width: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -252,6 +261,10 @@ body {
 
 .container-content .info-panel .dropdown .btn-secondary::after {
   border: none;
+}
+
+.container-content .info-panel .dropdown .btn-secondary img {
+  float: right;
 }
 
 .container-content .info-panel .dropdown .dropdown-item {
@@ -1352,7 +1365,7 @@ footer a {
 
 .login-container .login-illustrasi {
   position: absolute;
-  top: 0;
+  top: -185px;
   left: auto;
   bottom: 0;
   right: -300px;
@@ -1483,7 +1496,7 @@ footer a {
 
 .waiting-container .login-illustrasi {
   position: absolute;
-  top: 0;
+  top: -185px;
   left: auto;
   bottom: 0;
   right: -200px;
@@ -1619,7 +1632,7 @@ footer a {
 
 .container-success .login-illustrasi {
   position: absolute;
-  top: 0;
+  top: -185px;
   left: auto;
   bottom: 0;
   right: -200px;
@@ -1752,11 +1765,14 @@ footer a {
     margin-top: -10px;
   }
   .content-homepage {
-    height: 675px;
+    height: 745px;
   }
   .navbar-homepage {
     background-color: transparent;
     padding-top: 30px;
+  }
+  .navbar-homepage .container {
+    width: 1044px;
   }
   .navbar-homepage .nav-item {
     padding-left: 30px;
@@ -1769,6 +1785,7 @@ footer a {
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+    background-color: transparent;
   }
   .navbar-homepage .collapse .btn-getstarted {
     margin-right: 8px;
@@ -1792,8 +1809,9 @@ footer a {
   .jumbotron .display-4 {
     font-weight: 700;
     font-size: 60px;
-    margin-top: 90px;
+    margin-top: 65px;
     line-height: 60px;
+    margin-bottom: 16px;
   }
   .jumbotron .lead {
     font-size: 18px;
@@ -1808,6 +1826,7 @@ footer a {
             justify-content: end;
   }
   .jumbotron img {
+    margin-top: 50px;
     width: 667px;
     height: 100%;
   }
@@ -1828,6 +1847,9 @@ footer a {
     padding: 12px 16px;
     margin-left: 35px;
     width: auto;
+  }
+  .container-content .info-panel .dropdown .btn-secondary img {
+    float: none;
   }
   .container-content .card-shop .card {
     margin: 0px;
