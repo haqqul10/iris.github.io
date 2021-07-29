@@ -109,7 +109,7 @@ body{
             &:hover{
                 background: $gradienColor;
                 border: 1px solid transparent;
-                border: none;
+                // border: none;
                 border-radius: 5px;
                 color:gainsboro !important;
                 transition: 0.3s;
@@ -148,6 +148,7 @@ body{
         font-weight: 400;
         margin-top: 16px;
         line-height: 22px;
+        margin-bottom: 0px;
     }
     .btn-primary{
         background: $gradienColor;
@@ -214,13 +215,12 @@ body{
                 // position: relative;
                 
                 &:focus{
-                    // border: 1px solid linear-gradient(to left, #743ad5, #d53a9d);
                     box-shadow: 0 0 0 0;
-                    border-radius: 6px;
-                    border: 1px solid;
+                    border-radius: 5px;
+                    border: 1px solid $color1;
                     border-image-slice: 6;
                     border-width: 1;
-                    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                    border-image-source: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
                 }
             }
             img{
@@ -249,7 +249,7 @@ body{
                     border: 1px solid $color1;
                     border-image-slice: 6;
                     border-width: 1;
-                    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                    border-image-source: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
                 }
 
                 &::after{
@@ -1607,6 +1607,16 @@ footer{
     }
 }
 
+// Tablet Version
+@media screen and (min-width: 768px) {
+    // homepage
+    .jumbotron{
+        .display-4{
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+}
 
 // Desktop Version
 @media screen and (min-width: 992px) {
@@ -1829,7 +1839,7 @@ footer{
             font-size: 60px;
             margin-top: 65px;
             line-height: 60px;
-            margin-bottom: 16px;
+            // margin-bottom: 16px;
         }
         .lead{
             font-size: 18px;
