@@ -190,10 +190,11 @@ body {
   margin-top: -110px;
   position: relative;
   z-index: 1;
-  height: 250px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 6px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .container-content .info-panel .input-group .input-group-text {
@@ -214,20 +215,38 @@ body {
 .container-content .info-panel form .form-control {
   background-color: #1B143C;
   padding: 12px 16px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: white;
-  border-radius: 5px;
+  border-radius: 6px;
   padding-left: 13%;
+  margin-bottom: 20px;
 }
 
 .container-content .info-panel form .form-control:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  border-radius: 5px;
-  border: 1px solid #1B143C;
-  border-image-slice: 6;
-  border-width: 1;
-  border-image-source: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.container-content .info-panel form .form-control:focus + label {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+}
+
+.container-content .info-panel form .form-control + label {
+  border-radius: 6px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .container-content .info-panel form img {
@@ -236,27 +255,42 @@ body {
   right: 0;
   left: 4%;
   bottom: 0;
+  z-index: 1;
 }
 
 .container-content .info-panel .dropdown .btn-secondary {
   background-color: #1B143C;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 12px 16px;
-  border-radius: 5px;
+  border-radius: 6px;
   color: #BBB9C5;
   width: 100%;
+  margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.5);
   text-align: left;
+  position: relative;
 }
 
 .container-content .info-panel .dropdown .btn-secondary:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  border-radius: 5px;
-  border: 1px solid #1B143C;
-  border-image-slice: 6;
-  border-width: 1;
-  border-image-source: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.container-content .info-panel .dropdown .btn-secondary:focus::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  z-index: -1;
+  display: block;
 }
 
 .container-content .info-panel .dropdown .btn-secondary::after {
@@ -1670,6 +1704,9 @@ footer a {
     font-size: 48px;
     line-height: 50px;
   }
+  .info-panel .findstore {
+    margin-top: -20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1772,7 +1809,7 @@ footer a {
     margin-top: -10px;
   }
   .content-homepage {
-    height: 745px;
+    height: 675px;
   }
   .navbar-homepage {
     background-color: transparent;
@@ -1832,7 +1869,7 @@ footer a {
             justify-content: end;
   }
   .jumbotron img {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 667px;
     height: 100%;
   }
@@ -1848,14 +1885,22 @@ footer a {
   .container-content .info-panel form .form-control {
     padding-left: 8%;
     margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .container-content .info-panel form .form-control + label {
+    left: 10px;
   }
   .container-content .info-panel .dropdown .btn-secondary {
     padding: 12px 16px;
     margin-left: 35px;
     width: auto;
+    margin-bottom: 0px;
   }
   .container-content .info-panel .dropdown .btn-secondary img {
     float: none;
+  }
+  .container-content .info-panel .findstore {
+    margin-top: 0px;
   }
   .container-content .card-shop .card {
     margin: 0px;
