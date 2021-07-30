@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" style="overflow-x: hidden;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+
+    <!-- icons botstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>Login</title>
+  </head>
+  <body class="body-login">
+
+    <!-- halaman Login -->
+    <div class="container">
+      <h2 class="mb-4 mt-4 text-center">Autocomplete / Live Data Search dari Json File dengan Jquery</h2>
+      <div class="text-center">
+        <input type="text" id="search" placeholder="Cari Mahasiswa..." class="form-control" />
+      </div>
+      <ul class="list-group" id="resultlist"></ul>
+    </div>
+    <!-- akhir halaman login -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="/libraries/bootstrap/js/bootstrap.js"></script>
+    <!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+  $(document).ready(function(){
+    $.ajaxSetup({ cache: false });
+    $('#search').keyup(function(){
+        $('#resultlist').html('');
+        $('#state').val('');
+        var searchField = $('#search').val();
+        var expression = new RegExp(searchField, "i");
+ 
+        $.getJSON('data.json', function(data) {
+          $.each(data, function(key, value){
+            if (value.search.search(expression) != -1 || value.alamat.search(expression) != -1){
+              $('#resultlist').append(`
+                <li class="list-group-item link-class">
+                  <img src="avatar/`+value.avatar+`" height="40" width="40" class="img-thumbnail" /> 
+                  <span class="nama">`+value.search+`</span>
+                  <span class="text-muted" style="float: right;">`+value.alamat+`</span>
+                </li>`);
+            }
+          });   
+        });
+    });
+ 
+    $('#resultlist').on('click', 'li', function() {
+      let search = $(this).children('.nama').text();
+ 
+      $('#search').val(search);
+      $("#resultlist").html('');
+    });
+  });
+</script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,37 @@
+[
+   {
+      "id":5,
+      "name":"Nike",
+      "alamat":"$500",
+      "avatar":"../images/homepage/Group 771.png"
+   
+  },
+    {
+        "id":51,
+        "name":"Adidas",
+        "alamat":"$333",
+        "avatar":"../images/homepage/Group 771.png"
+    
+  },
+    {
+        "id":66,
+        "name":"Puma",
+        "alamat":"$500",
+        "avatar":"../images/homepage/Group 771.png"
+    
+  },
+    {
+        "id":44,
+        "name":"Vans",
+        "alamat":"$200",
+        "avatar":"../images/homepage/Group 771.png"
+    
+  },
+    {
+        "id":1,
+        "name":"Converse",
+        "alamat":"$100",
+        "avatar":"../images/homepage/Group 771.png"
+    
+  }
+]
