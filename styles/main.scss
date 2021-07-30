@@ -1481,7 +1481,7 @@ footer{
                 }
                 .bi-eye-slash::before {
                     content: "\f320";
-                    font-size: 24px;
+                    font-size: 16px;
                 }
             }
             .form-check{
@@ -1745,6 +1745,11 @@ footer{
                 .form-password-responsive{
                     margin-top: 0;
                 }
+                .form-password{
+                    .bi-eye-slash::before{
+                        font-size: 24px;
+                    }
+                }
             }
         }
     }
@@ -1762,6 +1767,12 @@ footer{
             .right{
                 .form-password-responsive{
                     margin-top: 0;
+                }
+
+                .form-password{
+                    .bi-eye-slash::before{
+                        font-size: 24px;
+                    }
                 }
             }
         }

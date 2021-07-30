@@ -1491,7 +1491,7 @@ footer a {
 
 .login-container .container .right .form-password .bi-eye-slash::before {
   content: "\f320";
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .login-container .container .right .form-check {
@@ -1764,6 +1764,9 @@ footer a {
   .login-container .container .right .form-password-responsive {
     margin-top: 0;
   }
+  .login-container .container .right .form-password .bi-eye-slash::before {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1772,6 +1775,9 @@ footer a {
   }
   .login-container .container .right .form-password-responsive {
     margin-top: 0;
+  }
+  .login-container .container .right .form-password .bi-eye-slash::before {
+    font-size: 24px;
   }
   .waiting-container .container {
     padding-top: 70px;
