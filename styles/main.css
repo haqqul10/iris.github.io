@@ -210,7 +210,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 1001;
-  color: white;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -219,6 +218,14 @@ body {
   background-color: #1B143C;
   border: none;
   color: white;
+}
+
+.container-content .info-panel .list-group-item .img-thumbnail {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .container-content .info-panel .text-muted {
@@ -248,10 +255,6 @@ body {
   border-radius: 6px;
   padding-left: 13%;
   margin-bottom: 20px;
-}
-
-.container-content .info-panel form .form-control input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
 }
 
 .container-content .info-panel form .form-control:focus {
@@ -1437,31 +1440,41 @@ footer a {
 .login-container .container .right {
   background-color: #221B4A;
   padding-top: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 56px;
+  padding-left: 56px;
   border-radius: 0px 6px 6px 0px;
 }
 
 .login-container .container .right h4 {
   font-family: 'Larsseit-medium';
   font-size: 24px;
+  padding-top: 66px;
+  padding-bottom: 32px;
+  margin-bottom: 0;
 }
 
-.login-container .container .right .form-control {
+.login-container .container .right .form-label {
+  margin-bottom: 12px;
+  line-height: 28px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.login-container .container .right form {
+  position: relative;
+}
+
+.login-container .container .right form .form-control {
   padding: 12px 16px;
-  border: 1px solid #1B143C;
+  border: 2px solid transparent;
   background-color: #1B143C;
   border-radius: 6px;
   color: white;
 }
 
-.login-container .container .right .form-control:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  border-image-slice: 1;
-  border-width: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  border-radius: 6px;
+.login-container .container .right form .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .login-container .container .right .form-password {
@@ -1475,10 +1488,20 @@ footer a {
   bottom: 0;
 }
 
+.login-container .container .right .form-check {
+  margin-top: 16px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
 .login-container .container .right .input-group-text {
   background-color: #1B143C;
   border: none;
   border-radius: 6px;
+}
+
+.login-container .container .right .form-password-responsive {
+  margin-top: 24px;
 }
 
 .login-container .container .right .form-check-input {
@@ -1495,11 +1518,11 @@ footer a {
 }
 
 .login-container .container .right .btn-primary {
-  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  background-image: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
-  padding: 15px 48px;
-  border: none;
+  height: 50px;
   width: 100%;
+  border: none;
   margin-top: 32px;
 }
 
@@ -1511,6 +1534,7 @@ footer a {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  line-height: 20px;
   color: #A691EC !important;
   text-decoration: none;
 }
@@ -1520,8 +1544,8 @@ footer a {
 }
 
 .login-container .container .right .privacy {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .login-container .container .right .privacy a {
@@ -1729,11 +1753,17 @@ footer a {
   .container-content .info-panel #resultlist {
     width: 47%;
   }
+  .login-container .container .right .form-password-responsive {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .login-container .container {
     padding-top: 80px;
+  }
+  .login-container .container .right .form-password-responsive {
+    margin-top: 0;
   }
   .waiting-container .container {
     padding-top: 70px;
