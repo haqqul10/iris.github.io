@@ -1381,6 +1381,7 @@ footer{
     background-image: $gradienBg;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100vh;
 }
 .login-container{
     position: relative;
@@ -1529,7 +1530,7 @@ footer{
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 20px;
-                color: #6241D4 !important;
+                color: #A691EC !important;
                 text-decoration: none;
                 // letter-spacing: 1px;
             }
