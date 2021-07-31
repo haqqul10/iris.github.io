@@ -1403,32 +1403,44 @@ footer{
 
     .container{
         padding-top: 40px;
+        
         .left{
             background-color: $color2;
             border-radius: 6px 0px 0px 6px;
         }
+
         .right{
             background-color: #18103E;
-            padding-top: 40px;
-            padding-right: 56px;
-            padding-left: 56px;
+            padding: 24px 24px 8px;
             border-radius: 0px 6px 6px 0px;
+            box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
+            // padding-top: 40px;
+            // padding-right: 56px;
+            // padding-left: 56px;
 
             h4{
                 font-family: 'Larsseit-medium';
-                font-size: 24px;
-                padding-top: 66px;
-                padding-bottom: 32px;
-                margin-bottom: 0;
+                font-size: 18px;
+                margin-top: 40px;
+                margin-bottom: 24px;
+                // margin-bottom: 0;
+                // font-size: 24px;
+                // padding-top: 66px;
+                // padding-bottom: 32px;
             }
+
             .form-label{
-                margin-bottom: 12px;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: normal;
-                font-size: 16px;
-                line-height: 28px;
+                margin-bottom: 12px;
+                // line-height: 28px;
+                // font-size: 16px;
+                // margin-bottom: 12px;
+
                 // letter-spacing: 1px;
             }
+
             form{
                 position: relative;
                 // .bungkus{
@@ -1436,7 +1448,13 @@ footer{
                 //     display: flex;
                 //     border-radius: 6px;
                 // }
+
+                .login-container__form-item {
+                    margin-bottom: 19px;
+                }
+
                 .form-control{
+                    font-size: 14px;
                     padding: 12px 16px;
                     border: 2px solid #0F0635;
                     background-color: #0F0635;
@@ -1467,6 +1485,51 @@ footer{
                     //     bottom: 0;
                     //     z-index: -1;
                     // }
+                }
+
+                .btn-primary{
+                    background-image: $gradienColor;
+                    border-radius: 6px;
+                    height: 50px;
+                    width: 100%;
+                    border: none;
+                    margin-top: 5px;
+
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+
+                .login-container__form-link {
+                    text-align: center;
+                    margin-bottom: 2em;
+                }
+
+                .login-container__form-separator{
+                    color: $gray;
+                    display: block;
+                    margin-top: 48px;
+                    margin-bottom: 0;
+                }
+
+                .privacy{
+                    // margin-top: 24px;
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    // margin-bottom: 24px;
+                }
+                .privacy a{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    color: #B4B6C4;
+                    text-decoration: none;
+                    // color: #5D6180;
+                    padding-right: 22px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
 
@@ -1512,18 +1575,6 @@ footer{
                     line-height: 26px;
                 }
             }
-
-            .btn-primary{
-                background-image: $gradienColor;
-                border-radius: 6px;
-                height: 50px;
-                width: 100%;
-                border: none;
-                margin-top: 32px;
-                &:hover{
-                    opacity: 0.9;
-                }
-            }
             
             .forget-password{
                 font-style: normal;
@@ -1533,19 +1584,6 @@ footer{
                 color: #A691EC !important;
                 text-decoration: none;
                 // letter-spacing: 1px;
-            }
-            hr{
-                color: $gray;
-            }
-            .privacy{
-                margin-top: 24px;
-                margin-bottom: 24px;
-            }
-            .privacy a{
-                text-decoration: none;
-                color: #5D6180;
-                padding-right: 22px;
-                font-weight: 400;
             }
         }
     }
