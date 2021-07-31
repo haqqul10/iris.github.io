@@ -1404,7 +1404,7 @@ footer a {
 }
 
 .body-login {
-  background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
+  background: linear-gradient(101.71deg, #3B1B74 9.67%, #230D49 90.64%);
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100vh;
@@ -1420,13 +1420,14 @@ footer a {
   width: 100%;
 }
 
-.login-container .login-illustrasi {
+.login-container .login-illustration {
   position: absolute;
   top: -305px;
   left: auto;
   bottom: 0;
   right: -365px;
   width: 930px;
+  display: none;
 }
 
 .login-container .container {
@@ -1468,18 +1469,51 @@ footer a {
   margin-bottom: 19px;
 }
 
+.login-container .container .right form .login-container__form-field {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.login-container .container .right form .login-container__form-field-pwicon {
+  z-index: 1;
+}
+
+.login-container .container .right form .login-container__form-field-gradient {
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: border-color .25s ease-in-out;
+  transition: border-color .25s ease-in-out;
+}
+
 .login-container .container .right form .form-control {
   font-size: 14px;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border: 2px solid #0F0635;
   background-color: #0F0635;
-  border-radius: 6px;
   color: white;
+  position: relative;
+  border-radius: 6px;
+  z-index: 1;
 }
 
 .login-container .container .right form .form-control:focus {
+  outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-color: transparent;
+}
+
+.login-container .container .right form .form-control:focus + .login-container__form-field-gradient {
+  z-index: 0;
 }
 
 .login-container .container .right form .btn-primary {
@@ -1784,6 +1818,9 @@ footer a {
   }
   .login-container .container .right .form-password .bi-eye-slash::before {
     font-size: 24px;
+  }
+  .login-container .container .login-illustration {
+    display: block;
   }
 }
 

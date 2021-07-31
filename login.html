@@ -35,21 +35,25 @@
                       <form class="text-white">
                         <div class="mb-4 login-container__form-item">
                           <label for="Email" class="form-label">Email Address</label>
-                          <span class="bungkus">
+                          <div class="login-container__form-field">
                             <input type="email" class="form-control" id="Email" placeholder="Email Address">
-                          </span>
+                            <span class="login-container__form-field-gradient"></span>
+                          </div>
                         </div>
                         <div class="login-container__form-item">
                           <label for="password" class="form-label" id="basic-addon2">Password</label>
-                          <div class="form-password">
+                          <div class="form-password login-container__form-field">
                             <input type="password" class="form-control" id="password" placeholder="Password">
+                            <span class="login-container__form-field-gradient"></span>
                             <!-- <img src="./images/icons/Icon-see.png" alt="" width="20px" id="togglePassword"> -->
-                            <i class="bi bi-eye-slash me-3" id="togglePassword"></i>
+                            <i class="bi bi-eye-slash me-3 login-container__form-field-pwicon" id="togglePassword"></i>
                           </div>
                         </div>
                         <input type="submit" name="login-submit" value="Login" class="btn btn-primary mb-4">
+
                         <!-- Don't ever use inline style for FE. It will make you difficult to tweak it on future revisions. -->
                         <!-- <p class="text-center" style="margin-bottom: 32px; "><a href="#" class="forget-password text-white" >Forget Password?</a></p> -->
+                       
                         <p class="login-container__form-link"><a href="#" class="forget-password text-white" >Forget Password?</a></p>
                         <p class="login-container__form-link">Don't have an account? <a href="sign-up.html" class="forget-password">Sign Up</a></p>
                         <hr class="login-container__form-separator">
@@ -60,7 +64,7 @@
                 </div>
               </div>
             </div>
-            <img src="./images/homepage/Ellipse.png" alt="" class="login-illustrasi">
+            <img src="./images/homepage/Ellipse.png" alt="shadow" class="login-illustration">
         </div>
     </main>
     <!-- akhir halaman login -->
