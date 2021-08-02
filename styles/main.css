@@ -1583,6 +1583,7 @@ footer a {
   color: #B4B6C4;
   text-decoration: none;
   padding-right: 22px;
+  display: inline-block;
 }
 
 .login-container .container .right form .privacy a:hover {
@@ -1838,6 +1839,35 @@ footer a {
 @media screen and (min-width: 992px) {
   .login-container .container {
     padding-top: 80px;
+  }
+  .login-container .container .right {
+    padding: 40px 56px 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .login-container .container .right h4 {
+    margin-top: 66px;
+    margin-bottom: 32px;
+  }
+  .login-container .container .right form .form-label {
+    font-size: 1rem;
+  }
+  .login-container .container .right form .form-control {
+    font-size: 1rem;
+    padding: 11px 15px;
+  }
+  .login-container .container .right form .login-container__form-item {
+    margin-bottom: 24px;
+  }
+  .login-container .container .right form .login-container__form-separator {
+    margin-top: 56px;
+  }
+  .login-container .container .right form .privacy {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .login-container .container .right form .privacy a {
+    font-size: 1rem;
   }
   .login-container .container .right .form-password-responsive {
     margin-top: 0;

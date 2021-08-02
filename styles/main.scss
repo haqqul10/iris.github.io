@@ -1430,9 +1430,6 @@ footer{
             padding: 24px 24px 8px;
             border-radius: 6px;
             box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
-            // padding-top: 40px;
-            // padding-right: 56px;
-            // padding-left: 56px;
 
             h4{
                 font-family: 'Larsseit-medium';
@@ -1555,21 +1552,19 @@ footer{
                 .privacy{
                     margin-top: 1em;
                     margin-bottom: 1em;
-                    // margin-top: 24px;
-                    // margin-bottom: 24px;
-                }
 
-                .privacy a{
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 1.4;
-                    color: #B4B6C4;
-                    text-decoration: none;
-                    // color: #5D6180;
-                    padding-right: 22px;
-
-                    &:hover {
-                        text-decoration: underline;
+                    a {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.4;
+                        color: #B4B6C4;
+                        text-decoration: none;
+                        padding-right: 22px;
+                        display: inline-block;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -1736,7 +1731,7 @@ footer{
                 margin-top: 20px;
                 margin-bottom: 20px;
                 
-                & a{
+                a{
                     text-decoration: none;
                     color: $grayScale;
                     padding-right: 22px;
@@ -1845,6 +1840,44 @@ footer{
             padding-top: 80px;
 
             .right{
+                padding: 40px 56px 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+
+                h4 {
+                    margin-top: 66px;
+                    margin-bottom: 32px;
+                }
+                
+                form {
+                    .form-label {
+                        font-size: 1rem;
+                    }
+
+                    .form-control {
+                        font-size: 1rem;
+                        padding: 11px 15px;
+                    }
+
+                    .login-container__form-item {
+                        margin-bottom: 24px;
+                    }
+
+                    .login-container__form-separator {
+                        margin-top: 56px;
+                    }
+
+                    .privacy {
+                        margin-top: 24px;
+                        margin-bottom: 24px;
+
+                         a {
+                             font-size: 1rem;
+                         }
+                    }
+                }
+
+
                 .form-password-responsive{
                     margin-top: 0;
                 }
@@ -1855,6 +1888,7 @@ footer{
                     }
                 }
             }
+            
             .login-illustration {
                 display: block;
             }
