@@ -43,12 +43,12 @@
                           <label for="password" class="form-label">Password</label>
                           <div class="form-password">
                             <input type="password" class="form-control" id="password" placeholder="Password">
-                            <i class="bi bi-eye-slash me-3" id="togglePassword"></i>
+                            <i class="bi bi-eye me-3" id="togglePassword"></i>
                           </div>
                         </div>
                         <div class="col-12 col-lg-12 form-check">
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">By signing up I agree  to Sastly <a href="#">Terms & <br> Conditons</a> and <a href="#">Privacy Policy</a></label>
+                          <label class="form-check-label" for="exampleCheck1">By signing up I agree  to Sastly <a href="#">Terms & Conditons</a> and <a href="#">Privacy Policy</a></label>
                         </div>
                         <div class="col-12 col-lg-12">
                           <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Sign Up</button>
@@ -80,7 +80,7 @@
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
         password.setAttribute('type', type);
         // toggle the eye / eye slash icon
-        this.classList.toggle('bi-eye');
+        this.classList.toggle('bi-eye-flash');
     });
     </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
