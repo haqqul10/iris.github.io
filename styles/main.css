@@ -1542,7 +1542,6 @@ footer a {
 }
 
 .login-container .container .right form .form-password .bi-eye-slash::before {
-  content: "\f320";
   font-size: 16px;
 }
 
