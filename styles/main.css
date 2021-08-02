@@ -1434,15 +1434,29 @@ footer a {
   padding-top: 40px;
 }
 
+.login-container .container .login-container__inner {
+  position: relative;
+  z-index: 5;
+}
+
 .login-container .container .left {
   background-color: #221B4A;
+  background-image: url(../images/login/Bg2.png);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
   border-radius: 6px 0px 0px 6px;
+}
+
+.login-container .container .left .login-container__left-image {
+  width: 100%;
+  height: auto;
 }
 
 .login-container .container .right {
   background-color: #18103E;
   padding: 24px 24px 8px;
-  border-radius: 0px 6px 6px 0px;
+  border-radius: 6px;
   -webkit-box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
           box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
 }
@@ -1480,7 +1494,7 @@ footer a {
 }
 
 .login-container .container .right form .login-container__form-field-gradient {
-  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   position: absolute;
   top: 0;
   left: 0;
@@ -1497,7 +1511,7 @@ footer a {
 .login-container .container .right form .form-control {
   font-size: 14px;
   padding: 10px 14px;
-  border: 2px solid #0F0635;
+  border: 1px solid #0F0635;
   background-color: #0F0635;
   color: white;
   position: relative;
@@ -1514,6 +1528,22 @@ footer a {
 
 .login-container .container .right form .form-control:focus + .login-container__form-field-gradient {
   z-index: 0;
+}
+
+.login-container .container .right form .form-password {
+  position: relative;
+}
+
+.login-container .container .right form .form-password #togglePassword {
+  position: absolute;
+  top: 26%;
+  right: 0;
+  bottom: 0;
+}
+
+.login-container .container .right form .form-password .bi-eye-slash::before {
+  content: "\f320";
+  font-size: 16px;
 }
 
 .login-container .container .right form .btn-primary {
@@ -1557,22 +1587,6 @@ footer a {
 
 .login-container .container .right form .privacy a:hover {
   text-decoration: underline;
-}
-
-.login-container .container .right .form-password {
-  position: relative;
-}
-
-.login-container .container .right .form-password #togglePassword {
-  position: absolute;
-  top: 26%;
-  right: 0;
-  bottom: 0;
-}
-
-.login-container .container .right .form-password .bi-eye-slash::before {
-  content: "\f320";
-  font-size: 16px;
 }
 
 .login-container .container .right .form-check {
@@ -1669,11 +1683,6 @@ footer a {
   border-radius: 6px;
 }
 
-.waiting-container .container .waiting-list h4 {
-  font-size: 24px;
-  font-family: 'Larsseit-medium';
-}
-
 @media (min-width: 768px) {
   .waiting-container .container .waiting-list {
     -webkit-box-flex: 0;
@@ -1681,6 +1690,11 @@ footer a {
             flex: 0 0 auto;
     width: 522px;
   }
+}
+
+.waiting-container .container .waiting-list h4 {
+  font-size: 24px;
+  font-family: 'Larsseit-medium';
 }
 
 .waiting-container .container .waiting-list .form-control {
@@ -1819,9 +1833,6 @@ footer a {
   .login-container .container .right .form-password .bi-eye-slash::before {
     font-size: 24px;
   }
-  .login-container .container .login-illustration {
-    display: block;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1833,6 +1844,9 @@ footer a {
   }
   .login-container .container .right .form-password .bi-eye-slash::before {
     font-size: 24px;
+  }
+  .login-container .container .login-illustration {
+    display: block;
   }
   .waiting-container .container {
     padding-top: 70px;

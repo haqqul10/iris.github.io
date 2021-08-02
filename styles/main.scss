@@ -1405,16 +1405,30 @@ footer{
 
     .container{
         padding-top: 40px;
+
+        .login-container__inner {
+            position: relative;
+            z-index: 5;
+        }
         
         .left{
             background-color: $color2;
+            background-image: url(../images/login/Bg2.png);
+            background-size: cover;
+            background-position:center;
+            padding: 0;
             border-radius: 6px 0px 0px 6px;
+
+            .login-container__left-image {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .right{
             background-color: #18103E;
             padding: 24px 24px 8px;
-            border-radius: 0px 6px 6px 0px;
+            border-radius: 6px;
             box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
             // padding-top: 40px;
             // padding-right: 56px;
@@ -1461,7 +1475,8 @@ footer{
                 }
                 
                 .login-container__form-field-gradient {
-                    background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%) ;
+                    // background: linear-gradient(228.14deg, #861C9B 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #4818EC 70.77%) ;
+                    background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -1477,7 +1492,7 @@ footer{
                 .form-control{
                     font-size: 14px;
                     padding: 10px 14px;
-                    border: 2px solid #0F0635;
+                    border: 1px solid #0F0635;
                     background-color: #0F0635;
                     color: white;
                     position: relative;
@@ -1492,6 +1507,23 @@ footer{
                         & + .login-container__form-field-gradient {
                             z-index: 0;
                         }
+                    }
+                }
+
+                .form-password{
+                    position: relative;
+    
+                    #togglePassword{
+                        position: absolute;
+                        top: 26%;
+                        right: 0;
+                        // left: 0;
+                        bottom: 0;
+                    }
+
+                    .bi-eye-slash::before {
+                        content: "\f320";
+                        font-size: 16px;
                     }
                 }
 
@@ -1521,11 +1553,12 @@ footer{
                 }
 
                 .privacy{
-                    // margin-top: 24px;
                     margin-top: 1em;
                     margin-bottom: 1em;
+                    // margin-top: 24px;
                     // margin-bottom: 24px;
                 }
+
                 .privacy a{
                     font-size: 14px;
                     font-weight: 400;
@@ -1541,31 +1574,18 @@ footer{
                 }
             }
 
-            .form-password{
-                position: relative;
-
-                #togglePassword{
-                    position: absolute;
-                    top: 26%;
-                    right: 0;
-                    // left: 0;
-                    bottom: 0;
-                }
-                .bi-eye-slash::before {
-                    content: "\f320";
-                    font-size: 16px;
-                }
-            }
             .form-check{
                 margin-top: 16px;
                 padding-left: 36px;
                 padding-right: 36px;
             }
+
             .input-group-text{
                 background-color: $color1;
                 border: none;
                 border-radius: 6px;
             }
+
             .form-password-responsive{
                 margin-top: 24px;
             }
@@ -1577,6 +1597,7 @@ footer{
 
             .form-check-label{
                 color: #5D6180;
+                
                 a{
                     color: #5D6180;
                     font-size: 16px;
@@ -1625,39 +1646,41 @@ footer{
         padding-top: 65px;
 
         .form-password{
-                position: relative;
+            position: relative;
 
-                #togglePassword{
-                    position: absolute;
-                    top: 23%;
-                    right: 0;
-                    // left: 0;
-                    bottom: 0;
-                }
-                #NewTogglePassword{
-                    position: absolute;
-                    top: 23%;
-                    right: 0;
-                    // left: 0;
-                    bottom: 0;
-                }
+            #togglePassword{
+                position: absolute;
+                top: 23%;
+                right: 0;
+                // left: 0;
+                bottom: 0;
             }
+            
+            #NewTogglePassword{
+                position: absolute;
+                top: 23%;
+                right: 0;
+                // left: 0;
+                bottom: 0;
+            }
+        }
 
         .waiting-list{
             background-color: $color2;
             padding-left: 40px;
             padding-right: 40px;
             border-radius: 6px;
+            
+            @media (min-width: 768px) {
+                flex: 0 0 auto;
+                width: 522px;
+            }
 
             h4{
                 font-size: 24px;
                 font-family: 'Larsseit-medium';
             }
-            
-            @media (min-width: 768px) {
-                flex: 0 0 auto;
-                width: 522px;
-                }
+
             .form-control{
                 padding: 12px 16px;
                 border: 1px solid $color2;
@@ -1665,6 +1688,7 @@ footer{
                 border-radius: 6px;
                 color: white;
                 -webkit-appearance: none;
+
                 &:focus{
                     box-shadow: 0 0 0 0;
                     border-image-slice: 1;
@@ -1674,12 +1698,15 @@ footer{
                     border-radius: 6px;
                 }
             }
+
             .form-check-input{
                 background-color: $color1;
                 border-color: $gray; 
             }
+
             .form-check-label{
                 color: $gray;
+
                 a{
                     color: $gray;
                 }
@@ -1687,10 +1714,12 @@ footer{
         
             .btn-primary{
                 @include tombol;
+
                 &:hover{
                     opacity: 0.9;
                 }
             }
+
             .forget-password{
                 font-style: normal;
                 font-weight: 500;
@@ -1698,18 +1727,21 @@ footer{
                 color: $textColor !important;
                 text-decoration: none;
             }
+
             hr{
                 color: $gray;
             }
+
             .privacy{
                 margin-top: 20px;
                 margin-bottom: 20px;
-            }
-            .privacy a{
-                text-decoration: none;
-                color: $grayScale;
-                padding-right: 22px;
-                font-weight: 400;
+                
+                & a{
+                    text-decoration: none;
+                    color: $grayScale;
+                    padding-right: 22px;
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -1799,9 +1831,6 @@ footer{
                     }
                 }
             }
-            .login-illustration {
-                display: block;
-            }
         }
     }
 
@@ -1825,6 +1854,9 @@ footer{
                         font-size: 24px;
                     }
                 }
+            }
+            .login-illustration {
+                display: block;
             }
         }
     }
