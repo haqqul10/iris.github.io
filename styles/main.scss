@@ -353,6 +353,7 @@ body{
             border: 1px solid #33275C;
             border-radius: 5px;
             margin: 10px;
+            background-color: transparent;
             .card-header{
                 background-color: $color2;
                 color: white;
@@ -482,7 +483,7 @@ body{
             left: -260px;
             right: 0;
             text-align: center;
-            top: -180px;
+            top: -300px;
             bottom: 0;
             margin: auto;
             width: 920px;
@@ -491,7 +492,7 @@ body{
 
         .illustration-404{
             width: 234px;
-            margin-top: 90px;
+            margin-top: 50px;
         }
         .display-4{
             margin-top: 20px;
@@ -504,11 +505,12 @@ body{
             color: $graytext;
             padding-bottom: 32px;
         }
-        .btn-primary{
+        .btn-backtohome{
             background-color: $color6;
             border: none;
             padding: 12px 16px;
             width: 142px;
+            color: white;
 
             &:hover{
                 background-image: $gradienColor;
@@ -531,6 +533,10 @@ body{
     
     .container{
         padding: auto;
+        .navbar-toggler{
+            border: none;
+        }
+
     }
 
     .navbar-nav{
@@ -565,32 +571,57 @@ body{
 
 // card-Dashboard
 .card-dashboard{
+    .container{
+        h2{
+            margin-bottom: 0;
+            margin-top: 35px;
+        }
+    }
     .card{
         background-color: $color2;
         height: 190px;
-        padding: 10px 0px 10px 10px;
+        padding: 0;
         position: relative;
         margin-top: 24px;
-        margin-right: 10px;
+        margin-right: 0px;
+        border-radius: 6px;
 
         .card-body{
+            padding-left: 32px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            padding-right: 32px;
+
+            .card-image{
+                margin-bottom: 20px;
+            }
+
+            .card-subtitle-text{
+                font-weight: 500;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
             .card-subtitle{
                 font-weight: 500;
                 font-size: 16px;
+                margin-bottom: 16px;
             }
     
             .card-title{
                 font-size: 30px;
                 color: white;
                 font-weight: 600;
+                margin-bottom: 0;
             }
     
             .card-text{
                 background: rgba(40, 199, 111, 0.12);
                 width: 100px;
                 border-radius: 6px;
-                padding: 6px 8px;
+                padding: 4px 8px;
                 color: #28C76F;
+                height: 32px;
+                margin-top: 32px;
             }
 
             .title{
@@ -598,6 +629,7 @@ body{
                 color: $graytext;
                 margin-top: 16px;
                 font-weight: 400;
+                margin-bottom: 0;
                 span{
                     font-size: 16px;
                     font-weight: 500;
@@ -605,14 +637,17 @@ body{
                 }
             }
 
-            .btn-primary{
+            .btn-renew{
                 background-color: $color6;
                 border-radius: 6px;
-                padding: 10px 16px;
+                padding: 11px 16px;
                 border: none;
                 width: 100%;
-                font-weight: 600;
+                height: 44px;
+                font-weight: 500;
                 line-height: 125%;
+                margin-top: 20px;
+                color: white;
             }
         }
 
@@ -632,23 +667,41 @@ body{
 .checkout{
     margin-top: 32px;
 
+    .container{
+        .table-content{
+            background-color: $color2;
+            width: auto;
+            .table-judul{
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+    
+            h5{
+                margin-left: 0px;
+                font-size: 20px; 
+                font-weight: 600;
+            }
+            
+            .pagination-checkout{
+                justify-content: flex-start;
+            }
+    
+        }
+    }
+
     .announcements{
         margin-top: 30px;
     }
 
-    .table-content{
-        background-color: $color2;
-
-        h5{
-            margin-left: 0px;
-        }
-    }
 
     .paginition{
         background-color: $color4;
         padding: 6px 5px;
         margin-bottom: 10px;
         border-radius: 6px;
+        height: 42px;
         
         
         .nav-pills{
@@ -656,16 +709,18 @@ body{
                 #pills-home-tab{
                     margin-left: 7px;
                 }
-                .nav-link{
+                .nav-link-background{
                     color: white;
                     font-size: 14px;
                     font-weight: 600;
-                    // width: 125px;
-                    width: 100%;
+                    width: 125px;
+                    padding: 0;
+                    height: 30px;
+                    margin-left: 10px;
                 }
-                .nav-link.active{
+                .nav-link-background.active{
                     background-color: $color6;
-                    width: 100%;
+                    width: 125px;
                 }
             }
         }
@@ -713,20 +768,33 @@ body{
     ::-webkit-scrollbar-thumb:window-inactive {
         background: white;
     }
-    .scroll1{
-        max-width: auto;
-        .scroll2{
-            min-width: auto;
+    .dataTables_scroll{
+        .dataTables_scrollHead{
+            width: 100%;
+            .dataTables_scrollHeadInner{
+                width: 100%;
+                .dataTable{
+                    margin-bottom: 0px;
+                    width: 100%;
+                }
+            }
         }
-    }             
+    }
+    
+    
     .table {
         // position: relative;
-        padding-left: 40px;
+        // padding-left: 40px;
+        margin-bottom: 0;
 
 
         .form-check-input {
             background-color: transparent;
             border-color: $gray;
+        }
+        thead{
+            background-color: #33275C;
+            border-radius: 6px;
         }
 
         tbody{
@@ -769,36 +837,57 @@ footer{
         margin-bottom: 20px;
         padding: auto;
         .flex-right{
-            justify-content: center;
+            justify-content: space-between;
         }
         .btn-group{
             // position: relative;
             
             form{
                 position: relative;
+                z-index: 1;
+                input::placeholder{
+                    font-size: 12px;
+                    color: #8D899E;
+                    padding-top: 4px;
+                }
+
                 .form-control{ 
                     width: 170px;
                     height: 44px;
-                    background-color: transparent;
+                    background-color: #1B143C;
                     border-color: #3A3456;
                     border-radius: 5px 0px 0 5px;
                     padding-left: 40px;
                     color: white;
                     border-right: none;
-                    position: relative;
+                    // position: relative; 
 
                     &:focus{
                         position: relative;
-                        z-index: 5;
-                        box-shadow: 0 0 0 0;
-                        border-radius: 5px;
-                        border: 1px solid $color1;
-                        border-image-slice: 6;
-                        border-width: 1;
-                        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                        outline: none;
+                        box-shadow: none;
+                        border-radius: 6px;
+                        border: 2px solid transparent;
+                        // border-right: none;
+                        // border-top-right-radius: 0;  
+                        // border-bottom-right-radius: 0;                    
+                        + label {
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%) ;
+                        }
                     }
-
-                    
+                    + label {
+                        border-radius: 6px;
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
+                    }    
                 }
                 img{
                     position: absolute;
@@ -806,13 +895,14 @@ footer{
                     right: 0;
                     left: 4%;
                     bottom: 0;
+                    z-index: 1;
                 }
             }
-            .btn-secondary{
+            .btn-secondary-dropdown{
                 background-color: transparent;
                 border-left: none;
-                padding-left: 3px;
-                padding-right: 0px;
+                padding-left: 16px;
+                padding-right: 16px;
                 border-color: #3A3456;
                 position: relative;
 
@@ -823,17 +913,10 @@ footer{
                     bottom: 6px;
                     left: 0;
                     content: "";
+                    z-index: 1;
                 }
-
                 &:focus{
-                    position: relative;
-                    z-index: 5;
-                    box-shadow: 0 0 0 0;
-                    border-radius: 5px;
-                    border: 1px solid $color1;
-                    border-image-slice: 6;
-                    border-width: 1;
-                    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+                    box-shadow: none;
                 }
             }
         }
@@ -842,6 +925,9 @@ footer{
             .input-group-text{
                 background-color: transparent;
                 border-color: #3A3456;
+                width: 44px;
+                height: 44px;
+                padding: 6px;
             }
         }
 
@@ -894,14 +980,21 @@ footer{
         padding: 0;
         border-radius: 6px;
         
+        .dataTable{
+            margin-bottom: 0;
+        }
         .table {
-            // position: relative;
             padding-left: 40px;
-
+            text-align: left;
+            .items{
+                padding-left: 10px;
+            }
 
             .form-check-input {
                 background-color: transparent;
-                border-color: $gray;
+                border-color: #BBB9C5;
+                width: 20px;
+                height: 20px;
             }
 
             tbody{
@@ -910,19 +1003,29 @@ footer{
                 a{
                     padding-right: 28px;
                 }
+                .img-shoe{
+                    width: 48px;
+                    height: 48px;
+                }
             }
             th {
                 border-style: none;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                padding-left: 30px;
+                padding-left: 48px;
             }
             td{
-                padding-top: 15px;
-                padding-bottom: 15px;
-                padding-left: 30px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-left: 48px;
                 border-color: $gray;
                 color: #BBB9C5;
+            }
+            tr:nth-child(1){
+                padding-left: 0;
+            }
+            tr>td{
+                border-color: #3A3456;
             }
 
         }
@@ -962,17 +1065,22 @@ footer{
         }
         .dataTables_info{
             color: #B9B9C3;
-            padding: 12px 16px;
+            margin-top: 25px;
+            padding-left: 12px;
         }
 
         .dataTables_scrollHead{
             border-radius: 6px;
         }
+        .dataTables_paginate{
+            margin-top: 14px;
+        }
         .page-link{
             background-color: transparent;
             color: #BBB9C5;
             border: none;
-            padding: 12px 16px;
+            padding: 12px 12px;
+            font-size: 14px;
 
             &:focus{
                 box-shadow: none;
@@ -986,14 +1094,14 @@ footer{
             background-color: $color6;
             border-radius: 50%;
             color: white;
-            height: 35px;
-            width: 35px;
+            height: 32px;
+            width: 32px;
             margin-top: 9px;
 
             .page-link {
                 color: white;
-                margin-top: -6px;
-                margin-left: -3px;
+                margin-top: -8px;
+                margin-left: 0px;
                 font-weight: 600;
             }
 
@@ -1001,7 +1109,7 @@ footer{
         }
         .pagination-default{
             img{
-                height: 25px;
+                height: 16px;
             }
         }
     }
@@ -1452,6 +1560,7 @@ footer{
                     background-color: #0F0635;
                     border-radius: 6px;
                     color: white;
+                    height: 50px;
     
                     &:focus {
                         position: relative;
@@ -1652,6 +1761,7 @@ footer{
                     background-color: #0F0635;
                     border-radius: 6px;
                     color: white;
+                    height: 50px;
                     // -webkit-appearance: none;
                     &:focus {
                         position: relative;
@@ -1764,7 +1874,7 @@ footer{
         background-color: $color1;
         color: white;
         text-align: center;
-        overflow-x: hidden;
+        overflow: hidden;
 
         img{
             margin-left: auto;
@@ -1826,6 +1936,26 @@ footer{
                         font-size: 24px;
                     }
                 }
+            }
+        }
+    }
+
+    // dashboard
+    .checkout{
+        .container{
+            .table-content{
+                width: 100%;
+            }
+        }
+    }
+
+    // 404
+    .body-404{
+        .container-fluid{
+            .pattern{
+                    width: 1440px;
+                    top: -300px;
+                    left: -250px;
             }
         }
     }
@@ -1922,6 +2052,10 @@ footer{
                 font-size: 32px;
                 font-weight: 600;
             }
+
+            .card{
+                margin-right: 5px;
+            }
         }
     }
 
@@ -1935,9 +2069,8 @@ footer{
             
             .table-content{
                 width: 965px;
-
-                h5{
-                    margin-left: 20px;
+                .pagination-checkout{
+                    justify-content: flex-end;
                 }
             }
         }
@@ -1947,6 +2080,9 @@ footer{
                 .nav-item{
                     #pills-home-tab{
                         margin-left: 0px;
+                    }
+                    .nav-link-background{
+                        margin-left: auto;
                     }
                     .nav-link{
                         width: 125px;
@@ -1971,7 +2107,7 @@ footer{
             .btn-group{
                 form{
                     .form-control{
-                        width: auto;
+                        width: 190px;
                     }
                 }
             }
@@ -1991,6 +2127,11 @@ footer{
         .table-content{
             .dataTables_paginate {
                 float: right;
+            }
+            .table{
+                .items{
+                    padding-left: 0;
+                }
             }
         }
     }
@@ -2175,18 +2316,25 @@ footer{
         .container-fluid{
             .pattern{
                 width: 1440px;
-                top: -100px;
+                top: -200px;
                 left: 0;
             }
             .illustration-404{
                 width: 470px;
             }
             .display-4{
-                margin-top: 20px;
-                font-size: 32px;
+                margin-top: 40px;
+                font-size: 38px;
+                font-weight: 500;
+                line-height: 46px;
+                margin-bottom: 0;
+                padding-bottom: 0;
             }
             .lead{
                 font-size: 18px;
+                margin-top: 12px;
+                margin-bottom: 32px;
+                padding-bottom: 0;
            }
         }
 
