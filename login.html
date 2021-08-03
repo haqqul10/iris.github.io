@@ -36,16 +36,16 @@
                       <form class="text-white">
                         <div class="login-container__form-item">
                           <label for="Email" class="form-label">Email Address</label>
-                          <div class="login-container__form-field">
+                          <div class="login-container__form-field animasi-gradient">
                             <input type="email" class="form-control" id="Email" placeholder="Email Address">
-                            <span class="login-container__form-field-gradient"></span>
+                            <span class="animasi-gradient-span login-container__form-field-gradient"></span>
                           </div>
                         </div>
                         <div class="login-container__form-item">
                           <label for="password" class="form-label" id="basic-addon2">Password</label>
-                          <div class="form-password login-container__form-field">
+                          <div class="form-password login-container__form-field animasi-gradient">
                             <input type="password" class="form-control" id="password" placeholder="Password">
-                            <span class="login-container__form-field-gradient"></span>
+                            <span class="login-container__form-field-gradient animasi-gradient-span"></span>
                             <i class="bi bi-eye-slash me-3 login-container__form-field-pwicon" id="togglePassword"></i>
                           </div>
                         </div>
@@ -79,7 +79,7 @@
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
         password.setAttribute('type', type);
         // toggle the eye / eye slash icon
-        this.classList.toggle('bi-eye');
+        this.classList.toggle('bi-eye-slash');
     });
     </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->

@@ -2,6 +2,8 @@
 @import 'variables';
 @import 'mixins';
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
 @font-face {
   font-family: 'Larsseit-bold';
   src: url('../libraries/font-bold/Larsseit-Bold.eot') format('eot'), /* IE6-IE8 */
@@ -1430,7 +1432,7 @@ footer{
             padding: 24px 24px 8px;
             border-radius: 6px;
             box-shadow: 0px 5.10345px 25.5172px rgba(6, 12, 59, 0.08);
-
+ 
             h4{
                 font-family: 'Larsseit-medium';
                 font-size: 18px;
@@ -1454,11 +1456,20 @@ footer{
                 // letter-spacing: 1px;
             }
 
+            .title-text{
+                color: #BBB9C5; 
+                margin-bottom: 0;
+                font-size:16px; 
+                margin-top: -24px; 
+                line-height: 22px; 
+                font-family: 'Inter', sans-serif;
+            }
+
             form{
                 position: relative;
 
                 .login-container__form-item {
-                    margin-bottom: 19px;
+                    margin-bottom: 24px;
                 }
                 
                 .login-container__form-field {
@@ -1485,10 +1496,15 @@ footer{
                     z-index: -1;
                     transition: border-color .25s ease-in-out;    
                 }
+                
+                .animasi-gradient{
+                    // position: relative;
+                    // z-index: 1;
+                }
 
                 .form-control{
                     font-size: 14px;
-                    padding: 10px 14px;
+                    padding: 15px 16px;
                     border: 1px solid #0F0635;
                     background-color: #0F0635;
                     color: white;
@@ -1538,6 +1554,10 @@ footer{
                 .login-container__form-link {
                     text-align: center;
                     margin-bottom: 2em;
+
+                    a {
+                        display: inline-block;
+                    }
                 }
 
                 .login-container__form-separator{
@@ -1564,6 +1584,10 @@ footer{
                             text-decoration: underline;
                         }
                     }
+                }
+                .bi-eye::before {
+                    content: "\f321";
+                    font-size: 16px;
                 }
             }
 
@@ -1592,7 +1616,7 @@ footer{
                 color: #5D6180;
                 
                 a{
-                    color: #5D6180;
+                    color: #B4B6C4;
                     font-size: 16px;
                     line-height: 26px;
                 }
@@ -1616,6 +1640,7 @@ footer{
     background-image:$gradienBg;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100vh;
 }
 .waiting-container{
     position: relative;
@@ -1625,14 +1650,15 @@ footer{
     margin-right: auto;
     max-width: 1144px;
     width: 100%;
+    
 
     .login-illustrasi{
         position: absolute;
-        top: -185px;
+        top: -305px;
         left: auto;
         bottom: 0;
-        right: -200px;
-        width: 900px;
+        right: -365px;
+        width: 930px;
     }
 
     .container{
@@ -1640,18 +1666,17 @@ footer{
 
         .form-password{
             position: relative;
-
+            z-index: 1;
             #togglePassword{
                 position: absolute;
-                top: 23%;
+                top: 26%;
                 right: 0;
                 // left: 0;
                 bottom: 0;
             }
-            
             #NewTogglePassword{
                 position: absolute;
-                top: 23%;
+                top: 26%;
                 right: 0;
                 // left: 0;
                 bottom: 0;
@@ -1659,42 +1684,74 @@ footer{
         }
 
         .waiting-list{
-            background-color: $color2;
-            padding-left: 40px;
-            padding-right: 40px;
+            background-color: #18103E;
+            padding-top: 24px;
+            padding-right: 24px;
+            padding-left: 24px;
             border-radius: 6px;
-            
-            @media (min-width: 768px) {
-                flex: 0 0 auto;
-                width: 522px;
+            .header-createpassword{
+                margin-top: 66px; 
+                margin-bottom: 0; 
+                line-height: 30px;
             }
-
             h4{
                 font-size: 24px;
                 font-family: 'Larsseit-medium';
             }
-
-            .form-control{
-                padding: 12px 16px;
-                border: 1px solid $color2;
-                background-color: #1B143C;
-                border-radius: 6px;
-                color: white;
-                -webkit-appearance: none;
-
-                &:focus{
-                    box-shadow: 0 0 0 0;
-                    border-image-slice: 1;
-                    border-width: 1;
-                    // border: 1px solid #1B143C;
-                    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+            .title-text-createpassword{
+                color: #BBB9C5; 
+                line-height: 22px; 
+                font-size:16px; 
+                margin-bottom: 0; 
+                margin-top: 10px; 
+                font-family: 'Inter', sans-serif;
+            }
+            
+            @media (min-width: 768px) {
+                flex: 0 0 auto;
+                width: 522px;
+                }
+            form{
+                position: relative;
+            
+                .form-control{
+                    padding: 12px 16px;
+                    border: 2px solid #0F0635;
+                    background-color: #0F0635;
                     border-radius: 6px;
+                    color: white;
+                    // -webkit-appearance: none;
+                    &:focus {
+                        position: relative;
+                        outline: none;
+                        box-shadow: none;
+                        border-radius: 6px;
+                        border: 2px solid transparent;
+
+                        + span {
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%) ;
+                        }
+                    }
+                    + span {
+                        border-radius: 6px;
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
+                    }
                 }
             }
 
             .form-check-input{
                 background-color: $color1;
                 border-color: $gray; 
+                
             }
 
             .form-check-label{
@@ -1706,8 +1763,13 @@ footer{
             }
         
             .btn-primary{
-                @include tombol;
-
+                background: $gradienColor;
+                border-radius: 6px;
+                padding: 12px 48px;
+                border: none;
+                width: 100%;
+                margin-top: 32px;
+                height: 50px;
                 &:hover{
                     opacity: 0.9;
                 }
@@ -1726,15 +1788,14 @@ footer{
             }
 
             .privacy{
-                margin-top: 20px;
-                margin-bottom: 20px;
-                
-                a{
-                    text-decoration: none;
-                    color: $grayScale;
-                    padding-right: 22px;
-                    font-weight: 400;
-                }
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+            .privacy a{
+                text-decoration: none;
+                color: $grayScale;
+                padding-right: 22px;
+                font-weight: 400;
             }
         }
     }
@@ -1745,6 +1806,7 @@ footer{
     background-image:$gradienBg;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100vh;
 }
 .container-success{
     position: relative;
@@ -1757,34 +1819,49 @@ footer{
 
     .login-illustrasi{
         position: absolute;
-        top: -185px;
+        top: -305px;
         left: auto;
         bottom: 0;
-        right: -200px;
-        width: 900px;
+        right: -365px;
+        width: 930px;
     }
     .container{
-        padding-top: 200px;
-        margin-bottom: 200px;
+        padding-top: 231px;
+        padding-bottom: 223px;
         
     }
     .card{
-        height: 380px;
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 5;
         background-color: $color1;
         color: white;
         text-align: center;
+        overflow-x: hidden;
+
+        img{
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 38px;
+            padding-bottom: 28px;
+        }
         .card-body{
+            padding: 0;
+            position: relative;
             .card-title{
                 font-family: 'Larsseit-medium';
                 font-size: 20px;
                 line-height: 130%;
+                margin-bottom: 0;
             }
             .card-text{
+                margin-top: 16px;
                 font-size: 14px;
-                line-height: 115%;
+                // line-height: 115%;
+                margin-bottom: 48px;
                 color: #BBB9C5;
+                font-family: 'Inter', sans-serif;
             }
         }
     }
@@ -1875,12 +1952,14 @@ footer{
                     }
                 }
 
-
                 .form-password-responsive{
                     margin-top: 0;
                 }
 
                 .form-password{
+                    .bi-eye::before{
+                        font-size: 24px;
+                    }
                     .bi-eye-slash::before{
                         font-size: 24px;
                     }
@@ -1895,8 +1974,21 @@ footer{
 
     // waiting list
     .waiting-container{
+        
         .container{
-            padding-top: 70px;
+            padding-top: 80px;
+
+            .waiting-list{
+                padding-top: 40px;
+                padding-right: 56px;
+                padding-left: 56px;
+
+                .form-password{
+                    .bi-eye::before{
+                        font-size: 24px;
+                    }
+                }
+            }
         }
     }
 
@@ -1904,10 +1996,10 @@ footer{
     .container-success{
         .card{
             width: 522px;
-            height: 432px;
             .card-body{
                 .card-title{
                     font-size: 24px;
+                    margin-top: 10px;
                 }
                 .card-text{
                     font-size: 16px;
@@ -1963,14 +2055,18 @@ footer{
         }
         .paginition{
             margin-right: 25px;
+
             .nav-pills{
                 .nav-item{
+                    
                     #pills-home-tab{
                         margin-left: 0px;
                     }
+
                     .nav-link{
                         width: 125px;
                     }
+
                     .nav-link.active{
                         width: 125px;
                     }

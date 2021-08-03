@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 @font-face {
   font-family: 'Larsseit-bold';
   src: url("../libraries/font-bold/Larsseit-Bold.eot") format("eot"), url("../libraries/font-bold/Larsseit-Bold.svg") format("svg"), url("../libraries/font-bold/Larsseit-Bold.ttf") format("ttf"), url("../libraries/font-bold/Larsseit-Bold.woff") format("woff"), url("../libraries/font-bold/Larsseit-Bold.woff2") format("woff2");
@@ -1475,12 +1476,21 @@ footer a {
   margin-bottom: 12px;
 }
 
+.login-container .container .right .title-text {
+  color: #BBB9C5;
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-top: -24px;
+  line-height: 22px;
+  font-family: 'Inter', sans-serif;
+}
+
 .login-container .container .right form {
   position: relative;
 }
 
 .login-container .container .right form .login-container__form-item {
-  margin-bottom: 19px;
+  margin-bottom: 24px;
 }
 
 .login-container .container .right form .login-container__form-field {
@@ -1510,7 +1520,7 @@ footer a {
 
 .login-container .container .right form .form-control {
   font-size: 14px;
-  padding: 10px 14px;
+  padding: 15px 16px;
   border: 1px solid #0F0635;
   background-color: #0F0635;
   color: white;
@@ -1563,6 +1573,10 @@ footer a {
   margin-bottom: 2em;
 }
 
+.login-container .container .right form .login-container__form-link a {
+  display: inline-block;
+}
+
 .login-container .container .right form .login-container__form-separator {
   color: #5D6180;
   display: block;
@@ -1587,6 +1601,11 @@ footer a {
 
 .login-container .container .right form .privacy a:hover {
   text-decoration: underline;
+}
+
+.login-container .container .right form .bi-eye::before {
+  content: "\f321";
+  font-size: 16px;
 }
 
 .login-container .container .right .form-check {
@@ -1615,7 +1634,7 @@ footer a {
 }
 
 .login-container .container .right .form-check-label a {
-  color: #5D6180;
+  color: #B4B6C4;
   font-size: 16px;
   line-height: 26px;
 }
@@ -1633,6 +1652,7 @@ footer a {
   background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
   overflow-x: hidden;
   overflow-y: scroll;
+  height: 100vh;
 }
 
 .waiting-container {
@@ -1647,11 +1667,11 @@ footer a {
 
 .waiting-container .login-illustrasi {
   position: absolute;
-  top: -185px;
+  top: -305px;
   left: auto;
   bottom: 0;
-  right: -200px;
-  width: 900px;
+  right: -365px;
+  width: 930px;
 }
 
 .waiting-container .container {
@@ -1660,27 +1680,49 @@ footer a {
 
 .waiting-container .container .form-password {
   position: relative;
+  z-index: 1;
 }
 
 .waiting-container .container .form-password #togglePassword {
   position: absolute;
-  top: 23%;
+  top: 26%;
   right: 0;
   bottom: 0;
 }
 
 .waiting-container .container .form-password #NewTogglePassword {
   position: absolute;
-  top: 23%;
+  top: 26%;
   right: 0;
   bottom: 0;
 }
 
 .waiting-container .container .waiting-list {
-  background-color: #221B4A;
-  padding-left: 40px;
-  padding-right: 40px;
+  background-color: #18103E;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
   border-radius: 6px;
+}
+
+.waiting-container .container .waiting-list .header-createpassword {
+  margin-top: 66px;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+.waiting-container .container .waiting-list h4 {
+  font-size: 24px;
+  font-family: 'Larsseit-medium';
+}
+
+.waiting-container .container .waiting-list .title-text-createpassword {
+  color: #BBB9C5;
+  line-height: 22px;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -1692,27 +1734,43 @@ footer a {
   }
 }
 
-.waiting-container .container .waiting-list h4 {
-  font-size: 24px;
-  font-family: 'Larsseit-medium';
+.waiting-container .container .waiting-list form {
+  position: relative;
 }
 
-.waiting-container .container .waiting-list .form-control {
+.waiting-container .container .waiting-list form .form-control {
   padding: 12px 16px;
-  border: 1px solid #221B4A;
-  background-color: #1B143C;
+  border: 2px solid #0F0635;
+  background-color: #0F0635;
   border-radius: 6px;
   color: white;
-  -webkit-appearance: none;
 }
 
-.waiting-container .container .waiting-list .form-control:focus {
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
-  border-image-slice: 1;
-  border-width: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+.waiting-container .container .waiting-list form .form-control:focus {
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.waiting-container .container .waiting-list form .form-control:focus + span {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+}
+
+.waiting-container .container .waiting-list form .form-control + span {
+  border-radius: 6px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .waiting-container .container .waiting-list .form-check-input {
@@ -1731,10 +1789,11 @@ footer a {
 .waiting-container .container .waiting-list .btn-primary {
   background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
-  padding: 15px 48px;
+  padding: 12px 48px;
   border: none;
   width: 100%;
   margin-top: 32px;
+  height: 50px;
 }
 
 .waiting-container .container .waiting-list .btn-primary:hover {
@@ -1754,8 +1813,8 @@ footer a {
 }
 
 .waiting-container .container .waiting-list .privacy {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .waiting-container .container .waiting-list .privacy a {
@@ -1769,6 +1828,7 @@ footer a {
   background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
   overflow-x: hidden;
   overflow-y: scroll;
+  height: 100vh;
 }
 
 .container-success {
@@ -1783,37 +1843,54 @@ footer a {
 
 .container-success .login-illustrasi {
   position: absolute;
-  top: -185px;
+  top: -305px;
   left: auto;
   bottom: 0;
-  right: -200px;
-  width: 900px;
+  right: -365px;
+  width: 930px;
 }
 
 .container-success .container {
-  padding-top: 200px;
-  margin-bottom: 200px;
+  padding-top: 231px;
+  padding-bottom: 223px;
 }
 
 .container-success .card {
-  height: 380px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 5;
   background-color: #1B143C;
   color: white;
   text-align: center;
+  overflow-x: hidden;
+}
+
+.container-success .card img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 38px;
+  padding-bottom: 28px;
+}
+
+.container-success .card .card-body {
+  padding: 0;
+  position: relative;
 }
 
 .container-success .card .card-body .card-title {
   font-family: 'Larsseit-medium';
   font-size: 20px;
   line-height: 130%;
+  margin-bottom: 0;
 }
 
 .container-success .card .card-body .card-text {
+  margin-top: 16px;
   font-size: 14px;
-  line-height: 115%;
+  margin-bottom: 48px;
   color: #BBB9C5;
+  font-family: 'Inter', sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -1871,6 +1948,9 @@ footer a {
   .login-container .container .right .form-password-responsive {
     margin-top: 0;
   }
+  .login-container .container .right .form-password .bi-eye::before {
+    font-size: 24px;
+  }
   .login-container .container .right .form-password .bi-eye-slash::before {
     font-size: 24px;
   }
@@ -1878,14 +1958,22 @@ footer a {
     display: block;
   }
   .waiting-container .container {
-    padding-top: 70px;
+    padding-top: 80px;
+  }
+  .waiting-container .container .waiting-list {
+    padding-top: 40px;
+    padding-right: 56px;
+    padding-left: 56px;
+  }
+  .waiting-container .container .waiting-list .form-password .bi-eye::before {
+    font-size: 24px;
   }
   .container-success .card {
     width: 522px;
-    height: 432px;
   }
   .container-success .card .card-body .card-title {
     font-size: 24px;
+    margin-top: 10px;
   }
   .container-success .card .card-body .card-text {
     font-size: 16px;

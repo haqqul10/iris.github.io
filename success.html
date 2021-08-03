@@ -20,11 +20,12 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-9 col-lg-6">
-            <div class="card">
-              <img src="./images/login/success.png" class="img-fluid" alt="success">
-              <div class="card-body pt-2">
-                <h5 class="card-title">You have successfully joined the Iris <br> waiting list!e</h5>
-                <p class="card-text pt-3">Turn on notifications on Twitter to stay up to <br> date when we announce winning entries</p>
+            <div class="card" id="card">
+              <canvas id="confetti-canvas" style="display:block; z-index:999999; pointer-events:none; position:fixed; top:0" width="1044" height="522"></canvas>
+              <img src="./images/icons/Poppers.svg" class="img-fluid text-center" alt="success" width="210" height="190">
+              <div class="card-body">
+                <h5 class="card-title">You have successfully joined the Iris <br> waiting list!</h5>
+                <p class="card-text">Turn on notifications on Twitter to stay up to <br> date when we announce winning entries</p>
               </div>
             </div>
           </div>
@@ -38,6 +39,16 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="libraries/bootstrap/js/bootstrap.js"></script>
+    <script src="libraries/jquery/confetti.js"></script>
+    <!-- <script src="node_modules/confetti-js/dist/index.min.js"></script> -->
+
+    <script>
+      // var confetti_animasi = document.getElementById('card');
+      // var start = confetti.start();
+      // confetti_animasi.setAttribute( start );
+      confetti.start();
+      
+    </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
