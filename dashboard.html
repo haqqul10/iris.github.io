@@ -52,7 +52,7 @@
       <section class="card-dashboard">
         <div class="container">
           <div class="row">
-            <div class="col mt-5 text-white">
+            <div class="col text-white">
               <h2>Dashboard</h2>
             </div>
           </div>
@@ -60,18 +60,18 @@
             <div class="col-12 col-md-6 col-lg-3">
               <div class="card">
                 <div class="card-body">
-                  <h6 class="card-subtitle mb-2 text-white">Total Money Spent</h6>
-                  <h5 class="card-title pt-2">$8.921,00</h5>
-                  <p class="card-text mt-4"> <img src="images/icons/Icon.svg" alt="" class="pb-1"> 23.14%</p>
+                  <h6 class="card-subtitle text-white">Total Money Spent</h6>
+                  <h5 class="card-title">$8.921,00</h5>
+                  <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pb-1"> 23.14%</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
               <div class="card">
                 <div class="card-body">
-                  <img src="images/icons/card complite.svg" alt="" width="48">
-                  <h6 class="card-subtitle mt-4 text-white">Total checouts</h6>
-                  <h5 class="card-title mt-2">215</h5>
+                  <img class="card-image" src="images/icons/card complite.svg" alt="" width="48">
+                  <h6 class="card-subtitle-text text-white">Total checouts</h6>
+                  <h5 class="card-title">215</h5>
                 </div>
                 <img class="card-backgroud" src="images/icons/Group 804.svg" alt="" width="93">
               </div>
@@ -79,9 +79,9 @@
             <div class="col-12 col-md-6 col-lg-3">
               <div class="card">
                 <div class="card-body">
-                  <img src="images/icons/card cancel.svg" alt="" width="48">
-                  <h6 class="card-subtitle mt-4 text-white">Total Declines</h6>
-                  <h5 class="card-title mt-2">124</h5>
+                  <img class="card-image" src="images/icons/card cancel.svg" alt="" width="48">
+                  <h6 class="card-subtitle-text text-white">Total Declines</h6>
+                  <h5 class="card-title">124</h5>
                 </div>
                 <img class="card-backgroud" src="images/icons/Group 804.svg" alt="" width="93">
               </div>
@@ -91,7 +91,7 @@
                 <div class="card-body text-white">
                   <h6 class="card-subtitle">Your Subscription</h6>
                   <p class="title">Your subscription has 9 days left on <br> <span>21 july 2021</span></p>
-                  <a class="btn btn-primary">Renew Subscribe</a>
+                  <a class="btn btn-renew">Renew Subscribe</a>
                 </div>
               </div>
             </div>
@@ -104,20 +104,20 @@
       <section class="checkout">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-9 table-content me-0">
-              <div class="row text-white">
-                <div class="col">
-                  <h5 class="pt-4" style="font-size: 20px; font-weight: 600;">Top 5 Recent Purchases</h5>
+            <div class="col-12 col-lg-9 table-content me-0">
+              <div class="row text-white table-judul">
+                <div class="col-12 col-md-6 col-lg-6 my-auto">
+                  <h5>Top 5 Recent Purchases</h5>
                 </div>
-                <div class="col d-flex justify-content-end">
-                  <p class="me-5 pt-4" style="font-weight: 600;">Checkout</p>
-                  <div class="paginition mt-2">
+                <div class="col-12 col-md-6 col-lg-6 d-flex pagination-checkout">
+                  <p class="me-5 my-auto" style="font-weight: 600;">Checkout</p>
+                  <div class="paginition my-auto mx-0">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                       <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" data-toggle="tab">All</button>
+                        <button class="nav-link active nav-link-background" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" data-toggle="tab">All</button>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" data-toggle="tab">Last 24 hours</button>
+                        <button class="nav-link nav-link-background" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" data-toggle="tab">Last 24 hours</button>
                       </li>
                     </ul>
 
@@ -126,13 +126,11 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-12 col-lg-12">
                   <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <div class="scroll1">
-                          <div class="scroll2">
-                            <table class="table text-white" id="myTable1" class="display" style="width:100%;">
-                              <thead style="background-color: #33275C;">
+                        <table class="table text-white" id="myTable1" class="display" style="width:100%;">
+                              <thead>
                                 <tr>
                                   <th>Item</th>
                                   <th>Price</th>
@@ -178,10 +176,7 @@
                                   <td>21 juni 2021</td>
                                 </tr>
                               </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        
+                        </table>
                       </div>
                       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <table class="table text-white" id="myTable2" class="display" style="width:100%">
@@ -244,7 +239,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-3 announcements">
+            <div class="col-12 col-md-12 col-lg-3 announcements">
               <h6 class="text-white mb-4">Announcements</h6>
               <div class="card">
                 <div class="card-body text-white">
