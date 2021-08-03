@@ -1658,13 +1658,9 @@ footer a {
   border: 1px solid #0F0635;
   background-color: #0F0635;
   color: white;
-<<<<<<< HEAD
   position: relative;
   border-radius: 6px;
   z-index: 1;
-=======
-  height: 50px;
->>>>>>> 1f57372bc7e97011bd05ded03d99f12476386683
 }
 
 .login-container .container .right form .form-control:focus {
@@ -1742,7 +1738,6 @@ footer a {
 }
 
 .login-container .container .right form .bi-eye::before {
-  content: "\f321";
   font-size: 16px;
 }
 
