@@ -1219,6 +1219,11 @@ footer a {
   padding-top: 65px;
 }
 
+.waiting-container .container .waiting-container__inner {
+  position: relative;
+  z-index: 5;
+}
+
 .waiting-container .container .form-password {
   position: relative;
   z-index: 1;
@@ -1240,30 +1245,8 @@ footer a {
 
 .waiting-container .container .waiting-list {
   background-color: #18103E;
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 24px 24px 8px;
   border-radius: 6px;
-}
-
-.waiting-container .container .waiting-list .header-createpassword {
-  margin-top: 66px;
-  margin-bottom: 0;
-  line-height: 30px;
-}
-
-.waiting-container .container .waiting-list h4 {
-  font-size: 24px;
-  font-family: 'Larsseit-medium';
-}
-
-.waiting-container .container .waiting-list .title-text-createpassword {
-  color: #BBB9C5;
-  line-height: 22px;
-  font-size: 16px;
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -1271,39 +1254,65 @@ footer a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: 522px;
+    max-width: 522px;
   }
 }
 
-.waiting-container .container .waiting-list form {
-  position: relative;
+.waiting-container .container .waiting-list h4 {
+  font-family: 'Larsseit-medium';
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
-.waiting-container .container .waiting-list form .form-control {
-  padding: 12px 16px;
-  border: 2px solid #0F0635;
+.waiting-container .container .waiting-list h4.waiting-container__waiting-list-title {
+  margin-bottom: 24px;
+}
+
+.waiting-container .container .waiting-list .waiting-container__info {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #BBB9C5;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form {
+  position: relative;
+  color: #fff;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form .form-label {
+  font-size: 14px;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form .form-control {
+  font-size: 14px;
+  line-height: 1.35;
+  padding: 15px 16px;
+  border: 1px solid #0F0635;
   background-color: #0F0635;
   border-radius: 6px;
   color: white;
-  height: 50px;
 }
 
-.waiting-container .container .waiting-list form .form-control:focus {
+.waiting-container .container .waiting-list .waiting-list__form .form-control:focus {
   position: relative;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 6px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
-.waiting-container .container .waiting-list form .form-control:focus + span {
+.waiting-container .container .waiting-list .waiting-list__form .form-control:focus + span {
   width: 100%;
   height: 100%;
-  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
 }
 
-.waiting-container .container .waiting-list form .form-control + span {
+.waiting-container .container .waiting-list .waiting-list__form .form-control + span {
   border-radius: 6px;
   display: block;
   content: "";
@@ -1315,34 +1324,47 @@ footer a {
   z-index: -1;
 }
 
-.waiting-container .container .waiting-list .form-check-input {
+.waiting-container .container .waiting-list .waiting-list__form .form-check-input {
   background-color: #1B143C;
   border-color: #5D6180;
 }
 
-.waiting-container .container .waiting-list .form-check-label {
+.waiting-container .container .waiting-list .waiting-list__form .form-check-label {
   color: #5D6180;
 }
 
-.waiting-container .container .waiting-list .form-check-label a {
+.waiting-container .container .waiting-list .waiting-list__form .form-check-label a {
   color: #5D6180;
 }
 
-.waiting-container .container .waiting-list .btn-primary {
+.waiting-container .container .waiting-list .waiting-list__form .btn-primary {
   background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
-  padding: 12px 48px;
+  padding: 15px;
   border: none;
   width: 100%;
-  margin-top: 32px;
-  height: 50px;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 50px;
 }
 
-.waiting-container .container .waiting-list .btn-primary:hover {
+.waiting-container .container .waiting-list .waiting-list__form .btn-primary:hover {
   opacity: 0.9;
 }
 
-.waiting-container .container .waiting-list .forget-password {
+.waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--email-send {
+  margin-bottom: 264px;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--waiting-list {
+  margin-bottom: 144px;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--pass-update {
+  margin-bottom: 286px;
+}
+
+.waiting-container .container .waiting-list .waiting-list__form .forget-password {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1350,20 +1372,25 @@ footer a {
   text-decoration: none;
 }
 
-.waiting-container .container .waiting-list hr {
-  color: #5D6180;
+.waiting-container .container .waiting-list .waiting-list__form hr {
+  color: #B4B6C4;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .waiting-container .container .waiting-list .privacy {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .waiting-container .container .waiting-list .privacy a {
+  font-size: 14px;
+  line-height: 1.4;
   text-decoration: none;
   color: #B4B6C4;
   padding-right: 22px;
   font-weight: 400;
+  display: inline-block;
 }
 
 .body-success {
@@ -1529,12 +1556,38 @@ footer a {
     padding-top: 80px;
   }
   .waiting-container .container .waiting-list {
-    padding-top: 40px;
     padding-right: 56px;
     padding-left: 56px;
   }
-  .waiting-container .container .waiting-list .form-password .bi-eye::before {
+  .waiting-container .container .waiting-list h5 {
     font-size: 24px;
+    line-height: 30px;
+  }
+  .waiting-container .container .waiting-list .waiting-container__info {
+    font-size: 16px;
+    line-height: 1.375;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .form-label {
+    font-size: 1rem;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .btn-primary {
+    font-size: 1rem;
+    margin-bottom: 106px;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--email-send {
+    margin-bottom: 342px;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--waiting-list {
+    margin-bottom: 64px;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--pass-update {
+    margin-bottom: 364px;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .form-password .bi-eye::before {
+    font-size: 24px;
+  }
+  .waiting-container .container .waiting-list .privacy a {
+    font-size: 1rem;
   }
   .container-success .card {
     width: 522px;
