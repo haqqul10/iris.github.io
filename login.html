@@ -22,40 +22,42 @@
     <main class="login-container">
         <div class="container">
             <div class="row justify-content-center login-container__inner">
-            
               <div class="col-11">
                 <div class="row justify-content-center">
                   
-                  <div class="col-2 col-md-10 col-lg-6 left d-none d-lg-flex">
+                  <div class="col-2 col-md-10 col-lg-6 left left__login d-none d-lg-flex">
                     <img src="./images/login/login-thumbnail.png" class="img-fluid my-auto mx-auto login-container__left-image">
                   </div>
 
                   <div class="col-12 col-md-10 col-lg-6 right">
                     <img src="./images/icons/Logo-login.svg" alt="logo" width="82" height="40">
-                      <h4 class="text-white">Login to Your Account</h4>
-                      <form class="text-white">
-                        <div class="login-container__form-item">
-                          <label for="Email" class="form-label">Email Address</label>
-                          <div class="login-container__form-field animasi-gradient">
-                            <input type="email" class="form-control" id="Email" placeholder="Email Address">
-                            <span class="animasi-gradient-span login-container__form-field-gradient"></span>
-                          </div>
+                    <h4 class="text-white">Login to Your Account</h4>
+
+                    <form class="text-white">
+                      <div class="login-container__form-item">
+                        <label for="Email" class="form-label">Email Address</label>
+                        <div class="login-container__form-field animasi-gradient">
+                          <input type="email" class="form-control" id="Email" placeholder="Email Address">
+                          <span class="animasi-gradient-span login-container__form-field-gradient"></span>
                         </div>
-                        <div class="login-container__form-item">
-                          <label for="password" class="form-label" id="basic-addon2">Password</label>
-                          <div class="form-password login-container__form-field animasi-gradient">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                            <span class="login-container__form-field-gradient animasi-gradient-span"></span>
-                            <i class="bi bi-eye-slash me-3 login-container__form-field-pwicon" id="togglePassword"></i>
-                          </div>
+                      </div>
+                      
+                      <div class="login-container__form-item">
+                        <label for="password" class="form-label" id="basic-addon2">Password</label>
+                        <div class="form-password login-container__form-field animasi-gradient">
+                          <input type="password" class="form-control" id="password" placeholder="Password">
+                          <span class="login-container__form-field-gradient animasi-gradient-span"></span>
+                          <i class="bi bi-eye-slash me-3 login-container__form-field-pwicon" id="togglePassword"></i>
                         </div>
-                        <input type="submit" name="login-submit" value="Login" class="btn btn-primary mb-4">
-                       
-                        <p class="login-container__form-link"><a href="#" class="forget-password text-white" >Forget Password?</a></p>
-                        <p class="login-container__form-link">Don't have an account? <a href="sign-up.html" class="forget-password">Sign Up</a></p>
-                        <hr class="login-container__form-separator">
-                        <p class="text-center privacy"><a href="#">Terms &amp; Conditions</a> <a href="">Privacy Policy</a></p>
-                      </form>
+                      </div>
+
+                      <input type="submit" name="login-submit" value="Login" class="btn btn-primary mb-4">
+                      
+                      <p class="login-container__form-link"><a href="#" class="forget-password text-white" >Forget Password?</a></p>
+                      <p class="login-container__form-link">Don't have an account? <a href="sign-up.html" class="forget-password">Sign Up</a></p>
+                      <hr class="login-container__form-separator">
+                      <p class="text-center privacy"><a href="#">Terms &amp; Conditions</a> <a href="#">Privacy Policy</a></p>
+                    </form>
                   </div>
 
                 </div>
@@ -80,7 +82,7 @@
         password.setAttribute('type', type);
         // toggle the eye / eye slash icon
         this.classList.toggle('bi-eye');
-    });
+      });
     </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

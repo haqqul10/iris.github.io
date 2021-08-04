@@ -24,26 +24,42 @@
             <div class="row justify-content-center" style="position: relative; z-index: 5;">
               <div class="col-11">
                 <div class="row">
+
                   <div class="col-2 col-lg-6 left d-none d-lg-flex" style="background-image: url(./images/login/Bg2.png); background-size: cover; background-position: top center;">
                     <img src="./images/login/left-login.png" class="img-fluid my-auto mx-auto" style="width: 523.71px; height: 451px;">
                   </div>
+
                   <div class="col-12 col-lg-6 right">
                     <img src="./images/icons/Logo-login.svg" alt="" width="82" height="40">
-                      <h4 class="text-white">Verify Your Email Address</h4>
-                      <p style="color: #BBB9C5; font-size:16px; margin-top: -21px; line-height: 22px; font-family: 'Inter', sans-serif; margin-bottom: 0;">To continue please verify your email address <span class="text-white">dummy@gmail.com</span></p>
-                      <form class="text-white">
-                        <label for="Email" class="form-label" style="margin-top: 32px;">Email Address</label>
-                        <div class="animasi-gradient">
-                          <input type="email" class="form-control" id="Email" placeholder="Email Address" >
-                          <span class="animasi-gradient-span"></span>
+
+                    <h4 class="text-white login-container__simple-form-title">Verify Your Email Address</h4>
+
+                    <p class="login-container__simple-form-info">To continue please verify your email address <span class="text-white">dummy@gmail.com</span></p>
+                    
+                    <form class="text-white" action="emailsend.html">
+                      <div class="login-container__verification-inner">
+
+                        <div class="login-container__form-item">
+                          <label for="Email" class="form-label">Email Address</label>
+                          <div class="login-container__form-field animasi-gradient">
+                            <input type="email" class="form-control" id="Email" placeholder="Email Address">
+                            <span class="animasi-gradient-span login-container__form-field-gradient"></span>
+                          </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-4"> <a href="emailsend.html" style="text-decoration:none; color: white;">Send Email</a> </button>
-                        <br>
-                        <p class="text-center" style="margin-bottom: 176px;"><a href="#" class="forget-password text-white">Back to Login</a></p>
-                        <hr style="margin-top: 0;">
-                        <p class="text-center privacy"><a href="#">Terms & Conditions</a> <a href="">Privacy Policy</a></p>
-                      </form>
+
+                        <!-- <button type="submit" class="btn btn-primary mb-4"> <a href="" style="text-decoration:none; color: white;">Send Email</a> </button> -->
+                        <input type="submit" name="login-submit" value="Send Email" class="btn btn-primary mb-4">
+
+                        <p class="text-center"><a href="#" class="forget-password text-white">Back to Login</a></p>
+                      </div>
+
+                      <hr class="login-container__form-separator login-container__form-separator--verification">
+
+                      <p class="text-center privacy"><a href="#">Terms &amp; Conditions</a> <a href="">Privacy Policy</a></p>
+                    </form>
+
                   </div>
+
                 </div>
               </div>
             </div>

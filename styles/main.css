@@ -954,6 +954,11 @@ footer a {
   border-radius: 6px 0px 0px 6px;
 }
 
+.login-container .container .left.left__sign-up {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 .login-container .container .left .login-container__left-image {
   width: 100%;
   height: auto;
@@ -990,8 +995,28 @@ footer a {
   font-family: 'Inter', sans-serif;
 }
 
+.login-container .container .right .login-container__simple-form-title {
+  margin-bottom: 8px;
+}
+
+.login-container .container .right .login-container__simple-form-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #BBB9C5;
+  margin-bottom: 32px;
+}
+
 .login-container .container .right form {
   position: relative;
+}
+
+.login-container .container .right form .login-container__verification-inner {
+  margin-bottom: 134px;
+}
+
+.login-container .container .right form .login-container__forget-inner {
+  margin-bottom: 134px;
 }
 
 .login-container .container .right form .login-container__form-item {
@@ -1060,13 +1085,19 @@ footer a {
   font-size: 16px;
 }
 
+.login-container .container .right form .form-check {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .login-container .container .right form .btn-primary {
   background-image: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
   height: 50px;
   width: 100%;
   border: none;
-  margin-top: 5px;
 }
 
 .login-container .container .right form .btn-primary:hover {
@@ -1087,6 +1118,10 @@ footer a {
   display: block;
   margin-top: 48px;
   margin-bottom: 0;
+}
+
+.login-container .container .right form .login-container__form-separator--verification {
+  margin-top: 0;
 }
 
 .login-container .container .right form .privacy {
@@ -1112,38 +1147,34 @@ footer a {
   font-size: 16px;
 }
 
-.login-container .container .right .form-check {
-  margin-top: 16px;
-  padding-left: 36px;
-  padding-right: 36px;
-}
-
-.login-container .container .right .input-group-text {
+.login-container .container .right form .input-group-text {
   background-color: #1B143C;
   border: none;
   border-radius: 6px;
 }
 
-.login-container .container .right .form-password-responsive {
+.login-container .container .right form .form-password-responsive {
   margin-top: 24px;
 }
 
-.login-container .container .right .form-check-input {
+.login-container .container .right form .form-check-input {
   background-color: #1B143C;
   border-color: #5D6180;
 }
 
-.login-container .container .right .form-check-label {
+.login-container .container .right form .form-check-label {
   color: #5D6180;
 }
 
-.login-container .container .right .form-check-label a {
-  color: #B4B6C4;
+.login-container .container .right form .form-check-label a {
+  color: #5D6180;
   font-size: 16px;
   line-height: 26px;
+  text-decoration: none;
+  border-bottom: 1px solid #5D6180;
 }
 
-.login-container .container .right .forget-password {
+.login-container .container .right form .forget-password {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1441,9 +1472,15 @@ footer a {
   .login-container .container .right form .form-control {
     font-size: 1rem;
     padding: 11px 15px;
+    border-width: 2px;
   }
   .login-container .container .right form .login-container__form-item {
     margin-bottom: 24px;
+  }
+  .login-container .container .right form .form-check {
+    margin-top: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
   .login-container .container .right form .login-container__form-separator {
     margin-top: 56px;
@@ -1455,13 +1492,13 @@ footer a {
   .login-container .container .right form .privacy a {
     font-size: 1rem;
   }
-  .login-container .container .right .form-password-responsive {
+  .login-container .container .right form .form-password-responsive {
     margin-top: 0;
   }
-  .login-container .container .right .form-password .bi-eye::before {
+  .login-container .container .right form .form-password .bi-eye::before {
     font-size: 24px;
   }
-  .login-container .container .right .form-password .bi-eye-slash::before {
+  .login-container .container .right form .form-password .bi-eye-slash::before {
     font-size: 24px;
   }
   .login-container .container .login-illustration {

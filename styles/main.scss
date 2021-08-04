@@ -944,6 +944,15 @@ footer{
             background-position:center;
             padding: 0;
             border-radius: 6px 0px 0px 6px;
+            
+            // .left__login {
+            //     background-image: url(../images/login/Bg2.png);
+            // }
+
+            &.left__sign-up {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
 
             .login-container__left-image {
                 width: 100%;
@@ -974,14 +983,34 @@ footer{
             .title-text{
                 color: #BBB9C5; 
                 margin-bottom: 0;
-                font-size:16px; 
+                font-size: 16px; 
                 margin-top: -24px; 
                 line-height: 22px; 
                 font-family: 'Inter', sans-serif;
             }
 
+            .login-container__simple-form-title {
+                margin-bottom: 8px;
+            }
+
+            .login-container__simple-form-info {
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+                color: #BBB9C5;
+                margin-bottom: 32px;
+            }
+
             form{
                 position: relative;
+
+                .login-container__verification-inner {
+                    margin-bottom: 134px;
+                }
+    
+                .login-container__forget-inner {
+                    margin-bottom: 134px;
+                }
 
                 .login-container__form-item {
                     margin-bottom: 24px;
@@ -1048,13 +1077,19 @@ footer{
                     }
                 }
 
+                .form-check{
+                    margin-top: 8px;
+                    margin-bottom: 24px;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+
                 .btn-primary{
                     background-image: $gradienColor;
                     border-radius: 6px;
                     height: 50px;
                     width: 100%;
                     border: none;
-                    margin-top: 5px;
 
                     &:hover{
                         opacity: 0.9;
@@ -1077,6 +1112,10 @@ footer{
                     margin-bottom: 0;
                 }
 
+                .login-container__form-separator--verification {
+                    margin-top: 0;
+                }
+
                 .privacy{
                     margin-top: 1em;
                     margin-bottom: 1em;
@@ -1095,51 +1134,49 @@ footer{
                         }
                     }
                 }
+                
                 .bi-eye::before {
                     // content: "\f321";
                     font-size: 16px;
                 }
-            }
 
-            .form-check{
-                margin-top: 16px;
-                padding-left: 36px;
-                padding-right: 36px;
-            }
-
-            .input-group-text{
-                background-color: $color1;
-                border: none;
-                border-radius: 6px;
-            }
-
-            .form-password-responsive{
-                margin-top: 24px;
-            }
-
-            .form-check-input{
-                background-color: $color1;
-                border-color: $gray; 
-            }
-
-            .form-check-label{
-                color: #5D6180;
-                
-                a{
-                    color: #B4B6C4;
-                    font-size: 16px;
-                    line-height: 26px;
+                .input-group-text{
+                    background-color: $color1;
+                    border: none;
+                    border-radius: 6px;
                 }
-            }
-            
-            .forget-password{
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 20px;
-                color: #A691EC !important;
-                text-decoration: none;
-                // letter-spacing: 1px;
+    
+                .form-password-responsive{
+                    margin-top: 24px;
+                }
+    
+                .form-check-input{
+                    background-color: $color1;
+                    border-color: $gray; 
+                }
+    
+                .form-check-label{
+                    color: #5D6180;
+                    
+                    a{
+                        color: #5D6180;
+                        // color: #B4B6C4;
+                        font-size: 16px;
+                        line-height: 26px;
+                        text-decoration: none;
+                        border-bottom: 1px solid #5D6180;
+                    }
+                }
+                
+                .forget-password{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #A691EC !important;
+                    text-decoration: none;
+                    // letter-spacing: 1px;
+                }
             }
         }
     }
@@ -1446,10 +1483,17 @@ footer{
                     .form-control {
                         font-size: 1rem;
                         padding: 11px 15px;
+                        border-width: 2px;
                     }
 
                     .login-container__form-item {
                         margin-bottom: 24px;
+                    }
+
+                    .form-check {
+                        margin-top: 16px;
+                        padding-left: 36px;
+                        padding-right: 36px;
                     }
 
                     .login-container__form-separator {
@@ -1464,18 +1508,18 @@ footer{
                              font-size: 1rem;
                          }
                     }
-                }
 
-                .form-password-responsive{
-                    margin-top: 0;
-                }
-
-                .form-password{
-                    .bi-eye::before{
-                        font-size: 24px;
+                    .form-password-responsive{
+                        margin-top: 0;
                     }
-                    .bi-eye-slash::before{
-                        font-size: 24px;
+
+                    .form-password{
+                        .bi-eye::before{
+                            font-size: 24px;
+                        }
+                        .bi-eye-slash::before{
+                            font-size: 24px;
+                        }
                     }
                 }
             }
