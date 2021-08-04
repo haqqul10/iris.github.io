@@ -910,6 +910,8 @@ footer{
     overflow-y: scroll;
     height: 100vh;
 }
+
+// Login, forget password, sign up, email verification
 .login-container{
     position: relative;
     padding-bottom: 120px;
@@ -1085,9 +1087,12 @@ footer{
                 }
 
                 .btn-primary{
+                    font-size: 14px;
                     background-image: $gradienColor;
                     border-radius: 6px;
-                    height: 50px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    line-height: 1.25;
                     width: 100%;
                     border: none;
 
@@ -1097,6 +1102,7 @@ footer{
                 }
 
                 .login-container__form-link {
+                    font-size: 14px;
                     text-align: center;
                     margin-bottom: 2em;
 
@@ -1156,12 +1162,13 @@ footer{
                 }
     
                 .form-check-label{
+                    font-size: 14px;
                     color: #5D6180;
                     
                     a{
                         color: #5D6180;
                         // color: #B4B6C4;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 26px;
                         text-decoration: none;
                         border-bottom: 1px solid #5D6180;
@@ -1171,7 +1178,7 @@ footer{
                 .forget-password{
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 20px;
                     color: #A691EC !important;
                     text-decoration: none;
@@ -1199,13 +1206,14 @@ footer{
     width: 100%;
     
 
-    .login-illustrasi{
+    .waiting-illustration{
         position: absolute;
         top: -305px;
         left: auto;
         bottom: 0;
         right: -365px;
         width: 930px;
+        display: none;
     }
 
     .container{
@@ -1432,12 +1440,15 @@ footer{
     .login-container{
         .container{
             .right{
-                .form-password-responsive{
-                    margin-top: 0;
-                }
-                .form-password{
-                    .bi-eye-slash::before{
-                        font-size: 24px;
+                form {
+                    .form-password-responsive{
+                        margin-top: 0;
+                    }
+
+                    .form-password{
+                        .bi-eye-slash::before{
+                            font-size: 24px;
+                        }
                     }
                 }
             }
@@ -1471,6 +1482,7 @@ footer{
                 border-bottom-left-radius: 0;
 
                 h4 {
+                    font-size: 24px;
                     margin-top: 66px;
                     margin-bottom: 32px;
                 }
@@ -1482,31 +1494,17 @@ footer{
 
                     .form-control {
                         font-size: 1rem;
-                        padding: 11px 15px;
+                        padding: 12px 16px;
                         border-width: 2px;
-                    }
-
-                    .login-container__form-item {
-                        margin-bottom: 24px;
                     }
 
                     .form-check {
                         margin-top: 16px;
-                        padding-left: 36px;
-                        padding-right: 36px;
+                        margin-bottom: 32px;
                     }
 
-                    .login-container__form-separator {
-                        margin-top: 56px;
-                    }
-
-                    .privacy {
-                        margin-top: 24px;
-                        margin-bottom: 24px;
-
-                         a {
-                             font-size: 1rem;
-                         }
+                    .form-check-label {
+                        font-size: 1rem;
                     }
 
                     .form-password-responsive{
@@ -1521,6 +1519,35 @@ footer{
                             font-size: 24px;
                         }
                     }
+
+                    .btn-primary{ 
+                        font-size: 1rem;
+                    }
+
+                    .login-container__form-link {
+                        font-size: 1rem;
+                        
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .login-container__form-separator {
+                        margin-top: 56px;
+                    }
+
+                    .forget-password {
+                        font-size: 1rem;
+                    }
+
+                    .privacy {
+                        margin-top: 24px;
+                        margin-bottom: 24px;
+
+                         a {
+                             font-size: 1rem;
+                         }
+                    }
                 }
             }
             
@@ -1532,6 +1559,10 @@ footer{
 
     // waiting list
     .waiting-container{
+
+        .waiting-illustration {
+            display: block;
+        }
         
         .container{
             padding-top: 80px;
