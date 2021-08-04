@@ -964,6 +964,14 @@ footer a {
   height: auto;
 }
 
+.login-container .container .left .login-container__left-image--purchase {
+  max-height: 475px;
+}
+
+.login-container .container .left .login-container__left-image--task {
+  max-height: 352px;
+}
+
 .login-container .container .right {
   background-color: #18103E;
   padding: 24px 24px 8px;

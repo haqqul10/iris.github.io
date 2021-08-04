@@ -946,10 +946,6 @@ footer{
             background-position:center;
             padding: 0;
             border-radius: 6px 0px 0px 6px;
-            
-            // .left__login {
-            //     background-image: url(../images/login/Bg2.png);
-            // }
 
             &.left__sign-up {
                 padding-left: 32px;
@@ -959,6 +955,14 @@ footer{
             .login-container__left-image {
                 width: 100%;
                 height: auto;
+            }
+
+            .login-container__left-image--purchase {
+                max-height: 475px;    
+            }
+
+            .login-container__left-image--task {
+                max-height: 352px;    
             }
         }
 
