@@ -1258,6 +1258,14 @@ footer a {
   }
 }
 
+.waiting-container .container .waiting-list .waiting-container__waiting-logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: auto;
+  height: 49px;
+}
+
 .waiting-container .container .waiting-list h4 {
   font-family: 'Larsseit-medium';
   font-size: 18px;
@@ -1285,6 +1293,7 @@ footer a {
 
 .waiting-container .container .waiting-list .waiting-list__form .form-label {
   font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .waiting-container .container .waiting-list .waiting-list__form .form-control {
@@ -1344,7 +1353,7 @@ footer a {
   border: none;
   width: 100%;
   font-size: 14px;
-  line-height: 1.45;
+  line-height: 1.25;
   margin-bottom: 50px;
 }
 
@@ -1556,8 +1565,15 @@ footer a {
     padding-top: 80px;
   }
   .waiting-container .container .waiting-list {
-    padding-right: 56px;
-    padding-left: 56px;
+    padding: 40px 56px 0;
+  }
+  .waiting-container .container .waiting-list h4 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-top: 66px;
+  }
+  .waiting-container .container .waiting-list h4.waiting-container__waiting-list-title {
+    margin-top: 56px;
   }
   .waiting-container .container .waiting-list h5 {
     font-size: 24px;
@@ -1569,6 +1585,16 @@ footer a {
   }
   .waiting-container .container .waiting-list .waiting-list__form .form-label {
     font-size: 1rem;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .form-control {
+    border-width: 2px;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .waiting-container .container .waiting-list .waiting-list__form .form-control:focus {
+    border-width: 2px;
   }
   .waiting-container .container .waiting-list .waiting-list__form .btn-primary {
     font-size: 1rem;
@@ -1585,6 +1611,10 @@ footer a {
   }
   .waiting-container .container .waiting-list .waiting-list__form .form-password .bi-eye::before {
     font-size: 24px;
+  }
+  .waiting-container .container .waiting-list .privacy {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   .waiting-container .container .waiting-list .privacy a {
     font-size: 1rem;

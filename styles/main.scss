@@ -1253,6 +1253,14 @@ footer{
                 max-width: 522px;
             }
 
+            .waiting-container__waiting-logo {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: auto;
+                height: 49px;
+            }
+
             h4{
                 font-family: 'Larsseit-medium';
                 font-size: 18px;
@@ -1279,6 +1287,7 @@ footer{
 
                 .form-label {
                     font-size: 14px;
+                    margin-bottom: 12px;
                 }
             
                 .form-control{
@@ -1337,7 +1346,7 @@ footer{
                     border: none;
                     width: 100%;
                     font-size: 14px;
-                    line-height: 1.45;
+                    line-height: 1.25;
                     margin-bottom: 50px;
 
                     &:hover{
@@ -1600,9 +1609,17 @@ footer{
             padding-top: 80px;
 
             .waiting-list{
-                padding-right: 56px;
-                padding-left: 56px;
-                // margin-top: 56px;
+                padding: 40px 56px 0;
+
+                h4 {
+                    font-size: 24px;
+                    line-height: 1.25;
+                    margin-top: 66px;
+
+                    &.waiting-container__waiting-list-title {
+                        margin-top: 56px;
+                    }
+                }
 
                 h5 {
                     font-size: 24px;
@@ -1617,6 +1634,18 @@ footer{
                 .waiting-list__form {
                     .form-label {
                         font-size: 1rem;
+                    }
+
+                    .form-control{
+                        border-width: 2px;
+                        font-size: 1rem;
+                        line-height: 1.4;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        
+                        &:focus {
+                            border-width: 2px;
+                        }
                     }
 
                     .btn-primary{
@@ -1642,6 +1671,9 @@ footer{
                 }
 
                 .privacy {
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+
                     a {
                         font-size: 1rem;
                     }
