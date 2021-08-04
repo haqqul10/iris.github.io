@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+@font-face {
+  font-family: 'Larsseit-bold';
+  src: url("../libraries/font-bold/Larsseit-Bold.eot") format("eot"), url("../libraries/font-bold/Larsseit-Bold.svg") format("svg"), url("../libraries/font-bold/Larsseit-Bold.ttf") format("ttf"), url("../libraries/font-bold/Larsseit-Bold.woff") format("woff"), url("../libraries/font-bold/Larsseit-Bold.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Larsseit-medium';
+  src: url("../libraries/font-medium/Larsseit-Medium.eot") format("eot"), url("../libraries/font-medium/Larsseit-Medium.svg") format("svg"), url("../libraries/font-medium/Larsseit-Medium.ttf") format("ttf"), url("../libraries/font-medium/Larsseit-Medium.woff") format("woff"), url("../libraries/font-medium/Larsseit-Medium.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard {
+  background-color: #1B143C;
+}
+
+.navbar-dashboard {
+  background-color: #221B4A;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.navbar-dashboard .container {
+  padding: auto;
+}
+
+.navbar-dashboard .container .navbar-toggler {
+  border: none;
+}
+
+.navbar-dashboard .navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-dashboard .navbar-nav .nav-item img {
+  margin-right: 10px;
+}
+
+.navbar-dashboard .navbar-nav .nav-item .active {
+  background-color: #7963FA;
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+
+.navbar-dashboard .navbar-collapse {
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  width: 95%;
+  z-index: 15;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: #221B4A;
+}
+
+.card-dashboard .container h2 {
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+
+.card-dashboard .card {
+  background-color: #221B4A;
+  height: 190px;
+  padding: 0;
+  position: relative;
+  margin-top: 24px;
+  margin-right: 0px;
+  border-radius: 6px;
+}
+
+.card-dashboard .card .card-body {
+  padding-left: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 32px;
+}
+
+.card-dashboard .card .card-body .card-image {
+  margin-bottom: 20px;
+}
+
+.card-dashboard .card .card-body .card-subtitle-text {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-dashboard .card .card-body .card-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.card-dashboard .card .card-body .card-title {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.card-dashboard .card .card-body .card-text {
+  background: rgba(40, 199, 111, 0.12);
+  width: 100px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: #28C76F;
+  height: 32px;
+  margin-top: 32px;
+}
+
+.card-dashboard .card .card-body .title {
+  font-size: 14px;
+  color: #BBB9C5;
+  margin-top: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.card-dashboard .card .card-body .title span {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.card-dashboard .card .card-body .btn-renew {
+  background-color: #7963FA;
+  border-radius: 6px;
+  padding: 11px 16px;
+  border: none;
+  width: 100%;
+  height: 44px;
+  font-weight: 500;
+  line-height: 125%;
+  margin-top: 20px;
+  color: white;
+}
+
+.card-dashboard .card .card-backgroud {
+  position: absolute;
+  top: 100;
+  right: 0;
+  left: 100;
+  bottom: 0;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.checkout {
+  margin-top: 32px;
+}
+
+.checkout .container .table-content {
+  background-color: #221B4A;
+  width: auto;
+}
+
+.checkout .container .table-content .table-judul {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.checkout .container .table-content h5 {
+  margin-left: 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.checkout .container .table-content .pagination-checkout {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.checkout .announcements {
+  margin-top: 30px;
+}
+
+.checkout .paginition {
+  background-color: #33275C;
+  padding: 6px 5px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  height: 42px;
+}
+
+.checkout .paginition .nav-pills .nav-item #pills-home-tab {
+  margin-left: 7px;
+}
+
+.checkout .paginition .nav-pills .nav-item .nav-link-background {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  width: 125px;
+  padding: 0;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.checkout .paginition .nav-pills .nav-item .nav-link-background.active {
+  background-color: #7963FA;
+  width: 125px;
+}
+
+.checkout .card {
+  background: linear-gradient(104.6deg, #6A3EE9 9.63%, #E03C8B 69.52%, #9D2FD8 99.46%);
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  padding: 30px 30px;
+}
+
+.checkout .card .card-subtitle {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.checkout .card .btn-primary {
+  background-color: white;
+  border: none;
+  color: black;
+  width: 100%;
+  font-weight: 600;
+}
+
+.checkout ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.checkout ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.checkout ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.checkout ::-webkit-scrollbar-thumb:window-inactive {
+  background: white;
+}
+
+.checkout .dataTables_scroll .dataTables_scrollHead {
+  width: 100%;
+}
+
+.checkout .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner {
+  width: 100%;
+}
+
+.checkout .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner .dataTable {
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.checkout .table {
+  margin-bottom: 0;
+}
+
+.checkout .table .form-check-input {
+  background-color: transparent;
+  border-color: #5D6180;
+}
+
+.checkout .table thead {
+  background-color: #33275C;
+  border-radius: 6px;
+}
+
+.checkout .table tbody {
+  vertical-align: 0;
+}
+
+.checkout .table th {
+  border-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.checkout .table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  border-color: #5D6180;
+}
+
+footer {
+  padding-bottom: 10px;
+}
+
+footer span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #BBB9C5;
+}
+
+footer a {
+  color: #BBB9C5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout .container .table-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-dashboard {
+    height: 80px;
+  }
+  .navbar-dashboard .container {
+    padding: 0;
+  }
+  .navbar-dashboard .navbar-collapse {
+    position: relative;
+    top: auto;
+    width: auto;
+    z-index: 15;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  .card-dashboard .container {
+    padding-left: 0px;
+  }
+  .card-dashboard .container h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .card-dashboard .container .card {
+    margin-right: 5px;
+  }
+  .checkout .container .announcements {
+    margin-left: 23px;
+    width: 320px;
+    margin-top: 0;
+  }
+  .checkout .container .table-content {
+    width: 965px;
+  }
+  .checkout .container .table-content .pagination-checkout {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .checkout .paginition {
+    margin-right: 25px;
+  }
+  .checkout .paginition .nav-pills .nav-item #pills-home-tab {
+    margin-left: 0px;
+  }
+  .checkout .paginition .nav-pills .nav-item .nav-link-background {
+    margin-left: auto;
+  }
+  .checkout .paginition .nav-pills .nav-item .nav-link {
+    width: 125px;
+  }
+  .checkout .paginition .nav-pills .nav-item .nav-link.active {
+    width: 125px;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */
