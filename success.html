@@ -21,11 +21,13 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-9 col-lg-6">
             <div class="card" id="card">
-              <canvas id="confetti-canvas" style="display:block; z-index:999999; pointer-events:none; position:fixed; top:0" width="1044" height="700"></canvas>
-              <img src="./images/icons/Poppers.svg" class="img-fluid text-center" alt="success" width="210" height="190">
-              <div class="card-body">
-                <h5 class="card-title">You have successfully joined the Iris <br> waiting list!</h5>
-                <p class="card-text">Turn on notifications on Twitter to stay up to <br> date when we announce winning entries</p>
+              <div class="animation__confetti">
+                <canvas id="confetti-canvas" style="display:block; z-index:999999; pointer-events:none; position:absolute; top:0" width="1044" height="700"></canvas>
+                <img src="./images/icons/Poppers.svg" class="img-fluid text-center" alt="success">
+                <div class="card-body">
+                  <h5 class="card-title">You have successfully joined the Iris <br> waiting list!</h5>
+                  <p class="card-text">Turn on notifications on Twitter to stay up to <br> date when we announce winning entries</p>
+                </div>
               </div>
             </div>
           </div>

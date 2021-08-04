@@ -80,7 +80,7 @@
         <div class="col-12 col-md-6 col-lg-6">
           <form>
             <img src="./images/icons/search.svg" alt="">
-            <input id="searchbox" class="form-control" type="search" placeholder="Search store" aria-label="Search">
+            <input id="name" class="form-control" type="search" placeholder="Search store" aria-label="Search">
             <label for="search-home" class="form-label"></label>
           </form>
           <ul class="list-group" id="resultlist"></ul>
@@ -217,104 +217,35 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>  -->
     
     <script>
-      $(document).ready(function () {
-        var contacts = [
-        {
-            "firstName": "Peter",
-            "lastName": "Parker",
-            "heroName": "Spiderman",
-            "imgUrl": "img/spiderman.png"
-        },
-        {
-            "firstName": "Bruce",
-            "lastName": "Banner",
-            "heroName": "Hulk",
-            "imgUrl": "img/hulk.png"
-        }, {
-            "firstName": "Tony",
-            "lastName": "Stark",
-            "heroName": "Ironman",
-            "imgUrl": "img/ironman.png"
-        }, {
-            "firstName": "Bruce",
-            "lastName": "Wayne",
-            "heroName": "Batman",
-            "imgUrl": "img/batman.png"
-        }
-        ];
-        
-        for (var i = 0; i < contacts.length; i++)
-        {
-            contacts[i].value = contacts[i].firstName + " " + contacts[i].lastName + " " + contacts[i].heroName;
-        }
-
-        $("#searchbox").autocomplete({
-            source: contacts,
-            minLength: 0,
-            focus: function (event, ui) {
-                $("#searchbox").val(ui.item.heroName)
-                return false;
-            },
-            select: function (event, ui) {
-                location.href = ui.item.imgUrl;
-                return false;
-            },
-        }).autocomplete("instance")._renderItem = function (ul, item) {
-            var $li = $("<li>");
-            $li.addClass("searchItem");
-
-            $outerDiv = $("<div>");
-            $outerDiv.appendTo($li);
-
-            $imageDiv = $("<div>");
-            $imageDiv.addClass("contactImageDiv");
-            $imageDiv.appendTo($outerDiv);
-
-            $img = $("<img>");
-            $img.addClass("contactImage");
-            $img.attr("src", item.imgUrl);
-            $img.appendTo($imageDiv);
-
-            $name = $("<div>");
-            $name.addClass("nameDiv");
-            $name.append(item.firstName + " " + item.lastName + "<br/><span style='font-style:italic'>" + item.heroName + "</span>");
-            $name.appendTo($outerDiv);
-
-            $li.appendTo(ul);
-
-            return $li;
-        };
-
-    })
-      // $(document).ready(function(){
-      //   $.ajaxSetup({ cache: false });
-      //   $('#name').keyup(function(){
-      //       $('#resultlist').html('');
-      //       $('#state').val('');
-      //       var searchField = $('#name').val();
-      //       var expression = new RegExp(searchField, "i");
+      $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+        $('#name').keyup(function(){
+            $('#resultlist').html('');
+            $('#state').val('');
+            var searchField = $('#name').val();
+            var expression = new RegExp(searchField, "i");
     
-      //       $.getJSON('data.json', function(data) {
-      //         $.each(data, function(key, value){
-      //           if (value.name.search(expression) != -1 || value.alamat.search(expression) != -1){
-      //             $('#resultlist').append(`
-      //               <li class="list-group-item link-class">
-      //                 <img src="avatar/`+value.avatar+`" height="40" width="40" class="img-thumbnail" /> 
-      //                 <span class="nama">`+value.name+`</span>
-      //                 <span class="text-muted" style="float: right;">`+value.alamat+`</span>
-      //               </li>`);
-      //           }
-      //         });   
-      //       });
-      //   });
+            $.getJSON('data.json', function(data) {
+              $.each(data, function(key, value){
+                if (value.name.search(expression) != -1 || value.alamat.search(expression) != -1){
+                  $('#resultlist').append(`
+                    <li class="list-group-item link-class">
+                      <img src="avatar/`+value.avatar+`" height="40" width="40" class="img-thumbnail" /> 
+                      <span class="nama">`+value.name+`</span>
+                      <span class="text-muted" style="float: right;">`+value.alamat+`</span>
+                    </li>`);
+                }
+              });   
+            });
+        });
     
-      //   $('#resultlist').on('click', 'li', function() {
-      //     let name = $(this).children('.nama').text();
+        $('#resultlist').on('click', 'li', function() {
+          let name = $(this).children('.nama').text();
     
-      //     $('#name').val(name);
-      //     $("#resultlist").html('');
-      //   });
-      // });
+          $('#name').val(name);
+          $("#resultlist").html('');
+        });
+      });
     </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

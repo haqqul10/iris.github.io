@@ -34,15 +34,15 @@ body {
   border: none;
 }
 
-.navbar-dashboard .navbar-nav .nav-item {
+.navbar-dashboard .container .navbar-nav .nav-item {
   margin-right: 20px;
 }
 
-.navbar-dashboard .navbar-nav .nav-item img {
+.navbar-dashboard .container .navbar-nav .nav-item img {
   margin-right: 10px;
 }
 
-.navbar-dashboard .navbar-nav .nav-item .active {
+.navbar-dashboard .container .navbar-nav .nav-item .active {
   background-color: #7963FA;
   border-radius: 6px;
   padding: 10px 16px;
@@ -112,7 +112,7 @@ body {
   padding: 4px 8px;
   color: #28C76F;
   height: 32px;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .card-dashboard .card .card-body .title {
@@ -132,13 +132,13 @@ body {
 .card-dashboard .card .card-body .btn-renew {
   background-color: #7963FA;
   border-radius: 6px;
-  padding: 11px 16px;
+  padding: 11px 0px;
   border: none;
   width: 100%;
   height: 44px;
   font-weight: 500;
   line-height: 125%;
-  margin-top: 20px;
+  margin-top: 12px;
   color: white;
 }
 
@@ -157,27 +157,33 @@ body {
 }
 
 .checkout .container .table-content {
-  background-color: #221B4A;
+  background-color: transparent;
   width: auto;
+  height: auto;
 }
 
 .checkout .container .table-content .table-judul {
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .checkout .container .table-content h5 {
   margin-left: 0px;
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .checkout .container .table-content .pagination-checkout {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.checkout .container .table-content .pagination-checkout p {
+  padding-bottom: 16px;
 }
 
 .checkout .announcements {
@@ -190,6 +196,9 @@ body {
   margin-bottom: 10px;
   border-radius: 6px;
   height: 42px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .checkout .paginition .nav-pills .nav-item #pills-home-tab {
@@ -245,8 +254,7 @@ body {
 
 .checkout ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: white;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background: #7963FA;
 }
 
 .checkout ::-webkit-scrollbar-thumb:window-inactive {
@@ -270,6 +278,10 @@ body {
   margin-bottom: 0;
 }
 
+.checkout .table img {
+  margin-right: 16px;
+}
+
 .checkout .table .form-check-input {
   background-color: transparent;
   border-color: #5D6180;
@@ -289,20 +301,31 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .checkout .table td {
+  color: #BBB9C5;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 30px;
-  border-color: #5D6180;
+  border-color: #3A3456;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 footer {
   padding-bottom: 10px;
 }
 
-footer span {
+footer p {
+  color: white;
+  font-size: 14px;
+  font-family: 400;
+}
+
+footer p span {
   font-size: 14px;
   font-weight: 400;
   color: #BBB9C5;
@@ -315,9 +338,16 @@ footer a {
   font-weight: 400;
 }
 
+footer a:hover {
+  color: white;
+}
+
 @media screen and (min-width: 768px) {
   .checkout .container .table-content {
     width: 100%;
+  }
+  .checkout .container .table-content .pagination-checkout {
+    display: contents;
   }
 }
 
@@ -327,6 +357,11 @@ footer a {
   }
   .navbar-dashboard .container {
     padding: 0;
+  }
+  .navbar-dashboard .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .navbar-dashboard .navbar-collapse {
     position: relative;
@@ -353,12 +388,31 @@ footer a {
     margin-top: 0;
   }
   .checkout .container .table-content {
+    background-color: #221B4A;
     width: 965px;
+    height: 538px;
   }
   .checkout .container .table-content .pagination-checkout {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .checkout .container .table-content .pagination-checkout p {
+    padding-bottom: 0;
+  }
+  .checkout .container .table-content .table-judul {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+  }
+  .checkout .container .table-content h5 {
+    margin-bottom: 0;
+  }
+  .checkout .container .table-content .table__content_full {
+    padding: 0;
   }
   .checkout .paginition {
     margin-right: 25px;
@@ -374,6 +428,46 @@ footer a {
   }
   .checkout .paginition .nav-pills .nav-item .nav-link.active {
     width: 125px;
+  }
+}
+
+@media (max-width: 500px) {
+  .table {
+    margin-top: 24px;
+  }
+  .table thead {
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 24px;
+  }
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    padding-right: 16px;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    text-align: left;
+    width: 50%;
+    padding-left: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+  }
+  .odd, .even {
+    background-color: #221B4A;
+    border-radius: 6px;
+  }
+  td:last-child {
+    border: none;
   }
 }
 /*# sourceMappingURL=dashboard.css.map */
