@@ -200,9 +200,9 @@ body {
 }
 
 .checkout .paginition .nav-pills {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .checkout .paginition .nav-pills .nav-item #pills-home-tab {
