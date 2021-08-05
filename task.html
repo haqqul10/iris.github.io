@@ -25,27 +25,27 @@
           <a class="navbar-brand" href="#">
             <img src="./images/icons/Logo.svg" alt="Iris" width="80">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> Dashboard</a>
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> <span>Dashboard</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="index.html"> <img src="images/icons/Icon=Task.svg" alt="" width="20" class="pb-1">Task</a>
+                <a class="nav-link active" href="index.html"> <img src="images/icons/Icon=Task.svg" alt="" width="20" class="pb-1"> <span>Task</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1">Releases</a>
+                <a class="nav-link" href="dashboard.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1"> <span>Releases</span> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="homepage.html"> <img src="images/icons/proxy.svg" alt="" width="20" class="pb-1">Proxies</a>
+                <a class="nav-link" href="homepage.html"> <img src="images/icons/proxy.svg" alt="" width="20" class="pb-1"> <span>Proxies</span> </a>
               </li>
             </ul>
-            <a href="" class="nav-link"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+            <a href="" class="nav-link icon_notification"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
             <a href="" class="nav-link text-white"> <img src="images/icons/Mask Group.png" alt="" width="40" class="pe-2 pb-1"> Rizki Agus</a>
-          </div>
+          <!-- </div> -->
         </div>
       </nav>
       <!-- akhir halaman navbar -->
@@ -80,13 +80,9 @@
                  <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.svg" alt="" width="30"></span>
               </a> 
               </div>
-              <a href="" class="btn btn-newtask"> New Task </a>
-            </div>
-            <div class="col-1">
-              
-            </div>
-            <div class="col-2">
-              
+              <div class="new__task">
+                <a href="" class="btn btn-newtask"> New Task </a>
+              </div>
             </div>
           </div>
         </div>
@@ -115,268 +111,101 @@
                     <tbody>
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-success">Completed</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
                       <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
+                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
+                        <td data-label="Size">40</td>
+                        <td data-label="Store">nike</td>
+                        <td data-label="Profil">jonh</td>
+                        <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
+                        <td data-label="Action">
                           <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
                           <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
                         </td>
                       </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td>40</td>
-                        <td>nike</td>
-                        <td>jonh</td>
-                        <td><span class="badge bg-warning">On Progress</span></td>
-                        <td>
-                          <a href=""><img src="./images/icons/Icon=Edit.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
+                      
                     </tbody>
                   </table>
                 </div>
@@ -432,7 +261,8 @@
               "sScrollX": "auto",
               searching: false,
               bInfo: true,
-              "lengthChange": false,
+              // "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+              "lengthChange": true,
               "pagingType": "simple_numbers",
                oLanguage: {
                   oPaginate: {

@@ -50,7 +50,7 @@ body{
             margin-right: 20px;
 
             img{
-                margin-right: 10px;
+                margin-right: 0px;
             }
 
             .active{
@@ -81,10 +81,16 @@ body{
         margin-bottom: 20px;
         padding: auto;
         .flex-right{
-            justify-content: space-between;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            // flex-direction: column;
         }
         .btn-group{
             // position: relative;
+            flex: 6;
+            margin-right: 16px;
+            height: 44px;
+            width: auto;
             
             .dropdown-menu{
                 background-color: $color2;
@@ -106,7 +112,6 @@ body{
                 }
 
                 .form-control{ 
-                    width: 170px;
                     height: 44px;
                     background-color: #1B143C;
                     border-color: #3A3456;
@@ -159,6 +164,7 @@ body{
                 padding-right: 16px;
                 border-color: #3A3456;
                 position: relative;
+                width: max-content;
 
                 &::after{
                     position: absolute;
@@ -176,6 +182,8 @@ body{
         }
 
         .input-group{
+            width: auto;
+            flex: 1;
             .input-group-text{
                 background-color: transparent;
                 border-color: #3A3456;
@@ -183,6 +191,11 @@ body{
                 height: 44px;
                 padding: 6px;
             }
+        }
+
+        .new__task{
+            flex: 0 0 100%;
+            margin-top: 16px;
         }
 
         .btn-newtask{
@@ -195,6 +208,7 @@ body{
             margin-left: 3px;
             padding-left: 1px;
             padding-right: 1px;
+            display: block;
 
             &:hover{
                 opacity: 0.8;
@@ -202,7 +216,7 @@ body{
                 background: $gradienColor;
                 border: none;
                 color: white !important;
-            }
+            } 
         }
 
         .dropdown-toggle::after{
@@ -216,14 +230,13 @@ body{
             color: #BBB9C5;
         }
 
-        .btn-group{
-            height: 44px;
-            width: auto;
-            margin-right: 3px;
-        }
-        .input-group{
-            width: auto;
-        }
+        // .btn-group{
+        //     height: 44px;
+        //     width: auto;
+        // }
+        // .input-group{
+        //     width: auto;
+        // }
         .btn-primary{
             height: 44px;
             width: auto;
@@ -234,12 +247,13 @@ body{
 
 .task-cart{
     .table-content{
-        background-color: $color2;
-        padding: 0;
         border-radius: 6px;
         
         .dataTable{
             margin-bottom: 0;
+        }
+        .dataTables_length, .dataTables_wrapper .dataTables_filter {
+            display: none;
         }
         .table {
             padding-left: 40px;
@@ -428,6 +442,14 @@ footer{
             padding: 0;
         }
 
+        .navbar-nav{
+            .nav-item{
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+
         .navbar-collapse{
             position: relative;
             top: auto;
@@ -446,18 +468,28 @@ footer{
             padding: 0;
             .flex-right{
                 justify-content: flex-end;
-            }
-
-            .btn-group{
-                form{
-                    .form-control{
-                        width: 190px;
-                    }
-                }
+                flex-wrap: initial;
+                // flex-direction: row;
             }
 
             .btn-group{
                 margin-right: 16px;
+                flex: none;
+                form{
+                    .form-control{
+                        width: 221px;
+                        // width: auto;
+                    }
+                }
+            }
+
+            .input-group{
+                flex: 0;
+            }
+
+            .new__task{
+                flex: 0 0 0;
+                margin-top: 0;
             }
 
             .btn-newtask{
@@ -471,6 +503,8 @@ footer{
     }
     .task-cart{
         .table-content{
+            padding: 0;
+            background-color: $color2;
             .dataTables_paginate {
                 float: right;
             }
@@ -478,6 +512,110 @@ footer{
                 .items{
                     padding-left: 0;
                 }
+            }
+        }
+    }
+}
+
+
+// responsive table
+@media screen and (max-width: 576px){
+    .table{
+        margin-top: 24px;
+    }
+    .table thead{
+        display: none;
+    }
+    .table,.table tbody,.table tr,.table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 24px;
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        padding-right: 16px;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        text-align: left;
+        width: 50%;
+        padding-left: 16px;
+        font-size: 15px;
+        font-weight: 500;
+        color: white;
+    }
+    .odd, .even{
+        background-color: $color2;
+        border-radius: 6px;
+    }
+    td:last-child {
+        border :none;
+    }
+    .task-cart{
+        .table-content{
+            .table{
+                padding-left: 0;
+                tbody{
+                    a{
+                        padding-right: 0;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .form-check-input{
+        display: none;
+    }
+
+    tbody{
+        .sorting_1{
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px){
+    .navbar-nav{
+        background-color: $color2;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        flex-direction: initial;
+        justify-content: space-around;
+        height: 83px;
+        padding-top: 20px;
+    
+        .nav-item{
+            .active{
+                background-color: $color6;
+                text-align: center;
+                padding: 8px 8px;
+                margin-right: 0;
+            }
+        }
+    }
+    .icon_notification{
+        display: none;
+    }
+    span{
+        display: none;
+    }
+    .task-judul{
+        .container{
+            .flex-right{
+                flex-wrap: wrap;
             }
         }
     }
