@@ -1145,8 +1145,10 @@ footer{
                     }
                 }
                 
-                .bi-eye::before {
-                    // content: "\f321";
+                .bi-eye::before{
+                    font-size: 16px;
+                }
+                .bi-eye-slash::before{
                     font-size: 16px;
                 }
 
@@ -1292,6 +1294,13 @@ footer{
                 .form-label {
                     font-size: 14px;
                     margin-bottom: 12px;
+                }
+
+                .bi-eye::before{
+                            font-size: 16px;
+                }
+                .bi-eye-slash::before{
+                            font-size: 16px;
                 }
             
                 .form-control{
@@ -1489,12 +1498,6 @@ footer{
                     .form-password-responsive{
                         margin-top: 0;
                     }
-
-                    .form-password{
-                        .bi-eye-slash::before{
-                            font-size: 24px;
-                        }
-                    }
                 }
             }
         }
@@ -1558,10 +1561,10 @@ footer{
 
                     .form-password{
                         .bi-eye::before{
-                            font-size: 24px;
+                            font-size: 20px;
                         }
                         .bi-eye-slash::before{
-                            font-size: 24px;
+                            font-size: 20px;
                         }
                     }
 
@@ -1669,7 +1672,10 @@ footer{
 
                     .form-password{
                         .bi-eye::before{
-                            font-size: 24px;
+                            font-size: 20px;
+                        }
+                        .bi-eye-slash::before{
+                            font-size: 20px;
                         }
                     }
                 }
