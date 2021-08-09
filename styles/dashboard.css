@@ -27,6 +27,7 @@ body {
 }
 
 .navbar-dashboard .container {
+  position: relative;
   padding: auto;
 }
 
@@ -46,6 +47,140 @@ body {
   background-color: #7963FA;
   border-radius: 6px;
   padding: 10px 16px;
+}
+
+.navbar-dashboard .container .icon_notification .icon_notification_hover {
+  cursor: pointer;
+}
+
+.navbar-dashboard .container .icon_notification:hover .table__notification {
+  opacity: 1;
+  z-index: 999;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification {
+  position: absolute;
+  width: 480px;
+  background-color: #312863;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 65px;
+  right: 100px;
+  z-index: 5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-top: 24px;
+  opacity: 0;
+  z-index: -999;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .header__notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .header__notification .header {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification hr {
+  margin: 0;
+  color: #625A8D;
+  border: none;
+  height: 2px;
+  background-color: #625A8D;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-left-style: 24px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items:hover {
+  background-color: #47377E;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items .left .title {
+  margin-left: 16px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items .left .title .title__judul {
+  margin-bottom: 9px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items .left .title .title__text {
+  font-size: 14px;
+  color: #BBB9C5;
+  line-height: 17px;
+  margin: 0;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .data__items .right p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  margin-top: 16px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .garis__items {
+  margin-left: 24px;
+  margin-right: 24px;
+  color: #625A8D;
+  border: none;
+  height: 2px;
+  background-color: #625A8D;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification .view__all {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #7963FA;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.navbar-dashboard .container .icon_notification .table__notification::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  background-color: #312863;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 60px;
 }
 
 .navbar-dashboard .navbar-collapse {
