@@ -1207,6 +1207,14 @@ footer a {
   height: 100vh;
 }
 
+.container__pass__update {
+  padding-top: 158px;
+}
+
+.container__email__send {
+  padding-top: 158px;
+}
+
 .waiting-container {
   position: relative;
   padding-bottom: 90px;
@@ -1382,7 +1390,7 @@ footer a {
 }
 
 .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--email-send {
-  margin-bottom: 264px;
+  margin-bottom: 56px;
 }
 
 .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--waiting-list {
@@ -1390,7 +1398,7 @@ footer a {
 }
 
 .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--pass-update {
-  margin-bottom: 286px;
+  margin-bottom: 78px;
 }
 
 .waiting-container .container .waiting-list .waiting-list__form .forget-password {
@@ -1575,6 +1583,12 @@ footer a {
   .login-container .container .login-illustration {
     display: block;
   }
+  .container__pass__update {
+    padding-top: 143px;
+  }
+  .container__email__send {
+    padding-top: 143px;
+  }
   .waiting-container .waiting-illustration {
     display: block;
   }
@@ -1618,13 +1632,13 @@ footer a {
     margin-bottom: 106px;
   }
   .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--email-send {
-    margin-bottom: 342px;
+    margin-bottom: 56px;
   }
   .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--waiting-list {
     margin-bottom: 64px;
   }
   .waiting-container .container .waiting-list .waiting-list__form .btn-primary.btn-primary--pass-update {
-    margin-bottom: 364px;
+    margin-bottom: 78px;
   }
   .waiting-container .container .waiting-list .waiting-list__form .form-password .bi-eye::before {
     font-size: 20px;
