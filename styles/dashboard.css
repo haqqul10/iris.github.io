@@ -212,7 +212,7 @@ body {
 
 .card-dashboard .card .card-body {
   padding-left: 32px;
-  padding-top: 32px;
+  padding-top: 24px;
   padding-bottom: 32px;
   padding-right: 32px;
 }
@@ -247,7 +247,7 @@ body {
   padding: 4px 8px;
   color: #28C76F;
   height: 32px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .card-dashboard .card .card-body .title {
@@ -428,7 +428,6 @@ body {
 
 .checkout .table thead {
   background-color: #33275C;
-  border-radius: 6px;
 }
 
 .checkout .table tbody {
@@ -439,16 +438,17 @@ body {
   border-style: none;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
   font-size: 16px;
   font-weight: 600;
+  border-radius: 6px 6px 0 0;
 }
 
 .checkout .table td {
   color: #BBB9C5;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 40px;
   border-color: #3A3456;
   font-weight: 500;
   font-size: 16px;
@@ -520,14 +520,13 @@ footer a:hover {
     margin-right: 5px;
   }
   .checkout .container .announcements {
-    margin-left: 23px;
+    margin-left: 18px;
     width: 320px;
     margin-top: 0;
   }
   .checkout .container .table-content {
     background-color: #221B4A;
-    width: 965px;
-    height: 538px;
+    width: 970px;
   }
   .checkout .container .table-content .pagination-checkout {
     -webkit-box-pack: end;
@@ -536,23 +535,27 @@ footer a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
   }
   .checkout .container .table-content .pagination-checkout p {
     padding-bottom: 0;
   }
   .checkout .container .table-content .table-judul {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-bottom: 16px;
+  }
+  .checkout .container .table-content .table-judul .header__judul__table {
+    padding: 0;
+  }
+  .checkout .container .table-content tbody > tr:last-child {
+    border-bottom-style: hidden;
   }
   .checkout .container .table-content h5 {
     margin-bottom: 0;
   }
   .checkout .container .table-content .table__content_full {
     padding: 0;
-  }
-  .checkout .paginition {
-    margin-right: 25px;
   }
   .checkout .paginition .nav-pills .nav-item #pills-home-tab {
     margin-left: 0px;
@@ -581,6 +584,8 @@ footer a:hover {
   }
   .table tr {
     margin-bottom: 24px;
+    background-color: #221B4A;
+    border-radius: 6px;
   }
   .table td {
     text-align: right;

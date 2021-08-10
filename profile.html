@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
 
     <!-- MyCSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
 
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
@@ -23,27 +23,52 @@
           <a class="navbar-brand" href="#">
             <img src="images/icons/Logo.svg" alt="Iris" width="80">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> Dashboard</a>
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> <span>Dashboard</span> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html"> <img src="images/icons/task.svg" alt="" width="20" class="pb-1">Task</a>
+                <a class="nav-link" href="index.html"> <img src="images/icons/task.svg" alt="" width="20" class="pb-1"><span>Task</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1">Releases</a>
+                <a class="nav-link" href="dashboard.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1"><span>Releases</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="homepage.html"> <img src="images/icons/proxy.svg" alt="" width="20" class="pb-1">Proxies</a>
+                <a class="nav-link" href="homepage.html"> <img src="images/icons/proxy.svg" alt="" width="20" class="pb-1"><span>Proxies</span></a>
               </li>
             </ul>
-            <a href="" class="nav-link"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+            <div class="item__notification">
+              <a href="" class="nav-link icon_notification"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+              <div class="table__notification">
+                <div class="header__notification">
+                    <p class="header">Notification <span>(4)</span></p>
+                    <a href="">
+                      <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
+                    </a>
+                </div>
+                <hr>
+                <a href="" class="data__items">
+                  <div class="left float-start">
+                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+                      <div class="title float-end">
+                        <p class="title__judul">Nike</p>
+                        <p class="title__text">Today, 24 june</p>
+                      </div>
+                  </div>
+                  <div class="right float-end">
+                    <p>Succesfully checkout</p>
+                  </div>
+                </a>
+                <hr class="garis__items">
+                <a href="" class="view__all">View All</a>
+              </div>
+            </div>
             <a href="" class="nav-link text-white"> <img src="images/icons/Mask Group.png" alt="" width="40" class="pe-2 pb-1"> Rizki Agus</a>
-          </div>
+          <!-- </div> -->
         </div>
       </nav>
       <!-- akhir halaman navbar -->
@@ -73,6 +98,7 @@
                   <form>
                     <img src="./images/icons/search.svg" alt="">
                     <input class="form-control" type="search" placeholder="Search Profile" aria-label="Search">
+                    <label for="search-home" class="form-label"></label>
                   </form>
                 </div>
               </div>
@@ -422,9 +448,9 @@
 
 
           if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-success').addClass('btn-default');
-            //navListItems.addClass('btn-default');
-            $item.addClass('btn-success');
+            // navListItems.addClass('btn-success');
+            $item.addClass('btn-success').removeClass('btn-default');
+            // navListItems.removeClass('btn-success').addClass('btn-success');
             allWells.hide();
             $target.show();
             $target.find('input:eq(0)').focus();
@@ -457,7 +483,8 @@
             curStepBtn = curStep.attr("id"),
             prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
 
-          prevStepWizard.removeAttr('disabled').trigger('click');
+            prevStepWizard.removeAttr('disabled').trigger('click');
+            // prevStepWizard.removeClass('btn-success').addClass('btn-default');
         });
 
 

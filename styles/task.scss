@@ -22,7 +22,7 @@
 }
 
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; 
 }
 
 // navbar task
@@ -377,9 +377,16 @@ body{
         .dataTable{
             margin-bottom: 0;
         }
-        .dataTables_length, .dataTables_wrapper .dataTables_filter {
-            display: none;
+        
+        .dataTables_paginate{
+            display: flex;
+            justify-content: center;
+
+            .pagination-default{
+                display: block;
+            }
         }
+        
         .table {
             padding-left: 40px;
             text-align: left;
@@ -474,9 +481,7 @@ body{
             }
         }
         .dataTables_info{
-            color: #B9B9C3;
-            margin-top: 25px;
-            padding-left: 12px;
+            display: none;
         }
 
         .dataTables_scrollHead{
@@ -553,7 +558,24 @@ footer{
             }
         }
     }
+    .task-cart{
+        .table-content{
+            .dataTables_length, .dataTables_wrapper .dataTables_filter {
+                display: none;
+            }
+        }
+    }
     
+}
+
+@media screen and (max-width: 768px) {
+    .task-cart{
+        .table-content{
+            .dataTables_length, .dataTables_wrapper .dataTables_filter {
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -633,10 +655,23 @@ footer{
             .dataTables_paginate {
                 float: right;
             }
+            .dataTables_length, .dataTables_wrapper .dataTables_filter {
+                display: none;
+            }
             .table{
                 .items{
                     padding-left: 0;
+
+                    .img-shoe{
+                        margin-right: 16px;
+                    }
                 }
+            }
+            .dataTables_info{
+                color: #B9B9C3;
+                margin-top: 25px;
+                padding-left: 12px;
+                display: block;
             }
         }
     }
@@ -645,8 +680,16 @@ footer{
 
 // responsive table
 @media screen and (max-width: 576px){
+    .task-judul{
+        .container{
+            margin-bottom: 32px;
+        }
+    }
+    .dataTables_scrollHead{
+        display: none;
+    }
     .table{
-        margin-top: 24px;
+        margin-top: 19px;
     }
     .table thead{
         display: none;
@@ -690,6 +733,29 @@ footer{
                     a{
                         padding-right: 0;
                         margin-left: 5px;
+                    }
+                }
+            }
+
+            .dataTables_length, .dataTables_wrapper .dataTables_filter {
+                display: flex;
+            }
+
+            .dataTables_length{
+                justify-content: flex-end;
+                color: white;
+
+                label{
+                    display: flex;
+
+                    .form-select{
+                        background-color: transparent;
+                        border-color: #3A3456;
+                        padding: 6px 8px;
+                        width: 56px;
+                        color: white !important;
+                        margin-left: 8px;
+                        margin-right: 8px;
                     }
                 }
             }
@@ -744,4 +810,6 @@ footer{
             }
         }
     }
+
+    
 }
