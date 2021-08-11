@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en" style="overflow-x: hidden;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="styles/proxy.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+
+    <title>Proxy</title>
+  </head>
+  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+
+    <!-- halaman navbar -->
+      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/icons/Logo.svg" alt="Iris" width="80">
+          </a>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="20" class="pb-1"> <span>Dashboard</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="task.html"> <img src="images/icons/task.svg" alt="" width="20" class="pb-1"> <span>Task</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="release.html"> <img src="images/icons/realise.svg" alt="" width="20" class="pb-1"> <span>Releases</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="proxy.html"> <img src="images/icons/Icon=Proxy.svg" alt="" width="20" class="pb-1"> <span>Proxies</span> </a>
+              </li>
+            </ul>
+            <div class="item__notification">
+              <a href="" class="nav-link icon_notification"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1" style="margin-right: -15px;"></a>
+              <div class="table__notification">
+                <div class="header__notification">
+                    <p class="header">Notification <span>(4)</span></p>
+                    <a href="">
+                      <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
+                    </a>
+                </div>
+                <hr>
+                <a href="" class="data__items">
+                  <div class="left float-start">
+                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+                      <div class="title float-end">
+                        <p class="title__judul">Nike</p>
+                        <p class="title__text">Today, 24 june</p>
+                      </div>
+                  </div>
+                  <div class="right float-end">
+                    <p>Succesfully checkout</p>
+                  </div>
+                </a>
+                <hr class="garis__items">
+                <a href="" class="view__all">View All</a>
+              </div>
+            </div>
+            <a href="" class="nav-link text-white"> <img src="images/icons/Mask Group.png" alt="" width="40" class="pe-2 pb-1"> Rizki Agus</a>
+          <!-- </div> -->
+        </div>
+      </nav>
+      <!-- akhir halaman navbar -->
+
+      <!-- Card -->
+      <section class="card-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5 col-lg-8 text-white">
+              <h2>Proxy</h2>
+              <p>Proxy Information in Here</p>
+            </div>
+            <div class="col-12 col-md-7 col-lg-4 d-flex flex-right my-auto">
+              <div class="btn-group">
+                <form>
+                  <input class="form-control" type="search" placeholder="Supreme" aria-label="Search">
+                  <label for="search-home" class="form-label"></label>
+                </form>
+                <button type="button" class="btn btn-secondary-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                  <img src="./images/icons/chevron-down-task.svg" alt="" class="img-fluid">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <div class="new__task">
+                <a href="" class="btn btn-newtask">Test All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir Card -->
+
+      <section class="profile">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 col-lg-4 your-profile-left">
+              <div class="row judul-profile">
+                <div class="col-12 col-md-6">
+                  <p class="text-white">Your Proxy</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <form>
+                    <img src="./images/icons/search.svg" alt="">
+                    <input class="form-control" type="search" placeholder="Search Proxy" aria-label="Search">
+                    <label for="search-home" class="form-label"></label>
+                  </form>
+                </div>
+              </div>
+              <div class="row table-profile">
+                <div class="col">
+                  <table class="table text-white" id="example" class="" style="width:100%;">
+                    <thead style="background-color: #33275C; border-radius: 6px;">
+                      <tr>
+                        <th>Proxy List</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_1" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">visiaon</td>
+                          <td>23</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_2" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">Hype ESP</td>
+                          <td>20</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_3" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">Indihome</td>
+                          <td>10</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_4" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">Prabola</td>
+                          <td>25</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_5" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">Shoope</td>
+                          <td>13</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                        <tr data-bs-toggle="collapse" data-bs-target="#step_6" aria-expanded="false" aria-controls="collapseExample">
+                          <td class="text-white">Tokopedia</td>
+                          <td>30</td>
+                          <td>
+                            <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  <div class="action-knob text-center">
+                    <a href="" class="btn btn-primary">Create New Group</a>
+                    <a href="" class="btn btn-danger">Delete All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-11 col-lg-8 your-profile-right">
+              <div class="row profile-information">
+                <!-- profile information left -->
+                <div class="col-12 col-lg-6 profile-information-left">
+                  <p class="text-white">Group Detail</p>
+                  <div class="collapse show " id="step_1">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Vision</p>
+                      <p class="alert__title">23</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.4</td>
+                            <td class="text-white">8080</td>
+                            <td>johndoe</td>
+                            <td>johndoe123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="step_2">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Hype ESP</p>
+                      <p class="alert__title">20</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.7</td>
+                            <td class="text-white">8080</td>
+                            <td>ashiap</td>
+                            <td>ashiap123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="step_3">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Indihome</p>
+                      <p class="alert__title">10</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.7</td>
+                            <td class="text-white">8080</td>
+                            <td>ashiap</td>
+                            <td>ashiap123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="step_4">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Prabola</p>
+                      <p class="alert__title">25</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.7</td>
+                            <td class="text-white">8080</td>
+                            <td>ashiap</td>
+                            <td>ashiap123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="step_5">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Shopee</p>
+                      <p class="alert__title">13</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.7</td>
+                            <td class="text-white">8080</td>
+                            <td>ashiap</td>
+                            <td>ashiap123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="step_6">
+                    <div class="alert alert__proxy" role="alert">
+                      <p class="alert__title">Tokopedia</p>
+                      <p class="alert__title">30</p>
+                      <a href=""> <img src="./images/icons/more-horizontal.svg" alt="" class="img-fluid" style="width: 20px;"> </a> 
+                    </div>
+                    <p class="proxy__list">Proxy List</p>
+                    <table class="table text-white" id="example" class="" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>Port</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td class="text-white">192.168.1.7</td>
+                            <td class="text-white">8080</td>
+                            <td>ashiap</td>
+                            <td>ashiap123</td>
+                          </tr> 
+                        </a>
+                      </tbody>
+                    </table>
+                    <div class="action-knob text-center">
+                      <a href="" class="btn btn-primary">Add Proxy</a>
+                      <a href="" class="btn btn-danger">Delete All</a>
+                    </div>
+                  </div>
+                </div>
+
+                    
+                <!-- akhir profile information left -->
+
+                <!-- profile information right -->
+                <div class="col-12 col-lg-6 profile-information-right">
+                  <p class="text-white">Proxy Detail</p>
+                  
+
+                  <form class="row text-white pt-4">
+                    <div class="mb-3">
+                      <label for="IP" class="form-label mb-3">IP</label>
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="IP" placeholder="IP">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="port" class="form-label mb-3">Port</label>
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="port" placeholder="Port">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                      <label for="username" class="form-label">Username</label>
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                      <label for="password" class="form-label">Password</label>
+                      <div class="gradien__form">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <a href="" class=" btn btn-success"> Save Profile </a>
+                    </div>
+                  </form>
+                </div>
+                <!-- akhir profile information right -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="row justify-content-between text-white">
+            <div class="col">
+              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="" class="pe-4">Status</a>
+              <a href="">Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- akhir footer -->
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/jquery/jquery-3.5.1.js"></script>
+    <!-- <script src="libraries/jquery/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script> -->
+    <!-- <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+      // $('.collapse').collapse({
+      //   hide: false
+      // })
+      $('.collapse').on('show.bs.collapse', function () {
+        $('.collapse').collapse('hide')
+      })
+    //   $('.collapse').on('show', function () {
+    //     $('.collapse.in').collapse('hide');
+    // });
+    </script>
+  </body>
+</html>

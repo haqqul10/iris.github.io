@@ -22,7 +22,7 @@
 }
 
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; 
 }
 
 // dashboard
@@ -175,7 +175,7 @@ body{
             margin-right: 20px;
 
             img{
-                margin-right: 10px;
+                margin-right: 0px;
             }
 
             .active{
@@ -200,6 +200,116 @@ body{
     }
 }
 
+// card dashboard proxy
+.card-dashboard{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    .flex-right{
+            justify-content: flex-end;
+        }
+        .btn-group{
+            height: 44px;
+            width: auto;
+            
+            .dropdown-menu{
+                background-color: $color2;
+                .dropdown-item{
+                    color: white;
+
+                    &:hover{
+                        background-color: #33275C;
+                    }
+                }
+            }
+            form{
+                position: relative;
+                z-index: 1;
+                input::placeholder{
+                    font-size: 12px;
+                    color: #8D899E;
+                    padding-top: 4px;
+                    font-weight: 500;
+                }
+
+                .form-control{ 
+                    height: 44px;
+                    background-color: #1B143C;
+                    border-color: #3A3456;
+                    border-radius: 5px 0px 0 5px;
+                    color: white;
+                    border-right: none;
+                    // position: relative; 
+
+                    &:focus{
+                        position: relative;
+                        outline: none;
+                        box-shadow: none;
+                        border-radius: 6px;
+                        border: 2px solid transparent;
+                        // border-right: none;
+                        // border-top-right-radius: 0;  
+                        // border-bottom-right-radius: 0;                    
+                        + label {
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%) ;
+                        }
+                    }
+                    + label {
+                        border-radius: 6px;
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
+                    }    
+                }
+            }
+            .btn-secondary-dropdown{
+                background-color: transparent;
+                border-left: none;
+                padding-left: 16px;
+                padding-right: 16px;
+                border-color: #3A3456;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .btn-newtask{
+            color: #fff;
+            background-color: $color6;
+            border: none;
+            height: 44px;
+            margin-left: 16px;
+            padding: 9px 0;
+            width: 135px;
+
+            &:hover{
+                opacity: 0.8;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: none;
+                color: white !important;
+            } 
+        }
+
+        .dropdown-toggle::after{
+            border: none;
+        }
+        h2{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        p{
+            color: #BBB9C5;
+        }
+    }
+
 // your-profile
 .profile{
     .your-profile-left{
@@ -209,15 +319,13 @@ body{
         padding-bottom: 32px;
 
         .judul-profile{
-            padding-top: 20px;
-            padding-bottom: 24px;
-            padding-left: 32px;
-            padding-right: 32px;
+            padding: 16px 32px;
 
             p{
-                padding-top: 7px;
+                padding-top: 6px;
                 font-weight: 600;
                 font-size: 20px;
+                margin-bottom: 0;
             }
         }
         form{
@@ -264,7 +372,7 @@ body{
                 position: absolute;
                 top: 20%;
                 right: 0;
-                left: 4%;
+                left: 8%;
                 bottom: 0;
                 width: 24px;
                 height: 24px;
@@ -287,6 +395,18 @@ body{
 
             tbody{
                 vertical-align: 0;
+                tr{
+                    &:hover{
+                        background-color: #A085FA;
+                        cursor: pointer;
+                        color: white !important;
+                    }
+                    td{
+                        &:hover{
+                            color: white !important;
+                        }
+                    }
+                }
                 a{
                     padding-left: 10px;
                 }
@@ -309,7 +429,7 @@ body{
         }
         .table-profile{
             .action-knob{
-                padding-top: 200px;
+                padding-top: 50px;
                 .btn-primary{
                     background-color: $color6;
                     border-radius: 6px;
@@ -365,147 +485,125 @@ body{
                 p{
                     font-size: 20px;
                     font-weight: 600;
-                    padding-bottom: 24px;
+                    margin-bottom: 0;
+                    line-height: 20px;
                 }
-
-                .stepwizard-step p {
-                    margin-top: 0px;
-                    color: white;
-
-                    small{
-                        font-size: 12px;
-                        font-weight: 400;
-                    }
-                    span{
-                        font-size: 14px;
-                        font-weight: 600;
-                    }
-                }
-                .stepwizard-row {
-                    display: table-row;
-                }
-                .stepwizard {
-                    display: table;
-                    width: 100%;
-                    position: relative;
-                }
-                .stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
-                    opacity:1 !important;
-                    color:#bbb;
-                }
-                .progress{
-                    top: 19px;
-                    bottom: 0;
-                    position: absolute;
-                    content: " ";
-                    width: 74%;
-                    left:13%;
-                    height: 2px;
-                    z-index: 0;
-                    background-color: #33275C;
-                    
-                    .progress-bar{
-                        background-color: $color6;
-                    }
-                }
-                .stepwizard-step {
-                    display: table-cell;
-                    text-align: center;
-                    position: relative;
-
-                    .btn-success{
-                        background-color: $color6;
-                        border-color:$color6 ;
-                    }
-                    .btn-circle {
-                        width: 40px;
-                        height: 40px;
-                        text-align: center;
-                        padding: 10px 0;
-                        font-size: 12px;
-                        border-radius: 50%;
-                        font-size: 16px;
-                        line-height: 16px;
-                        font-weight: 600;
-                    }    
-                    .btn-default{
-                        background-color: #33275C;
-                        color: #BBB9C5;
-                    }
-                }
-                .gradien__form{
-                    position: relative;
-                    z-index: 1;
-                }
-
-                .form-control{
-                    // width: 470px;
-                    padding: 12px 16px;
-                    border: 2px solid transparent;
-                    background-color: $color1;
-                    border-radius: 6px;
-                    color: white;
-                    line-height: 125%;
-
-                    &:focus{
-                    // box-shadow: 0 0 0 0;
-                    position: relative;
-                    outline: none;
-                    box-shadow: none;
-                    border-radius: 6px;
-                    border: 2px solid transparent;
                 
-                        + span {
-                            width: 100%;
-                            height: 100%;
-                            background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%) ;
+
+                .alert__proxy{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #A085FA;
+                    color: white;
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+                    height: 52px;
+
+                    .alert__title{
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    line-height: 20px;
+                    }
+                    
+                    a{
+                        img{
+                            margin-top: -5px;
                         }
                     }
-                    + span {
-                        border-radius: 6px;
-                        display: block;
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        z-index: -1;
+                }
 
+                .proxy__list{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    color: white;
+                    margin-bottom: 16px;
+                }
+
+                .table {
+                    // position: relative;
+                    // padding-left: 40px;
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    .form-check{
+                        .form-check-input {
+                            background-color: transparent;
+                            border-color: $gray;
+                        }
+                    }
+                    thead{
+                        background-color: #33275C; 
+                        tr{
+                            border-radius: 6px;
+                        }
+                    }
+
+                    tbody{
+                        vertical-align: 0;
+                        a{
+                            padding-left: 10px;
+                        }
+                    }
+                    th {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 20px;
+                        border-style: none;
+                        width: 100%;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                    }
+                    td{
+                        border-color: $gray;
+                        color: #BBB9C5;
+                        width: 100%;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
                     }
                 }
-                #webhook{
-                    margin-bottom: 54px;
-                }
-                .form-check{
-                    .form-check-input{
-                        background-color: transparent;
-                        border-color: white;
-                        width: 24px;
-                        height: 24px;
-                        margin-right: 8px;
-                    }
-                    .form-check-label{
-                        padding-top: 4px;
-                    }
-                }
-                .pager{
-                    padding-top: 32px;
-                    padding-bottom: 32px;
-                    .arrow-left{
-                        background-color: $color4;
-                        padding: 12px;
-                        border-radius: 6px;
-                        margin-right: 14px;
-                    }
-                    .arrow-right{
+                .action-knob{
+                    padding-top: 50px;
+                    .btn-primary{
                         background-color: $color6;
-                        padding: 12px;
                         border-radius: 6px;
+                        border:none;
+                        font-weight: 500;
+                        padding: 9px 16px;
+                        margin-right: 0;
+                        height: 44px;
+                        width: auto;
+
+                        &:hover{
+                        opacity: 0.8;
+                        transition: 0.3s;
+                        background: $gradienColor;
+                        border: none;
+                        color: white;
+                    
+                        }
+                    }
+
+                    .btn-danger{
+                        border: 1px solid #E03C8B;
+                        background-color: transparent;
+                        color: #E03C8B;
+                        padding: 9px 16px;
+                        width: auto;
+                        height: 44px;
+
+                        &:hover{
+                            opacity: 0.8;
+                            transition: 0.3s;
+                            background: $gradienColor;
+                            border: none;
+                            color: white;
+                        }
                     }
                 }
+                
             }
-
             .profile-information-right{
                 padding-left: 32px;
                 padding-top: 32px;
@@ -524,51 +622,12 @@ body{
                     font-size: 16px;
                     font-weight: 500;
                 }
-                .card{
-                    background-color: transparent;
-                    
-                    img{
-                        height: 226px;
-                    }
-                    
-                    .text-title{
-                        font-size: 16px;
-                        font-weight: 500;
-                    }
-                    .card-text{
-                        font-size: 18px;
-                        font-weight: 600;
-                        padding-top: 10px;
-                    }
-
-                    .card-text-name{
-                        p{
-                            font-size: 12px;
-                            font-weight: 200;
-                            text-transform: uppercase ;
-                            line-height: 125%;
-                            letter-spacing: 0.08em;
-                        }
-                    }
-                    .card-text-name-profile{
-                        .detail-profile{
-                            margin-top: -17px;
-                        }
-                        p{
-                            font-weight: 600;
-                            line-height: 125%;
-                            font-size: 16px;
-                        }
-                    }
-                }
                 .gradien__form{
                     position: relative;
                     z-index: 1;
                 }
 
                 .form-control{
-                // width: 470px;
-                // padding: 12px 16px;
                 height: 44px;
                 border: 2px solid transparent;
                 background-color: $color1;
@@ -634,14 +693,6 @@ body{
             }
             /*form styles*/
             form{
-                .text-mute{
-                    font-size: 16px;
-                    color: #8D899E;
-                    font-weight: 400;
-                    padding-top: 12px;
-                    padding-bottom: 24px;
-                }
-
                 .btn-success{
                     background-color: $color6;
                     border-radius: 6px;
@@ -649,6 +700,8 @@ body{
                     font-weight: 500;
                     padding: 10px 16px;
                     height: 44px;
+                    margin-top: 24px;
+                    width: 100%;
 
                     &:hover{
                     opacity: 0.8;
@@ -720,8 +773,10 @@ footer{
     // Profil
     .profile{
         .your-profile-left{
+            height: 736px;
             .table-profile{
                 .action-knob{
+                    margin-top: 130px;
                     .btn-primary{
                         width: auto;
                         margin-right: 16px;
@@ -736,19 +791,33 @@ footer{
 
         }
         .your-profile-right{
+            padding-left: 0;
+            
             .profile-information{
                 margin-left: 32px;
                 margin-top: auto;
 
                 .profile-information-left{
-
+                    height: 736px;
+                    .action-knob{
+                        margin-top: 310px;
+                        .btn-primary{
+                            width: 165px;
+                            margin-right: 16px;
+                        }
+        
+                        .btn-danger{
+                            width: 165px;
+                        }
+                    }
                 }
 
                 .profile-information-right{
+                    height: 736px;
                     &::after{
                         position: absolute;
                         border-left: 1px solid $gray;
-                        height: 790px;
+                        height: 668px;
                         // width: 100%;
                         bottom: 30px;
                         left: 0;
@@ -776,7 +845,7 @@ footer{
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 1;
+        z-index: 5;
         flex-direction: initial;
         justify-content: space-around;
         height: 83px;
@@ -788,6 +857,9 @@ footer{
                 text-align: center;
                 padding: 8px 8px;
                 margin-right: 0;
+            }
+            img{
+                margin-right: 10px;
             }
 
         }

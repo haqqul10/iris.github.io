@@ -91,10 +91,10 @@
           <div class="row justify-content-center">
             <div class="col-11 col-lg-4 your-profile-left">
               <div class="row judul-profile">
-                <div class="col">
+                <div class="col-12 col-md-6">
                   <p class="text-white">Your Profile</p>
                 </div>
-                <div class="col">
+                <div class="ol-12 col-md-6">
                   <form>
                     <img src="./images/icons/search.svg" alt="">
                     <input class="form-control" type="search" placeholder="Search Profile" aria-label="Search">
@@ -204,19 +204,31 @@
                     <form id="step-1" class="text-white setup-content">
                       <div class="mb-4">
                         <label for="profilname" class="form-label mb-3">Profile Name</label>
-                        <input type="text" class="form-control" id="profilname" placeholder="Profile Name" >
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="profilname" placeholder="Profile Name" >
+                          <span class="color__gradient"></span>
+                        </div>
                       </div>
                       <div class="mb-4">
                         <label for="Email" class="form-label mb-3">Email</label>
-                        <input type="email" class="form-control" id="Email" placeholder="Email" >
+                        <div class="gradien__form">
+                          <input type="email" class="form-control" id="Email" placeholder="Email" >
+                          <span class="color__gradient"></span>
+                        </div>
                       </div>
                       <div class="mb-4">
                         <label for="phonenumber" class="form-label mb-3">Phone Number</label>
-                        <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" >
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="phonenumber" placeholder="Phone Number" >
+                          <span class="color__gradient"></span>
+                        </div>
                       </div>
                       <div class="mb-4">
                         <label for="webhook" class="form-label mb-3">Webhook</label>
-                        <input type="text" class="form-control" id="webhook" placeholder="Webhook" >
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="webhook" placeholder="Webhook" >
+                          <span class="color__gradient"></span>
+                        </div>
                       </div>
                       <div class="pager float-end">
                         <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
@@ -228,35 +240,59 @@
                       <div class="row">
                         <div class="col-6 col-md-6">
                           <label for="firtsname" class="form-label">Firts Name</label>
-                          <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="col-6 col-md-6">
                           <label for="lastname" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="mb-3 mt-3">
                           <label for="address1" class="form-label mb-3">Address 1</label>
-                          <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="mb-3">
                           <label for="address2" class="form-label mb-3">Address 2</label>
-                          <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="col-6 col-md-6">
                           <label for="country" class="form-label">Country</label>
-                          <input type="text" class="form-control" id="country" placeholder="Country">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="country" placeholder="Country">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="col-6 col-md-6">
                           <label for="state" class="form-label">State</label>
-                          <input type="text" class="form-control" id="state" placeholder="State">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="state" placeholder="State">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="col-6 col-md-6 mt-3">
                           <label for="city" class="form-label">City</label>
-                          <input type="text" class="form-control" id="city" placeholder="City">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                            <span></span>
+                          </div>
                         </div>
                         <div class="col-6 col-md-6 mt-3">
                           <label for="zipcode" class="form-label">Zipcode</label>
-                          <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                            <span></span>
+                          </div>
                         </div>
                       </div>
                       <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
@@ -271,47 +307,71 @@
 
                   <form id="step-3" class="setup-content text-white">
                     <div class="row">
-                      <div class="col-6 col-md-6">
-                        <label for="firtsname" class="form-label">Firts Name</label>
-                        <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                        <div class="col-6 col-md-6">
+                          <label for="firtsname" class="form-label">Firts Name</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="firtsname" placeholder="Firts Name">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="lastname" class="form-label">Last Name</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3 mt-3">
+                          <label for="address1" class="form-label mb-3">Address 1</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="address2" class="form-label mb-3">Address 2</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="country" class="form-label">Country</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="country" placeholder="Country">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                          <label for="state" class="form-label">State</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="state" placeholder="State">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-6 mt-3">
+                          <label for="city" class="form-label">City</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-6 mt-3">
+                          <label for="zipcode" class="form-label">Zipcode</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                            <span></span>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-6 col-md-6">
-                        <label for="lastname" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                      <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
                       </div>
-                      <div class="mb-3 mt-3">
-                        <label for="address1" class="form-label mb-3">Address 1</label>
-                        <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                      <div class="pager float-end">
+                        <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                        <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
                       </div>
-                      <div class="mb-3">
-                        <label for="address2" class="form-label mb-3">Address 2</label>
-                        <input type="text" class="form-control" id="address2" placeholder="Address 2">
-                      </div>
-                      <div class="col-6 col-md-6">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="country" placeholder="Country">
-                      </div>
-                      <div class="col-6 col-md-6">
-                        <label for="state" class="form-label">State</label>
-                        <input type="text" class="form-control" id="state" placeholder="State">
-                      </div>
-                      <div class="col-6 col-md-6 mt-3">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="City">
-                      </div>
-                      <div class="col-6 col-md-6 mt-3">
-                        <label for="zipcode" class="form-label">Zipcode</label>
-                        <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
-                      </div>
-                    </div>
-                    <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
-                    </div>
-                    <div class="pager float-end">
-                      <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
-                      <a class="arrow-right" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
-                    </div>
                   </form>
                 </div>
                 <!-- akhir profile information left -->
@@ -368,15 +428,24 @@
                   <form class="row text-white pt-4">
                     <div class="mb-3">
                       <label for="Card Number" class="form-label mb-3">Card Number</label>
-                      <input type="email" class="form-control" id="Card Number" placeholder="Card Number">
+                      <div class="gradien__form">
+                        <input type="email" class="form-control" id="Card Number" placeholder="Card Number">
+                        <span></span>
+                      </div>
                     </div>
                     <div class="col-6 col-md-6">
                       <label for="Card Expiration" class="form-label">Card Expiration</label>
-                      <input type="text" class="form-control" id="Card Expiration" placeholder="Card Expiration">
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="Card Expiration" placeholder="Card Expiration">
+                        <span></span>
+                      </div>
                     </div>
                     <div class="col-6 col-md-6">
                       <label for="CVV" class="form-label">CVV</label>
-                      <input type="text" class="form-control" id="CVV" placeholder="CVV">
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="CVV" placeholder="CVV">
+                        <span></span>
+                      </div>
                     </div>
                     <p class="text-mute">*Keep your card info is safe when shipping</p>
                     <a href="" class=" btn btn-success"> Save Profile </a>
