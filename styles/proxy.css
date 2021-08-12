@@ -334,6 +334,7 @@ body {
 
 .card-dashboard p {
   color: #BBB9C5;
+  margin-bottom: 0;
 }
 
 .profile .your-profile-left {
@@ -586,6 +587,8 @@ body {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 15px;
+  padding-right: 0;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table td {
@@ -594,6 +597,7 @@ body {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 15px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .action-knob {

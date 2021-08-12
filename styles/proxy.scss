@@ -307,6 +307,7 @@ body{
         }
         p{
             color: #BBB9C5;
+            margin-bottom: 0;
         }
     }
 
@@ -554,6 +555,8 @@ body{
                         width: 100%;
                         padding-top: 16px;
                         padding-bottom: 16px;
+                        padding-left: 15px;
+                        padding-right: 0;
                     }
                     td{
                         border-color: $gray;
@@ -561,6 +564,7 @@ body{
                         width: 100%;
                         padding-top: 16px;
                         padding-bottom: 16px;
+                        padding-left: 15px;
                     }
                 }
                 .action-knob{
