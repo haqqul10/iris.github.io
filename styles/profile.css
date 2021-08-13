@@ -173,7 +173,7 @@ body {
   background-color: #312863;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 20%;
+  right: 10%;
 }
 
 .navbar-dashboard .container .my__profile {
