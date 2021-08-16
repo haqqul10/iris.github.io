@@ -15,8 +15,15 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1344px;
+    padding: 0;
+  }
+}
+
 .dashboard {
-  background-color: #1B143C;
+  background-color: #18103E;
 }
 
 .navbar-dashboard {
@@ -58,7 +65,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 80px;
+  top: 60px;
   right: 100px;
   z-index: 5;
   -webkit-transition: all 0.3s;
@@ -168,21 +175,25 @@ body {
   right: 25%;
 }
 
-.navbar-dashboard .navbar-nav .nav-item {
+.navbar-dashboard .container .my__profile {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.navbar-dashboard .container .navbar-nav .nav-item {
   margin-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.navbar-dashboard .navbar-nav .nav-item img {
-  margin-right: 0px;
-}
-
-.navbar-dashboard .navbar-nav .nav-item .active {
+.navbar-dashboard .container .navbar-nav .nav-item .active {
   background-color: #7963FA;
   border-radius: 6px;
   padding: 10px 16px;
 }
 
-.navbar-dashboard .navbar-collapse {
+.navbar-dashboard .container .navbar-collapse {
   text-align: center;
   position: absolute;
   top: 100%;
@@ -203,6 +214,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-top: 16px;
 }
 
 .card-dashboard .btn-group {
@@ -227,34 +239,6 @@ body {
   z-index: 1;
 }
 
-.card-dashboard .btn-group form input::-webkit-input-placeholder {
-  font-size: 12px;
-  color: #8D899E;
-  padding-top: 4px;
-  font-weight: 500;
-}
-
-.card-dashboard .btn-group form input:-ms-input-placeholder {
-  font-size: 12px;
-  color: #8D899E;
-  padding-top: 4px;
-  font-weight: 500;
-}
-
-.card-dashboard .btn-group form input::-ms-input-placeholder {
-  font-size: 12px;
-  color: #8D899E;
-  padding-top: 4px;
-  font-weight: 500;
-}
-
-.card-dashboard .btn-group form input::placeholder {
-  font-size: 12px;
-  color: #8D899E;
-  padding-top: 4px;
-  font-weight: 500;
-}
-
 .card-dashboard .btn-group form .form-control {
   height: 44px;
   background-color: #1B143C;
@@ -262,6 +246,38 @@ body {
   border-radius: 5px 0px 0 5px;
   color: white;
   border-right: none;
+}
+
+.card-dashboard .btn-group form .form-control::-webkit-input-placeholder {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 4px;
+}
+
+.card-dashboard .btn-group form .form-control:-ms-input-placeholder {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 4px;
+}
+
+.card-dashboard .btn-group form .form-control::-ms-input-placeholder {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 4px;
+}
+
+.card-dashboard .btn-group form .form-control::placeholder {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 4px;
 }
 
 .card-dashboard .btn-group form .form-control:focus {
@@ -295,8 +311,8 @@ body {
   background-color: transparent;
   border-left: none;
   padding-left: 16px;
-  padding-right: 16px;
   border-color: #3A3456;
+  padding-top: 2px;
 }
 
 .card-dashboard .btn-group .btn-secondary-dropdown:focus {
@@ -312,6 +328,7 @@ body {
   margin-left: 16px;
   padding: 9px 0;
   width: 135px;
+  border-radius: 6px;
 }
 
 .card-dashboard .btn-newtask:hover {
@@ -330,6 +347,7 @@ body {
 .card-dashboard h2 {
   font-size: 32px;
   font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .card-dashboard p {
@@ -344,15 +362,11 @@ body {
   padding-bottom: 32px;
 }
 
-.profile .your-profile-left .judul-profile {
-  padding: 16px 32px;
-}
-
 .profile .your-profile-left .judul-profile p {
+  margin-bottom: 16px;
   padding-top: 6px;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 0;
 }
 
 .profile .your-profile-left form {
@@ -361,13 +375,36 @@ body {
 }
 
 .profile .your-profile-left form .form-control {
-  font-size: 12px;
   height: 44px;
-  background-color: #1B143C;
-  border: 2px solid transparent;
+  background-color: transparent;
+  border: 1px solid #3A3456;
   border-radius: 6px;
   padding-left: 40px;
   color: white;
+}
+
+.profile .your-profile-left form .form-control::-webkit-input-placeholder {
+  color: #8D899E;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profile .your-profile-left form .form-control:-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profile .your-profile-left form .form-control::-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.profile .your-profile-left form .form-control::placeholder {
+  color: #8D899E;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .profile .your-profile-left form .form-control:focus {
@@ -377,6 +414,7 @@ body {
           box-shadow: none;
   border-radius: 6px;
   border: 2px solid transparent;
+  background-color: #221B4A;
 }
 
 .profile .your-profile-left form .form-control:focus + label {
@@ -401,54 +439,73 @@ body {
   position: absolute;
   top: 20%;
   right: 0;
-  left: 8%;
+  left: 4%;
   bottom: 0;
   width: 24px;
   height: 24px;
   z-index: 1;
 }
 
-.profile .your-profile-left .table {
+.profile .your-profile-left .table-profile .table {
   padding: 0;
 }
 
-.profile .your-profile-left .table .form-check .form-check-input {
+.profile .your-profile-left .table-profile .table .form-check .form-check-input {
   background-color: transparent;
   border-color: #5D6180;
 }
 
-.profile .your-profile-left .table tbody {
+.profile .your-profile-left .table-profile .table tbody {
   vertical-align: 0;
 }
 
-.profile .your-profile-left .table tbody tr:hover {
+.profile .your-profile-left .table-profile .table tbody tr:hover {
   background-color: #A085FA;
   cursor: pointer;
   color: white !important;
 }
 
-.profile .your-profile-left .table tbody tr td:hover {
+.profile .your-profile-left .table-profile .table tbody tr td:hover {
   color: white !important;
 }
 
-.profile .your-profile-left .table tbody a {
+.profile .your-profile-left .table-profile .table tbody tr .amound {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr .text-white {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr .img-fluid {
+  width: 24px;
+  float: right;
+  margin-right: 12px;
+}
+
+.profile .your-profile-left .table-profile .table tbody a {
   padding-left: 10px;
 }
 
-.profile .your-profile-left .table th {
+.profile .your-profile-left .table-profile .table th {
   font-weight: 500;
   border-style: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 30px;
 }
 
-.profile .your-profile-left .table td {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  border-color: #5D6180;
+.profile .your-profile-left .table-profile .table td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  border-color: #3A3456;
   color: #BBB9C5;
+  padding-right: 24px;
 }
 
 .profile .your-profile-left .table-profile .action-knob {
@@ -507,10 +564,7 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-left {
-  padding-left: 32px;
-  padding-top: 32px;
-  padding-right: 32px;
-  padding-bottom: 32px;
+  padding: 16px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left p {
@@ -532,6 +586,8 @@ body {
   margin-top: 24px;
   margin-bottom: 24px;
   height: 52px;
+  padding-left: 24px;
+  padding-right: 25px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy .alert__title {
@@ -539,6 +595,13 @@ body {
   font-weight: 600;
   margin-bottom: 0;
   line-height: 20px;
+  padding-right: 40px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .alert__proxy .alert__title_text {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy a img {
@@ -575,6 +638,10 @@ body {
   vertical-align: 0;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr .ip__address {
+  width: 100px;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .table tbody a {
   padding-left: 10px;
 }
@@ -587,17 +654,20 @@ body {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 15px;
-  padding-right: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table td {
-  border-color: #5D6180;
+  border-color: #3A3456;
   color: #BBB9C5;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 15px;
+  padding-left: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .action-knob {
@@ -643,11 +713,8 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-right {
-  padding-left: 32px;
-  padding-top: 32px;
-  padding-right: 32px;
+  padding: 16px;
   position: relative;
-  padding-bottom: 32px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right::after {
@@ -657,6 +724,7 @@ body {
 .profile .your-profile-right .profile-information .profile-information-right p {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right .text-title {
@@ -671,10 +739,38 @@ body {
 
 .profile .your-profile-right .profile-information .profile-information-right .form-control {
   height: 44px;
-  border: 2px solid transparent;
+  border: 2px solid #1B143C;
   background-color: #1B143C;
   border-radius: 6px;
   color: white;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .form-control::-webkit-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .form-control:-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .form-control::-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .form-control::placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right .form-control:focus {
@@ -781,12 +877,33 @@ footer a:hover {
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .profile .your-profile-left .judul-profile {
+    padding: 20px 24px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .navbar-dashboard {
     height: 80px;
   }
   .navbar-dashboard .container {
+    position: relative;
     padding: 0;
+  }
+  .navbar-dashboard .container .navbar-nav {
+    position: absolute;
+    left: 410px;
+  }
+  .navbar-dashboard .container .navbar-nav .nav-item img {
+    margin-right: 5px;
+  }
+  .navbar-dashboard .container .item__notification {
+    position: absolute;
+    right: 140px;
+  }
+  .navbar-dashboard .container .item__notification .table__notification {
+    right: -100px;
   }
   .navbar-dashboard .navbar-collapse {
     position: relative;
@@ -797,11 +914,28 @@ footer a:hover {
     padding-right: 0px;
     padding-bottom: 0px;
   }
+  .card-dashboard .flex-right {
+    margin-top: auto;
+    padding-right: 0;
+  }
+  .card-dashboard .flex-right form .form-control {
+    width: 157px;
+  }
   .profile .your-profile-left {
     height: 736px;
+    width: 427px;
+  }
+  .profile .your-profile-left .judul-profile {
+    padding: 20px 32px 24px 32px;
+  }
+  .profile .your-profile-left .judul-profile p {
+    margin-bottom: 0;
+  }
+  .profile .your-profile-left form img {
+    left: 8%;
   }
   .profile .your-profile-left .table-profile .action-knob {
-    margin-top: 130px;
+    margin-top: 125px;
   }
   .profile .your-profile-left .table-profile .action-knob .btn-primary {
     width: auto;
@@ -810,18 +944,29 @@ footer a:hover {
   .profile .your-profile-left .table-profile .action-knob .btn-danger {
     width: 174px;
   }
+  .profile .your-profile-left .table-profile .table tbody tr .text-white {
+    width: 200px;
+  }
   .profile .your-profile-right {
     padding-left: 0;
+    padding-right: 0;
   }
   .profile .your-profile-right .profile-information {
-    margin-left: 32px;
+    margin-left: 17px;
     margin-top: auto;
   }
+  .profile .your-profile-right .profile-information .col-lg-7 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 55.333333%;
+  }
   .profile .your-profile-right .profile-information .profile-information-left {
+    padding: 32px;
     height: 736px;
   }
   .profile .your-profile-right .profile-information .profile-information-left .action-knob {
-    margin-top: 310px;
+    margin-top: 320px;
   }
   .profile .your-profile-right .profile-information .profile-information-left .action-knob .btn-primary {
     width: 165px;
@@ -830,12 +975,19 @@ footer a:hover {
   .profile .your-profile-right .profile-information .profile-information-left .action-knob .btn-danger {
     width: 165px;
   }
+  .profile .your-profile-right .profile-information .col-lg-5 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 44.666667%;
+  }
   .profile .your-profile-right .profile-information .profile-information-right {
+    padding: 32px;
     height: 736px;
   }
   .profile .your-profile-right .profile-information .profile-information-right::after {
     position: absolute;
-    border-left: 1px solid #5D6180;
+    border-left: 1px solid #3A3456;
     height: 668px;
     bottom: 30px;
     left: 0;
@@ -846,8 +998,14 @@ footer a:hover {
   }
 }
 
+@media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  .navbar-dashboard .container .navbar-nav {
+    left: 210px;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  .navbar-nav {
+  .navbar-dashboard .container .navbar-nav {
     background-color: #221B4A;
     position: fixed;
     bottom: 0;
@@ -863,20 +1021,62 @@ footer a:hover {
     height: 83px;
     padding-top: 20px;
   }
-  .navbar-nav .nav-item .active {
+  .navbar-dashboard .container .navbar-nav .nav-item .active {
     background-color: #7963FA;
     text-align: center;
-    padding: 8px 8px;
+    padding: 10px 12px;
     margin-right: 0;
   }
-  .navbar-nav .nav-item img {
-    margin-right: 10px;
-  }
-  .icon_notification {
+  .navbar-dashboard .container .icon_notification {
     display: none;
   }
-  span {
+  .navbar-dashboard .container span {
     display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile .your-profile-left {
+    background-color: transparent;
+  }
+  .table {
+    margin-top: 24px;
+  }
+  .table thead {
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 24px;
+    background-color: #221B4A;
+    border-radius: 6px;
+  }
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    padding-right: 16px;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    text-align: left;
+    width: 50%;
+    padding-left: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+  }
+  .odd, .even {
+    background-color: #221B4A;
+    border-radius: 6px;
+  }
+  td:last-child {
+    border: none;
   }
 }
 /*# sourceMappingURL=proxy.css.map */

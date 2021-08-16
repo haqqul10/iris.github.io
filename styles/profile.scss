@@ -67,7 +67,7 @@ body{
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                top:80px;
+                top:52px;
                 right: 100px;
                 z-index: 5;
                 transition: all 0.3s;
@@ -167,7 +167,7 @@ body{
                 top: -10px;
                 background-color: #312863;
                 transform: rotate(45deg);
-                right: 10%;
+                right: 17%;
             }
 
             // .table__notification.active{
@@ -177,11 +177,15 @@ body{
         }
 
         .my__profile{
-            padding: 0;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
         }
 
         .navbar-nav{
             .nav-item{
+                margin-top: auto;
+                margin-bottom: auto;
     
                 .nav-link{
                     padding: 0;
@@ -243,7 +247,7 @@ body{
         padding: 0;
 
         .judul-profile{
-            padding: 20px 24px;
+            padding: 10px;
 
             p{
                 font-weight: 600;
@@ -787,6 +791,13 @@ footer{
 
 // Tablet Version
 @media screen and (min-width: 768px) {
+    .profile{
+        .your-profile-left{
+            .judul-profile{
+                padding: 20px 24px;
+            }
+        }
+    }
 
 }
 
@@ -798,7 +809,10 @@ footer{
         height: 80px;
 
         .container{
+            position: relative;
             .navbar-nav{
+                position: absolute;
+                left: 430px;
                 .nav-item{
                     margin-right: 30px;
                     .nav-link{
@@ -806,6 +820,15 @@ footer{
                             margin-right: 7px;
                         }
                     }
+                }
+            }
+
+            .item__notification{
+                position: absolute;
+                right: 140px;
+
+                .table__notification{
+                    right: -55px;
                 }
             }
         }
@@ -836,7 +859,7 @@ footer{
             // background-color: $color2;
 
             .judul-profile{
-                padding: 20px 40px;
+                padding: 20px 15px 24px 40px;
                 p{
                     margin-bottom: 0;
                 }
@@ -844,7 +867,7 @@ footer{
             
             .table-profile{
                 .action-knob{
-                    padding-top: 210px;
+                    padding-top: 190px;
                     margin-bottom: 0;
                     .btn-primary{
                         width: auto;
@@ -858,6 +881,15 @@ footer{
 
             }
             form{
+                .form-control{
+                    width: 171px;
+
+                    &:focus{
+                        + label{
+                            width: 171px;
+                        }
+                    }
+                }
                 img{
                     left: 8%;
                 }
@@ -876,7 +908,7 @@ footer{
                     padding-right: 40px;
 
                     .pager{
-                        padding-top: 58px;
+                        padding-top: 38px;
                     }
                 }
 
@@ -917,34 +949,50 @@ footer{
 
 }
 
-@media screen and (max-width: 992px){
-    .navbar-nav{
-        background-color: $color2;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 5;
-        flex-direction: initial;
-        justify-content: space-around;
-        height: 83px;
-        padding-top: 20px;
-    
-        .nav-item{
-            .active{
-                background-color: $color6;
-                text-align: center;
-                padding: 8px 8px;
-                margin-right: 0;
+@media only screen and (max-width: 1344px), 
+(height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), 
+(width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)  {
+    .navbar-dashboard{
+        .container{
+            .navbar-nav{
+                left: 210px;
             }
-
         }
     }
-    .icon_notification{
-        display: none;
-    }
-    span{
-        display: none;
+     // insert mobile and iPad Pro 12.9" CSS here    
+}
+@media screen and (max-width: 992px){
+    .navbar-dashboard{
+        .container{
+            .navbar-nav{
+                background-color: $color2;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 5;
+                flex-direction: initial;
+                justify-content: space-around;
+                height: 83px;
+                padding-top: 20px;
+            
+                .nav-item{
+                    .active{
+                        background-color: $color6;
+                        text-align: center;
+                        padding: 8px 8px;
+                        margin-right: 0;
+                    }
+        
+                }
+            }
+            .icon_notification{
+                display: none;
+            }
+            span{
+                display: none;
+            }
+        }
     }
 }
 
@@ -997,3 +1045,4 @@ footer{
     }
 
 }
+

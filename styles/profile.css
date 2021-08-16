@@ -66,7 +66,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 80px;
+  top: 52px;
   right: 100px;
   z-index: 5;
   -webkit-transition: all 0.3s;
@@ -173,11 +173,18 @@ body {
   background-color: #312863;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 10%;
+  right: 17%;
 }
 
 .navbar-dashboard .container .my__profile {
-  padding: 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.navbar-dashboard .container .navbar-nav .nav-item {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .navbar-dashboard .container .navbar-nav .nav-item .nav-link {
@@ -230,7 +237,7 @@ body {
 }
 
 .profile .your-profile-left .judul-profile {
-  padding: 20px 24px;
+  padding: 10px;
 }
 
 .profile .your-profile-left .judul-profile p {
@@ -832,15 +839,35 @@ footer a:hover {
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .profile .your-profile-left .judul-profile {
+    padding: 20px 24px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .navbar-dashboard {
     height: 80px;
+  }
+  .navbar-dashboard .container {
+    position: relative;
+  }
+  .navbar-dashboard .container .navbar-nav {
+    position: absolute;
+    left: 430px;
   }
   .navbar-dashboard .container .navbar-nav .nav-item {
     margin-right: 30px;
   }
   .navbar-dashboard .container .navbar-nav .nav-item .nav-link img {
     margin-right: 7px;
+  }
+  .navbar-dashboard .container .item__notification {
+    position: absolute;
+    right: 140px;
+  }
+  .navbar-dashboard .container .item__notification .table__notification {
+    right: -55px;
   }
   .navbar-dashboard .navbar-collapse {
     position: relative;
@@ -855,13 +882,13 @@ footer a:hover {
     width: 427px;
   }
   .profile .your-profile-left .judul-profile {
-    padding: 20px 40px;
+    padding: 20px 15px 24px 40px;
   }
   .profile .your-profile-left .judul-profile p {
     margin-bottom: 0;
   }
   .profile .your-profile-left .table-profile .action-knob {
-    padding-top: 210px;
+    padding-top: 190px;
     margin-bottom: 0;
   }
   .profile .your-profile-left .table-profile .action-knob .btn-primary {
@@ -870,6 +897,12 @@ footer a:hover {
   }
   .profile .your-profile-left .table-profile .action-knob .btn-danger {
     width: 174px;
+  }
+  .profile .your-profile-left form .form-control {
+    width: 171px;
+  }
+  .profile .your-profile-left form .form-control:focus + label {
+    width: 171px;
   }
   .profile .your-profile-left form img {
     left: 8%;
@@ -885,7 +918,7 @@ footer a:hover {
     padding-right: 40px;
   }
   .profile .your-profile-right .profile-information .profile-information-left .pager {
-    padding-top: 58px;
+    padding-top: 38px;
   }
   .profile .your-profile-right .profile-information .profile-information-right {
     padding-right: 32px;
@@ -913,8 +946,14 @@ footer a:hover {
   }
 }
 
+@media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  .navbar-dashboard .container .navbar-nav {
+    left: 210px;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  .navbar-nav {
+  .navbar-dashboard .container .navbar-nav {
     background-color: #221B4A;
     position: fixed;
     bottom: 0;
@@ -930,16 +969,16 @@ footer a:hover {
     height: 83px;
     padding-top: 20px;
   }
-  .navbar-nav .nav-item .active {
+  .navbar-dashboard .container .navbar-nav .nav-item .active {
     background-color: #7963FA;
     text-align: center;
     padding: 8px 8px;
     margin-right: 0;
   }
-  .icon_notification {
+  .navbar-dashboard .container .icon_notification {
     display: none;
   }
-  span {
+  .navbar-dashboard .container span {
     display: none;
   }
 }
