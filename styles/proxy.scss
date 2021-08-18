@@ -361,6 +361,8 @@ body{
                     color: #8D899E;
                     font-size: 12px;
                     font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 &:focus{
@@ -526,7 +528,12 @@ body{
                     margin-bottom: 0;
                     line-height: 20px;
                 }
-                
+
+                .collapsing {
+                    width: 0;
+                    overflow: hidden;
+                    transition: 0.25s ease-in-out;
+                }
 
                 .alert__proxy{
                     display: flex;
@@ -590,7 +597,7 @@ body{
                         vertical-align: 0;
                         tr{
                             .ip__address{
-                                width: 100px;
+                                width: auto;
                             }
                         }
                         a{
@@ -938,6 +945,15 @@ footer{
         
                         .btn-danger{
                             width: 165px;
+                        }
+                    }
+                    .table{
+                        tbody{
+                            tr{
+                                .ip__address{
+                                    width: 100px;
+                                }
+                            }
                         }
                     }
                 }

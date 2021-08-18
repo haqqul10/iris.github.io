@@ -439,77 +439,76 @@ body {
   margin-bottom: 0;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step p {
-  margin-top: -4px;
-  color: white;
-  padding-bottom: 30px;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step p small {
-  font-size: 12px;
-  font-weight: 400;
-  padding: 0;
-  color: #BBB9C5;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step p small .active {
-  color: #9072F5;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step p span {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 0;
-  color: #8D899E;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step p span .active {
-  color: white;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-row {
-  display: table-row;
-}
-
 .profile .your-profile-right .profile-information .profile-information-left .stepwizard {
   display: table;
   width: 100%;
   position: relative;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard .btn.disabled, .profile .your-profile-right .profile-information .profile-information-left .stepwizard .btn[disabled], .profile .your-profile-right .profile-information .profile-information-left .stepwizard fieldset[disabled] .btn {
-  opacity: 1 !important;
-  color: #bbb;
-}
-
-.profile .your-profile-right .profile-information .profile-information-left .progress {
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .progress {
   top: 19px;
   bottom: 0;
   position: absolute;
   content: " ";
-  width: 74%;
-  left: 13%;
+  width: 90%;
+  left: 5px;
   height: 2px;
   z-index: 0;
   background-color: #33275C;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .progress .progress-bar {
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .progress .progress-bar {
   background-color: #7963FA;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step {
-  display: table-cell;
-  text-align: center;
-  position: relative;
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row {
+  display: table-row;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step .btn-success {
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step {
+  display: table-cell;
+  text-align: left;
+  position: relative;
+  width: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step p {
+  margin-top: -4px;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step p small {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  color: #BBB9C5;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step p small .active {
+  color: #9072F5 !important;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step p span {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  color: #8D899E;
+  margin-left: -5px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step p span .active {
+  color: white !important;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step .btn-success {
   background-color: #7963FA;
   border-color: #7963FA;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step .btn-circle {
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step .btn-circle {
   width: 40px;
   height: 40px;
   text-align: center;
@@ -521,9 +520,14 @@ body {
   font-weight: 600;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .stepwizard-step .btn-default {
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .stepwizard-row .stepwizard-step .btn-default {
   background-color: #33275C;
   color: #BBB9C5;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .stepwizard .btn.disabled, .profile .your-profile-right .profile-information .profile-information-left .stepwizard .btn[disabled], .profile .your-profile-right .profile-information .profile-information-left .stepwizard fieldset[disabled] .btn {
+  opacity: 1 !important;
+  color: #bbb;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .gradien__form {

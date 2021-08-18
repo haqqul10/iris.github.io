@@ -387,24 +387,44 @@ body {
   color: #8D899E;
   font-size: 12px;
   font-weight: 400;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control:-ms-input-placeholder {
   color: #8D899E;
   font-size: 12px;
   font-weight: 400;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control::-ms-input-placeholder {
   color: #8D899E;
   font-size: 12px;
   font-weight: 400;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control::placeholder {
   color: #8D899E;
   font-size: 12px;
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control:focus {
@@ -574,6 +594,13 @@ body {
   line-height: 20px;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .collapsing {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,7 +666,7 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table tbody tr .ip__address {
-  width: 100px;
+  width: auto;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table tbody a {
@@ -974,6 +1001,9 @@ footer a:hover {
   }
   .profile .your-profile-right .profile-information .profile-information-left .action-knob .btn-danger {
     width: 165px;
+  }
+  .profile .your-profile-right .profile-information .profile-information-left .table tbody tr .ip__address {
+    width: 100px;
   }
   .profile .your-profile-right .profile-information .col-lg-5 {
     -webkit-box-flex: 0;

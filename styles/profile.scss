@@ -430,83 +430,91 @@ body{
                     padding-bottom: 24px;
                     margin-bottom: 0;
                 }
-
-                .stepwizard-step p {
-                    margin-top: -4px;
-                    color: white;
-                    padding-bottom: 30px;
-
-                    small{
-                        font-size: 12px;
-                        font-weight: 400;
-                        padding: 0;
-                        color: #BBB9C5;
-                        .active{
-                            color: #9072F5;
-                        }
-                    }
-                    span{
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 0;
-                        color: #8D899E;
-                        .active{
-                            color: white;
-                        }
-                    }
-                }
-                .stepwizard-row {
-                    display: table-row;
-                }
-                .stepwizard {
+                .stepwizard{
                     display: table;
                     width: 100%;
                     position: relative;
+                    .progress{
+                        top: 19px;
+                        bottom: 0;
+                        position: absolute;
+                        content: " ";
+                        width: 90%;
+                        left:5px;
+                        height: 2px;
+                        z-index: 0;
+                        background-color: #33275C;
+                        
+                        .progress-bar{
+                            background-color: $color6;
+                        }
+                    }
+                    .stepwizard-row {
+                        display: table-row;
+
+                        .stepwizard-step {
+                            display: table-cell;
+                            text-align: left;
+                            position: relative;
+                            width: 50%;
+                            padding-left: 5px;
+                            padding-right: 5px;
+
+                            p{
+                                margin-top: -4px;
+                                color: white;
+                                padding-bottom: 30px;
+            
+                                small{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    padding: 0;
+                                    color: #BBB9C5;
+                                    .active{
+                                        color: #9072F5 !important;
+                                    }
+                                }
+                                span{
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    padding: 0;
+                                    color: #8D899E;
+                                    margin-left: -5px;
+                                    .active{
+                                        color: white !important;
+                                    }
+                                }
+                            }
+
+                            .btn-success{
+                                background-color: $color6;
+                                border-color:$color6 ;
+                            }
+                            .btn-circle {
+                                width: 40px;
+                                height: 40px;
+                                text-align: center;
+                                padding: 10px 0;
+                                font-size: 12px;
+                                border-radius: 50%;
+                                font-size: 16px;
+                                line-height: 16px;
+                                font-weight: 600;
+                            }    
+                            .btn-default{
+                                background-color: #33275C;
+                                color: #BBB9C5;
+                            }
+                        }
+                    }
                 }
+                
                 .stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
                     opacity:1 !important;
                     color:#bbb;
                 }
-                .progress{
-                    top: 19px;
-                    bottom: 0;
-                    position: absolute;
-                    content: " ";
-                    width: 74%;
-                    left:13%;
-                    height: 2px;
-                    z-index: 0;
-                    background-color: #33275C;
-                    
-                    .progress-bar{
-                        background-color: $color6;
-                    }
-                }
-                .stepwizard-step {
-                    display: table-cell;
-                    text-align: center;
-                    position: relative;
-
-                    .btn-success{
-                        background-color: $color6;
-                        border-color:$color6 ;
-                    }
-                    .btn-circle {
-                        width: 40px;
-                        height: 40px;
-                        text-align: center;
-                        padding: 10px 0;
-                        font-size: 12px;
-                        border-radius: 50%;
-                        font-size: 16px;
-                        line-height: 16px;
-                        font-weight: 600;
-                    }    
-                    .btn-default{
-                        background-color: #33275C;
-                        color: #BBB9C5;
-                    }
-                }
+                
+                
                 .gradien__form{
                     position: relative;
                     z-index: 1;
