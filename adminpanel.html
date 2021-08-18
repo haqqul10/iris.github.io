@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" style="overflow-x: hidden;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+
+    <!-- MyCSS -->
+    <link rel="stylesheet" href="styles/adminpanel.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+
+    <title>Admin Panel</title>
+  </head>
+  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+
+    <!-- halaman navbar -->
+      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/icons/Logo.svg" alt="Iris" width="80">
+          </a>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1"> <span>Dashboard</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="task.html"> <img src="images/icons/task.svg" alt="" width="24" class="pb-1"> <span>Task</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24" class="pb-1"> <span>Releases</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1"> <span>Proxies</span> </a>
+              </li>
+            </ul>
+            <div class="item__notification">
+              <a href="" class="nav-link icon_notification"> <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="pb-1"></a>
+              <div class="table__notification">
+                <div class="header__notification">
+                    <p class="header">Notification <span>(4)</span></p>
+                    <a href="">
+                      <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
+                    </a>
+                </div>
+                <hr>
+                <a href="" class="data__items">
+                  <div class="left float-start">
+                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+                      <div class="title float-end">
+                        <p class="title__judul">Nike</p>
+                        <p class="title__text">Today, 24 june</p>
+                      </div>
+                  </div>
+                  <div class="right float-end">
+                    <p>Succesfully checkout</p>
+                  </div>
+                </a>
+                <hr class="garis__items">
+                <a href="" class="view__all">View All</a>
+              </div>
+            </div>
+            <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2 pb-1"> Rizki Agus</a>
+          <!-- </div> -->
+        </div>
+      </nav>
+      <!-- akhir halaman navbar -->
+
+      <!-- Card -->
+      <section class="card-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5 col-lg-8 text-white">
+              <h2>Void Admin Panel</h2>
+              <p>Manage and Create Task</p>
+            </div>
+            <div class="col-12 col-md-7 col-lg-4 flex-right">
+              <div class="new__task">
+                <a href="" class="btn btn-newtask">Generate Key</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir Card -->
+
+      <!-- card admin panel -->
+      <section class="card__admin__panel"> 
+        <div class="container text-white">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+              <div class="row">
+                <div class="col-md-12 col-lg-7">
+                  <div class="row">
+                    <div class="col-sm-4 colom_1">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle">Income</h6>
+                          <h5 class="card-title">$8.921,00</h5>
+                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 colom_2">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle">Total Member</h6>
+                          <h5 class="card-title">2.100</h5>
+                          <p class="card-text-down"> <img src="images/icons/Icon-red.svg" alt="" class="pe-1" width="20"> 12.16%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 colom_3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle">Lifetime Members</h6>
+                          <h5 class="card-title">24</h5>
+                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                        </div>
+                      </div>
+                    </div><!-- akhir row lima-tiga -->
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                  <div class="row">
+                    <div class="col-sm-6 colom_4">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle">Cancelations</h6>
+                          <h5 class="card-title">45</h5>
+                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 colom_5">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle">Total Checkouts</h6>
+                          <h5 class="card-title">212.434</h5>
+                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- akhir row lima-dua -->
+                </div>
+              </div><!-- akhir dari row luar -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir card admin panel -->
+
+
+      <!-- admin panel license -->
+      <section class="task-cart">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 table-content">
+              <div class="row">
+                <div class="col">
+                  <table class="table text-white" id="example" class="display" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" class="form-check-input" id="checkAll"></th>
+                        <th class="items" width="410">License</th>
+                        <th width="130">Type</th>
+                        <th>Renewal Date</th>
+                        <th>Creation Date</th>
+                        <th width="160">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td><input type="checkbox" class="form-check-input"></td>
+                        <td class="text-white items" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                        <td data-label="Type">Renewal</td>
+                        <td data-label="Renewal Date">10 Jan 2021</td>
+                        <td data-label="Creation Date">10 Jan 2021</td>
+                        <td data-label="Action">
+                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                        </td>
+                      </tr> 
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir admin panel licence -->
+     
+
+      <!-- footer -->
+      <footer class="mt-5">
+        <div class="container">
+          <div class="row justify-content-between text-white">
+            <div class="col">
+              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a href="" class="pe-4">Status</a>
+              <a href="">Support</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- akhir footer -->
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="libraries/bootstrap/js/bootstrap.js"></script> -->
+    <script src="libraries/jquery/jquery-3.5.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="libraries/jquery/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+    <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+
+      $('#checkAll').click(function (e) {
+          $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
+          e.stopImmediatePropagation();
+      });
+
+      $(document).ready(function() {
+          $('#example').DataTable( {
+              "pageLength": 7,
+              "sScrollX": "auto",
+              searching: false,
+              bInfo: true,
+              integer: true,
+              // "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+              "lengthChange": true,
+              "pagingType": "simple_numbers",
+              lengthMenu: [7, 10, 20, 50, 100, 200, 500],
+                oLanguage: {
+                  oPaginate: {
+                      sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
+                      sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+                  }
+                },
+              "language" : {
+                "lengthMenu": "Result per page _MENU_",
+                "info":"Showing _START_ to _END_ of _TOTAL_ results",
+              },
+
+              // "dom": '<"top"fl>rt<"bottom"ip><"clear">'
+          } );
+      } );
+    </script>
+  </body>
+</html>

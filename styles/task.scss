@@ -481,9 +481,19 @@ body{
             }
         }
         .dataTables_info{
-            display: none;
+            color: #B9B9C3;
+            padding-left: 12px;
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
         }
 
+        .paginition{
+            justify-content: center;
+        }
         .dataTables_scrollHead{
             border-radius: 6px;
         }
@@ -668,10 +678,12 @@ footer{
                 }
             }
             .dataTables_info{
-                color: #B9B9C3;
+                justify-content: flex-start;
                 margin-top: 25px;
-                padding-left: 12px;
-                display: block;
+
+            }
+            .paginition{
+                justify-content: flex-end;
             }
         }
     }
@@ -747,6 +759,9 @@ footer{
 
                 label{
                     display: flex;
+                    color: #B9B9C3;
+                    font-size: 14px;
+                    line-height: 18px;
 
                     .form-select{
                         background-color: transparent;
@@ -755,7 +770,9 @@ footer{
                         width: 56px;
                         color: white !important;
                         margin-left: 8px;
-                        margin-right: 8px;
+                        margin-top: -5px;
+                        background-image: url(../images/icons/chevron-down-task.svg);
+                        background-size: 15px;
                     }
                 }
             }
