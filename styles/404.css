@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+@font-face {
+  font-family: 'Larsseit-bold';
+  src: url("../libraries/font-bold/Larsseit-Bold.eot") format("eot"), url("../libraries/font-bold/Larsseit-Bold.svg") format("svg"), url("../libraries/font-bold/Larsseit-Bold.ttf") format("ttf"), url("../libraries/font-bold/Larsseit-Bold.woff") format("woff"), url("../libraries/font-bold/Larsseit-Bold.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Larsseit-medium';
+  src: url("../libraries/font-medium/Larsseit-Medium.eot") format("eot"), url("../libraries/font-medium/Larsseit-Medium.svg") format("svg"), url("../libraries/font-medium/Larsseit-Medium.ttf") format("ttf"), url("../libraries/font-medium/Larsseit-Medium.woff") format("woff"), url("../libraries/font-medium/Larsseit-Medium.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.body-homepage {
+  background-color: #2B2252;
+}
+
+.content-homepage {
+  background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
+  height: 952px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-homepage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-homepage {
+  position: relative;
+  z-index: 5;
+}
+
+.navbar-homepage .container {
+  width: 1044px;
+  position: relative;
+}
+
+.navbar-homepage .navbar-toggler {
+  border: none;
+}
+
+.navbar-homepage .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-homepage .collapse-text .nav-link {
+  text-align: center;
+}
+
+.navbar-homepage .collapse-text .btn-getstarted {
+  text-align: center;
+}
+
+.navbar-homepage .collapse-text .btn-login {
+  text-align: center;
+}
+
+.navbar-homepage .navbar-collapse {
+  position: absolute;
+  top: 100%;
+  width: 95%;
+  z-index: 15;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: #221B4A;
+}
+
+.navbar-homepage .btn-getstarted {
+  background-color: #7963FA;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-homepage .btn-getstarted:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border: none;
+  color: white !important;
+}
+
+.navbar-homepage .btn-login {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #7963FA;
+  margin-top: 10px;
+  color: #7963FA !important;
+}
+
+.navbar-homepage .btn-login:hover {
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: gainsboro !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8s;
+  -webkit-box-shadow: 0px 0px 0px 1px none;
+          box-shadow: 0px 0px 0px 1px none;
+}
+
+.body-404 {
+  background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
+  position: relative;
+}
+
+.body-404 .navbar-homepage {
+  position: relative;
+  z-index: 15;
+}
+
+.body-404 .navbar-homepage .container-fluid {
+  position: relative;
+  z-index: 15;
+}
+
+.body-404 .navbar-homepage .navbar-collapse {
+  position: absolute;
+  top: 100%;
+  width: 95%;
+  z-index: 15;
+  background-color: #221B4A;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.body-404 .ellipe-1 {
+  background-image: url(../images/404/Ellipse2.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: 200px;
+}
+
+.body-404 .ellipe-2 {
+  background-image: url(../images/404/Ellipse1.png);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: -200px;
+}
+
+.body-404 .container-fluid {
+  overflow: hidden;
+  height: 100vh;
+  padding-top: 130px;
+  position: relative;
+}
+
+.body-404 .container-fluid .pattern {
+  position: absolute;
+  left: -260px;
+  right: 0;
+  text-align: center;
+  top: -300px;
+  bottom: 0;
+  margin: auto;
+  width: 920px;
+}
+
+.body-404 .container-fluid .illustration-404 {
+  width: 234px;
+  margin-top: 50px;
+}
+
+.body-404 .container-fluid .display-4 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+
+.body-404 .container-fluid .lead {
+  font-size: 16px;
+  color: #BBB9C5;
+  padding-bottom: 32px;
+}
+
+.body-404 .container-fluid .btn-backtohome {
+  background-color: #7963FA;
+  border: none;
+  padding: 12px 16px;
+  width: 142px;
+  color: white;
+}
+
+.body-404 .container-fluid .btn-backtohome:hover {
+  background-image: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+}
+
+@media screen and (min-width: 768px) {
+  .body-404 .container-fluid .pattern {
+    width: 1440px;
+    top: -300px;
+    left: -250px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content-homepage {
+    height: 675px;
+  }
+  .navbar-homepage {
+    background-color: transparent;
+    padding-top: 30px;
+  }
+  .navbar-homepage .container {
+    width: 1044px;
+  }
+  .navbar-homepage .nav-item {
+    padding-left: 30px;
+  }
+  .navbar-homepage .navbar-collapse {
+    position: relative;
+    top: auto;
+    width: auto;
+    z-index: 15;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+  }
+  .navbar-homepage .collapse .btn-getstarted {
+    margin-right: 8px;
+    width: 125px;
+    height: 43px;
+  }
+  .navbar-homepage .collapse .btn-login {
+    margin-top: 0;
+    width: 75px;
+    height: 43px;
+  }
+  .body-404 .navbar-homepage .navbar-collapse {
+    position: relative;
+    top: auto;
+    width: auto;
+    z-index: 15;
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  .body-404 .container-fluid .pattern {
+    width: 1440px;
+    top: -200px;
+    left: 0;
+  }
+  .body-404 .container-fluid .illustration-404 {
+    width: 470px;
+  }
+  .body-404 .container-fluid .display-4 {
+    margin-top: 40px;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 46px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .body-404 .container-fluid .lead {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+  }
+  .body-404 .ellipe-1 {
+    background-position-x: 600px;
+  }
+  .body-404 .ellipe-2 {
+    background-position-x: -600px;
+  }
+}
+/*# sourceMappingURL=404.css.map */

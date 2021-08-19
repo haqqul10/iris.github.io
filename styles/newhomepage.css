@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+@font-face {
+  font-family: 'Larsseit-bold';
+  src: url("../libraries/font-bold/Larsseit-Bold.eot") format("eot"), url("../libraries/font-bold/Larsseit-Bold.svg") format("svg"), url("../libraries/font-bold/Larsseit-Bold.ttf") format("ttf"), url("../libraries/font-bold/Larsseit-Bold.woff") format("woff"), url("../libraries/font-bold/Larsseit-Bold.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Larsseit-medium';
+  src: url("../libraries/font-medium/Larsseit-Medium.eot") format("eot"), url("../libraries/font-medium/Larsseit-Medium.svg") format("svg"), url("../libraries/font-medium/Larsseit-Medium.ttf") format("ttf"), url("../libraries/font-medium/Larsseit-Medium.woff") format("woff"), url("../libraries/font-medium/Larsseit-Medium.woff2") format("woff2");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.body-homepage {
+  background-color: #221B42;
+}
+
+.content-homepage {
+  background-image: linear-gradient(101.71deg, #3B1B74 9.67%, #230D49 90.64%);
+  height: 904px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-homepage .container-homepage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1044px;
+  width: 100%;
+  position: relative;
+}
+
+.content-homepage .container-homepage .ellipe {
+  position: absolute;
+  top: -185px;
+  left: auto;
+  bottom: 0;
+  right: -300px;
+  width: 930px;
+}
+
+.content-homepage .container-homepage .ellipe_1 {
+  position: absolute;
+  top: -290px;
+  bottom: 0;
+  right: -450px;
+  width: 630px;
+  z-index: 30;
+}
+
+.content-homepage .container-homepage .ellipe_2 {
+  position: absolute;
+  top: 0;
+  left: -470px;
+  width: 975px;
+}
+
+.navbar-homepage {
+  position: relative;
+  z-index: 5;
+}
+
+.navbar-homepage .container {
+  width: 1044px;
+  position: relative;
+}
+
+.navbar-homepage .container .navbar-toggler {
+  border: none;
+}
+
+.navbar-homepage .container .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-homepage .collapse-text .nav-link {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.navbar-homepage .collapse-text .btn-getstarted {
+  text-align: center;
+}
+
+.navbar-homepage .navbar-collapse {
+  position: absolute;
+  top: 100%;
+  width: 95%;
+  z-index: 15;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: #221B4A;
+}
+
+.navbar-homepage .btn-getstarted {
+  background-color: #7963FA;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-homepage .btn-getstarted:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border: none;
+  color: white !important;
+}
+
+.jumbotron {
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron .container .jumbotron-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.jumbotron .container .jumbotron-row .aio__software {
+  margin-top: 200px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #2AF6FF;
+}
+
+.jumbotron .container .jumbotron-row .display-4 {
+  color: white;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: 'Larsseit-bold';
+  font-size: 24px;
+  margin-top: 11px;
+  padding: 0;
+}
+
+.jumbotron .container .jumbotron-row .lead {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.jumbotron .container .jumbotron-row .sold__out {
+  background-color: #4C63A8;
+  color: white;
+  padding: 14px 0;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 23px;
+  width: 123px;
+  height: 54px;
+  border-radius: 5px;
+  margin-right: 11px;
+}
+
+.jumbotron .container .jumbotron-row .sold__out:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.jumbotron .container .jumbotron-row .learn__more {
+  background-color: #7963FA;
+  color: white;
+  padding: 14px 0;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 23px;
+  width: 149px;
+  height: 54px;
+  border-radius: 5px;
+}
+
+.jumbotron .container .jumbotron-row .learn__more:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.jumbotron .header-illustration {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-top: 24px;
+}
+
+.jumbotron .header-illustration img {
+  width: 300px;
+  position: absolute;
+}
+
+.gradient__color {
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  background-image: linear-gradient(101.71deg, #3B1B74 -1.33%, #230D49 90.64%);
+}
+
+.gradient__color::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(182.9deg, rgba(34, 27, 66, 0) 22.28%, #221B42 82.1%);
+}
+
+.support {
+  position: relative;
+  z-index: 5;
+}
+
+.support .container {
+  max-width: 1040px;
+}
+
+.support .container .header__support {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Larsseit-bold';
+  line-height: 60px;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.support .container .title__support {
+  text-align: center;
+}
+
+.support .container .title__support img {
+  width: 154px;
+  height: 36px;
+  margin-top: 10px;
+}
+
+.product {
+  margin-top: -80px;
+  position: relative;
+  z-index: 55;
+}
+
+.product .title__product {
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-family: 'Larsseit-bold';
+}
+
+.container-content {
+  position: relative;
+}
+
+.container-content .card-shop {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.container-content .card-shop .card {
+  border: 1px solid #33275C;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.container-content .card-shop .card .card-header {
+  background-color: #221B4A;
+  color: white;
+  padding-top: 15px;
+}
+
+.container-content .card-shop .card .card-header img {
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 30px;
+}
+
+.container-content .card-shop .card .card-header .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.container-content .card-shop .card .card-header .card-text {
+  color: #BBB9C5;
+}
+
+.container-content .card-shop .card .card-body {
+  padding: 0;
+}
+
+.container-content .card-shop .card .card-body img {
+  width: 100%;
+}
+
+.container-content .card-shop .card .card-footer {
+  background-color: #221B4A;
+  padding: 10px;
+}
+
+.container-content .card-shop .card .card-footer .card-text {
+  color: #BBB9C5;
+  font-size: 14;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.container-content .card-shop .card .card-footer .card-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-left: 10px;
+}
+
+.container-content .card-shop .card .card-footer .btn-primary {
+  background-color: rgba(101, 78, 179, 0.5);
+  padding: 9px 16px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 6px;
+  width: 105px;
+  height: 43px;
+  border: none;
+}
+
+.container-content .card-shop .card .card-footer .btn-primary:hover {
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border-radius: 5px;
+  color: #B4B6C4 !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8s;
+}
+
+.features {
+  background-color: #2B2252;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.features .container {
+  max-width: 1044px;
+}
+
+.features .container .header__features {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-family: 'Larsseit-bold';
+  margin-bottom: 0;
+}
+
+.features .container .title__features {
+  line-height: 21px;
+  font-size: 18px;
+  color: #BBB9C5;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.features .container .card__features {
+  margin-top: 64px;
+}
+
+.features .container .card__features__row {
+  margin-top: 8px;
+}
+
+.features .container .card {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding: 16px;
+}
+
+.features .container .card img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.features .container .card .header__features__product {
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.features .container .card .title__features__product {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  opacity: 0.7;
+}
+
+.question {
+  background-color: #221B42;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.question .container {
+  max-width: 1040px;
+  /* Horizontal line */
+  /* Vertical line */
+}
+
+.question .container .header__question {
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-family: 'Larsseit-bold';
+  margin-bottom: 0;
+  margin-bottom: 64px;
+}
+
+.question .container .accordion .card {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #3A3456;
+}
+
+.question .container .accordion .card .card-header {
+  border: none;
+  padding: 24px 0;
+}
+
+.question .container .accordion .card .card-header h6 {
+  margin-bottom: 0;
+}
+
+.question .container .accordion .card .card-header .collapsible-link {
+  color: white;
+  text-decoration: none;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.question .container .accordion .card .card-body {
+  padding: 0;
+  color: white;
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.question .container .accordion .card .card-body p {
+  margin-bottom: 0;
+  padding-bottom: 24px;
+}
+
+.question .container .accordion .card .collapse .show a {
+  color: #7963FA;
+}
+
+.question .container .accordion .card .collapse .show .collapsible-link::after {
+  color: #7963FA;
+}
+
+.question .container .accordion .card .collapse .show .collapsible-link::before {
+  color: #7963FA;
+}
+
+.question .container .collapsible-link {
+  display: block;
+  position: relative;
+}
+
+.question .container .collapsible-link::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 1rem;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.question .container .collapsible-link::after {
+  content: '';
+  width: 2px;
+  height: 14px;
+  background: white;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: calc(1rem + 6px);
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.question .container .collapsible-link[aria-expanded='true']::after {
+  -webkit-transform: rotate(90deg) translateX(-1px);
+          transform: rotate(90deg) translateX(-1px);
+}
+
+.question .container .collapsible-link[aria-expanded='true']::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron .container .jumbotron-row .aio__software {
+    margin-top: 390px;
+  }
+  .jumbotron .container .jumbotron-row .display-4 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .jumbotron .header-illustration {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .jumbotron .header-illustration img {
+    width: 500px;
+  }
+  .container-content .info-panel .findstore {
+    margin-top: -20px;
+  }
+  .container-content .info-panel #resultlist {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .gradient__color {
+    background-image: linear-gradient(101.71deg, #3B1B74 -76.33%, #230D49 90.64%);
+  }
+  .content-homepage {
+    height: 1020px;
+  }
+}
+
+@media screen and (min-width: 567px) {
+  .gradient__color {
+    background-image: linear-gradient(101.71deg, #3B1B74 -20.33%, #230D49 90.64%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .gradient__color {
+    background-image: linear-gradient(101.71deg, #3B1B74 -1.33%, #230D49 90.64%);
+  }
+  .navbar-homepage {
+    background-color: transparent;
+    padding-top: 25px;
+  }
+  .navbar-homepage .container {
+    width: 1044px;
+    padding: 0;
+  }
+  .navbar-homepage .nav-item {
+    padding-left: 30px;
+  }
+  .navbar-homepage .navbar-collapse {
+    position: relative;
+    top: auto;
+    width: auto;
+    z-index: 15;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+  }
+  .navbar-homepage .collapse .btn-getstarted {
+    margin-right: 0px;
+    width: 116px;
+    height: 43px;
+  }
+  .jumbotron .container {
+    width: 1044px;
+    padding: 0;
+  }
+  .jumbotron .container .jumbotron-row {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+  }
+  .jumbotron .container .jumbotron-row .aio__software {
+    margin-top: 77px;
+    font-size: 20px;
+  }
+  .jumbotron .container .jumbotron-row .display-4 {
+    color: white;
+    font-weight: 700;
+    line-height: 60px;
+    font-size: 60px;
+    margin-top: 16px;
+  }
+  .jumbotron .container .jumbotron-row .lead {
+    font-size: 18px;
+  }
+  .jumbotron .btn-primary {
+    padding: 14px 24px;
+    font-size: 18px;
+  }
+  .jumbotron .header-illustration {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin-top: 68px;
+    padding-left: 0;
+  }
+  .jumbotron .header-illustration img {
+    width: 797.42px;
+    height: 525px;
+  }
+  .support .container {
+    padding: 0;
+  }
+  .support .container .header__support {
+    margin-top: 170px;
+  }
+  .support .container .title__support img {
+    margin-right: 15px;
+    margin-top: 0;
+  }
+  .container-content {
+    width: 1044px;
+  }
+  .container-content .card-shop .card {
+    margin: 0px;
+  }
+  .features .container {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=newhomepage.css.map */

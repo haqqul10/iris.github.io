@@ -377,6 +377,24 @@ body{
         .dataTable{
             margin-bottom: 0;
         }
+        .dataTables_wrapper{
+            .top{
+                display: none;
+                .dataTables_info{
+                    .titik{
+                        display: none;
+                    }
+                }
+            }
+            .bottom{
+                .dataTables_info{
+                    display: none;
+                }
+                .dataTables_length{
+                    display: none;
+                }
+            }
+        }
         
         .dataTables_paginate{
             display: flex;
@@ -665,8 +683,54 @@ footer{
             .dataTables_paginate {
                 float: right;
             }
-            .dataTables_length, .dataTables_wrapper .dataTables_filter {
-                display: none;
+            
+
+            .dataTables_wrapper{
+                .bottom{
+                    display: flex;
+                    padding-left: 24px;
+                    padding-right: 24px;
+
+                    .dataTables_info{
+                        flex: 0;
+                        font-size: 14px;
+                        color: white;
+                        display: flex;
+                        .total__page{
+                            padding-right: 2px;
+
+                        }
+                        .titik{
+                            font-size: 50px;
+                            margin-top: -14px;
+                            padding: 0 10px;
+                            color: #B9B9C3;
+                        }
+                    }
+                    .dataTables_length{
+                        display: block;
+                        flex: 1;
+                        label{
+                            font-size: 14px;
+                            color: #B9B9C3;
+                            font-weight: 400;
+                            display: flex;
+                            margin-top: 23px;
+
+                            .form-select{
+                                margin-left: 8px;
+                                margin-top: -5px;
+                                background-color: transparent;
+                                width: 56px;
+                                height: 32px;
+                                color: white !important;
+                                background-image: url(../images/icons/chevron-down-task.svg);
+                                background-size: 15px;
+                                border-color: #3A3456;
+                            }
+                        }
+                    }
+                }
             }
             .table{
                 .items{
@@ -749,30 +813,47 @@ footer{
                 }
             }
 
-            .dataTables_length, .dataTables_wrapper .dataTables_filter {
-                display: flex;
-            }
 
-            .dataTables_length{
-                justify-content: flex-end;
-                color: white;
-
-                label{
+            
+            .dataTables_wrapper{
+                .top{
                     display: flex;
-                    color: #B9B9C3;
-                    font-size: 14px;
-                    line-height: 18px;
+                    justify-content: space-between;
 
-                    .form-select{
-                        background-color: transparent;
-                        border-color: #3A3456;
-                        padding: 6px 8px;
-                        width: 56px;
-                        color: white !important;
-                        margin-left: 8px;
-                        margin-top: -5px;
-                        background-image: url(../images/icons/chevron-down-task.svg);
-                        background-size: 15px;
+                    .dataTables_info{
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        padding-left: 0;
+                        .total__page{
+                            padding-right: 2px;
+                        }
+                    }
+                    .dataTables_length{
+                        justify-content: flex-end;
+                        color: white;
+                        display: flex;
+
+                        label{
+                            display: flex;
+                            color: #B9B9C3;
+                            font-size: 14px;
+                            line-height: 18px;
+
+                            .form-select{
+                                background-color: transparent;
+                                border-color: #3A3456;
+                                padding: 6px 8px;
+                                width: 56px;
+                                height: 32px;
+                                color: white !important;
+                                margin-left: 8px;
+                                margin-top: -5px;
+                                background-image: url(../images/icons/chevron-down-task.svg);
+                                background-size: 15px;
+                            }
+                        }
                     }
                 }
             }
