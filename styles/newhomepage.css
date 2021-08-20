@@ -50,7 +50,6 @@ body {
   bottom: 0;
   right: -450px;
   width: 630px;
-  z-index: 30;
 }
 
 .content-homepage .container-homepage .ellipe_2 {
@@ -256,44 +255,78 @@ body {
   margin-top: 10px;
 }
 
-.product {
+.animation__card {
+  background-color: #221B42;
+}
+
+.animation__card .container-fluid {
   margin-top: -80px;
   position: relative;
   z-index: 55;
+  padding: 0;
 }
 
-.product .title__product {
+.animation__card .container-fluid .title__product {
   font-size: 48px;
   line-height: 54px;
   font-weight: 700;
   color: white;
   text-align: center;
   font-family: 'Larsseit-bold';
+  margin-bottom: 0;
 }
 
-.container-content {
+.animation__card .container-fluid .carousel .carousel__body .prev__next {
   position: relative;
+  top: 250px;
+  z-index: 999;
 }
 
-.container-content .card-shop {
-  margin-top: 80px;
-  margin-bottom: 100px;
+.animation__card .container-fluid .carousel .carousel__body .prev__next .carousel__prev {
+  left: 10%;
+  position: absolute;
 }
 
-.container-content .card-shop .card {
+.animation__card .container-fluid .carousel .carousel__body .prev__next .carousel__next {
+  right: 10%;
+  position: absolute;
+}
+
+.animation__card .container-fluid .carousel .carousel__body .ellipe__card {
+  width: 600px;
+  position: absolute;
+  left: 430px;
+  top: -30px;
+}
+
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item {
+  width: 332px;
+  height: 386px;
+}
+
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .carousel__slider__item--active {
+  width: 332px;
+  height: 386px;
+}
+
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card {
   border: 1px solid #33275C;
   border-radius: 5px;
   margin: 10px;
   background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-.container-content .card-shop .card .card-header {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header {
   background-color: #221B4A;
   color: white;
   padding-top: 15px;
+  text-align: left;
 }
 
-.container-content .card-shop .card .card-header img {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header img {
   margin-right: 20px;
   margin-top: 5px;
   margin-left: 10px;
@@ -302,44 +335,45 @@ body {
   height: 30px;
 }
 
-.container-content .card-shop .card .card-header .card-title {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header .card-title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 0;
 }
 
-.container-content .card-shop .card .card-header .card-text {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header .card-text {
   color: #BBB9C5;
 }
 
-.container-content .card-shop .card .card-body {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-body {
   padding: 0;
 }
 
-.container-content .card-shop .card .card-body img {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-body img {
   width: 100%;
 }
 
-.container-content .card-shop .card .card-footer {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer {
   background-color: #221B4A;
   padding: 10px;
+  text-align: left;
 }
 
-.container-content .card-shop .card .card-footer .card-text {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .card-text {
   color: #BBB9C5;
   font-size: 14;
   margin-bottom: 2px;
   margin-left: 10px;
 }
 
-.container-content .card-shop .card .card-footer .card-title {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .card-title {
   font-size: 20px;
   font-weight: 400;
   color: white;
   margin-left: 10px;
 }
 
-.container-content .card-shop .card .card-footer .btn-primary {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .btn-primary {
   background-color: rgba(101, 78, 179, 0.5);
   padding: 9px 16px;
   text-align: center;
@@ -350,7 +384,7 @@ body {
   border: none;
 }
 
-.container-content .card-shop .card .card-footer .btn-primary:hover {
+.animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .btn-primary:hover {
   background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 5px;
   color: #B4B6C4 !important;
@@ -432,7 +466,7 @@ body {
 .question {
   background-color: #221B42;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 304px;
 }
 
 .question .container {
@@ -475,6 +509,10 @@ body {
   font-size: 20px;
 }
 
+.question .container .accordion .card .card-header .collapsible-link .active {
+  color: #7963FA;
+}
+
 .question .container .accordion .card .card-body {
   padding: 0;
   color: white;
@@ -509,7 +547,7 @@ body {
   content: '';
   width: 14px;
   height: 2px;
-  background: white;
+  background-color: white;
   position: absolute;
   top: calc(50% - 1px);
   right: 1rem;
@@ -522,7 +560,7 @@ body {
   content: '';
   width: 2px;
   height: 14px;
-  background: white;
+  background-color: white;
   position: absolute;
   top: calc(50% - 7px);
   right: calc(1rem + 6px);
@@ -539,6 +577,133 @@ body {
 .question .container .collapsible-link[aria-expanded='true']::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.twitter {
+  background-color: #2B2252;
+}
+
+.twitter .container {
+  max-width: 1040px;
+}
+
+.twitter .container .card {
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-top: -180px;
+  height: 360px;
+  padding: 0;
+  background-image: url(../images/newhomepage/Bg.svg);
+}
+
+.twitter .container .card .card-img-overlay {
+  text-align: center;
+  padding: 0;
+}
+
+.twitter .container .card .card-img-overlay img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.twitter .container .card .card-img-overlay .card-title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Larsseit-bold';
+  margin-bottom: 0;
+  padding: 0 5px;
+}
+
+.twitter .container .card .card-img-overlay .card-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: white;
+  opacity: 0.7;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding: 0 9px;
+}
+
+.twitter .container .card .card-img-overlay .follow__twitter {
+  background-color: #360D6A;
+  color: white;
+  font-weight: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 6px;
+}
+
+.twitter .container .card .card-img-overlay .follow__twitter:hover {
+  opacity: 0.9;
+}
+
+.twitter .container .link__help {
+  padding-bottom: 64px;
+  padding-top: 120px;
+}
+
+.twitter .container .link__help img {
+  width: 86px;
+  height: 42px;
+}
+
+.twitter .container .link__help .iris__help {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0;
+  margin-top: 12px;
+  padding-right: 70px;
+}
+
+.twitter .container .link__help .legal {
+  margin-right: 5px;
+  margin-top: 16px;
+}
+
+.twitter .container .link__help h6 {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.twitter .container .link__help a {
+  display: block;
+  color: #8D899E;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.twitter .container .link__help a:hover {
+  opacity: 0.8;
+}
+
+.twitter .container footer {
+  border-top: 1px solid #3A3456;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.twitter .container footer p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #8D899E;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -566,18 +731,25 @@ body {
   .container-content .info-panel #resultlist {
     width: 47%;
   }
+  .twitter .container .link__help .help__media__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 576px) {
   .gradient__color {
-    background-image: linear-gradient(101.71deg, #3B1B74 -76.33%, #230D49 90.64%);
+    background-image: linear-gradient(101.71deg, #3B1B74 -63.33%, #230D49 90.64%);
   }
   .content-homepage {
     height: 1020px;
   }
 }
 
-@media screen and (min-width: 567px) {
+@media screen and (min-width: 576px) {
   .gradient__color {
     background-image: linear-gradient(101.71deg, #3B1B74 -20.33%, #230D49 90.64%);
   }
@@ -594,6 +766,9 @@ body {
   .navbar-homepage .container {
     width: 1044px;
     padding: 0;
+  }
+  .navbar-homepage .container .menu-toggle input {
+    display: none;
   }
   .navbar-homepage .nav-item {
     padding-left: 30px;
@@ -670,6 +845,63 @@ body {
   }
   .features .container {
     padding: 0;
+  }
+  .twitter .container {
+    padding: 0;
+  }
+  .twitter .container .card .card-img-overlay img {
+    margin-bottom: 35px;
+    margin-top: 30px;
+  }
+  .twitter .container .card .card-img-overlay .card-title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .twitter .container .card .card-img-overlay .card-text {
+    font-size: 18px;
+  }
+  .twitter .container .link__help .help__media__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .twitter .container .link__help .legal {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-homepage .container .menu-toggle {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-homepage .container .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+  }
+  .navbar-homepage .container .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=newhomepage.css.map */

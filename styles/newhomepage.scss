@@ -56,7 +56,6 @@ body{
             bottom: 0;
             right: -450px;
             width: 630px;
-            z-index: 30;
         }
         .ellipe_2{
             position: absolute;
@@ -72,7 +71,6 @@ body{
     .container{
         width: 1044px;
         position: relative;
-        
         .navbar-toggler{
             border: none;
     
@@ -81,6 +79,7 @@ body{
             }
     
         }
+        
     }
     .collapse-text{
         .nav-link{
@@ -256,100 +255,142 @@ body{
 }
 
 // product
-.product{
-    margin-top: -80px;
-    position: relative;
-    z-index: 55;
-    .title__product{
-        font-size: 48px;
-        line-height: 54px;
-        font-weight: 700;
-        color: white;
-        text-align: center;
-        font-family: 'Larsseit-bold'; 
-    }
+.animation__card{
+    background-color: #221B42;
+    .container-fluid{
+        margin-top: -80px;
+        position: relative;
+        z-index: 55;
+        padding: 0;
+        .title__product{
+            font-size: 48px;
+            line-height: 54px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            font-family: 'Larsseit-bold'; 
+            margin-bottom: 0;
+        }
+        .carousel{
+            .carousel__body{
+                .prev__next{
+                    position: relative;
+                    top: 250px;
+                    z-index: 999;
 
-}
-
-.container-content{
-    position: relative;
-
-    .card-shop{
-        margin-top: 80px;
-        margin-bottom: 100px;
-        .card{
-            border: 1px solid #33275C;
-            border-radius: 5px;
-            margin: 10px;
-            background-color: transparent;
-            .card-header{
-                background-color: $color2;
-                color: white;
-                padding-top: 15px;
-
-                img{
-                    margin-right: 20px;
-                    margin-top: 5px;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    width: 60px;
-                    height: 30px;
+                    .carousel__prev{
+                        left: 10%;
+                        position: absolute;
+                    }
+                    .carousel__next{
+                        right: 10%;
+                        position: absolute;
+                    }
+                }
+                .ellipe__card{
+                    width: 600px;
+                    position: absolute;
+                    // z-index: 44;
+                    left: 430px;
+                    top: -30px;
                 }
 
-                .card-title{
-                    font-size: 20px;
-                    font-weight: 700;
-                    margin-bottom: 0;
-                }
-                .card-text{
-                    color: $graytext;
-                }
-            }
-            .card-body{
-                padding: 0;
-                img{
-                    width: 100%;
-                }
-            }
+                .carousel__slider{
+                    .carousel__slider__item{
+                        width: 332px;
+                        height: 386px;
+                        .carousel__slider__item--active{
+                            width: 332px;
+                            height: 386px;
+                        }
+                        .item__3d-frame{
+                            .item__3d-frame__box{
+                                .card{
+                                    border: 1px solid #33275C;
+                                    border-radius: 5px;
+                                    margin: 10px;
+                                    background-color: transparent;
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0;
+                                    .card-header{
+                                        background-color: $color2;
+                                        color: white;
+                                        padding-top: 15px;
+                                        text-align: left;
 
-            .card-footer{
-                background-color: $color2;
-                padding: 10px;
-                .card-text{
-                    color: $graytext;
-                    font-size: 14;
-                    margin-bottom: 2px;
-                    margin-left: 10px;
-                }
-                .card-title{
-                    font-size: 20px;
-                    font-weight: 400;
-                    color: white;
-                    margin-left: 10px;
-                }
-                .btn-primary{
-                    background-color: rgba(101, 78, 179, 0.5);
-                    padding: 9px 16px;
-                    text-align: center;
-                    margin-right: 10px;
-                    margin-top: 6px;
-                    width: 105px;
-                    height: 43px;
-                    border: none;
+                                        img{
+                                            margin-right: 20px;
+                                            margin-top: 5px;
+                                            margin-left: 10px;
+                                            margin-bottom: 10px;
+                                            width: 60px;
+                                            height: 30px;
+                                        }
 
-                    &:hover{
-                        background: $gradienColor;
-                        // border: 1px solid $color6;
-                        border-radius: 5px;
-                        color: $grayScale !important;
-                        transition: 0.3s;
-                        opacity: 0.8s;
+                                        .card-title{
+                                            font-size: 20px;
+                                            font-weight: 700;
+                                            margin-bottom: 0;
+                                        }
+                                        .card-text{
+                                            color: $graytext;
+                                        }
+                                    }
+                                    .card-body{
+                                        padding: 0;
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    .card-footer{
+                                        background-color: $color2;
+                                        padding: 10px;
+                                        text-align: left;
+                                        .card-text{
+                                            color: $graytext;
+                                            font-size: 14;
+                                            margin-bottom: 2px;
+                                            margin-left: 10px;
+                                        }
+                                        .card-title{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            color: white;
+                                            margin-left: 10px;
+                                        }
+                                        .btn-primary{
+                                            background-color: rgba(101, 78, 179, 0.5);
+                                            padding: 9px 16px;
+                                            text-align: center;
+                                            margin-right: 10px;
+                                            margin-top: 6px;
+                                            width: 105px;
+                                            height: 43px;
+                                            border: none;
+
+                                            &:hover{
+                                                background: $gradienColor;
+                                                // border: 1px solid $color6;
+                                                border-radius: 5px;
+                                                color: $grayScale !important;
+                                                transition: 0.3s;
+                                                opacity: 0.8s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
 }
+
 
 // features
 .features{
@@ -422,7 +463,7 @@ body{
 .question{
     background-color: #221B42;
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 304px;
     .container{
         max-width: 1040px;
 
@@ -456,6 +497,10 @@ body{
                         line-height: 32px;
                         font-weight: 500;
                         font-size: 20px;
+
+                        .active{
+                            color: $color6;
+                        }
                     }
                 }
 
@@ -496,7 +541,7 @@ body{
         content: '';
         width: 14px;
         height: 2px;
-        background:white;
+        background-color: white;
         position: absolute;
         top: calc(50% - 1px);
         right: 1rem;
@@ -509,7 +554,7 @@ body{
         content: '';
         width: 2px;
         height: 14px;
-        background: white;
+        background-color: white;
         position: absolute;
         top: calc(50% - 7px);
         right: calc(1rem + 6px);
@@ -527,6 +572,132 @@ body{
 
     }
 }
+
+// twitter
+.twitter{
+    background-color: #2B2252;
+    .container{
+        max-width: 1040px;
+
+        // card twitter
+        .card{
+            border: none;
+            border-radius: 6px;
+            background-color: transparent;
+            margin-top: -180px;
+            height: 360px;
+            padding: 0;
+            background-image: url(../images/newhomepage/Bg.svg);
+
+            .card-img-overlay{
+                text-align: center;
+                padding: 0;
+                img{
+                    width: 72px;
+                    height: 72px;
+                    margin-bottom: 18px;
+                    margin-top: 18px;
+                }
+                .card-title{
+                    font-size: 32px;
+                    line-height: 38px;
+                    font-weight: 700;
+                    color: white;
+                    font-family: 'Larsseit-bold'; 
+                    margin-bottom: 0;
+                    padding: 0 5px;
+                }
+                .card-text{
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: white;
+                    opacity: 0.7;
+                    margin-top: 16px;
+                    margin-bottom: 32px;
+                    padding: 0 9px;
+                }
+                .follow__twitter{
+                    background-color: #360D6A;
+                    color: white;
+                    font-weight: 18px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    padding: 16px 24px;
+                    border-radius: 6px;
+
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+
+        // link help
+        .link__help{
+            padding-bottom: 64px;
+            padding-top: 120px;
+            img{
+                width: 86px;
+                height: 42px;
+            }
+            .iris__help{
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(255, 255, 255, 0.75);
+                margin-bottom: 0;
+                margin-top: 12px;
+                padding-right: 70px;
+            }
+            .help__media__social{
+                
+            }
+            .legal{
+                margin-right: 5px;
+                margin-top: 16px;
+            }
+            h6{
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 0;
+                padding-bottom: 16px;
+            }
+            a{
+                display: block;
+                color: #8D899E;
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: 400;
+                margin-bottom: 10px;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+        // akhir link help
+
+        // footer
+        footer{
+            border-top: 1px solid #3A3456;
+            text-align: center;
+            padding: 24px 0;
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                color: #8D899E;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+        // akhir footer
+    }
+}
+
 
 
 // Tablet Version
@@ -564,18 +735,30 @@ body{
             }
         }
     }
+
+    // twitter
+    .twitter{
+        .container{
+            .link__help{
+                .help__media__social{
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 576px) {
     .gradient__color{
-        background-image: linear-gradient(101.71deg, #3B1B74 -76.33%, #230D49 90.64%);
+        background-image: linear-gradient(101.71deg, #3B1B74 -63.33%, #230D49 90.64%);
     }
     .content-homepage{
         height: 1020px;
     }
 }
 
-@media screen and (min-width: 567px) {
+@media screen and (min-width: 576px) {
 
     .gradient__color{
         background-image: linear-gradient(101.71deg, #3B1B74 -20.33%, #230D49 90.64%);
@@ -599,6 +782,12 @@ body{
         .container{
             width: 1044px;
             padding: 0;
+
+            .menu-toggle{
+                input{
+                    display: none;
+                }
+            }
         }
         .nav-item{
             padding-left: 30px;
@@ -697,6 +886,71 @@ body{
     .features{
         .container{
             padding: 0;
+        }
+    }
+
+    .twitter{
+        .container{
+            padding: 0;
+            .card{
+                .card-img-overlay{
+                    img{
+                        margin-bottom: 35px;
+                        margin-top: 30px;
+                    }
+                    .card-title{
+                        font-size: 48px;
+                        line-height: 58px;
+                    }
+                    .card-text{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .link__help{
+                .help__media__social{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .legal{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-homepage{
+        .container{
+            .collapse{
+
+            }
+            .menu-toggle{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                height: 20px;
+                justify-content: space-between;
+
+                span{
+                    display: block;
+                    width: 28px;
+                    height: 3px;
+                    background-color: white;
+                    border-radius: 3px;
+                }
+
+                input{
+                    position: absolute;
+                    width: 40px;
+                    height: 28px;
+                    left: -5px;
+                    top: -3px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
