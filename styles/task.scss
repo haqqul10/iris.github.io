@@ -27,7 +27,13 @@ body{
 
 // navbar task
 .dashboard{
-    background-color: $color1;
+    background-color: #18103E;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1344px;
+    }
 }
 
 // navbar
@@ -59,7 +65,7 @@ body{
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                top:80px;
+                top:59px;
                 right: 100px;
                 z-index: 5;
                 transition: all 0.3s;
@@ -173,6 +179,8 @@ body{
     .navbar-nav{
         .nav-item{
             margin-right: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
 
             img{
                 margin-right: 0px;
@@ -615,15 +623,35 @@ footer{
 
         .container{
             padding: 0;
-        }
+            position: relative;
 
-        .navbar-nav{
-            .nav-item{
-                img{
-                    margin-right: 10px;
+            .my__profile{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+            }
+
+            .navbar-nav{
+                position: absolute;
+                left: 25%;
+                .nav-item{
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .item__notification{
+                position: absolute;
+                right: 140px;
+                
+                .table__notification{
+                    right: -100px;
                 }
             }
         }
+
+        
 
         .navbar-collapse{
             position: relative;
@@ -734,7 +762,6 @@ footer{
             }
             .table{
                 .items{
-                    padding-left: 0;
 
                     .img-shoe{
                         margin-right: 16px;
@@ -751,6 +778,19 @@ footer{
             }
         }
     }
+}
+
+@media only screen and (max-width: 1344px), 
+(height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), 
+(width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait)  {
+    .navbar-dashboard{
+        .container{
+            .navbar-nav{
+                left: 130px;
+            }
+        }
+    }
+     // insert mobile and iPad Pro 12.9" CSS here    
 }
 
 
@@ -874,40 +914,42 @@ footer{
 }
 
 @media screen and (max-width: 992px){
-    .navbar-nav{
-        background-color: $color2;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        flex-direction: initial;
-        justify-content: space-around;
-        height: 83px;
-        padding-top: 20px;
-    
-        .nav-item{
-            .active{
-                background-color: $color6;
-                text-align: center;
-                padding: 8px 8px;
-                margin-right: 0;
-            }
-        }
-    }
-    .icon_notification{
-        display: none;
-    }
-    span{
-        display: none;
-    }
-    .task-judul{
+    .navbar-dashboard{
         .container{
-            .flex-right{
-                flex-wrap: wrap;
+            .navbar-nav{
+                background-color: $color2;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                flex-direction: initial;
+                justify-content: space-around;
+                height: 83px;
+                padding-top: 20px;
+            
+                .nav-item{
+                    .active{
+                        background-color: $color6;
+                        text-align: center;
+                        padding: 8px 8px;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .icon_notification{
+                display: none;
+            }
+            span{
+                display: none;
+            }
+            .task-judul{
+                .container{
+                    .flex-right{
+                        flex-wrap: wrap;
+                    }
+                }
             }
         }
     }
-
-    
 }

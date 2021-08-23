@@ -42,6 +42,7 @@ body{
     background-color: $color2;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
     
     .container{
         padding: auto;
@@ -52,8 +53,6 @@ body{
         
         .item__notification{
             .icon_notification{
-                margin-right: 23px;
-                padding: 0;
             }
             &:hover .table__notification{
                 opacity: 1;
@@ -167,12 +166,8 @@ body{
                 top: -10px;
                 background-color: #312863;
                 transform: rotate(45deg);
-                right: 17%;
+                right: 15%;
             }
-
-            // .table__notification.active{
-            //     opacity: 1;
-            // }
             
         }
 
@@ -330,7 +325,7 @@ body{
             tbody{
                 vertical-align: 0;
                 a{
-                    padding-left: 10px;
+                    padding-left: 15px;
                 }
                 tr{
                     &:hover{
@@ -820,7 +815,7 @@ footer{
             position: relative;
             .navbar-nav{
                 position: absolute;
-                left: 430px;
+                left: 25%;
                 .nav-item{
                     margin-right: 30px;
                     .nav-link{

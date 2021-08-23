@@ -168,10 +168,6 @@ body{
                 transform: rotate(45deg);
                 right: 25%;
             }
-
-            // .table__notification.active{
-            //     opacity: 1;
-            // }
             
         }
 
@@ -337,9 +333,9 @@ body{
         padding-bottom: 32px;
 
         .judul-profile{
+            padding: 10;
             p{
                 margin-bottom: 16px;
-                padding-top: 6px;
                 font-weight: 600;
                 font-size: 20px;
                 
@@ -349,6 +345,7 @@ body{
             position: relative;
             z-index: 1;
             .form-control{ 
+                font-size: 12px;
                 height: 44px;
                 background-color: transparent;
                 // border-color: #3A3456;
@@ -359,10 +356,10 @@ body{
 
                 &::placeholder{
                     color: #8D899E;
-                    font-size: 12px;
-                    font-weight: 400;
-                    display: flex;
-                    flex-direction: column;
+                    // font-size: 12px;
+                    // font-weight: 400;
+                    // display: flex;
+                    // flex-direction: column;
                 }
 
                 &:focus{
@@ -395,7 +392,7 @@ body{
             }
             img{
                 position: absolute;
-                top: 20%;
+                top: 22%;
                 right: 0;
                 left: 4%;
                 bottom: 0;
@@ -411,6 +408,7 @@ body{
                 // position: relative;
                 // padding-left: 40px;
                 padding: 0;
+                margin-bottom: 0;
     
                 .form-check{
                     .form-check-input {
@@ -421,14 +419,27 @@ body{
     
                 tbody{
                     vertical-align: 0;
+                    a{
+                        padding-left: 15px;
+                    }
                     tr{
                         &:hover{
                             background-color: #A085FA;
                             cursor: pointer;
                             color: white !important;
                         }
-            
                         td{
+                            padding-bottom: 16px;
+                            padding-top: 16px;
+                            padding-left: 23px;
+                            padding-right: 23px;
+                            border-color: #3A3456;
+                            color: #BBB9C5;
+                            // padding-right: 24px;
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 400;
+
                             &:hover{
                                 color: white !important;
                             }
@@ -445,30 +456,21 @@ body{
                         }
 
                         .img-fluid{
-                            width: 24px;
-                            float: right;
-                            margin-right: 12px;
+                            width: 20px;
                         }
-                    }
-                    a{
-                        padding-left: 10px;
                     }
                 }
                 th {
                     font-weight: 500;
                     border-style: none;
+                    font-size: 16px;
+                    line-height: 20px;
                     padding-top: 16px;
                     padding-bottom: 16px;
-                    padding-left: 30px;
+                    padding-left: 23px;
+                    padding-right: 23px;
                 }
-                td{
-                    padding-top: 16px;
-                    padding-bottom: 16px;
-                    padding-left: 32px;
-                    border-color: #3A3456;
-                    color: #BBB9C5;
-                    padding-right: 24px;
-                }
+                
     
             }
             .action-knob{
@@ -836,7 +838,7 @@ footer{
 
             .navbar-nav{
                 position: absolute;
-                left: 410px;
+                left: 25%;
                 .nav-item{
                     img{
                         margin-right: 5px;
@@ -885,19 +887,22 @@ footer{
             width: 427px;
 
             .judul-profile{
-                padding: 20px 32px 24px 32px;
+                padding: 20px 27px 24px 26px;
                 p{
                     margin-bottom: 0;
                 }
             }
             form{
+                .form-control{
+                    width: 171px;
+                }
                 img{
                     left: 8%;
                 }
             }
             .table-profile{
                 .action-knob{
-                    margin-top: 125px;
+                    margin-top: 145px;
                     .btn-primary{
                         width: auto;
                         margin-right: 16px;

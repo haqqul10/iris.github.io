@@ -30,6 +30,7 @@ body {
   background-color: #221B4A;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .navbar-dashboard .container {
@@ -39,11 +40,6 @@ body {
 
 .navbar-dashboard .container .navbar-toggler {
   border: none;
-}
-
-.navbar-dashboard .container .item__notification .icon_notification {
-  margin-right: 23px;
-  padding: 0;
 }
 
 .navbar-dashboard .container .item__notification:hover .table__notification {
@@ -173,7 +169,7 @@ body {
   background-color: #312863;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 17%;
+  right: 15%;
 }
 
 .navbar-dashboard .container .my__profile {
@@ -332,7 +328,7 @@ body {
 }
 
 .profile .your-profile-left .table tbody a {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .profile .your-profile-left .table tbody tr:hover {
@@ -858,7 +854,7 @@ footer a:hover {
   }
   .navbar-dashboard .container .navbar-nav {
     position: absolute;
-    left: 430px;
+    left: 25%;
   }
   .navbar-dashboard .container .navbar-nav .nav-item {
     margin-right: 30px;

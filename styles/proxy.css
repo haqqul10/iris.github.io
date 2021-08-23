@@ -362,9 +362,12 @@ body {
   padding-bottom: 32px;
 }
 
+.profile .your-profile-left .judul-profile {
+  padding: 10;
+}
+
 .profile .your-profile-left .judul-profile p {
   margin-bottom: 16px;
-  padding-top: 6px;
   font-weight: 600;
   font-size: 20px;
 }
@@ -375,6 +378,7 @@ body {
 }
 
 .profile .your-profile-left form .form-control {
+  font-size: 12px;
   height: 44px;
   background-color: transparent;
   border: 1px solid #3A3456;
@@ -385,46 +389,18 @@ body {
 
 .profile .your-profile-left form .form-control::-webkit-input-placeholder {
   color: #8D899E;
-  font-size: 12px;
-  font-weight: 400;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control:-ms-input-placeholder {
   color: #8D899E;
-  font-size: 12px;
-  font-weight: 400;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control::-ms-input-placeholder {
   color: #8D899E;
-  font-size: 12px;
-  font-weight: 400;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control::placeholder {
   color: #8D899E;
-  font-size: 12px;
-  font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .profile .your-profile-left form .form-control:focus {
@@ -457,7 +433,7 @@ body {
 
 .profile .your-profile-left form img {
   position: absolute;
-  top: 20%;
+  top: 22%;
   right: 0;
   left: 4%;
   bottom: 0;
@@ -468,6 +444,7 @@ body {
 
 .profile .your-profile-left .table-profile .table {
   padding: 0;
+  margin-bottom: 0;
 }
 
 .profile .your-profile-left .table-profile .table .form-check .form-check-input {
@@ -479,10 +456,26 @@ body {
   vertical-align: 0;
 }
 
+.profile .your-profile-left .table-profile .table tbody a {
+  padding-left: 15px;
+}
+
 .profile .your-profile-left .table-profile .table tbody tr:hover {
   background-color: #A085FA;
   cursor: pointer;
   color: white !important;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr td {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 23px;
+  padding-right: 23px;
+  border-color: #3A3456;
+  color: #BBB9C5;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .profile .your-profile-left .table-profile .table tbody tr td:hover {
@@ -502,30 +495,18 @@ body {
 }
 
 .profile .your-profile-left .table-profile .table tbody tr .img-fluid {
-  width: 24px;
-  float: right;
-  margin-right: 12px;
-}
-
-.profile .your-profile-left .table-profile .table tbody a {
-  padding-left: 10px;
+  width: 20px;
 }
 
 .profile .your-profile-left .table-profile .table th {
   font-weight: 500;
   border-style: none;
+  font-size: 16px;
+  line-height: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 30px;
-}
-
-.profile .your-profile-left .table-profile .table td {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  border-color: #3A3456;
-  color: #BBB9C5;
-  padding-right: 24px;
+  padding-left: 23px;
+  padding-right: 23px;
 }
 
 .profile .your-profile-left .table-profile .action-knob {
@@ -920,7 +901,7 @@ footer a:hover {
   }
   .navbar-dashboard .container .navbar-nav {
     position: absolute;
-    left: 410px;
+    left: 25%;
   }
   .navbar-dashboard .container .navbar-nav .nav-item img {
     margin-right: 5px;
@@ -953,16 +934,19 @@ footer a:hover {
     width: 427px;
   }
   .profile .your-profile-left .judul-profile {
-    padding: 20px 32px 24px 32px;
+    padding: 20px 27px 24px 26px;
   }
   .profile .your-profile-left .judul-profile p {
     margin-bottom: 0;
+  }
+  .profile .your-profile-left form .form-control {
+    width: 171px;
   }
   .profile .your-profile-left form img {
     left: 8%;
   }
   .profile .your-profile-left .table-profile .action-knob {
-    margin-top: 125px;
+    margin-top: 145px;
   }
   .profile .your-profile-left .table-profile .action-knob .btn-primary {
     width: auto;

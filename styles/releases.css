@@ -655,14 +655,14 @@ footer a {
   }
   .navbar-dashboard .container .navbar-nav {
     position: absolute;
-    left: 410px;
+    left: 25%;
   }
   .navbar-dashboard .container .navbar-nav .nav-item img {
     margin-right: 6px;
   }
   .navbar-dashboard .container .item__notification {
     position: absolute;
-    right: 160px;
+    right: 140px;
   }
   .navbar-dashboard .container .item__notification .table__notification {
     right: -100px;

@@ -16,7 +16,13 @@ body {
 }
 
 .dashboard {
-  background-color: #1B143C;
+  background-color: #18103E;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1344px;
+  }
 }
 
 .navbar-dashboard {
@@ -58,7 +64,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 80px;
+  top: 59px;
   right: 100px;
   z-index: 5;
   -webkit-transition: all 0.3s;
@@ -170,6 +176,8 @@ body {
 
 .navbar-dashboard .navbar-nav .nav-item {
   margin-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .navbar-dashboard .navbar-nav .nav-item img {
@@ -633,9 +641,26 @@ footer a {
   }
   .navbar-dashboard .container {
     padding: 0;
+    position: relative;
   }
-  .navbar-dashboard .navbar-nav .nav-item img {
+  .navbar-dashboard .container .my__profile {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  .navbar-dashboard .container .navbar-nav {
+    position: absolute;
+    left: 25%;
+  }
+  .navbar-dashboard .container .navbar-nav .nav-item img {
     margin-right: 10px;
+  }
+  .navbar-dashboard .container .item__notification {
+    position: absolute;
+    right: 140px;
+  }
+  .navbar-dashboard .container .item__notification .table__notification {
+    right: -100px;
   }
   .navbar-dashboard .navbar-collapse {
     position: relative;
@@ -742,9 +767,6 @@ footer a {
     background-size: 15px;
     border-color: #3A3456;
   }
-  .task-cart .table-content .table .items {
-    padding-left: 0;
-  }
   .task-cart .table-content .table .items .img-shoe {
     margin-right: 16px;
   }
@@ -758,6 +780,12 @@ footer a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+  .navbar-dashboard .container .navbar-nav {
+    left: 130px;
   }
 }
 
@@ -868,7 +896,7 @@ footer a {
 }
 
 @media screen and (max-width: 992px) {
-  .navbar-nav {
+  .navbar-dashboard .container .navbar-nav {
     background-color: #221B4A;
     position: fixed;
     bottom: 0;
@@ -884,19 +912,19 @@ footer a {
     height: 83px;
     padding-top: 20px;
   }
-  .navbar-nav .nav-item .active {
+  .navbar-dashboard .container .navbar-nav .nav-item .active {
     background-color: #7963FA;
     text-align: center;
     padding: 8px 8px;
     margin-right: 0;
   }
-  .icon_notification {
+  .navbar-dashboard .container .icon_notification {
     display: none;
   }
-  span {
+  .navbar-dashboard .container span {
     display: none;
   }
-  .task-judul .container .flex-right {
+  .navbar-dashboard .container .task-judul .container .flex-right {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
