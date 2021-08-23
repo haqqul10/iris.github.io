@@ -13,6 +13,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
 .body-homepage {
@@ -127,9 +128,9 @@ body {
 .jumbotron .container .jumbotron-row .display-4 {
   color: white;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 36px;
   font-family: 'Larsseit-bold';
-  font-size: 24px;
+  font-size: 36px;
   margin-top: 11px;
   padding: 0;
 }
@@ -245,6 +246,8 @@ body {
 
 .animation__card {
   background-color: #221B42;
+  margin-top: -120px;
+  padding-top: 120px;
 }
 
 .animation__card .container-fluid {
@@ -255,8 +258,8 @@ body {
 }
 
 .animation__card .container-fluid .title__product {
-  font-size: 48px;
-  line-height: 54px;
+  font-size: 32px;
+  line-height: 32px;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -283,7 +286,7 @@ body {
 .animation__card .container-fluid .carousel .carousel__body .ellipe__card {
   width: 600px;
   position: absolute;
-  left: 80px;
+  left: 10px;
   top: -30px;
 }
 
@@ -317,7 +320,7 @@ body {
 .animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header img {
   margin-right: 20px;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 3px;
   margin-bottom: 10px;
   width: 60px;
   height: 30px;
@@ -330,7 +333,9 @@ body {
 }
 
 .animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-header .card-text {
-  color: #BBB9C5;
+  color: white;
+  opacity: 0.75;
+  font-size: 16px;
 }
 
 .animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-body {
@@ -348,7 +353,8 @@ body {
 }
 
 .animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .card-text {
-  color: #BBB9C5;
+  color: white;
+  opacity: 0.5;
   font-size: 14;
   margin-bottom: 2px;
   margin-left: 10px;
@@ -370,6 +376,9 @@ body {
   width: 105px;
   height: 43px;
   border: none;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
 }
 
 .animation__card .container-fluid .carousel .carousel__body .carousel__slider .carousel__slider__item .item__3d-frame .item__3d-frame__box .card .card-footer .btn-primary:hover {
@@ -392,8 +401,8 @@ body {
 }
 
 .features .container .header__features {
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 32px;
+  line-height: 32px;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -464,8 +473,8 @@ body {
 }
 
 .question .container .header__question {
-  font-size: 48px;
-  line-height: 54px;
+  font-size: 32px;
+  line-height: 32px;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -497,7 +506,7 @@ body {
   font-size: 20px;
 }
 
-.question .container .accordion .card .card-header .collapsible-link .active {
+.question .container .accordion .card .card-header a[aria-expanded="true"] {
   color: #7963FA;
 }
 
@@ -512,18 +521,6 @@ body {
 .question .container .accordion .card .card-body p {
   margin-bottom: 0;
   padding-bottom: 24px;
-}
-
-.question .container .accordion .card .collapse .show a {
-  color: #7963FA;
-}
-
-.question .container .accordion .card .collapse .show .collapsible-link::after {
-  color: #7963FA;
-}
-
-.question .container .accordion .card .collapse .show .collapsible-link::before {
-  color: #7963FA;
 }
 
 .question .container .collapsible-link {
@@ -560,11 +557,13 @@ body {
 .question .container .collapsible-link[aria-expanded='true']::after {
   -webkit-transform: rotate(90deg) translateX(-1px);
           transform: rotate(90deg) translateX(-1px);
+  background-color: #7963FA;
 }
 
 .question .container .collapsible-link[aria-expanded='true']::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  background-color: #7963FA;
 }
 
 .twitter {
@@ -652,9 +651,18 @@ body {
   padding-right: 70px;
 }
 
+.twitter .container .link__help .help__media__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .twitter .container .link__help .legal {
   margin-right: 5px;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .twitter .container .link__help h6 {
@@ -728,12 +736,20 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .animation__card .container-fluid .carousel .carousel__body .ellipe__card {
+    left: 80px;
+    top: -30px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .gradient__color {
     background-image: linear-gradient(101.71deg, #3B1B74 -63.33%, #230D49 90.64%);
   }
-  .content-homepage {
-    height: 1020px;
+  .animation__card .container-fluid .carousel .carousel__body .ellipe__card {
+    left: -110px;
+    top: -50px;
   }
 }
 
@@ -823,16 +839,22 @@ body {
   }
   .support .container .header__support {
     margin-top: 170px;
+    line-height: 60px;
+    font-size: 48px;
   }
   .support .container .title__support img {
     margin-right: 15px;
     margin-top: 0;
   }
+  .animation__card .container-fluid .title__product {
+    font-size: 48px;
+    line-height: 54px;
+  }
   .animation__card .container-fluid .carousel .carousel__body .ellipe__card {
     width: 600px;
     position: absolute;
-    left: 430px;
-    top: -30px;
+    left: 410px;
+    top: -20px;
   }
   .container-content {
     width: 1044px;
@@ -842,6 +864,14 @@ body {
   }
   .features .container {
     padding: 0;
+  }
+  .features .container .header__features {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .question .container .header__question {
+    font-size: 48px;
+    line-height: 54px;
   }
   .twitter .container {
     padding: 0;
@@ -973,6 +1003,9 @@ body {
     opacity: 0;
     cursor: pointer;
     z-index: 2;
+  }
+  .content-homepage {
+    height: 1020px;
   }
 }
 /*# sourceMappingURL=newhomepage.css.map */

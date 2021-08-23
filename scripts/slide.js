@@ -7,7 +7,7 @@
       prevBtn = carousel.getElementsByClassName('carousel__prev')[0],
       nextBtn = carousel.getElementsByClassName('carousel__next')[0];
   
-  var width, height, totalWidth, margin = 20,
+  var width, height, totalWidth, margin = 0,
       currIndex = 0,
       interval, intervalTime = 4000;
   

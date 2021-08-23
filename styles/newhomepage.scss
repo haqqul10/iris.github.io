@@ -23,6 +23,7 @@
 
 body{
     font-family: 'Inter', sans-serif; 
+    position: relative; 
 }
 
 // home page
@@ -128,9 +129,9 @@ body{
             .display-4{
                 color: white;
                 font-weight: 500;
-                line-height: 30px;
+                line-height: 36px;
                 font-family: 'Larsseit-bold';
-                font-size: 24px;
+                font-size: 36px;
                 margin-top: 11px;
                 padding: 0;
             }
@@ -246,14 +247,16 @@ body{
 // product
 .animation__card{
     background-color: #221B42;
+    margin-top: -120px;
+    padding-top: 120px;
     .container-fluid{
         margin-top: -80px;
         position: relative;
         z-index: 55;
         padding: 0;
         .title__product{
-            font-size: 48px;
-            line-height: 54px;
+            font-size: 32px;
+            line-height: 32px;
             font-weight: 700;
             color: white;
             text-align: center;
@@ -280,7 +283,7 @@ body{
                     width: 600px;
                     position: absolute;
                     // z-index: 44;
-                    left: 80px;
+                    left: 10px;
                     top: -30px;
                 }
 
@@ -311,7 +314,7 @@ body{
                                         img{
                                             margin-right: 20px;
                                             margin-top: 5px;
-                                            margin-left: 10px;
+                                            margin-left: 3px;
                                             margin-bottom: 10px;
                                             width: 60px;
                                             height: 30px;
@@ -323,7 +326,9 @@ body{
                                             margin-bottom: 0;
                                         }
                                         .card-text{
-                                            color: $graytext;
+                                            color: white;
+                                            opacity: 0.75;
+                                            font-size: 16px;
                                         }
                                     }
                                     .card-body{
@@ -338,7 +343,8 @@ body{
                                         padding: 10px;
                                         text-align: left;
                                         .card-text{
-                                            color: $graytext;
+                                            color: white;
+                                            opacity: 0.5;
                                             font-size: 14;
                                             margin-bottom: 2px;
                                             margin-left: 10px;
@@ -358,6 +364,9 @@ body{
                                             width: 105px;
                                             height: 43px;
                                             border: none;
+                                            font-size: 16px;
+                                            color: white;
+                                            font-weight: 500;
 
                                             &:hover{
                                                 background: $gradienColor;
@@ -389,8 +398,8 @@ body{
     .container{
         max-width: 1044px;
         .header__features{
-            font-size: 48px;
-            line-height: 60px;
+            font-size: 32px;
+            line-height: 32px;
             font-weight: 700;
             color: white;
             text-align: center;
@@ -457,8 +466,8 @@ body{
         max-width: 1040px;
 
         .header__question{
-            font-size: 48px;
-            line-height: 54px;
+            font-size: 32px;
+            line-height: 32px;
             font-weight: 700;
             color: white;
             text-align: center;
@@ -486,10 +495,9 @@ body{
                         line-height: 32px;
                         font-weight: 500;
                         font-size: 20px;
-
-                        .active{
-                            color: $color6;
-                        }
+                    }
+                    a[aria-expanded="true"]{
+                        color: #7963FA;;
                     }
                 }
 
@@ -503,22 +511,6 @@ body{
                     opacity: 0.7;
                     font-size: 16px;
                     line-height: 28px;
-                }
-
-                .collapse{
-                    .show{
-                        a{
-                            color: #7963FA;
-                        }
-
-                        .collapsible-link::after{
-                            color: #7963FA;
-                        }
-
-                        .collapsible-link::before{
-                            color: #7963FA;
-                        }
-                    }
                 }
             }
         }
@@ -553,10 +545,12 @@ body{
 
         .collapsible-link[aria-expanded='true']::after {
         transform: rotate(90deg) translateX(-1px);
+        background-color: #7963FA;
         }
 
         .collapsible-link[aria-expanded='true']::before {
         transform: rotate(180deg);
+        background-color: #7963FA;
         }
 
     }
@@ -640,11 +634,12 @@ body{
                 padding-right: 70px;
             }
             .help__media__social{
-                
+                display: flex;
+                justify-content: space-between;
             }
             .legal{
                 margin-right: 5px;
-                margin-top: 16px;
+                margin-top: 32px;
             }
             h6{
                 font-size: 16px;
@@ -738,13 +733,43 @@ body{
     }
 }
 
+@media screen and (max-width: 768px) {
+    // .content-homepage{
+    //     height: 1020px;
+    // }
+    .animation__card{
+        .container-fluid{
+            .carousel{
+                .carousel__body{
+                    .ellipe__card{
+                        left: 80px;
+                        top: -30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 576px) {
     .gradient__color{
         background-image: linear-gradient(101.71deg, #3B1B74 -63.33%, #230D49 90.64%);
     }
-    .content-homepage{
-        height: 1020px;
+    .animation__card{
+        .container-fluid{
+            .carousel{
+                .carousel__body{
+                    .ellipe__card{
+                        left: -110px;
+                        top: -50px;
+                    }
+                }
+            }
+        }
     }
+    // .content-homepage{
+    //     height: 1020px;
+    // }
 }
 
 @media screen and (min-width: 576px) {
@@ -857,6 +882,8 @@ body{
             padding: 0;
             .header__support{
                 margin-top: 170px;
+                line-height: 60px;
+                font-size: 48px;
             }
             .title__support{
                 img{
@@ -870,14 +897,18 @@ body{
     // product
     .animation__card{
         .container-fluid{
+            .title__product{
+                font-size: 48px;
+                line-height: 54px;
+            }
             .carousel{
                 .carousel__body{
                     .ellipe__card{
                         width: 600px;
                         position: absolute;
                         // z-index: 44;
-                        left: 430px;
-                        top: -30px;
+                        left: 410px;
+                        top: -20px;
                     }
                 }
             }
@@ -898,6 +929,20 @@ body{
     .features{
         .container{
             padding: 0;
+
+            .header__features{
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+    }
+
+    .question{
+        .container{
+            .header__question{
+                font-size: 48px;
+                line-height: 54px;
+            }
         }
     }
 
@@ -1018,5 +1063,8 @@ body{
                 }
             }
         }
+    }
+    .content-homepage{
+        height: 1020px;
     }
 }
