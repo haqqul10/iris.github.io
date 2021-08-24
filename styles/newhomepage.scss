@@ -24,11 +24,13 @@
 body{
     font-family: 'Inter', sans-serif; 
     position: relative; 
+    
 }
 
 // home page
 .body-homepage{
     background-color: #221B42;
+    overflow-x: hidden;
 }
 .content-homepage{
     background-image: linear-gradient(101.71deg, #3B1B74 9.67%, #230D49 90.64%);
@@ -68,7 +70,10 @@ body{
 }
 .navbar-homepage{ 
     position: relative;
-    z-index: 5;
+    z-index: 999;
+    height: 90px;
+    background-color: transparent;
+    
     .container{
         width: 1044px;
         position: relative;
@@ -80,30 +85,31 @@ body{
             }
     
         }
-        
-    }
-    .collapse-text{
-        .nav-link{
-            text-align: center;
-            color: white;
-            font-size: 16px;
-            font-weight: 400;
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    text-align: center;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .btn-getstarted{
+                    text-align: center;
+                }
+            }
         }
+        // .collapse{
         .btn-getstarted{
-            text-align: center;
-        }
-    }
-    // .collapse{
-    .btn-getstarted{
-        background-color: $color6;
-        border: none;
-        border-radius: 5px;
-        &:hover{
-            opacity: 0.8;
-            transition: 0.3s;
-            background: $gradienColor;
+            background-color: $color6;
             border: none;
-            color: white !important;
+            border-radius: 5px;
+            &:hover{
+                opacity: 0.8;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: none;
+                color: white !important;
+            }
         }
     }
 
@@ -247,13 +253,17 @@ body{
 // product
 .animation__card{
     background-color: #221B42;
-    margin-top: -120px;
-    padding-top: 120px;
+    margin-top: -160px;
+    padding-top: 180px;
     .container-fluid{
         margin-top: -80px;
         position: relative;
         z-index: 55;
         padding: 0;
+        .no-margin{
+            margin-right: 0;
+            margin-left: 0;
+        }
         .title__product{
             font-size: 32px;
             line-height: 32px;
@@ -686,6 +696,10 @@ body{
 
 // Tablet Version
 @media screen and (min-width: 768px) {
+
+    .body-homepage{
+        overflow-x: hidden;
+    }
     // homepage
     .jumbotron{
         .container{
@@ -737,6 +751,9 @@ body{
     // .content-homepage{
     //     height: 1020px;
     // }
+    .body-homepage{
+        overflow-x: hidden;
+    }
     .animation__card{
         .container-fluid{
             .carousel{
@@ -752,6 +769,9 @@ body{
 }
 
 @media screen and (max-width: 576px) {
+    .body-homepage{
+        overflow-x: hidden;
+    }
     .gradient__color{
         background-image: linear-gradient(101.71deg, #3B1B74 -63.33%, #230D49 90.64%);
     }
@@ -773,7 +793,9 @@ body{
 }
 
 @media screen and (min-width: 576px) {
-
+    .body-homepage{
+        overflow-x: hidden;
+    }
     .gradient__color{
         background-image: linear-gradient(101.71deg, #3B1B74 -20.33%, #230D49 90.64%);
     }
@@ -781,6 +803,9 @@ body{
 
 // Desktop Version
 @media screen and (min-width: 992px) {
+    .body-homepage{
+        overflow-x: hidden;
+    }
     // homepage
     .content-homepage{
         // height: 675px;
@@ -790,13 +815,26 @@ body{
         background-image: linear-gradient(101.71deg, #3B1B74 -1.33%, #230D49 90.64%);
     }
 
+    .navbar-homepage.scrolled{
+        background-color: #221B42;
+        width: 100%;
+        left: 0;
+    }
     .navbar-homepage{
-        background-color: transparent;
-        padding-top: 25px;
+        position: fixed;
         .container{
             width: 1044px;
             padding: 0;
 
+            .top__btn{
+                display: none;
+            }
+
+            .navbar-brand{
+                .logo_responsive{
+                    display: none;
+                }
+            }
             .menu-toggle{
                 input{
                     display: none;
@@ -842,7 +880,7 @@ body{
                 flex-direction: unset;
 
                 .aio__software{
-                    margin-top: 77px;
+                    margin-top: 162px;
                     font-size: 20px;
                 }
                 
@@ -865,7 +903,7 @@ body{
 
         .header-illustration{
             justify-content: end;
-            margin-top: 68px;
+            margin-top: 150px;
             padding-left: 0;
 
             img{
@@ -978,41 +1016,55 @@ body{
 }
 
 @media screen and (max-width: 992px){
+    .body-homepage{
+        overflow-x: hidden;
+    }
     .navbar-homepage{
         .container{
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            .navbar-brand{
+                margin-right: 0;
+            }
             .collapse{
                 display: flex;
-                top: -8px;
+                top: -20px;
                 right: 0;
                 position: absolute;
                 background-color: #2B2252;
                 // background-image: linear-gradient(101.71deg, #3B1B74 9.67%, #230D49 90.64%);
                 width: 100%;
-                height: 80vh;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                padding-bottom: 32px;
+                height: 100vh;
                 z-index: 6;
-                transform: translateY(-100%);
+                opacity: 0;
                 transition: all 1s;
                 border-radius: 0 0 6px 6px;
+                padding-top: 140px;
+                padding-left: 12px;
 
                 .navbar-nav{
-                    height: 80vh;
+                    height: 100vh;
                     width: 100%;
-                    justify-content: space-evenly;
                     .nav-item{
-                        transition: all 0.5s;
-                        &:hover{
-                            background-color: $color6;
-                            color: white !important;
+                        z-index: -1;
+                        position: relative;
+                        padding: 8px 0;
+                        .nav-link{
+                            text-align: left;
+                            &:hover{
+                                opacity: 0.7;
+                            }
                         }
                     }
                 }
             }
             .collapse.show{
-                transform: translateY(0);
+                opacity: 1;
+                .navbar-nav{
+                    .nav-item{
+                        z-index: 1;
+                    }
+                }
             }
             .menu-toggle{
                 position: relative;
@@ -1024,7 +1076,7 @@ body{
 
                 span{
                     display: block;
-                    width: 28px;
+                    width: 25px;
                     height: 3px;
                     background-color: white;
                     border-radius: 3px;
@@ -1039,11 +1091,11 @@ body{
                 }
 
                 input:checked ~ span:nth-child(2){
-                    transform: rotate(45deg) translate(-1px, -1px);
+                    transform: rotate(45deg) translate(0px, 0px);
                     background-color: white;
                 }
                 input:checked ~ span:nth-child(4){
-                    transform: rotate(-45deg) translate(-1px, 0);
+                    transform: rotate(-45deg) translate(0px, 0px);
                     background-color: white;
                 }
                 input:checked ~ span:nth-child(3){
@@ -1060,6 +1112,18 @@ body{
                     opacity: 0;
                     cursor: pointer;
                     z-index: 2;
+                }
+            }
+            .bottom__btn{
+                display: none;
+            }
+            .navbar-brand{
+                .logo_deskstop{
+                    display: none;
+                }
+                .logo_responsive{
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }

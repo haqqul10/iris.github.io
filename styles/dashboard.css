@@ -194,7 +194,7 @@ body {
   background-color: #312863;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 101px;
+  right: 118px;
 }
 
 .navbar-dashboard .navbar-collapse {
@@ -517,7 +517,7 @@ footer a:hover {
     left: 25%;
   }
   .navbar-dashboard .container .navbar-nav .nav-item img {
-    margin-right: 10px;
+    margin-right: 6px;
   }
   .navbar-dashboard .container .icon_notification {
     position: absolute;
@@ -599,7 +599,7 @@ footer a:hover {
 
 @media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
   .navbar-dashboard .container .navbar-nav {
-    left: 160px;
+    left: 130px;
   }
 }
 

@@ -184,9 +184,6 @@ body{
     
                 .nav-link{
                     padding: 0;
-                    img{
-                        margin-right: 5px;
-                    }
                 }
     
     
@@ -441,7 +438,7 @@ body{
                         background-color: #33275C;
                         
                         .progress-bar{
-                            background-color: $color6;
+                            background-color: #9072F5;
                         }
                     }
                     .stepwizard-row {
@@ -465,9 +462,9 @@ body{
                                     font-weight: 400;
                                     padding: 0;
                                     color: #BBB9C5;
-                                    .active{
-                                        color: #9072F5 !important;
-                                    }
+                                }
+                                small.active_small{
+                                    color: #9072F5 !important;
                                 }
                                 span{
                                     font-size: 14px;
@@ -475,15 +472,15 @@ body{
                                     padding: 0;
                                     color: #8D899E;
                                     margin-left: -5px;
-                                    .active{
-                                        color: white !important;
-                                    }
+                                }
+                                span.active_span{
+                                    color: white !important;
                                 }
                             }
 
                             .btn-success{
-                                background-color: $color6;
-                                border-color:$color6 ;
+                                background-color: #9072F5;
+                                border-color: #9072F5 ;
                             }
                             .btn-circle {
                                 width: 40px;
@@ -751,6 +748,7 @@ body{
                     font-weight: 500;
                     padding: 10px 16px;
                     height: 44px;
+                    width: 100%;
 
                     &:hover{
                     opacity: 0.8;
@@ -958,7 +956,7 @@ footer{
     .navbar-dashboard{
         .container{
             .navbar-nav{
-                left: 210px;
+                left: 130px;
             }
         }
     }
@@ -980,10 +978,15 @@ footer{
                 padding-top: 20px;
             
                 .nav-item{
+                    .nav-link{
+                        img{
+                            margin-left: 0;
+                        }
+                    }
                     .active{
                         background-color: $color6;
                         text-align: center;
-                        padding: 8px 8px;
+                        padding: 8px 11px;
                         margin-right: 0;
                     }
         

@@ -653,7 +653,7 @@ footer a {
     left: 25%;
   }
   .navbar-dashboard .container .navbar-nav .nav-item img {
-    margin-right: 10px;
+    margin-right: 6px;
   }
   .navbar-dashboard .container .item__notification {
     position: absolute;
@@ -915,7 +915,7 @@ footer a {
   .navbar-dashboard .container .navbar-nav .nav-item .active {
     background-color: #7963FA;
     text-align: center;
-    padding: 8px 8px;
+    padding: 8px 11px;
     margin-right: 0;
   }
   .navbar-dashboard .container .icon_notification {

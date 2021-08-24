@@ -84,8 +84,5 @@
 
   
   init();
-
-  console.log("height", height);
-  console.log(window.innerHeight);
   
 })();

@@ -72,7 +72,7 @@ body{
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                top:80px;
+                top:59px;
                 right: 100px;
                 z-index: 5;
                 transition: all 0.3s;
@@ -172,7 +172,7 @@ body{
                 top: -10px;
                 background-color: #312863;
                 transform: rotate(45deg);
-                right: 22%;
+                right: 25%;
             }
 
             // .table__notification.active{
@@ -737,7 +737,7 @@ footer{
     .navbar-dashboard{
         .container{
             .navbar-nav{
-                left: 210px;
+                left: 130px;
             }
         }
     }
@@ -763,7 +763,7 @@ footer{
                     .active{
                         background-color: $color6;
                         text-align: center;
-                        padding: 10px 12px;
+                        padding: 8px 11px;
                         margin-right: 0;
                     }
                 }

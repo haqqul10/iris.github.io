@@ -28,7 +28,6 @@ body{
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1344px;
-        padding: 0;
     }
 }
 
@@ -258,9 +257,7 @@ body{
 
 // card admin panel
 .card__admin__panel{
-    .container{
-        
-        
+    .container{ 
         .card{
             background-color: $color2;
             height: 180px;
@@ -440,7 +437,7 @@ body{
 
         .dataTables_scrollHead{
             border-radius: 6px;
-            display: none;
+            // display: none;
         }
         .dataTables_paginate{
             margin-top: 14px;
@@ -554,7 +551,7 @@ footer{
 
             .navbar-nav{
                 position: absolute;
-                left: 410px;
+                left: 25%;
                 .nav-item{
                     img{
                         margin-right: 5px;
@@ -585,6 +582,9 @@ footer{
 
     // card dashboard proxy
     .card-dashboard{
+        .container{
+            padding: 0;
+        }
         .flex-right{
             margin-top: auto;
             display: flex;
@@ -597,6 +597,7 @@ footer{
 
     .card__admin__panel{
         .container{
+            padding: 0;
             .colom_1{
                 padding-right: 0;
             }
@@ -712,7 +713,7 @@ footer{
     .navbar-dashboard{
         .container{
             .navbar-nav{
-                left: 210px;
+                left: 130px;
             }
         }
     }
