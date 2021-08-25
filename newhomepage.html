@@ -30,7 +30,12 @@
       <div class="container-homepage">
         <nav id="navbar-example" class="navbar navbar-homepage navbar-expand-lg navbar-dark">
           <div class="container">
-            <a href="dashboard.html" class="nav-link btn-getstarted text-white top__btn"> Dashboard </a>
+            <div class="menu-toggle">
+              <input type="checkbox"/>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <a class="navbar-brand" href="#iris">
               <img src="images/icons/Logo.svg" alt="Iris" width="86" class="logo_deskstop">
               <img src="./images/newhomepage/Logo_responsive.svg" alt="" class="logo_responsive">
@@ -39,6 +44,8 @@
               <span class="navbar-toggler-icon"></span>
             </button> -->
             <div class="collapse navbar-collapse collapse-text" id="navbarNav" >
+              <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
+              <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="#discover">Discover</a>
@@ -52,16 +59,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#twitter">Twitter</a>
                 </li>
+                <a href="dashboard.html" class="nav-link btn-getstarted text-white bottom__btn__collapse"> Dashboard </a>
               </ul>
             </div>
             <a href="dashboard.html" class="nav-link btn-getstarted text-white bottom__btn"> Dashboard </a>
-            <div class="menu-toggle">
-              <input type="checkbox"/>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
           </div>
         </nav>
         <!-- akhir halaman navbar -->
@@ -528,10 +529,16 @@
       $(document).ready(function(){
         const menuToggle = document.querySelector('.menu-toggle input');
         const nav = document.querySelector('.navbar-collapse');
+        const delete_icon = document.querySelector('.icon__delete__responsive');
   
         menuToggle.addEventListener('click', function(){
           nav.classList.toggle('show');
         });
+
+        delete_icon.addEventListener('click', function(){
+          nav.classList.remove('show');
+        });
+
       });
 
 

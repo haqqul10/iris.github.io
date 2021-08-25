@@ -15,18 +15,27 @@
 
     <title>Dashboard</title>
   </head>
-  <body class="dashboard">
+  <body class="dashboard" id="dashboard">
 
     <!-- halaman navbar -->
       <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
         <div class="container">
+          <div class="menu-toggle">
+              <input type="checkbox"/>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
           <a class="navbar-brand" href="#">
-            <img src="images/icons/Logo.svg" alt="Iris" width="80">
+            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
+            <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
           </a>
           <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
-          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
+            <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <a class="nav-link active" href="dashboard.html"><img src="images/icons/Icon=Home.svg" alt="" width="24" class="pb-1"> <span>Dashboard</span> </a>
@@ -35,14 +44,15 @@
                 <a class="nav-link" href="task.html"> <img src="images/icons/task.svg" alt="" width="24" class="pb-1"> <span>Task</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="profile.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1"> <span>Profile</span></a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24" class="pb-1"> <span>Releases</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1"> <span>Proxies</span></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24" class="pb-1"> <span>Profile</span></a>
+              </li>
+              <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
             </ul>
             <!-- <div class="item__notification"> -->
               <div class="nav-link icon_notification"> 
@@ -110,8 +120,8 @@
                   <a href="" class="view__all">View All</a>
                 </div>
               </div>
-            <!-- </div> -->
-            <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2 pb-1"> Rizki Agus</a>
+            </div>
+            <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
           <!-- </div> -->
         </div>
       </nav>
@@ -344,50 +354,23 @@
     <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script> -->
 
     <script>
-      // const iconNotification = document.querySelector('.icon_notification_hover');
-      // const tableNotification = document.querySelector('.table__notification');
-
-      // iconNotification.addEventListener('click', function(){
-      //   tableNotification.classList.add('active');
-      // });
-
-
-
-
-
-
-
-
-
-
-
-
-      // $(document).ready(function() {
-      //   $('button[data-toggle="tab"]').on( 'shown.bs.tab', function (e) {
-      //       $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
-      //   } );
+      // animation humberger
+      $(document).ready(function(){
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('.navbar-collapse');
+        const delete_icon = document.querySelector('.icon__delete__responsive');
+        // const modal = document.getElementById('dashboard');
         
-      //   $('table.table').DataTable( {
-      //       scrollY: 400,
-      //       // scrollX: true,
-      //       scrollCollapse: true,
-      //       paging: false,
-      //       searching: false,
-      //       bInfo: false,
-      //       "sScrollX": "auto",
-      //       // "sScrollXInner": "140%",
-      //       // "bScrollCollapse": "30%",
-            
-      //       // "filter": true,         // this is for disable filter (search box)
-      //       // "orderMulti": true,     // for disable multiple column at once
-      //       // "responsive": false,
-      //       "pageLength": 50,
-      //       // "searchDelay":1000,
-      //       // "bAutoWidth": false,
-      //   } );
-      //   // Apply a search to the second table for the demo
-      //   $('#myTable2').DataTable().search( 'New York' ).draw();
-      // } );
+        // menuToggle.onclick = function() {
+        //   nav.style.display = "block";
+        // }
+        menuToggle.addEventListener('click', function(){
+          nav.classList.toggle('show');
+        });
+        delete_icon.addEventListener('click', function(){
+          nav.classList.remove('show');
+        });
+      });
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

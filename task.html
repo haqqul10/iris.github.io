@@ -22,13 +22,20 @@
     <!-- halaman navbar -->
       <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
         <div class="container">
+          <div class="menu-toggle">
+              <input type="checkbox"/>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
           <a class="navbar-brand" href="#">
-            <img src="./images/icons/Logo.svg" alt="Iris" width="80">
+            <img src="./images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
+            <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
           </a>
           <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
-          <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1"> <span>Dashboard</span></a>
@@ -72,8 +79,8 @@
                 <a href="" class="view__all">View All</a>
               </div>
             </div>
-            <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2 pb-1"> Rizki Agus</a>
-          <!-- </div> -->
+          </div>
+          <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> Rizki Agus</a>
         </div>
       </nav>
       <!-- akhir halaman navbar -->
@@ -274,9 +281,14 @@
     <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
 
     <script>
-      // $("#checkAll").change(function () {
-      //     $("input:checkbox").prop('checked', $(this).prop("checked"));
-      // });
+      $(document).ready(function(){
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('.navbar-collapse');
+  
+        menuToggle.addEventListener('click', function(){
+          nav.classList.toggle('show');
+        });
+      });
 
       $('#checkAll').click(function (e) {
           $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));

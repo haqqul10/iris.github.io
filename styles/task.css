@@ -40,6 +40,12 @@ body {
   border: none;
 }
 
+.navbar-dashboard .container .my__profile {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
 .navbar-dashboard .container .item__notification .icon_notification_hover {
   cursor: pointer;
 }
@@ -174,27 +180,27 @@ body {
   right: 25%;
 }
 
-.navbar-dashboard .navbar-nav .nav-item {
+.navbar-dashboard .container .navbar-nav .nav-item {
   margin-right: 20px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.navbar-dashboard .navbar-nav .nav-item img {
+.navbar-dashboard .container .navbar-nav .nav-item img {
   margin-right: 0px;
 }
 
-.navbar-dashboard .navbar-nav .nav-item .active {
+.navbar-dashboard .container .navbar-nav .nav-item .active {
   background-color: #7963FA;
   border-radius: 6px;
   padding: 10px 16px;
 }
 
-.navbar-dashboard .navbar-collapse {
+.navbar-dashboard .container .navbar-collapse {
   text-align: center;
   position: absolute;
   top: 100%;
-  width: 95%;
+  width: 100%;
   z-index: 15;
   padding-left: 10px;
   padding-right: 10px;
@@ -643,10 +649,8 @@ footer a {
     padding: 0;
     position: relative;
   }
-  .navbar-dashboard .container .my__profile {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
+  .navbar-dashboard .container .navbar-brand .logo_responsive {
+    display: none;
   }
   .navbar-dashboard .container .navbar-nav {
     position: absolute;
@@ -657,12 +661,18 @@ footer a {
   }
   .navbar-dashboard .container .item__notification {
     position: absolute;
-    right: 140px;
+    right: -10px;
   }
   .navbar-dashboard .container .item__notification .table__notification {
     right: -100px;
   }
-  .navbar-dashboard .navbar-collapse {
+  .navbar-dashboard .container .menu-toggle input {
+    display: none;
+  }
+  .navbar-dashboard .container .my__profile img {
+    padding-bottom: 1px;
+  }
+  .navbar-dashboard .container .navbar-collapse {
     position: relative;
     top: auto;
     width: auto;
@@ -896,33 +906,123 @@ footer a {
 }
 
 @media screen and (max-width: 992px) {
-  .navbar-dashboard .container .navbar-nav {
-    background-color: #221B4A;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    -webkit-box-orient: initial;
-    -webkit-box-direction: initial;
-        -ms-flex-direction: initial;
-            flex-direction: initial;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    height: 83px;
-    padding-top: 20px;
+  .navbar-dashboard {
+    height: 80px;
+    z-index: 99;
   }
-  .navbar-dashboard .container .navbar-nav .nav-item .active {
-    background-color: #7963FA;
-    text-align: center;
-    padding: 8px 11px;
+  .navbar-dashboard .container .collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0;
+    position: absolute;
+    background-color: #221B4A;
+    height: 100vh;
+    z-index: 55;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    border-radius: 0 0 6px 6px;
+    padding-left: 12px;
+  }
+  .navbar-dashboard .container .collapse .navbar-nav {
+    height: 100vh;
+    width: 100%;
+    display: inline;
+  }
+  .navbar-dashboard .container .collapse .navbar-nav .nav-item {
+    position: relative;
+    z-index: -1;
+    padding: 8px 0;
     margin-right: 0;
+  }
+  .navbar-dashboard .container .collapse .navbar-nav .nav-item .active {
+    padding-left: 8px;
+  }
+  .navbar-dashboard .container .collapse .navbar-nav .nav-item .nav-link {
+    text-align: left;
+  }
+  .navbar-dashboard .container .collapse.show {
+    opacity: 1;
+  }
+  .navbar-dashboard .container .collapse.show .navbar-nav .nav-item {
+    z-index: 1;
+  }
+  .navbar-dashboard .container .menu-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    z-index: 999;
+  }
+  .navbar-dashboard .container .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .navbar-dashboard .container .menu-toggle span:nth-child(2) {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .navbar-dashboard .container .menu-toggle span:nth-child(4) {
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  .navbar-dashboard .container .menu-toggle input:checked ~ span:nth-child(2) {
+    -webkit-transform: rotate(45deg) translate(0px, 0px);
+            transform: rotate(45deg) translate(0px, 0px);
+    background-color: white;
+  }
+  .navbar-dashboard .container .menu-toggle input:checked ~ span:nth-child(4) {
+    -webkit-transform: rotate(-45deg) translate(0px, 0px);
+            transform: rotate(-45deg) translate(0px, 0px);
+    background-color: white;
+  }
+  .navbar-dashboard .container .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .navbar-dashboard .container .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .navbar-dashboard .container .navbar-brand .logo_deskstop {
+    display: none;
+  }
+  .navbar-dashboard .container .navbar-brand .logo_responsive {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 18px;
+    left: 40%;
   }
   .navbar-dashboard .container .icon_notification {
     display: none;
   }
-  .navbar-dashboard .container span {
-    display: none;
+  .navbar-dashboard .container .my__profile {
+    padding: 0;
+  }
+  .navbar-dashboard .container .my__profile img {
+    padding-bottom: 0;
   }
   .navbar-dashboard .container .task-judul .container .flex-right {
     -ms-flex-wrap: wrap;
