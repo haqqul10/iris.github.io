@@ -45,12 +45,38 @@ body{
     position: relative;
     
     .container{
+        position: relative;
         padding: auto;
         .navbar-toggler{
             border: none;
         }
 
-        .item__notification{
+        .my__profile{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+        
+        .navbar-nav{
+            .nav-item{
+                margin-right: 20px;
+                margin-top: auto;
+                margin-bottom: auto;
+    
+                img{
+                    margin-right: 0px;
+                }
+                .active{
+                    background-color: $color6;
+                    border-radius: 6px;
+                    padding: 10px 16px;
+                }
+    
+            }
+        }
+
+
+        .icon_notification{
             .icon_notification_hover{
                 cursor: pointer;
             }
@@ -66,8 +92,8 @@ body{
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                top:60px;
-                right: 100px;
+                top:59px;
+                right: 85px;
                 z-index: 5;
                 transition: all 0.3s;
                 padding-top: 24px;
@@ -166,44 +192,22 @@ body{
                 top: -10px;
                 background-color: #312863;
                 transform: rotate(45deg);
-                right: 25%;
+                right: 118px;
             }
-            
-        }
-
-        .my__profile{
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-        }
-
-        .navbar-nav{
-            .nav-item{
-                margin-right: 20px;
-                margin-top: auto;
-                margin-bottom: auto;
-    
-                .active{
-                    background-color: $color6;
-                    border-radius: 6px;
-                    padding: 10px 16px;
-                    
-                }
-            }
-        }
-    
-        .navbar-collapse{
-                text-align: center;
-                position: absolute;
-                top: 100%;
-                width: 95%;
-                z-index: 15;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-bottom: 10px;
-                background-color: $color2;
         }
     }
+    .navbar-collapse{
+            text-align: center;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            z-index: 15;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            background-color: $color2;
+    }
+
 
 }
 
@@ -835,22 +839,33 @@ footer{
             position: relative;
             padding: 0;
 
+            .navbar-brand{
+                .logo_responsive{
+                    display: none;
+                }
+            }
+
             .navbar-nav{
                 position: absolute;
                 left: 25%;
                 .nav-item{
                     img{
-                        margin-right: 5px;
+                        margin-right: 6px;
                     }
                 }
             }
 
-            .item__notification{
+            .icon_notification{
                 position: absolute;
                 right: 140px;
                 
                 .table__notification{
                     right: -100px;
+                }
+            }
+            .menu-toggle{
+                input{
+                    display: none;
                 }
             }
         }
@@ -863,6 +878,21 @@ footer{
             padding-left: 0px;
             padding-right: 0px;
             padding-bottom: 0px;
+
+            .icon__delete__responsive{
+                display: none;
+            }
+            .logo_collapse{
+                display: none;
+            }
+        }
+        .my__profile{
+            img{
+                padding-bottom: 1px;
+            }
+        }
+        .my__profile__collapse{
+            display: none;
         }
     }
 
@@ -1007,34 +1037,127 @@ footer{
 
 @media screen and (max-width: 992px){
     .navbar-dashboard{
+        height: 80px;
         .container{
-            .navbar-nav{
-                background-color: $color2;
-                position: fixed;
-                bottom: 0;
+            .collapse{
+                display: flex;
                 left: 0;
-                right: 0;
-                z-index: 5;
-                flex-direction: initial;
-                justify-content: space-around;
-                height: 83px;
-                padding-top: 20px;
-            
-                .nav-item{
-                    .active{
-                        background-color: $color6;
-                        text-align: center;
-                        padding: 8px 11px;
+                position: absolute;
+                background-color: #221B4A;
+                width: 70%;
+                height: 100vh;
+                // opacity: 0;
+                z-index: -1;
+                top: 0;
+                transition: all 0.8s;
+                padding-top: 210px;
+                padding-left: 20px;
+                padding-right: 20px;
+                transform: translateX(-200%);
+
+                .navbar-nav{
+                    height: 100vh;
+                    width: 100%;
+                    display: inline;
+                    z-index: -1;
+                    .nav-item{
+                        position: relative;
+                        // z-index: -1;
+                        padding: 8px 0;
                         margin-right: 0;
+                        .active{
+                            padding-left: 8px;
+                        }
+                        .nav-link{
+                            text-align: left;
+                            padding-left: 19px;
+                        }
+            
                     }
-        
+                }
+                .icon__delete__responsive{
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    right: 20px;
+                    cursor: pointer;
+                }
+                .logo_collapse{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                }
+                .my__profile__collapse{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 20px;
+                }
+            }
+            .collapse.show{
+                // opacity: 1;
+                z-index: 5;
+                transform: translateX(0);
+                .navbar-nav{
+                    z-index: 5;
+                    .nav-item{
+                        // z-index: 2;
+                    }
+                }
+            }
+            .menu-toggle{
+                display: flex;
+                flex-direction: column;
+                height: 20px;
+                justify-content: space-between;
+                position: relative;
+
+                span{
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background-color: white;
+                    border-radius: 3px;
+                    transition: all 0.5s;
+
+                }
+
+                input{
+                    position: absolute;
+                    width: 40px;
+                    height: 28px;
+                    left: -5px;
+                    top: -3px;
+                    opacity: 0;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+            }
+            .navbar-brand{
+                .logo_deskstop{
+                    display: none;
+                }
+                .logo_responsive{
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 0;
+                    left: 45%;
                 }
             }
             .icon_notification{
                 display: none;
             }
-            span{
-                display: none;
+            .my__profile{
+                padding: 0;
+                img{
+                    padding-bottom: 0;
+                }
+                span{
+                    display: none;
+                }
             }
         }
     }
