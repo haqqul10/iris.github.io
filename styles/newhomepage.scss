@@ -488,6 +488,7 @@ body{
 
         /* Horizontal line */
         .accordion{
+            background-color: #221B42;
             .card{
                 background-color: transparent;
                 border: none;
@@ -496,6 +497,7 @@ body{
                 .card-header{
                     border: none;
                     padding: 24px 0;
+                    background-color: #221B42;
                     h6{
                         margin-bottom: 0;
                     }

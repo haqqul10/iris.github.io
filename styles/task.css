@@ -231,18 +231,6 @@ body {
   width: auto;
 }
 
-.task-judul .container .btn-group .dropdown-menu {
-  background-color: #221B4A;
-}
-
-.task-judul .container .btn-group .dropdown-menu .dropdown-item {
-  color: white;
-}
-
-.task-judul .container .btn-group .dropdown-menu .dropdown-item:hover {
-  background-color: #33275C;
-}
-
 .task-judul .container .btn-group form {
   position: relative;
   z-index: 1;
@@ -276,10 +264,9 @@ body {
   height: 44px;
   background-color: #1B143C;
   border-color: #3A3456;
-  border-radius: 5px 0px 0 5px;
+  border-radius: 5px;
   padding-left: 40px;
   color: white;
-  border-right: none;
 }
 
 .task-judul .container .btn-group form .form-control:focus {
@@ -840,7 +827,7 @@ footer a {
             flex: none;
   }
   .task-judul .container .btn-group form .form-control {
-    width: 221px;
+    width: 240px;
   }
   .task-judul .container .input-group {
     -webkit-box-flex: 0;

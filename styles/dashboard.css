@@ -442,6 +442,7 @@ body {
 
 .checkout .table thead {
   background-color: #33275C;
+  border-radius: 6px 6px 0 0;
 }
 
 .checkout .table tbody {
@@ -455,7 +456,6 @@ body {
   padding-left: 40px;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 6px 6px 0 0;
 }
 
 .checkout .table td {

@@ -226,17 +226,6 @@ body{
             margin-right: 16px;
             height: 44px;
             width: auto;
-            
-            .dropdown-menu{
-                background-color: $color2;
-                .dropdown-item{
-                    color: white;
-
-                    &:hover{
-                        background-color: #33275C;
-                    }
-                }
-            }
             form{
                 position: relative;
                 z-index: 1;
@@ -250,10 +239,9 @@ body{
                     height: 44px;
                     background-color: #1B143C;
                     border-color: #3A3456;
-                    border-radius: 5px 0px 0 5px;
+                    border-radius: 5px;
                     padding-left: 40px;
                     color: white;
-                    border-right: none;
                     // position: relative; 
 
                     &:focus{
@@ -807,7 +795,7 @@ footer{
                 flex: none;
                 form{
                     .form-control{
-                        width: 221px;
+                        width: 240px;
                         // width: auto;
                     }
                 }

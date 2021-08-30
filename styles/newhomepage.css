@@ -491,6 +491,10 @@ body {
   margin-bottom: 64px;
 }
 
+.question .container .accordion {
+  background-color: #221B42;
+}
+
 .question .container .accordion .card {
   background-color: transparent;
   border: none;
@@ -500,6 +504,7 @@ body {
 .question .container .accordion .card .card-header {
   border: none;
   padding: 24px 0;
+  background-color: #221B42;
 }
 
 .question .container .accordion .card .card-header h6 {

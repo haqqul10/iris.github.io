@@ -222,109 +222,6 @@ body {
   margin-top: 16px;
 }
 
-.card-dashboard .btn-group {
-  height: 44px;
-  width: auto;
-}
-
-.card-dashboard .btn-group .dropdown-menu {
-  background-color: #221B4A;
-}
-
-.card-dashboard .btn-group .dropdown-menu .dropdown-item {
-  color: white;
-}
-
-.card-dashboard .btn-group .dropdown-menu .dropdown-item:hover {
-  background-color: #33275C;
-}
-
-.card-dashboard .btn-group form {
-  position: relative;
-  z-index: 1;
-}
-
-.card-dashboard .btn-group form .form-control {
-  height: 44px;
-  background-color: #1B143C;
-  border-color: #3A3456;
-  border-radius: 5px 0px 0 5px;
-  color: white;
-  border-right: none;
-}
-
-.card-dashboard .btn-group form .form-control::-webkit-input-placeholder {
-  font-size: 12px;
-  color: white;
-  font-weight: 500;
-  line-height: 20px;
-  padding-left: 4px;
-}
-
-.card-dashboard .btn-group form .form-control:-ms-input-placeholder {
-  font-size: 12px;
-  color: white;
-  font-weight: 500;
-  line-height: 20px;
-  padding-left: 4px;
-}
-
-.card-dashboard .btn-group form .form-control::-ms-input-placeholder {
-  font-size: 12px;
-  color: white;
-  font-weight: 500;
-  line-height: 20px;
-  padding-left: 4px;
-}
-
-.card-dashboard .btn-group form .form-control::placeholder {
-  font-size: 12px;
-  color: white;
-  font-weight: 500;
-  line-height: 20px;
-  padding-left: 4px;
-}
-
-.card-dashboard .btn-group form .form-control:focus {
-  position: relative;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-radius: 6px;
-  border: 2px solid transparent;
-}
-
-.card-dashboard .btn-group form .form-control:focus + label {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
-}
-
-.card-dashboard .btn-group form .form-control + label {
-  border-radius: 6px;
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.card-dashboard .btn-group .btn-secondary-dropdown {
-  background-color: transparent;
-  border-left: none;
-  padding-left: 16px;
-  border-color: #3A3456;
-  padding-top: 2px;
-}
-
-.card-dashboard .btn-group .btn-secondary-dropdown:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .card-dashboard .btn-newtask {
   color: #fff;
   background-color: #7963FA;
@@ -948,9 +845,6 @@ footer a:hover {
     margin-top: auto;
     padding-right: 0;
   }
-  .card-dashboard .flex-right form .form-control {
-    width: 157px;
-  }
   .profile .your-profile-left {
     height: 736px;
     width: 427px;
@@ -962,6 +856,9 @@ footer a:hover {
     margin-bottom: 0;
   }
   .profile .your-profile-left form .form-control {
+    width: 171px;
+  }
+  .profile .your-profile-left form .form-control:focus + label {
     width: 171px;
   }
   .profile .your-profile-left form img {
