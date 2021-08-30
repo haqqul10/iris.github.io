@@ -491,8 +491,6 @@ body{
         .table {
             padding-left: 0px;
             text-align: left;
-            .items{
-            }
 
             .form-check-input {
                 background-color: transparent;
@@ -504,6 +502,13 @@ body{
             thead{
                 background-color: #33275C;
                 border-radius: 6px;
+
+                tr{
+                    .checkbox{
+                        padding-left: 48px;
+                        padding-right: 10px;
+                    }
+                }
             }
 
             tbody{
@@ -519,12 +524,17 @@ body{
                 tr:last-child {
                     border-bottom :none;
                 }
+                tr{
+                    .checkbox{
+                        padding-left: 48px;
+                        padding-right: 10px;
+                    }
+                }
             }
             th {
                 border-style: none;
                 padding-top: 20px;
                 padding-bottom: 18px;
-                padding-left: 48px;
                 font-size: 16px;
                 line-height: 20px;
                 font-weight: 600;
@@ -532,7 +542,6 @@ body{
             td{
                 padding-top: 31px;
                 padding-bottom: 26px;
-                padding-left: 48px;
                 border-color: #BBB9C5;
                 color: #BBB9C5;
                 font-size: 16px;
@@ -550,7 +559,7 @@ body{
         .sorting_asc {
             // background-color: black;
             &:focus{
-                box-shadow: none;
+                box-shadow: 0 0 0 0;
             }
         }
         .dataTables_info{
@@ -833,7 +842,7 @@ footer{
                                 margin-left: 8px;
                                 margin-top: -5px;
                                 background-color: transparent;
-                                width: 56px;
+                                width: auto;
                                 height: 32px;
                                 color: white !important;
                                 background-image: url(../images/icons/chevron-down-task.svg);
@@ -863,6 +872,9 @@ footer{
                     .img-shoe{
                         margin-right: 16px;
                     }
+                }
+                .username{
+                    padding-left: 16px;
                 }
             }
             .dataTables_info{
@@ -1103,7 +1115,7 @@ footer{
                                 background-color: transparent;
                                 border-color: #3A3456;
                                 padding: 6px 8px;
-                                width: 56px;
+                                width: 70px;
                                 height: 32px;
                                 color: white !important;
                                 margin-left: 8px;

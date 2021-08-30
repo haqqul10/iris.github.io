@@ -642,7 +642,8 @@
           if (!$item.hasClass('disabled')) {
             // navListItems.addClass('btn-success');
             $item.addClass('btn-success').removeClass('btn-default');
-            // navListItems.removeClass('btn-success').addClass('btn-success');
+            // $item.removeClass('btn-success').addClass('btn-default');
+
             allWells.hide();
             $target.show();
             $target.find('input:eq(0)').focus();
@@ -674,11 +675,6 @@
           var curStep = $(this).closest(".setup-content"),
             curStepBtn = curStep.attr("id"),
             prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-          // var delete__success = document.querySelector('.stepwizard-step a');
-
-            // prevStepWizard.addClass('btn-default');
-            // prevStepWizard.removeClass('btn-success');
-            // delete__success.removeAttr('btn-success');
 
             prevStepWizard.removeAttr('disabled').trigger('click');
         });
