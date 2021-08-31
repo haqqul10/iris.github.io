@@ -1,455 +1,525 @@
 <!doctype html>
 <html lang="en" style="overflow-x: hidden;">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/icons/flower.svg">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/icons/FavIcon.svg" width="50">
 
-    <!-- MyCSS -->
-    <link rel="stylesheet" href="styles/adminpanel.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
 
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+  <!-- MyCSS -->
+  <link rel="stylesheet" href="styles/adminpanel.css">
 
-    <title>Admin Panel</title>
-  </head>
-  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
-    <!-- halaman navbar -->
-      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
-        <div class="container">
-          <div class="menu-toggle">
-              <input type="checkbox"/>
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <a class="navbar-brand" href="#">
-            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
-            <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
-          </a>
-          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <title>Admin Panel</title>
+</head>
+
+<body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+
+  <div id="overlay"></div>
+
+  <!-- halaman navbar -->
+  <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a class="navbar-brand" href="#">
+        <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
+        <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
+      </a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
-            <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1"> <span>Dashboard</span> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="task.html"> <img src="images/icons/task.svg" alt="" width="24" class="pb-1"> <span>Task</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24" class="pb-1"> <span>Releases</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1"> <span>Proxies</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24" class="pb-1"> <span>Profile</span></a>
-              </li>
-              <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
-            </ul>
-            </div>
-            <div class="nav-link icon_notification"> 
-              <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
-                <div class="table__notification">
-                  <div class="header__notification">
-                    <p class="header">Notification <span>(4)</span></p>
-                    <a href="">
-                      <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
-                    </a>
-                  </div>
-                  <hr>
-                  <a href="" class="data__items">
-                    <div class="left float-start">
-                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                      <div class="title float-end">
-                        <p class="title__judul">Nike</p>
-                        <p class="title__text">Today, 24 june</p>
-                      </div>
-                    </div>
-                    <div class="right float-end">
-                      <p>Succesfully checkout</p>
-                    </div>
-                  </a>
-                  <hr class="garis__items">
-                  <a href="" class="data__items">
-                    <div class="left float-start">
-                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                      <div class="title float-end">
-                        <p class="title__judul">Nike</p>
-                        <p class="title__text">Today, 24 june</p>
-                      </div>
-                    </div>
-                    <div class="right float-end">
-                      <p>Succesfully checkout</p>
-                    </div>
-                  </a>
-                  <hr class="garis__items">
-                  <a href="" class="data__items">
-                    <div class="left float-start">
-                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                      <div class="title float-end">
-                        <p class="title__judul">Nike</p>
-                        <p class="title__text">Today, 24 june</p>
-                      </div>
-                    </div>
-                    <div class="right float-end">
-                      <p>waiting list</p>
-                    </div>
-                  </a>
-                  <hr class="garis__items">
-                  <a href="" class="data__items">
-                    <div class="left float-start">
-                      <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                      <div class="title float-end">
-                        <p class="title__judul">Nike</p>
-                        <p class="title__text">Today, 24 june</p>
-                      </div>
-                    </div>
-                    <div class="right float-end">
-                      <p>Succesfully checkout</p>
-                    </div>
-                  </a>
-                  <hr class="garis__items">
-                  <a href="" class="view__all">View All</a>
-                </div>
-            </div>
-          <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
-          <!-- </div> -->
-        </div>
-      </nav>
-      <!-- akhir halaman navbar -->
-
-      <!-- Card -->
-      <section class="card-dashboard">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-5 col-lg-8 text-white">
-              <h2>Void Admin Panel</h2>
-              <p>Manage and Create Task</p>
-            </div>
-            <div class="col-12 col-md-7 col-lg-4 flex-right">
-              <div class="new__task">
-                <button class="btn btn-newtask" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" href="">Generate Key</button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
+        <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1">
+              <span>Dashboard</span> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="task.html"> <img src="images/icons/task.svg" alt="" width="24" class="pb-1">
+              <span>Task</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24"
+                class="pb-1"> <span>Releases</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1">
+              <span>Proxies</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24"
+                class="pb-1"> <span>Profile</span></a>
+          </li>
+          <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt=""
+              width="49" class="pe-2"> <span>Rizki Agus</span></a>
+        </ul>
+      </div>
+      <div class="nav-link icon_notification">
+        <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
+        <div class="table__notification">
+          <div class="header__notification">
+            <p class="header">Notification <span>(4)</span></p>
+            <a href="">
+              <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
+            </a>
+          </div>
+          <hr>
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
               </div>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Generate New Key</h5>
-                        <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt="" width="24"></a>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form class="row text-white pt-4">
-                          <div class="col-12">
-                            <label for="type" class="form-label">Type</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Renewal</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="mb-3">
-                            <label for="key" class="form-label">Key</label>
-                            <div class="gradien__form">
-                              <input type="text" class="form-control" id="key" placeholder="GHA24ASF-124F-ASF1-124D15DQ24WW3">
-                              <span></span>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer mx-auto">
-                        <a href="" class=" btn add__new__task"> Copy Key </a>
-                      </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>waiting list</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="view__all">View All</a>
+        </div>
+      </div>
+      <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49"
+          class="pe-2"> <span>Rizki Agus</span></a>
+      <!-- </div> -->
+    </div>
+  </nav>
+  <!-- akhir halaman navbar -->
+
+  <!-- Card -->
+  <section class="card-dashboard">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 col-lg-8 text-white">
+          <h2>Void Admin Panel</h2>
+          <p>Manage and Create Task</p>
+        </div>
+        <div class="col-12 col-md-7 col-lg-4 flex-right">
+          <div class="new__task">
+            <button class="btn btn-keys" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              href="">Keys</button>
+          </div>
+          <div class="new__task">
+            <button class="btn btn-newtask" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              href="">Generate Key</button>
+          </div>
+
+          <!-- Modal Keys -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content modal__content__Keys">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Keys</h5>
+                  <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
+                      width="24"></a>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="header">User</p>
+                      <h5 class="title">Username#123</h5>
                     </div>
                   </div>
-              </div> 
-              <!-- akhir modal -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- akhir Card -->
-
-      <!-- card admin panel -->
-      <section class="card__admin__panel"> 
-        <div class="container text-white">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
-              <div class="row">
-                <div class="col-md-12 col-lg-7">
                   <div class="row">
-                    <div class="col-sm-4 colom_1">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle">Income</h6>
-                          <h5 class="card-title">$8.921,00</h5>
-                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
-                        </div>
-                      </div>
+                    <div class="col-12">
+                      <p class="header">Product</p>
+                      <h5 class="title">Nike React 270 White Black Red</h5>
                     </div>
-                    <div class="col-sm-4 colom_2">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle">Total Member</h6>
-                          <h5 class="card-title">2.100</h5>
-                          <p class="card-text-down"> <img src="images/icons/Icon-red.svg" alt="" class="pe-1" width="20"> 12.16%</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4 colom_3">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle">Lifetime Members</h6>
-                          <h5 class="card-title">24</h5>
-                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
-                        </div>
-                      </div>
-                    </div><!-- akhir row lima-tiga -->
                   </div>
-                </div>
-                <div class="col-md-12 col-lg-5">
                   <div class="row">
-                    <div class="col-sm-6 colom_4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle">Cancelations</h6>
-                          <h5 class="card-title">45</h5>
-                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
-                        </div>
-                      </div>
+                    <div class="col-12">
+                      <p class="header">Size</p>
+                      <h5 class="title">US 10,5</h5>
                     </div>
-                    <div class="col-sm-6 colom_5">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle">Total Checkouts</h6>
-                          <h5 class="card-title">212.434</h5>
-                          <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="header">Time</p>
+                      <h5 class="title">10 August 2021</h5>
                     </div>
-                  </div><!-- akhir row lima-dua -->
-                </div>
-              </div><!-- akhir dari row luar -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- akhir card admin panel -->
-
-
-      <!-- admin panel license -->
-      <section class="task-cart">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 table-content">
-              <div class="row">
-                <div class="col">
-                  <table class="table text-white" id="example" class="display" style="width:100%;">
-                    <thead>
-                      <tr>
-                        <th class="checkbox"><input type="checkbox" class="form-check-input" id="checkAll"></th>
-                        <th class="items" width="150">Username</th>
-                        <th width="380">License</th>
-                        <th width="">Type</th>
-                        <th>Renewal Date</th>
-                        <th>Creation Date</th>
-                        <th width="">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Velic</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">13 Jan 2021</td>
-                        <td data-label="Creation Date">24 jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Chintia</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">01 Jan 2021</td>
-                        <td data-label="Creation Date">30 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Roberto</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">05 Jan 2021</td>
-                        <td data-label="Creation Date">23 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Jhesica</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">07 Jan 2021</td>
-                        <td data-label="Creation Date">19 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Jhone</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">10 Jan 2021</td>
-                        <td data-label="Creation Date">10 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Morata</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">12 Jan 2021</td>
-                        <td data-label="Creation Date">16 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Benzema</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">10 Jan 2021</td>
-                        <td data-label="Creation Date">19 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white username" data-label="Username">Zidane</td>
-                        <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
-                        <td data-label="Type">Renewal</td>
-                        <td data-label="Renewal Date">23 Jan 2021</td>
-                        <td data-label="Creation Date">29 Jan 2021</td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="header">Status</p>
+                      <h5 class="status__title">Cancelled</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- akhir modal -->
+          <!-- Modal newtask -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content modal__content__newtask">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Generate New Key</h5>
+                  <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
+                      width="24"></a>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="row text-white pt-4">
+                    <div class="col-12">
+                      <label for="type" class="form-label">Type</label>
+                      <div class="gradien__form">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected class="select__option">Renewal</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="key" class="form-label">Key</label>
+                      <div class="gradien__form">
+                        <input type="text" class="form-control" id="key" placeholder="GHA24ASF-124F-ASF1-124D15DQ24WW3">
+                        <span></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer mx-auto">
+                  <a href="" class=" btn add__new__task"> Copy Key </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- akhir modal -->
         </div>
-      </section>
-      <!-- akhir admin panel licence -->
-     
+      </div>
+    </div>
+  </section>
+  <!-- akhir Card -->
 
-      <!-- footer -->
-      <footer class="mt-5">
-        <div class="container">
-          <div class="row justify-content-between text-white">
+  <!-- card admin panel -->
+  <section class="card__admin__panel">
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
+          <div class="row">
+            <div class="col-md-12 col-lg-7">
+              <div class="row">
+                <div class="col-sm-4 colom_1">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle">Income</h6>
+                      <h5 class="card-title">$8.921,00</h5>
+                      <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 colom_2">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle">Total Member</h6>
+                      <h5 class="card-title">2.100</h5>
+                      <p class="card-text-down"> <img src="images/icons/Icon-red.svg" alt="" class="pe-1" width="20">
+                        12.16%</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 colom_3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle">Lifetime Members</h6>
+                      <h5 class="card-title">24</h5>
+                      <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                    </div>
+                  </div>
+                </div><!-- akhir row lima-tiga -->
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-5">
+              <div class="row">
+                <div class="col-sm-6 colom_4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle">Cancelations</h6>
+                      <h5 class="card-title">45</h5>
+                      <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 colom_5">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle">Total Checkouts</h6>
+                      <h5 class="card-title">212.434</h5>
+                      <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pe-1" width="20"> 23.42%</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- akhir row lima-dua -->
+            </div>
+          </div><!-- akhir dari row luar -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- akhir card admin panel -->
+
+
+  <!-- admin panel license -->
+  <section class="task-cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 table-content">
+          <div class="row">
             <div class="col">
-              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
-            </div>
-            <div class="col d-flex justify-content-end">
-              <a href="" class="pe-4">Status</a>
-              <a href="">Support</a>
+              <table class="table text-white" id="example" class="display" style="width:100%;">
+                <thead>
+                  <tr>
+                    <th class="checkbox"><input type="checkbox" class="form-check-input" id="checkAll"></th>
+                    <th class="items" width="150">Username</th>
+                    <th width="380">License</th>
+                    <th width="">Type</th>
+                    <th>Renewal Date</th>
+                    <th>Creation Date</th>
+                    <th width="">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Velic</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">13 Jan 2021</td>
+                    <td data-label="Creation Date">24 jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Chintia</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">01 Jan 2021</td>
+                    <td data-label="Creation Date">30 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Roberto</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">05 Jan 2021</td>
+                    <td data-label="Creation Date">23 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Jhesica</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">07 Jan 2021</td>
+                    <td data-label="Creation Date">19 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Jhone</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">10 Jan 2021</td>
+                    <td data-label="Creation Date">10 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Morata</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">12 Jan 2021</td>
+                    <td data-label="Creation Date">16 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Benzema</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">10 Jan 2021</td>
+                    <td data-label="Creation Date">19 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="checkbox"><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white username" data-label="Username">Zidane</td>
+                    <td class="text-white" data-label="License">GHA24ASF-124F-ASF1-124D15DQ24WW3</td>
+                    <td data-label="Type">Renewal</td>
+                    <td data-label="Renewal Date">23 Jan 2021</td>
+                    <td data-label="Creation Date">29 Jan 2021</td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/icon-delete-admin.svg" alt="" width="24"></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- akhir footer -->
-    
+      </div>
+    </div>
+  </section>
+  <!-- akhir admin panel licence -->
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <!-- footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row justify-content-between text-white">
+        <div class="col">
+          <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <a href="" class="pe-4">Status</a>
+          <a href="">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- akhir footer -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="libraries/bootstrap/js/bootstrap.js"></script> -->
-    <script src="libraries/jquery/jquery-3.5.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="libraries/jquery/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-    <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
 
-    <script>
 
-      $(document).ready(function(){
-        const menuToggle = document.querySelector('.menu-toggle input');
-        const nav = document.querySelector('.navbar-collapse');
-        const delete_icon = document.querySelector('.icon__delete__responsive');
-        // const modal = document.getElementById('dashboard');
-        
-        // menuToggle.onclick = function() {
-        //   nav.style.display = "block";
-        // }
-        menuToggle.addEventListener('click', function(){
-          nav.classList.toggle('show');
-        });
-        delete_icon.addEventListener('click', function(){
-          nav.classList.remove('show');
-        });
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="libraries/bootstrap/js/bootstrap.js"></script> -->
+  <script src="libraries/jquery/jquery-3.5.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libraries/jquery/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+  <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      const menuToggle = document.querySelector('.menu-toggle input');
+      const nav = document.querySelector('.navbar-collapse');
+      const delete_icon = document.querySelector('.icon__delete__responsive');
+      const overlay_modal = document.querySelector('#overlay');
+
+
+      menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+        document.getElementById("overlay").style.display = "block";
       });
-
-      $('#checkAll').click(function (e) {
-          $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
-          e.stopImmediatePropagation();
+      delete_icon.addEventListener('click', function () {
+        nav.classList.remove('show');
+        document.getElementById("overlay").style.display = "none";
       });
+      overlay_modal.addEventListener('click', function () {
+        document.getElementById('overlay').style.display = "none";
+        nav.classList.remove('show');
+      });
+    });
 
-      $(document).ready(function() {
-          $('#example').DataTable( {
-              "pageLength": 7,
-              "sScrollX": "auto",
-              searching: false,
-              bInfo: true,
-              integer: true,
-              // "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-              "lengthChange": true,
-              "pagingType": "simple_numbers",
-              lengthMenu: [7, 10, 20, 50, 100, 200, 500],
-                oLanguage: {
-                  oPaginate: {
-                      sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
-                      sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
-                  }
-                },
-              "language" : {
-                "lengthMenu": "Result per page _MENU_",
-                "info":"<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
-              },
-              "dom": '<"top"il>rt<"bottom"ilp><"clear">'
-          } );
-      } );
-    </script>
-  </body>
+    $('#checkAll').click(function (e) {
+      $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
+      e.stopImmediatePropagation();
+    });
+
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "pageLength": 7,
+        "sScrollX": "auto",
+        searching: true,
+        bInfo: true,
+        integer: true,
+        // "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+        "lengthChange": true,
+        "pagingType": "simple_numbers",
+        lengthMenu: [7, 10, 20, 50, 100, 200, 500],
+        oLanguage: {
+          oPaginate: {
+            sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
+            sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+          }
+        },
+        "language": {
+          "lengthMenu": "Result per page _MENU_",
+          "info": "<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
+        },
+        "dom": '<"top"il>rt<"bottom"ilp><"clear">',
+      });
+    });
+  </script>
+</body>
+
 </html>

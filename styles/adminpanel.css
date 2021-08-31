@@ -231,55 +231,104 @@ body {
   margin-top: 16px;
 }
 
-.card-dashboard .flex-right .modal-content {
+.card-dashboard .flex-right .modal__content__Keys {
   background-color: #221B4A;
   border-radius: 6px;
   border: none;
   padding: 16px 18px;
 }
 
-.card-dashboard .flex-right .modal-content .modal-header {
+.card-dashboard .flex-right .modal__content__Keys .modal-header {
   border-bottom: none;
+  margin-bottom: 34px;
   padding: 0;
 }
 
-.card-dashboard .flex-right .modal-content .modal-header .modal-title {
+.card-dashboard .flex-right .modal__content__Keys .modal-header .modal-title {
   font-size: 32px;
   line-height: 38px;
   color: white;
   font-weight: 600;
 }
 
-.card-dashboard .flex-right .modal-content .modal-header .btn-close {
+.card-dashboard .flex-right .modal__content__Keys .modal-header .btn-close {
   display: none;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body {
+.card-dashboard .flex-right .modal__content__Keys .modal-body {
   padding: 0;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body #key::-webkit-input-placeholder {
+.card-dashboard .flex-right .modal__content__Keys .modal-body .header {
+  opacity: 0.5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  padding-bottom: 4px;
+}
+
+.card-dashboard .flex-right .modal__content__Keys .modal-body .status__title {
+  color: #FF4365 !important;
+  padding-bottom: 0;
+}
+
+.card-dashboard .flex-right .modal__content__Keys .modal-body .title {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 16px;
+}
+
+.card-dashboard .flex-right .modal__content__newtask {
+  background-color: #221B4A;
+  border-radius: 6px;
+  border: none;
+  padding: 16px 18px;
+}
+
+.card-dashboard .flex-right .modal__content__newtask .modal-header {
+  border-bottom: none;
+  padding: 0;
+}
+
+.card-dashboard .flex-right .modal__content__newtask .modal-header .modal-title {
+  font-size: 32px;
+  line-height: 38px;
+  color: white;
+  font-weight: 600;
+}
+
+.card-dashboard .flex-right .modal__content__newtask .modal-header .btn-close {
+  display: none;
+}
+
+.card-dashboard .flex-right .modal__content__newtask .modal-body {
+  padding: 0;
+}
+
+.card-dashboard .flex-right .modal__content__newtask .modal-body #key::-webkit-input-placeholder {
   color: white !important;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body #key:-ms-input-placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body #key:-ms-input-placeholder {
   color: white !important;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body #key::-ms-input-placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body #key::-ms-input-placeholder {
   color: white !important;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body #key::placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body #key::placeholder {
   color: white !important;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form {
   position: relative;
   z-index: 1;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-select {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-select {
   height: 44px;
   border: 2px solid transparent;
   background-color: #1B143C;
@@ -290,12 +339,12 @@ body {
   background-size: 20px;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-select:focus {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-select:focus {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control {
   height: 44px;
   border: 2px solid #1B143C;
   background-color: #1B143C;
@@ -303,23 +352,23 @@ body {
   color: white;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control::-webkit-input-placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control::-webkit-input-placeholder {
   color: #8D899E;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control:-ms-input-placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control:-ms-input-placeholder {
   color: #8D899E;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control::-ms-input-placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control::-ms-input-placeholder {
   color: #8D899E;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control::placeholder {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control::placeholder {
   color: #8D899E;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control:focus {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control:focus {
   position: relative;
   outline: none;
   -webkit-box-shadow: none;
@@ -328,13 +377,13 @@ body {
   border: 2px solid transparent;
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control:focus + span {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control:focus + span {
   width: 100%;
   height: 100%;
   background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
 }
 
-.card-dashboard .flex-right .modal-content .modal-body .gradien__form .form-control + span {
+.card-dashboard .flex-right .modal__content__newtask .modal-body .gradien__form .form-control + span {
   border-radius: 6px;
   display: block;
   content: "";
@@ -346,12 +395,12 @@ body {
   z-index: -1;
 }
 
-.card-dashboard .flex-right .modal-content .modal-footer {
+.card-dashboard .flex-right .modal__content__newtask .modal-footer {
   padding: 0;
   border-top: none;
 }
 
-.card-dashboard .flex-right .modal-content .modal-footer .add__new__task {
+.card-dashboard .flex-right .modal__content__newtask .modal-footer .add__new__task {
   background-color: #7963FA;
   height: 40px;
   width: auto;
@@ -366,7 +415,7 @@ body {
   border: none;
 }
 
-.card-dashboard .flex-right .modal-content .modal-footer .add__new__task:hover {
+.card-dashboard .flex-right .modal__content__newtask .modal-footer .add__new__task:hover {
   background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 5px;
   -webkit-transition: 0.3s;
@@ -375,7 +424,27 @@ body {
   border: none;
 }
 
-.card-dashboard .btn-newtask {
+.card-dashboard .flex-right .btn-keys {
+  color: #fff;
+  background-color: #43357F;
+  border: none;
+  height: 44px;
+  padding: 9px 0;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.card-dashboard .flex-right .btn-keys:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border: none;
+  color: white !important;
+}
+
+.card-dashboard .flex-right .btn-newtask {
   color: #fff;
   background-color: #7963FA;
   border: none;
@@ -385,7 +454,7 @@ body {
   border-radius: 6px;
 }
 
-.card-dashboard .btn-newtask:hover {
+.card-dashboard .flex-right .btn-newtask:hover {
   opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -759,15 +828,26 @@ footer a:hover {
   .card-dashboard .flex-right .btn-newtask {
     width: 135px;
   }
+  .card-dashboard .flex-right .btn-keys {
+    width: 135px;
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
   .card-dashboard .flex-right .modal-lg {
     width: 528px;
   }
-  .card-dashboard .flex-right .modal-lg .modal-content {
+  .card-dashboard .flex-right .modal-lg .modal__content__newtask {
     padding: 56px 64px;
   }
-  .card-dashboard .flex-right .modal-lg .modal-content .modal-footer .add__new__task {
+  .card-dashboard .flex-right .modal-lg .modal__content__newtask .modal-footer .add__new__task {
     width: 330px;
     padding: 10px 0;
+  }
+  .card-dashboard .flex-right .modal-lg {
+    width: 528px;
+  }
+  .card-dashboard .flex-right .modal-lg .modal__content__Keys {
+    padding: 56px 64px;
   }
   .card__admin__panel .container {
     padding: 0;
@@ -889,9 +969,20 @@ footer a:hover {
 }
 
 @media screen and (max-width: 992px) {
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
   .navbar-dashboard {
     height: 80px;
-    z-index: 55;
   }
   .navbar-dashboard .container .collapse {
     display: -webkit-box;
@@ -903,22 +994,23 @@ footer a:hover {
     width: 70%;
     height: 100vh;
     z-index: -1;
-    opacity: 0;
     top: 0;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
     padding-top: 210px;
     padding-left: 20px;
     padding-right: 20px;
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
   .navbar-dashboard .container .collapse .navbar-nav {
     height: 100vh;
     width: 100%;
     display: inline;
+    z-index: -1;
   }
   .navbar-dashboard .container .collapse .navbar-nav .nav-item {
     position: relative;
-    z-index: -1;
     padding: 8px 0;
     margin-right: 0;
   }
@@ -932,13 +1024,13 @@ footer a:hover {
   .navbar-dashboard .container .collapse .icon__delete__responsive {
     display: block;
     position: absolute;
-    top: 7px;
+    top: 27px;
     right: 20px;
     cursor: pointer;
   }
   .navbar-dashboard .container .collapse .logo_collapse {
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 20px;
   }
   .navbar-dashboard .container .collapse .my__profile__collapse {
@@ -950,11 +1042,13 @@ footer a:hover {
     left: 20px;
   }
   .navbar-dashboard .container .collapse.show {
-    opacity: 1;
-    z-index: 99;
+    z-index: 5;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: fixed;
   }
-  .navbar-dashboard .container .collapse.show .navbar-nav .nav-item {
-    z-index: 1;
+  .navbar-dashboard .container .collapse.show .navbar-nav {
+    z-index: 5;
   }
   .navbar-dashboard .container .menu-toggle {
     display: -webkit-box;

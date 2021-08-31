@@ -230,7 +230,53 @@ body{
         justify-content: flex-end;
         margin-top: 16px;
 
-        .modal-content{
+        .modal__content__Keys {
+            background-color: #221B4A;
+            border-radius: 6px;
+            border: none;
+            padding: 16px 18px;
+            .modal-header {
+                border-bottom: none;
+                margin-bottom: 34px;
+                padding: 0;
+
+                .modal-title {
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: white;
+                    font-weight: 600;
+                }
+
+                .btn-close {
+                    display: none;
+                }
+            }
+            .modal-body{
+                padding: 0;
+                .header{
+                    opacity: 0.5;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    padding-bottom: 4px;
+
+                    
+                }
+                .status__title{
+                    color: #FF4365 !important;
+                    padding-bottom: 0;
+                }
+                .title{
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: white;
+                    padding-bottom: 16px;
+                }
+            }
+        }
+
+        .modal__content__newtask {
             background-color: #221B4A;
             border-radius: 6px;
             border: none;
@@ -346,25 +392,46 @@ body{
                 }
             }
         }
+
+        .btn-keys {
+            color: #fff;
+            background-color: #43357F;
+            border: none;
+            height: 44px;
+            padding: 9px 0;
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 16px;
+
+            &:hover {
+                opacity: 0.8;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: none;
+                color: white !important;
+            }
+        }
+        .btn-newtask {
+            color: #fff;
+            background-color: $color6;
+            border: none;
+            height: 44px;
+            padding: 9px 0;
+            width: 100%;
+            border-radius: 6px;
+
+            &:hover {
+                opacity: 0.8;
+                transition: 0.3s;
+                background: $gradienColor;
+                border: none;
+                color: white !important;
+            }
+        }
     }
         
-    .btn-newtask{
-        color: #fff;
-        background-color: $color6;
-        border: none;
-        height: 44px;
-        padding: 9px 0;
-        width: 100%;
-        border-radius: 6px;
-
-        &:hover{
-            opacity: 0.8;
-            transition: 0.3s;
-            background: $gradienColor;
-            border: none;
-            color: white !important;
-        } 
-    }
+    
+    
 
     .dropdown-toggle::after{
         border: none;
@@ -756,11 +823,16 @@ footer{
             .btn-newtask{
                 width: 135px;
             }
+            .btn-keys{
+                width: 135px;
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
 
             .modal-lg{
                 width: 528px;
 
-                .modal-content{
+                .modal__content__newtask{
                     padding: 56px 64px;
                     .modal-footer{
                         .add__new__task{
@@ -768,6 +840,13 @@ footer{
                             padding: 10px 0;
                         }
                     }
+                }
+            }
+            .modal-lg{
+                width: 528px;
+
+                .modal__content__Keys{
+                    padding: 56px 64px;
                 }
             }
         }
@@ -902,9 +981,20 @@ footer{
 }
 
 @media screen and (max-width: 992px){
+    #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
     .navbar-dashboard{
         height: 80px;
-        z-index: 55;
         .container{
             .collapse{
                 display: flex;
@@ -915,20 +1005,22 @@ footer{
                 width: 70%;
                 height: 100vh;
                 z-index: -1;
-                opacity: 0;
+                // opacity: 0;
                 top: 0;
-                transition: all 0.5s;
+                transition: all 0.6s;
                 padding-top: 210px;
                 padding-left: 20px;
                 padding-right: 20px;
+                transform: translateX(-200%);
 
                 .navbar-nav{
                     height: 100vh;
                     width: 100%;
                     display: inline;
+                    z-index: -1;
                     .nav-item{
                         position: relative;
-                        z-index: -1;
+                        // z-index: -1;
                         padding: 8px 0;
                         margin-right: 0;
                         .active{
@@ -944,13 +1036,13 @@ footer{
                 .icon__delete__responsive{
                     display: block;
                     position: absolute;
-                    top: 7px;
+                    top: 27px;
                     right: 20px;
                     cursor: pointer;
                 }
                 .logo_collapse{
                     position: absolute;
-                    top: 0;
+                    top: 20px;
                     left: 20px;
                 }
                 .my__profile__collapse{
@@ -963,11 +1055,14 @@ footer{
                 }
             }
             .collapse.show{
-                opacity: 1;
-                z-index: 99;
+                // opacity: 1;
+                z-index: 5;
+                transform: translateX(0);
+                position: fixed;
                 .navbar-nav{
+                    z-index: 5;
                     .nav-item{
-                        z-index: 1;
+                        // z-index: 1;
                     }
                 }
             }

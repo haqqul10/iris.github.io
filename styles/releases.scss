@@ -756,6 +756,18 @@ footer{
 }
 
 @media screen and (max-width: 992px){
+    #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
     .navbar-dashboard{
         height: 80px;
         .container{
@@ -770,7 +782,7 @@ footer{
                 // opacity: 0;
                 z-index: -1;
                 top: 0;
-                transition: all 0.8s;
+                transition: all 0.6s;
                 padding-top: 210px;
                 padding-left: 20px;
                 padding-right: 20px;
@@ -799,13 +811,13 @@ footer{
                 .icon__delete__responsive{
                     display: block;
                     position: absolute;
-                    top: 7px;
+                    top: 27px;
                     right: 20px;
                     cursor: pointer;
                 }
                 .logo_collapse{
                     position: absolute;
-                    top: 0;
+                    top: 20px;
                     left: 20px;
                 }
                 .my__profile__collapse{
@@ -821,6 +833,7 @@ footer{
                 // opacity: 1;
                 z-index: 5;
                 transform: translateX(0);
+                position: fixed;
                 .navbar-nav{
                     z-index: 5;
                     .nav-item{

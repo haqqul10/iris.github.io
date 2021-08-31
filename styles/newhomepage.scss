@@ -159,6 +159,8 @@ body{
                 height: 54px;
                 border-radius: 5px;
                 margin-right: 11px;
+                margin-bottom: 0;
+                cursor: default;
         
                 &:hover{
                     opacity: 0.8;
@@ -841,6 +843,8 @@ body{
     .content-homepage{
         // height: 675px;
     }
+    .container-homepage{
+    }
 
     .gradient__color{
         background-image: linear-gradient(101.71deg, #3B1B74 -1.33%, #230D49 90.64%);
@@ -852,6 +856,8 @@ body{
         left: 0;
     }
     .navbar-homepage{
+        width: 100%;
+        left: 0;
         position: fixed;
         .container{
             width: 1044px;
@@ -1067,7 +1073,7 @@ body{
                 height: 100vh;
                 z-index: -1;
                 opacity: 0;
-                transition: all 1s;
+                transition: all 0.8s;
                 padding-top: 200px;
                 padding-left: 20px;
                 padding-right: 20px;

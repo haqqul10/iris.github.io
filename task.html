@@ -1,490 +1,512 @@
 <!doctype html>
 <html lang="en" style="overflow-x: hidden;">
-  <head>
-    <!-- Required meta tags -->  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/icons/flower.svg">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/icons/FavIcon.svg">
 
-    <!-- icon bootstrap -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
 
-    <!-- MyCSS -->
-    <link rel="stylesheet" href="styles/task.css">
+  <!-- icon bootstrap -->
 
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+  <!-- MyCSS -->
+  <link rel="stylesheet" href="styles/task.css">
 
-    <title>Task</title>
-  </head>
-  <body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
-      <!-- halaman navbar -->
-      <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
-        <div class="container">
-          <div class="menu-toggle">
-              <input type="checkbox"/>
-              <span></span>
-              <span></span>
-              <span></span>
+  <title>Task</title>
+</head>
+
+<body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
+
+  <div id="overlay"></div>
+
+  <!-- halaman navbar -->
+  <nav class="navbar navbar-dashboard navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a class="navbar-brand" href="#">
+        <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
+        <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
+        <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1">
+              <span>Dashboard</span> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="task.html"> <img src="images/icons/Icon=Task.svg" alt="" width="24"
+                class="pb-1"> <span>Task</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24"
+                class="pb-1"> <span>Releases</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1">
+              <span>Proxies</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24"
+                class="pb-1"> <span>Profile</span></a>
+          </li>
+          <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt=""
+              width="49" class="pe-2"> <span>Rizki Agus</span></a>
+        </ul>
+      </div>
+      <div class="nav-link icon_notification">
+        <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
+        <div class="table__notification">
+          <div class="header__notification">
+            <p class="header">Notification <span>(4)</span></p>
+            <a href="">
+              <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
+            </a>
           </div>
-          <a class="navbar-brand" href="#">
-            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_deskstop">
-            <img src="images/newhomepage/Logo_responsive.svg" alt="Iris" class="logo_responsive">
+          <hr>
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
           </a>
-          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <img src="images/icons/Logo.svg" alt="Iris" width="80" class="logo_collapse">
-            <img src="./images/icons/Icon-delete.svg" alt="" class="icon__delete__responsive">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="dashboard.html"><img src="images/icons/home.svg" alt="" width="24" class="pb-1"> <span>Dashboard</span> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="task.html"> <img src="images/icons/Icon=Task.svg" alt="" width="24" class="pb-1"> <span>Task</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="releases.html"> <img src="images/icons/realise.svg" alt="" width="24" class="pb-1"> <span>Releases</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="proxy.html"> <img src="images/icons/proxy.svg" alt="" width="24" class="pb-1"> <span>Proxies</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24" class="pb-1"> <span>Profile</span></a>
-              </li>
-              <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
-            </ul>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>waiting list</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="data__items">
+            <div class="left float-start">
+              <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
+              <div class="title float-end">
+                <p class="title__judul">Nike</p>
+                <p class="title__text">Today, 24 june</p>
+              </div>
+            </div>
+            <div class="right float-end">
+              <p>Succesfully checkout</p>
+            </div>
+          </a>
+          <hr class="garis__items">
+          <a href="" class="view__all">View All</a>
+        </div>
+      </div>
+      <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49"
+          class="pe-2"> <span>Rizki Agus</span></a>
+      <!-- </div> -->
+    </div>
+  </nav>
+  <!-- akhir halaman navbar -->
+
+  <!-- Card -->
+  <section class="task-judul">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-12 col-md-5 col-lg-7 text-white">
+          <h2>Your Task</h2>
+          <p>Manage and Create Task</p>
+        </div>
+        <div class="col-12 col-md-7 col-lg-5 d-flex flex-right mt-2">
+          <div class="btn-group">
+            <form>
+              <img src="./images/icons/search.svg" alt="" class="img-fluid" style="width: 20px;">
+              <input class="form-control" id="search" type="text" placeholder="Search by Modules" aria-label="Search">
+              <label for="search-home" class="form-label"></label>
+            </form>
           </div>
-          <div class="nav-link icon_notification"> 
-            <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
-              <div class="table__notification">
-                <div class="header__notification">
-                  <p class="header">Notification <span>(4)</span></p>
-                  <a href="">
-                    <img src="./images/icons/Icon-delete.svg" alt="" width="24px" height="24px">
-                  </a>
+          <div class="input-group">
+            <a href="">
+              <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.svg" alt=""
+                  width="30"></span>
+            </a>
+          </div>
+          <div class="new__task">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" href="" class="btn btn-newtask">
+              New Task </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+              <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
+                  width="24"></a>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row text-white pt-4">
+                <div class="col-12 col-md-6">
+                  <label for="side" class="form-label">Side</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Side</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
+                  </div>
                 </div>
-                <hr>
-                <a href="" class="data__items">
-                  <div class="left float-start">
-                    <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                    <div class="title float-end">
-                      <p class="title__judul">Nike</p>
-                      <p class="title__text">Today, 24 june</p>
-                    </div>
+                <div class="col-12 col-md-6">
+                  <label for="mude" class="form-label">Mude</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Mude</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
                   </div>
-                  <div class="right float-end">
-                    <p>Succesfully checkout</p>
+                </div>
+                <div class="mb-3">
+                  <label for="munitor_input" class="form-label">Munitor Input</label>
+                  <div class="gradien__form">
+                    <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                    <span></span>
                   </div>
-                </a>
-                <hr class="garis__items">
-                <a href="" class="data__items">
-                  <div class="left float-start">
-                    <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                    <div class="title float-end">
-                      <p class="title__judul">Nike</p>
-                      <p class="title__text">Today, 24 june</p>
-                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="size" class="form-label">Size</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Size</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
                   </div>
-                  <div class="right float-end">
-                    <p>Succesfully checkout</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="proxy_group" class="form-label">Proxy Group</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Proxy Group</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
                   </div>
-                </a>
-                <hr class="garis__items">
-                <a href="" class="data__items">
-                  <div class="left float-start">
-                    <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                    <div class="title float-end">
-                      <p class="title__judul">Nike</p>
-                      <p class="title__text">Today, 24 june</p>
-                    </div>
-                  </div>
-                  <div class="right float-end">
-                    <p>waiting list</p>
-                  </div>
-                </a>
-                <hr class="garis__items">
-                <a href="" class="data__items">
-                  <div class="left float-start">
-                    <img src="./images/icons/Group 703.png" alt="" width="48" class="float-start">
-                    <div class="title float-end">
-                      <p class="title__judul">Nike</p>
-                      <p class="title__text">Today, 24 june</p>
-                    </div>
-                  </div>
-                  <div class="right float-end">
-                    <p>Succesfully checkout</p>
-                  </div>
-                </a>
-                <hr class="garis__items">
-                <a href="" class="view__all">View All</a>
-              </div>
-          </div>
-          <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49" class="pe-2"> <span>Rizki Agus</span></a>
-          <!-- </div> -->
-        </div>
-      </nav>
-      <!-- akhir halaman navbar -->
+                </div>
 
-      <!-- Card -->
-      <section class="task-judul">
-        <div class="container">
-          <div class="row mt-4">
-            <div class="col-12 col-md-5 col-lg-7 text-white">
-              <h2>Your Task</h2>
-              <p>Manage and Create Task</p>
+                <div class="col-12 col-md-6">
+                  <label for="profile" class="form-label">Profile</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Profile</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="task_quantity" class="form-label">Task Quantity</label>
+                  <div class="gradien__form">
+                    <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                    <span></span>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="col-12 col-md-7 col-lg-5 d-flex flex-right mt-2">
-              <div class="btn-group">
-                <form>
-                  <img src="./images/icons/search.svg" alt="" class="img-fluid" style="width: 20px;">
-                  <input class="form-control" id="search" type="text" placeholder="Search by Modules" aria-label="Search">
-                  <label for="search-home" class="form-label"></label>
-                </form>
-              </div>
-              <div class="input-group">
-               <a href="">
-                 <span class="input-group-text" id="basic-addon1"><img src="./images/icons/Icon=Filter.svg" alt="" width="30"></span>
-              </a> 
-              </div>
-              <div class="new__task">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" href="" class="btn btn-newtask"> New Task </button>
-              </div>
+            <div class="modal-footer mx-auto">
+              <a href="" class=" btn add__new__task"> Add New Task </a>
             </div>
           </div>
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                        <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt="" width="24"></a>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form class="row text-white pt-4">
-                          <div class="col-12 col-md-6">
-                            <label for="side" class="form-label">Side</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Side</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="col-12 col-md-6">
-                            <label for="mude" class="form-label">Mude</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Mude</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="mb-3">
-                            <label for="munitor_input" class="form-label">Munitor Input</label>
-                            <div class="gradien__form">
-                              <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="col-12 col-md-6">
-                            <label for="size" class="form-label">Size</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Size</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="col-12 col-md-6">
-                            <label for="proxy_group" class="form-label">Proxy Group</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Proxy Group</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          
-                          <div class="col-12 col-md-6">
-                            <label for="profile" class="form-label">Profile</label>
-                            <div class="gradien__form">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected class="select__option">Profile</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="col-12 col-md-6">
-                            <label for="task_quantity" class="form-label">Task Quantity</label>
-                            <div class="gradien__form">
-                              <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                              <span></span>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer mx-auto">
-                        <a href="" class=" btn add__new__task"> Add New Task </a>
-                      </div>
-                    </div>
-                  </div>
-          </div> 
-          <!-- akhir modal -->
         </div>
-      </section>
-      <!-- akhir Card -->
+      </div>
+      <!-- akhir modal -->
+    </div>
+  </section>
+  <!-- akhir Card -->
 
-      <!-- checkout -->
-      <section class="task-cart">
-        <div class="container">
+  <!-- checkout -->
+  <section class="task-cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 table-content">
           <div class="row">
-            <div class="col-12 table-content">
-              <div class="row">
-                <div class="col">
-                  <table class="table text-white" id="example" class="display" style="width:100%;">
-                    <thead style="background-color: #33275C; border-radius: 6px;">
-                      <tr>
-                        <th width=30><input type="checkbox" class="form-check-input" id="checkAll"></th>
-                        <th class="items" width="200">Item</th>
-                        <th width="100">Size</th>
-                        <th width="100">Store</th>
-                        <th width="100">Profil</th>
-                        <th width="100">Status</th>
-                        <th width="100">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_1.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td data-label="Size">40</td>
-                        <td data-label="Store">finisline</td>
-                        <td data-label="Profil">jonh</td>
-                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_2.png" alt="" width="35" class="img-shoe"> Air Max 92 II</td>
-                        <td data-label="Size">39</td>
-                        <td data-label="Store">zelora</td>
-                        <td data-label="Profil">erik</td>
-                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_3.png" alt="" width="35" class="img-shoe"> Women’s Air Max 1</td>
-                        <td data-label="Size">41</td>
-                        <td data-label="Store">shoope</td>
-                        <td data-label="Profil">liet</td>
-                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_4.png" alt="" width="35" class="img-shoe"> Harde Vol 5 Floral Shoes</td>
-                        <td data-label="Size">45</td>
-                        <td data-label="Store">tokopedia</td>
-                        <td data-label="Profil">albert jonh</td>
-                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_5.png" alt="" width="35" class="img-shoe"> Ultraboost DNA</td>
-                        <td data-label="Size">42</td>
-                        <td data-label="Store">lazada</td>
-                        <td data-label="Profil">putri</td>
-                        <td data-label="Status"><span class="badge bg-success">Completed</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_6.png" alt="" width="35" class="img-shoe"> Stant Smith</td>
-                        <td data-label="Size">40</td>
-                        <td data-label="Store">adidas</td>
-                        <td data-label="Profil">samsmith</td>
-                        <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td data-label="Size">40</td>
-                        <td data-label="Store">nike</td>
-                        <td data-label="Profil">jonh</td>
-                        <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td><input type="checkbox" class="form-check-input"></td>
-                        <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="35" class="img-shoe"> Air Force 1</td>
-                        <td data-label="Size">40</td>
-                        <td data-label="Store">nike</td>
-                        <td data-label="Profil">jonh</td>
-                        <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
-                        <td data-label="Action">
-                          <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                          <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
-                        </td>
-                      </tr> 
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- akhir checkout -->
-
-      <!-- footer -->
-      <footer class="mt-5">
-        <div class="container">
-          <div class="row justify-content-between text-white">
             <div class="col">
-              <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
-            </div>
-            <div class="col d-flex justify-content-end">
-              <a href="" class="pe-4">Status</a>
-              <a href="">Support</a>
+              <table class="table text-white" id="example" class="display" style="width:100%;">
+                <thead style="background-color: #33275C; border-radius: 6px;">
+                  <tr>
+                    <th width=30><input type="checkbox" class="form-check-input" id="checkAll"></th>
+                    <th class="items" width="200">Item</th>
+                    <th width="100">Size</th>
+                    <th width="100">Store</th>
+                    <th width="100">Profil</th>
+                    <th width="100">Status</th>
+                    <th width="100">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_1.png" alt=""
+                        width="35" class="img-shoe"> Air Force 1</td>
+                    <td data-label="Size">40</td>
+                    <td data-label="Store">finisline</td>
+                    <td data-label="Profil">jonh</td>
+                    <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_2.png" alt=""
+                        width="35" class="img-shoe"> Air Max 92 II</td>
+                    <td data-label="Size">39</td>
+                    <td data-label="Store">zelora</td>
+                    <td data-label="Profil">erik</td>
+                    <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_3.png" alt=""
+                        width="35" class="img-shoe"> Women’s Air Max 1</td>
+                    <td data-label="Size">41</td>
+                    <td data-label="Store">shoope</td>
+                    <td data-label="Profil">liet</td>
+                    <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_4.png" alt=""
+                        width="35" class="img-shoe"> Harde Vol 5 Floral Shoes</td>
+                    <td data-label="Size">45</td>
+                    <td data-label="Store">tokopedia</td>
+                    <td data-label="Profil">albert jonh</td>
+                    <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_5.png" alt=""
+                        width="35" class="img-shoe"> Ultraboost DNA</td>
+                    <td data-label="Size">42</td>
+                    <td data-label="Store">lazada</td>
+                    <td data-label="Profil">putri</td>
+                    <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_6.png" alt=""
+                        width="35" class="img-shoe"> Stant Smith</td>
+                    <td data-label="Size">40</td>
+                    <td data-label="Store">adidas</td>
+                    <td data-label="Profil">samsmith</td>
+                    <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt=""
+                        width="35" class="img-shoe"> Air Force 1</td>
+                    <td data-label="Size">40</td>
+                    <td data-label="Store">nike</td>
+                    <td data-label="Profil">jonh</td>
+                    <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" class="form-check-input"></td>
+                    <td class="text-white items" data-label="Item"><img src="images/icons/Group 703.png" alt=""
+                        width="35" class="img-shoe"> Air Force 1</td>
+                    <td data-label="Size">40</td>
+                    <td data-label="Store">nike</td>
+                    <td data-label="Profil">jonh</td>
+                    <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
+                    <td data-label="Action">
+                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                      <a href=""><img src="./images/icons/Icon=Trash.svg" alt="" width="20"></a>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- akhir footer -->
-    
+      </div>
+    </div>
+  </section>
+  <!-- akhir checkout -->
+
+  <!-- footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row justify-content-between text-white">
+        <div class="col">
+          <p>&copy;2021 - Iris. <span>All Rights Reserved</span></p>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <a href="" class="pe-4">Status</a>
+          <a href="">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- akhir footer -->
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="libraries/bootstrap/js/bootstrap.js"></script> -->
-    <script src="libraries/jquery/jquery-3.5.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="libraries/jquery/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-    <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="libraries/bootstrap/js/bootstrap.js"></script> -->
+  <script src="libraries/jquery/jquery-3.5.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libraries/jquery/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+  <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
 
-      // search
-      $("#search").on("keyup", function(){
-        // alert($(".table-profile .table tbody tr"));
-        $(".task-cart .table-content .table tbody tr").filter(function(){
-          $(this).toggle($(this).text().toLowerCase().indexOf($("#search").val().toLowerCase()) > -1 );
-        });
+  <script>
+    // search
+    $("#search").on("keyup", function () {
+      // alert($(".table-profile .table tbody tr"));
+      $(".task-cart .table-content .table tbody tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf($("#search").val().toLowerCase()) > -1);
       });
+    });
 
-      // animation humberger
-      $(document).ready(function(){
-        const menuToggle = document.querySelector('.menu-toggle input');
-        const nav = document.querySelector('.navbar-collapse');
-        const delete_icon = document.querySelector('.icon__delete__responsive');
-        // const modal = document.getElementById('dashboard');
-        
-        // menuToggle.onclick = function() {
-        //   nav.style.display = "block";
-        // }
-        menuToggle.addEventListener('click', function(){
-          nav.classList.toggle('show');
-        });
-        delete_icon.addEventListener('click', function(){
-          nav.classList.remove('show');
-        });
+    // animation humberger
+    $(document).ready(function () {
+      const menuToggle = document.querySelector('.menu-toggle input');
+      const nav = document.querySelector('.navbar-collapse');
+      const delete_icon = document.querySelector('.icon__delete__responsive');
+      const overlay_modal = document.querySelector('#overlay');
+
+
+      menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+        document.getElementById("overlay").style.display = "block";
       });
-
-      // Check all
-      $('#checkAll').click(function (e) {
-          $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
-          e.stopImmediatePropagation();
+      delete_icon.addEventListener('click', function () {
+        nav.classList.remove('show');
+        document.getElementById("overlay").style.display = "none";
       });
+      overlay_modal.addEventListener('click', function () {
+        document.getElementById('overlay').style.display = "none";
+        nav.classList.remove('show');
+      });
+    });
 
-      // datatable
-      $(document).ready(function() {
-          $('#example').DataTable( {
-              "pageLength": 7,
-              "sScrollX": "auto",
-              searching: false,
-              bInfo: true,
-              integer: true,
-              // "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-              "lengthChange": true,
-              "pagingType": "simple_numbers",
-              lengthMenu: [7, 10, 20, 50, 100, 200, 500],
-                oLanguage: {
-                  oPaginate: {
-                      sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
-                      sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
-                  }
-                },
-              "language" : {
-                "lengthMenu":     "Result per page _MENU_",
-                "info":"<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
-              },
-              "dom": '<"top"il>rt<"bottom"ilp><"clear">'
-          } );
-      } );
-    </script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    // Check all
+    $('#checkAll').click(function (e) {
+      $('#example tbody :checkbox').prop('checked', $(this).is(':checked'));
+      e.stopImmediatePropagation();
+    });
+
+    // datatable
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "pageLength": 7,
+        "sScrollX": "auto",
+        "searching": true,
+        bInfo: true,
+        integer: true,
+        "lengthChange": true,
+        "pagingType": "simple_numbers",
+        lengthMenu: [7, 10, 20, 50, 100, 200, 500],
+        oLanguage: {
+          oPaginate: {
+            sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
+            sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+          }
+        },
+        "language": {
+          "lengthMenu": "Result per page _MENU_",
+          "info": "<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
+        },
+        "dom": '<"top"il>rt<"bottom"ilp><"clear">'
+      });
+    });
+  </script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
