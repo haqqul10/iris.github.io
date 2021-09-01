@@ -468,7 +468,6 @@ body {
   border-radius: 6px;
   background-color: #221B4A;
   margin-top: 25px;
-  /*form styles*/
 }
 
 .profile .your-profile-right .profile-information .profile-information-left {
@@ -630,6 +629,7 @@ body {
 .profile .your-profile-right .profile-information .profile-information-right {
   padding: 16px;
   position: relative;
+  /*form styles*/
 }
 
 .profile .your-profile-right .profile-information .profile-information-right::after {
@@ -744,7 +744,27 @@ body {
   color: #5D6180;
 }
 
-.profile .your-profile-right .profile-information form .btn-success {
+.profile .your-profile-right .profile-information .profile-information-right .hr__or {
+  margin-top: 28px;
+  border: 1px solid #3A3456;
+  opacity: 1;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .hr__or::before {
+  content: "OR";
+  display: inline-block;
+  background-color: #221B4A;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  padding: 0 5px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.profile .your-profile-right .profile-information .profile-information-right form .btn-success {
   background-color: #7963FA;
   border-radius: 6px;
   border: none;
@@ -755,7 +775,7 @@ body {
   width: 100%;
 }
 
-.profile .your-profile-right .profile-information form .btn-success:hover {
+.profile .your-profile-right .profile-information .profile-information-right form .btn-success:hover {
   opacity: 0.8;
   -webkit-transition: 0.3s;
   transition: 0.3s;

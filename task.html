@@ -490,8 +490,9 @@
           "lengthMenu": "Result per page _MENU_",
           "info": "<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
           "infoFiltered": "",
+          "infoEmpty": "<p class='total__page'>0</p>results <p class='titik'>.</p>",
         },
-        "dom": '<"top"il>rt<"bottom"ilp><"clear">'
+        "dom": '<"top"il>rt<"bottom"ilp><"clear">',
       });
 
       $('#search').keyup(function () {
@@ -499,20 +500,6 @@
       })
 
     });
-
-    // search
-    // $(document).ready(function () {
-    //   var oTable = $('#example').DataTable();
-      // $("#search").on("keyup", function () {
-      //   $(".task-cart .table-content .table tbody tr").filter(function () {
-      //     $(this).toggle($(this).text().toLowerCase().indexOf($("#search").val().toLowerCase()) > -1);
-      //     console.log(table.rows().data());
-      //   });
-      // });
-    //   $('#search').keyup(function () {
-    //     oTable.search($(this).val()).draw();
-    //   })
-    // });
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
