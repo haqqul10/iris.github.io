@@ -49,6 +49,20 @@ body {
     }
 }
 
+/*css3 design scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #DBD6FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #AC9FFC;
+    border-radius: 10px;
+}
+
 // dashboard
 .dashboard {
     background-color: #18103E;

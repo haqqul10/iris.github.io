@@ -16,6 +16,20 @@ body {
   position: relative;
 }
 
+/*css3 design scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #DBD6FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AC9FFC;
+  border-radius: 10px;
+}
+
 .body-homepage {
   background-color: #221B42;
   overflow-x: hidden;
