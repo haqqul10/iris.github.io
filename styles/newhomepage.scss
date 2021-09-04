@@ -1050,10 +1050,13 @@ body {
             justify-content: end;
             margin-top: 150px;
             padding-left: 0;
+            position: relative;
 
             img {
                 width: 797.42px;
                 height: 525px;
+                position: absolute;
+                left: 0;
             }
         }
     }
