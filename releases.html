@@ -166,1051 +166,1053 @@
   <!-- card releases -->
   <section class="releases-cart">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Tokopedia</h5>
+      <div id="myItems">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Tokopedia</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
+              </div>
+              <div class="card-body">
+                <img src="images/releases/Shoe.png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan 1 MID SE</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$535</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe.png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan 1 MID SE</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$535</h5>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Shoope</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
+              </div>
+              <div class="card-body">
+                <img src="images/releases/Shoe (1).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan 1</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$100</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Zara</h5>
                   </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
-                        </div>
-                      </div>
-                    </form>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
                   </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <img src="images/releases/Shoe (2).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$290</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Amazon</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <img src="images/releases/Shoe (3).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Holde Vol 5</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$390</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Shoope</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
+        <div class="row row__table__two">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Zalora</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (1).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan 1</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$100</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
+              <div class="card-body">
+                <img src="images/releases/Shoe.png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan 1 MID SE</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$522</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Zara</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Bukalapak</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (2).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$290</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
+              <div class="card-body">
+                <img src="images/releases/Shoe (1).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan 1</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$600</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Amazon</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Lazada</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (3).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Holde Vol 5</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$390</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
+              <div class="card-body">
+                <img src="images/releases/Shoe (2).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Air Jordan</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$450</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row row__table__two">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Zalora</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Store</p>
+                    <h5 class="card-title">Alibaba</h5>
+                  </div>
+                  <div class="col-6 text__right">
+                    <p class="card-text">Monitor Input</p>
+                    <h5 class="card-title">13CH4174</h5>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe.png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan 1 MID SE</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$522</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
+              <div class="card-body">
+                <img src="images/releases/Shoe (3).png" width="120" class="float-start">
+                <p>10 July -10am GMT</p>
+                <h5>Nike - Holde Vol 5</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6">
+                    <p class="card-text">Price</p>
+                    <h5 class="card-title">$500</h5>
+                  </div>
+                  <div class="col-6 my-auto btn__create__modal">
+                    <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Create
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                      <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg"
+                          alt="" width="24"></a>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row text-white pt-4">
+                        <div class="col-12 col-md-6">
+                          <label for="side" class="form-label">Side</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Side</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="mude" class="form-label">Mude</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Mude</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
+                        <div class="mb-3">
+                          <label for="munitor_input" class="form-label">Munitor Input</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="size" class="form-label">Size</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Size</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="proxy_group" class="form-label">Proxy Group</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Proxy Group</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="profile" class="form-label">Profile</label>
+                          <div class="gradien__form">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected class="select__option">Profile</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
+                        <div class="col-12 col-md-6">
+                          <label for="task_quantity" class="form-label">Task Quantity</label>
+                          <div class="gradien__form">
+                            <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
+                            <span></span>
+                          </div>
                         </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Bukalapak</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (1).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan 1</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$600</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Lazada</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (2).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Air Jordan</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$450</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Store</p>
-                  <h5 class="card-title">Shoope</h5>
-                </div>
-                <div class="col-6 text__right">
-                  <p class="card-text">Monitor Input</p>
-                  <h5 class="card-title">13CH4174</h5>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <img src="images/releases/Shoe (3).png" width="120" class="float-start">
-              <p>10 July -10am GMT</p>
-              <h5>Nike - Holde Vol 5</h5>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-6">
-                  <p class="card-text">Price</p>
-                  <h5 class="card-title">$500</h5>
-                </div>
-                <div class="col-6 my-auto btn__create__modal">
-                  <button type="button" class="btn btn-create" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
-                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
-                        width="24"></a>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="side" class="form-label">Side</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Side</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mude" class="form-label">Mude</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Mude</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="munitor_input" class="form-label">Munitor Input</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="size" class="form-label">Size</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Size</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="proxy_group" class="form-label">Proxy Group</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Proxy Group</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-6">
-                        <label for="profile" class="form-label">Profile</label>
-                        <div class="gradien__form">
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected class="select__option">Profile</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="task_quantity" class="form-label">Task Quantity</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="task_quantity" placeholder="Task Quantity">
-                          <span></span>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Task </a>
+                      </form>
+                    </div>
+                    <div class="modal-footer mx-auto">
+                      <a href="" class=" btn add__new__task"> Add New Task </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1253,9 +1255,16 @@
 
   <script>
     // search
+    // $("#search").on("keyup", function () {
+    //   $(".releases-cart .card").filter(function () {
+    //     $(this).toggle($(this).text().toLowerCase().indexOf($("#search").val().toLowerCase()) > -1);
+    //   });
+    // });
+
     $("#search").on("keyup", function () {
-      $(".releases-cart .card").filter(function () {
-        $(this).toggle($(this).text().toLowerCase().indexOf($("#search").val().toLowerCase()) > -1);
+      var value = $(this).val().toLowerCase();
+      $("#myItems .col-12.col-md-6.col-lg-3").filter(function () {
+        $(this).toggle($(this).find('.card').text().toLowerCase().indexOf(value) > -1)
       });
     });
 
