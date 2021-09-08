@@ -30,7 +30,12 @@ body {
 }
 
 @media (min-width: 1400px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1344px;
     padding: 0;
   }
@@ -498,7 +503,9 @@ body {
 }
 
 .releases-cart .container .card .modal-content {
-  background-color: #221B4A;
+  background: rgba(121, 99, 250, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 6px;
   border: none;
   padding: 16px 18px;
@@ -506,6 +513,7 @@ body {
 
 .releases-cart .container .card .modal-content .modal-header {
   border-bottom: none;
+  padding: 0;
 }
 
 .releases-cart .container .card .modal-content .modal-header .modal-title {

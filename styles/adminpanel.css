@@ -16,7 +16,12 @@ body {
 }
 
 @media (min-width: 1400px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1344px;
   }
 }
@@ -44,7 +49,12 @@ body {
 }
 
 @media (min-width: 1400px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1344px;
   }
 }
@@ -246,7 +256,9 @@ body {
 }
 
 .card-dashboard .flex-right .modal__content__Keys {
-  background-color: #221B4A;
+  background: rgba(121, 99, 250, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 6px;
   border: none;
   padding: 16px 18px;
@@ -295,7 +307,9 @@ body {
 }
 
 .card-dashboard .flex-right .modal__content__newtask {
-  background-color: #221B4A;
+  background: rgba(121, 99, 250, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 6px;
   border: none;
   padding: 16px 18px;
@@ -776,7 +790,8 @@ footer a:hover {
   .task-cart .table-content {
     background-color: #221B4A;
   }
-  .task-cart .table-content .dataTables_length, .task-cart .table-content .dataTables_wrapper .dataTables_filter {
+  .task-cart .table-content .dataTables_length,
+  .task-cart .table-content .dataTables_wrapper .dataTables_filter {
     display: none;
   }
 }
@@ -1135,7 +1150,10 @@ footer a:hover {
   .table thead {
     display: none;
   }
-  .table, .table tbody, .table tr, .table td {
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
     display: block;
     width: 100%;
   }
@@ -1161,7 +1179,8 @@ footer a:hover {
     font-weight: 500;
     color: white;
   }
-  .odd, .even {
+  .odd,
+  .even {
     background-color: #221B4A;
     border-radius: 6px;
   }

@@ -34,6 +34,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+
 }
 
 @media (min-width: 1400px) {
@@ -49,7 +50,6 @@ body {
     }
 }
 
-/*css3 design scrollbar*/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -765,6 +765,7 @@ body {
                     margin-top: 28px;
                     border: 1px solid #3A3456;
                     opacity: 1;
+
                     &::before {
                         content: "OR";
                         display: inline-block;
@@ -777,6 +778,10 @@ body {
                         left: 50%;
                         transform: translate(-50%, -50%);
                     }
+                }
+
+                textarea {
+                    resize: none;
                 }
 
 

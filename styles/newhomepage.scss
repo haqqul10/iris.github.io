@@ -32,10 +32,16 @@
     /* Legacy iOS */
 }
 
+
 body {
     font-family: 'Inter', sans-serif;
     position: relative;
 
+}
+
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #ac9ffc #dbd6ff;
 }
 
 /*css3 design scrollbar*/

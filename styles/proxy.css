@@ -27,7 +27,6 @@ body {
   }
 }
 
-/*css3 design scrollbar*/
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -776,6 +775,10 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.profile .your-profile-right .profile-information .profile-information-right textarea {
+  resize: none;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right form .btn-success {
