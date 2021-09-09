@@ -41,6 +41,7 @@ body {
   .container-xl,
   .container-xxl {
     max-width: 1344px;
+    padding: 0;
   }
 }
 
@@ -529,7 +530,6 @@ footer a:hover {
   }
   .navbar-dashboard .container {
     position: relative;
-    padding: 0;
   }
   .navbar-dashboard .container .navbar-brand .logo_responsive {
     display: none;
@@ -572,24 +572,21 @@ footer a:hover {
   .navbar-dashboard .my__profile__collapse {
     display: none;
   }
-  .card-dashboard .container {
-    padding-left: 0px;
-  }
   .card-dashboard .container h2 {
     font-size: 32px;
     font-weight: 600;
   }
-  .card-dashboard .container .card {
-    margin-right: 5px;
+  .checkout .container {
+    padding-left: 14px;
   }
   .checkout .container .announcements {
-    margin-left: 18px;
-    width: 334px;
+    margin-left: 14px;
+    width: 340px;
     margin-top: 0;
   }
   .checkout .container .table-content {
     background-color: #221B4A;
-    width: 988px;
+    width: 1000px;
   }
   .checkout .container .table-content .pagination-checkout {
     -webkit-box-pack: end;

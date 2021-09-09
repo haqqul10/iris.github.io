@@ -64,7 +64,7 @@ body {
     .container-xl,
     .container-xxl {
         max-width: 1344px;
-        // padding: 0;
+        padding: 0;
     }
 }
 
@@ -583,7 +583,6 @@ footer {
 
         .container {
             position: relative;
-            padding: 0;
 
             .navbar-brand {
                 .logo_responsive {
@@ -649,7 +648,6 @@ footer {
 
     .card-dashboard {
         .container {
-            padding-left: 0px;
 
             h2 {
                 font-size: 32px;
@@ -657,22 +655,23 @@ footer {
             }
 
             .card {
-                margin-right: 5px;
+                // margin-right: 5px;
             }
         }
     }
 
     .checkout {
         .container {
+            padding-left: 14px;
             .announcements {
-                margin-left: 18px;
-                width: 334px;
+                margin-left: 14px;
+                width: 340px;
                 margin-top: 0;
             }
 
             .table-content {
                 background-color: $color2;
-                width: 988px;
+                width: 1000px;
 
                 .pagination-checkout {
                     justify-content: flex-end;
@@ -754,7 +753,7 @@ footer {
         margin-top: 24px;
     }
 
-    .table thead { 
+    .table thead {
         display: none;
     }
 
@@ -816,6 +815,7 @@ footer {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 2;
     }
+
     .navbar-dashboard {
         height: 80px;
 
