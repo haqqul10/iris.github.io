@@ -727,6 +727,68 @@ body {
   z-index: -1;
 }
 
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien {
+  border: 2px solid #1B143C;
+  background-color: #1B143C;
+  border-radius: 6px;
+  color: white;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien::-webkit-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien:-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien::-ms-input-placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien::placeholder {
+  color: #8D899E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien:focus {
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien:focus + span {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+}
+
+.profile .your-profile-right .profile-information .profile-information-right .text__area__gradien + span {
+  border-radius: 6px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .profile .your-profile-right .profile-information .profile-information-right .form-password {
   position: relative;
 }
@@ -826,6 +888,18 @@ footer a {
 
 footer a:hover {
   color: white;
+}
+
+@media screen and (min-width: 1080px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1344px;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
