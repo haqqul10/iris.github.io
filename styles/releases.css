@@ -231,7 +231,6 @@ body {
 
 .task-judul .container {
   margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .task-judul .container .flex-right {
@@ -744,6 +743,7 @@ footer a {
   .releases-cart .container .card {
     margin-top: 0;
     margin-right: 5px;
+    margin-top: 30px;
   }
   .releases-cart .container .card .card-header {
     padding: 0 13px 0 0;

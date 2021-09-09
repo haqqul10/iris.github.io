@@ -256,7 +256,7 @@ body {
 .task-judul {
     .container {
         margin-top: 24px;
-        margin-bottom: 24px;
+        // margin-bottom: 24px;
 
         .flex-right {
             justify-content: space-evenly;
@@ -784,6 +784,7 @@ footer {
             .card {
                 margin-top: 0;
                 margin-right: 5px;
+                margin-top: 30px;
 
                 .card-header {
                     padding: 0 13px 0 0;
