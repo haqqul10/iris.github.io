@@ -883,19 +883,6 @@ footer {
     }
 }
 
-@media screen and (min-width: 1080px) {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 1440px;
-        padding: 0;
-    }
-}
-
 // Tablet Version
 @media screen and (min-width: 768px) {
     .profile {
@@ -910,6 +897,16 @@ footer {
 
 // Desktop Version
 @media screen and (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1344px;
+        padding: 0;
+    }
 
     // Dashboard
     .navbar-dashboard {

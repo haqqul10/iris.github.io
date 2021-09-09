@@ -890,18 +890,6 @@ footer a:hover {
   color: white;
 }
 
-@media screen and (min-width: 1080px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1440px;
-    padding: 0;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .profile .your-profile-left .judul-profile {
     padding: 20px 24px;
@@ -909,6 +897,15 @@ footer a:hover {
 }
 
 @media screen and (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1344px;
+    padding: 0;
+  }
   .navbar-dashboard {
     height: 80px;
   }
