@@ -897,7 +897,7 @@ footer a:hover {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1044px;
+    max-width: 1440px;
     padding: 0;
   }
 }
