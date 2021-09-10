@@ -921,6 +921,10 @@ footer {
                         margin-right: 6px;
                     }
                 }
+
+                .icon_notification_collapse {
+                    display: none;
+                }
             }
 
             .icon_notification {
@@ -1204,6 +1208,137 @@ footer {
                     left: 20px;
                 }
 
+            }
+
+            .icon_notification_collapse {
+                padding: 0;
+
+                .icon_notification_hover {
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 50px;
+                    right: 20px;
+
+                }
+
+                &:hover .table__notification {
+                    display: flex;
+                }
+
+                .table__notification {
+                    position: absolute;
+                    width: 100%;
+                    background-color: #312863;
+                    border-radius: 6px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    bottom: 90px;
+                    transition: all 0.3s;
+                    padding-top: 24px;
+                    display: none;
+                    left: 0;
+
+                    .header__notification {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 16px;
+                        padding-left: 16px;
+                        padding-right: 16px;
+
+                        .header {
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin-bottom: 0;
+
+                        }
+                    }
+
+                    hr {
+                        margin: 0;
+                        color: #625A8D;
+                        border: none;
+                        height: 2px;
+                        background-color: #625A8D;
+                    }
+
+                    .data__items {
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        // border-bottom: 1px solid #625a8d;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        justify-content: center;
+                        color: white;
+                        border-left-style: 24px;
+
+                        &:hover {
+                            background-color: #47377E;
+                        }
+
+                        .left {
+                            .title {
+                                margin-left: 16px;
+                                text-align: left;
+
+                                .title__judul {
+                                    margin-bottom: 9px;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                }
+
+                                .title__text {
+                                    font-size: 14px;
+                                    color: #BBB9C5;
+                                    line-height: 17px;
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        .right {
+                            p {
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 17px;
+                                margin-top: 16px;
+                            }
+                        }
+                    }
+
+                    .garis__items {
+                        margin-left: 24px;
+                        margin-right: 24px;
+                        color: #625A8D;
+                        border: none;
+                        height: 2px;
+                        background-color: #625A8D;
+                    }
+
+                    .view__all {
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #7963FA;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+                }
+
+                .table__notification::before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    bottom: -10px;
+                    background-color: #312863;
+                    transform: rotate(45deg);
+                    right: 21px;
+                }
             }
 
             .collapse.show {
