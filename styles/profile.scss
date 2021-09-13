@@ -705,7 +705,7 @@ body {
                         font-weight: 600;
                         padding-top: 20px;
                         margin-bottom: 0;
-                        padding-bottom: 25px;
+                        padding-bottom: 60px;
                     }
 
                     .card-text-name {
@@ -878,7 +878,6 @@ footer {
     }
 }
 
-
 // Tablet Version
 @media screen and (min-width: 768px) {
     .profile {
@@ -888,7 +887,6 @@ footer {
             }
         }
     }
-
 }
 
 
@@ -979,8 +977,7 @@ footer {
     // Profil
     .profile {
         .your-profile-left {
-            width: 427px;
-            // background-color: $color2;
+            width: auto;
 
             .judul-profile {
                 padding: 20px 15px 24px 40px;
@@ -994,6 +991,7 @@ footer {
                 .action-knob {
                     padding-top: 190px;
                     margin-bottom: 0;
+                    padding-bottom: 30px;
 
                     .btn-primary {
                         width: auto;
@@ -1080,6 +1078,7 @@ footer {
 
     }
 
+
 }
 
 @media only screen and (max-width: 1344px),
@@ -1088,12 +1087,50 @@ footer {
     .navbar-dashboard {
         .container {
             .navbar-nav {
-                left: 130px;
+                left: 10px;
             }
         }
     }
 
+
+
     // insert mobile and iPad Pro 12.9" CSS here    
+}
+
+@media only screen and (min-width: 1080px) {
+
+    .profile {
+        .your-profile-right {
+            // margin-top: 0;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1390px) and (min-width: 1024px) {
+    .profile {
+        .your-profile-right {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+
+            .profile-information {
+                flex-direction: column;
+                width: 423px;
+                margin-left: 0;
+                .profile-information-left{
+                    width: 100%;
+                }
+                .profile-information-right {
+                    width: 100%;
+                    &::after{
+                        content: none;
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 @media screen and (max-width: 992px) {

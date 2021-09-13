@@ -694,7 +694,7 @@ body {
   font-weight: 600;
   padding-top: 20px;
   margin-bottom: 0;
-  padding-bottom: 25px;
+  padding-bottom: 60px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right .card .card-text-name p {
@@ -921,7 +921,7 @@ footer a:hover {
     display: none;
   }
   .profile .your-profile-left {
-    width: 427px;
+    width: auto;
   }
   .profile .your-profile-left .judul-profile {
     padding: 20px 15px 24px 40px;
@@ -932,6 +932,7 @@ footer a:hover {
   .profile .your-profile-left .table-profile .action-knob {
     padding-top: 190px;
     margin-bottom: 0;
+    padding-bottom: 30px;
   }
   .profile .your-profile-left .table-profile .action-knob .btn-primary {
     width: auto;
@@ -990,7 +991,36 @@ footer a:hover {
 
 @media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
   .navbar-dashboard .container .navbar-nav {
-    left: 130px;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1390px) and (min-width: 1024px) {
+  .profile .your-profile-right {
+    margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .profile .your-profile-right .profile-information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 423px;
+    margin-left: 0;
+  }
+  .profile .your-profile-right .profile-information .profile-information-left {
+    width: 100%;
+  }
+  .profile .your-profile-right .profile-information .profile-information-right {
+    width: 100%;
+  }
+  .profile .your-profile-right .profile-information .profile-information-right::after {
+    content: none;
   }
 }
 

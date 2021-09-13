@@ -1038,7 +1038,13 @@ footer a:hover {
 
 @media only screen and (max-width: 1344px), (height: 1024px) and (width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape), (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
   .navbar-dashboard .container .navbar-nav {
-    left: 130px;
+    left: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .profile .profile-information-right {
+    margin-top: 32px;
   }
 }
 
@@ -1303,6 +1309,9 @@ footer a:hover {
   }
   .navbar-dashboard .container .my__profile span {
     display: none;
+  }
+  .profile .profile-information-right {
+    margin-top: 32px;
   }
 }
 

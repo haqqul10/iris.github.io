@@ -1117,12 +1117,21 @@ footer {
     .navbar-dashboard {
         .container {
             .navbar-nav {
-                left: 130px;
+                left: 10px;
             }
         }
     }
 
     // insert mobile and iPad Pro 12.9" CSS here    
+}
+
+// tablet ipad pro
+@media (min-width:769px) and (max-width:1024px) {
+    .profile {
+        .profile-information-right {
+            margin-top: 32px;
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -1418,6 +1427,11 @@ footer {
         }
     }
 
+    .profile {
+        .profile-information-right {
+            margin-top: 32px;
+        }
+    }
 
 }
 
