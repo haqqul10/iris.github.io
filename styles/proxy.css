@@ -280,6 +280,8 @@ body {
   border-radius: 6px;
   padding: 0;
   padding-bottom: 32px;
+  position: relative;
+  height: 736px;
 }
 
 .profile .your-profile-left .judul-profile {
@@ -383,7 +385,14 @@ body {
 .profile .your-profile-left .table-profile .table tbody tr:hover {
   background-color: #A085FA;
   cursor: pointer;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr:hover .amound {
   color: white !important;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr:hover svg path {
+  stroke: white !important;
 }
 
 .profile .your-profile-left .table-profile .table tbody tr td {
@@ -418,6 +427,18 @@ body {
   width: 20px;
 }
 
+.profile .your-profile-left .table-profile .table tbody tr:not(.collapsed) {
+  background-color: #A085FA;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr:not(.collapsed) .amound {
+  color: white !important;
+}
+
+.profile .your-profile-left .table-profile .table tbody tr:not(.collapsed) svg path {
+  stroke: white !important;
+}
+
 .profile .your-profile-left .table-profile .table th {
   font-weight: 500;
   border-style: none;
@@ -429,8 +450,15 @@ body {
   padding-right: 23px;
 }
 
+.profile .your-profile-left .table-profile .scroll {
+  max-height: 560px;
+  overflow-y: auto;
+}
+
 .profile .your-profile-left .table-profile .action-knob {
-  padding-top: 50px;
+  position: absolute;
+  bottom: 32px;
+  left: 29px;
 }
 
 .profile .your-profile-left .table-profile .action-knob .btn-primary {
@@ -485,6 +513,8 @@ body {
 
 .profile .your-profile-right .profile-information .profile-information-left {
   padding: 16px;
+  position: relative;
+  height: 736px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left p {
@@ -597,7 +627,9 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .action-knob {
-  padding-top: 50px;
+  position: absolute;
+  left: 60px;
+  bottom: 32px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .action-knob .btn-primary {
@@ -1000,7 +1032,7 @@ footer a:hover {
     height: 736px;
   }
   .profile .your-profile-right .profile-information .profile-information-left .action-knob {
-    margin-top: 320px;
+    left: 70px;
   }
   .profile .your-profile-right .profile-information .profile-information-left .action-knob .btn-primary {
     width: 165px;
@@ -1061,6 +1093,9 @@ footer a:hover {
   }
   .profile .your-profile-right .profile-information .profile-information-left {
     width: 100%;
+  }
+  .profile .your-profile-right .profile-information .profile-information-left .action-knob {
+    left: 36px;
   }
   .profile .your-profile-right .profile-information .profile-information-right {
     width: 100%;

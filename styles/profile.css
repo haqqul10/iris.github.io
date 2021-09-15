@@ -250,6 +250,8 @@ body {
   border-radius: 6px;
   padding-bottom: 32px;
   padding: 0;
+  position: relative;
+  height: 736px;
 }
 
 .profile .your-profile-left .judul-profile {
@@ -336,6 +338,7 @@ body {
 .profile .your-profile-left .table {
   padding: 0;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .profile .your-profile-left .table .form-check .form-check-input {
@@ -354,10 +357,15 @@ body {
 .profile .your-profile-left .table tbody tr:hover {
   cursor: pointer;
   background-color: #A085FA;
+  color: white;
 }
 
 .profile .your-profile-left .table tbody tr:hover .card__number {
   color: white !important;
+}
+
+.profile .your-profile-left .table tbody tr:hover svg path {
+  stroke: white !important;
 }
 
 .profile .your-profile-left .table tbody tr td {
@@ -368,6 +376,19 @@ body {
   line-height: 20px;
   font-weight: 400;
   border-color: #3A3456;
+}
+
+.profile .your-profile-left .table tbody tr.active {
+  background-color: #A085FA;
+  color: white;
+}
+
+.profile .your-profile-left .table tbody tr.active .card__number {
+  color: white !important;
+}
+
+.profile .your-profile-left .table tbody tr.active svg path {
+  stroke: white !important;
 }
 
 .profile .your-profile-left .table th {
@@ -388,9 +409,15 @@ body {
   line-height: 17px;
 }
 
+.profile .your-profile-left .table-profile .scroll {
+  max-height: 560px;
+  overflow-y: auto;
+}
+
 .profile .your-profile-left .table-profile .action-knob {
-  padding-top: 60px;
-  margin-bottom: 32px;
+  position: absolute;
+  bottom: 32px;
+  left: 29px;
 }
 
 .profile .your-profile-left .table-profile .action-knob .btn-primary {
@@ -921,18 +948,13 @@ footer a:hover {
     display: none;
   }
   .profile .your-profile-left {
-    width: auto;
+    width: 427px;
   }
   .profile .your-profile-left .judul-profile {
     padding: 20px 15px 24px 40px;
   }
   .profile .your-profile-left .judul-profile p {
     margin-bottom: 0;
-  }
-  .profile .your-profile-left .table-profile .action-knob {
-    padding-top: 190px;
-    margin-bottom: 0;
-    padding-bottom: 30px;
   }
   .profile .your-profile-left .table-profile .action-knob .btn-primary {
     width: auto;

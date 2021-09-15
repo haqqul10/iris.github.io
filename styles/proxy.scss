@@ -304,6 +304,8 @@ body {
         border-radius: 6px;
         padding: 0;
         padding-bottom: 32px;
+        position: relative;
+        height: 736px;
 
         .judul-profile {
             padding: 10;
@@ -401,7 +403,16 @@ body {
                         &:hover {
                             background-color: #A085FA;
                             cursor: pointer;
-                            color: white !important;
+
+                            .amound {
+                                color: white !important;
+                            }
+
+                            svg {
+                                path {
+                                    stroke: white !important;
+                                }
+                            }
                         }
 
                         td {
@@ -437,6 +448,20 @@ body {
                             width: 20px;
                         }
                     }
+
+                    tr:not(.collapsed) {
+                        background-color: #A085FA;
+
+                        .amound {
+                            color: white !important;
+                        }
+
+                        svg {
+                            path {
+                                stroke: white !important;
+                            }
+                        }
+                    }
                 }
 
                 th {
@@ -453,8 +478,16 @@ body {
 
             }
 
+            .scroll {
+                max-height: 560px;
+                overflow-y: auto;
+            }
+
             .action-knob {
-                padding-top: 50px;
+                // padding-top: 50px;
+                position: absolute;
+                bottom: 32px;
+                left: 29px;
 
                 .btn-primary {
                     background-color: $color6;
@@ -506,6 +539,8 @@ body {
 
             .profile-information-left {
                 padding: 16px;
+                position: relative;
+                height: 736px;
 
                 p {
                     font-size: 20px;
@@ -621,7 +656,10 @@ body {
                 }
 
                 .action-knob {
-                    padding-top: 50px;
+                    // padding-top: 50px;
+                    position: absolute;
+                    left: 60px;
+                    bottom: 32px;
 
                     .btn-primary {
                         background-color: $color6;
@@ -1054,7 +1092,7 @@ footer {
                     height: 736px;
 
                     .action-knob {
-                        margin-top: 320px;
+                        left: 70px;
 
                         .btn-primary {
                             width: 165px;
@@ -1139,6 +1177,11 @@ footer {
 
                 .profile-information-left {
                     width: 100%;
+
+
+                    .action-knob {
+                        left: 36px;
+                    }
                 }
 
                 .profile-information-right {

@@ -326,7 +326,7 @@
                     <th width="100">Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="example_tbody">
                   <tr>
                     <td><input type="checkbox" class="form-check-input"></td>
                     <td class="text-white items" data-label="Item"><img src="images/icons/sepatu_1.png" alt=""
@@ -510,6 +510,37 @@
 
     // datatable
     $(document).ready(function () {
+      // $('#example_tbody').empty();
+
+      // $.get('https://pastebin.com/raw/ZhDYM0f9', (result) => {
+      //   console.log(result);
+      // })
+      // $.ajax({
+      //   headers: {'Access-Control-Allow-Origin' : 'https://pastebin.com'},
+      //   type: "GET",
+      //   url: "https://pastebin.com/raw/ZhDYM0f9",
+      //   success: (result) => {
+      //     $.each(result.tasks, (index, value) => {
+      //       $('#example_tbody').append(
+      //         `<tr>
+      //           <td><input type="checkbox" class="form-check-input"></td>
+      //           <td class="text-white items" data-label="Item"><img src="${value.item.image}" alt="" width="35"
+      //               class="img-shoe"> ${value.item.name}</td>
+      //           <td data-label="Size">${value.module.size}</td>
+      //           <td data-label="Store">${value.module.name}</td>
+      //           <td data-label="Profil">${value.profileName}</td>
+      //           <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
+      //           <td data-label="Action">
+      //             <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+      //             <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+      //             <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
+      //           </td>
+      //         </tr>`
+      //       );
+      //     })
+      //   }
+      // })
+
       var oTable = $('#example').DataTable({
         "pageLength": 7,
         "sScrollX": "auto",

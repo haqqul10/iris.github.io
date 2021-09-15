@@ -279,9 +279,10 @@ body {
     .your-profile-left {
         background-color: $color2;
         border-radius: 6px;
-        // padding: auto;
         padding-bottom: 32px;
         padding: 0;
+        position: relative;
+        height: 736px;
 
         .judul-profile {
             padding: 10px;
@@ -360,6 +361,7 @@ body {
             // padding-left: 40px;
             padding: 0;
             margin-bottom: 0;
+            width: 100%;
 
             .form-check {
                 .form-check-input {
@@ -368,6 +370,7 @@ body {
                 }
             }
 
+
             tbody {
                 vertical-align: 0;
 
@@ -375,13 +378,22 @@ body {
                     padding-left: 15px;
                 }
 
+
                 tr {
+
                     &:hover {
                         cursor: pointer;
                         background-color: #A085FA;
+                        color: white;
 
                         .card__number {
                             color: white !important;
+                        }
+
+                        svg {
+                            path {
+                                stroke: white !important;
+                            }
                         }
                     }
 
@@ -394,6 +406,21 @@ body {
                         font-weight: 400;
                         border-color: #3A3456;
 
+                    }
+                }
+
+                tr.active {
+                    background-color: #A085FA;
+                    color: white;
+
+                    .card__number {
+                        color: white !important;
+                    }
+
+                    svg {
+                        path {
+                            stroke: white !important;
+                        }
                     }
                 }
             }
@@ -419,9 +446,15 @@ body {
         }
 
         .table-profile {
+            .scroll {
+                max-height: 560px;
+                overflow-y: auto;
+            }
+
             .action-knob {
-                padding-top: 60px;
-                margin-bottom: 32px;
+                position: absolute;
+                bottom: 32px;
+                left: 29px;
 
                 .btn-primary {
                     background-color: $color6;
@@ -977,7 +1010,7 @@ footer {
     // Profil
     .profile {
         .your-profile-left {
-            width: auto;
+            width: 427px;
 
             .judul-profile {
                 padding: 20px 15px 24px 40px;
@@ -989,9 +1022,9 @@ footer {
 
             .table-profile {
                 .action-knob {
-                    padding-top: 190px;
-                    margin-bottom: 0;
-                    padding-bottom: 30px;
+                    // padding-top: 190px;
+                    // margin-bottom: 0;
+                    // padding-bottom: 30px;
 
                     .btn-primary {
                         width: auto;
@@ -1118,12 +1151,15 @@ footer {
                 flex-direction: column;
                 width: 423px;
                 margin-left: 0;
-                .profile-information-left{
+
+                .profile-information-left {
                     width: 100%;
                 }
+
                 .profile-information-right {
                     width: 100%;
-                    &::after{
+
+                    &::after {
                         content: none;
                     }
                 }
