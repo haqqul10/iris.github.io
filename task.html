@@ -510,65 +510,87 @@
 
     // datatable
     $(document).ready(function () {
-      // $('#example_tbody').empty();
+      $('#example_tbody').empty();
 
-      // $.get('https://pastebin.com/raw/ZhDYM0f9', (result) => {
-      //   console.log(result);
-      // })
-      // $.ajax({
-      //   headers: {'Access-Control-Allow-Origin' : 'https://pastebin.com'},
-      //   type: "GET",
-      //   url: "https://pastebin.com/raw/ZhDYM0f9",
-      //   success: (result) => {
-      //     $.each(result.tasks, (index, value) => {
-      //       $('#example_tbody').append(
-      //         `<tr>
-      //           <td><input type="checkbox" class="form-check-input"></td>
-      //           <td class="text-white items" data-label="Item"><img src="${value.item.image}" alt="" width="35"
-      //               class="img-shoe"> ${value.item.name}</td>
-      //           <td data-label="Size">${value.module.size}</td>
-      //           <td data-label="Store">${value.module.name}</td>
-      //           <td data-label="Profil">${value.profileName}</td>
-      //           <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
-      //           <td data-label="Action">
-      //             <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-      //             <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-      //             <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
-      //           </td>
-      //         </tr>`
-      //       );
-      //     })
-      //   }
-      // })
+      $.ajax({
+        type: "GET",
+        url: "https://irisbot.io/api/test/tasks/get_task",
+        success: (result) => {
+          $.each(result.tasks, (index, value) => {
+            $('#example_tbody').append(
+              `<tr>
+                <td><input type="checkbox" class="form-check-input"></td>
+                <td class="text-white items" data-label="Item"><img src="${value.item.image}" alt="" width="35"
+                    class="img-shoe"> ${value.item.name}</td>
+                <td data-label="Size">${value.module.size}</td>
+                <td data-label="Store">${value.module.name}</td>
+                <td data-label="Profil">${value.profileName}</td>
+                <td data-label="Status">${getStatusColored(value.status)}</td>
+                <td data-label="Action">
+                  <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                  <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
+                  <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
+                </td>
+              </tr>`
+            );
 
-      var oTable = $('#example').DataTable({
-        "pageLength": 7,
-        "sScrollX": "auto",
-        "searching": true,
-        bInfo: true,
-        integer: true,
-        "lengthChange": true,
-        "pagingType": "simple_numbers",
-        lengthMenu: [7, 10, 20, 50, 100, 200, 500],
-        oLanguage: {
-          oPaginate: {
-            sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
-            sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+            if(index === result.tasks.length - 1){
+              setDatatable();
+            }
+          })
+
+          if(result.tasks.length === 0){
+            setDatatable();
           }
-        },
-        "language": {
-          "lengthMenu": "Result per page _MENU_",
-          "info": "<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
-          "infoFiltered": "",
-          "infoEmpty": "<p class='total__page'>0</p>results <p class='titik'>.</p>",
-        },
-        "dom": '<"top"il>rt<"bottom"ilp><"clear">',
-      });
-
-      $('#search').keyup(function () {
-        oTable.search($(this).val()).draw();
+        }
       })
 
+      function setDatatable(){
+        var oTable = $('#example').DataTable({
+          "pageLength": 7,
+          "sScrollX": "auto",
+          "searching": true,
+          bInfo: true,
+          integer: true,
+          "lengthChange": true,
+          "pagingType": "simple_numbers",
+          lengthMenu: [7, 10, 20, 50, 100, 200, 500],
+          oLanguage: {
+            oPaginate: {
+              sNext: '<span class="pagination-default"><img src="./images/icons/Right.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
+              sPrevious: '<span class="pagination-default"><img src="./images/icons/Left.svg" alt=""></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
+            }
+          },
+          "language": {
+            "lengthMenu": "Result per page _MENU_",
+            "info": "<p class='total__page'>_TOTAL_</p>results <p class='titik'>.</p>",
+            "infoFiltered": "",
+            "infoEmpty": "<p class='total__page'>0</p>results <p class='titik'>.</p>",
+          },
+          "dom": '<"top"il>rt<"bottom"ilp><"clear">',
+        });
+        
+        $('#search').keyup(function () {
+          oTable.search($(this).val()).draw();
+        })
+      }
+
+      function getStatusColored($status){
+        $status_original = $status;
+        $status = $status.toLowerCase();
+
+        if($status == "paused"){
+          return '<span class="badge bg-warning">Paused</span>';
+        }else if($status == "Stopped"){
+          return '<span class="badge bg-warning">Stopped</span>';
+        }else if($status == "checked out" || $status == "checking out"){
+          return '<span class="badge bg-success">Checked Out</span>';
+        }else if($status == "error"){
+          return '<span class="badge bg-danger">Error</span>';
+        }else{
+          return '<span class="badge bg-success" style="background-color: rgba(121, 99, 250, 0.1)!important; color: #7963FA!important;">'+$status_original+'</span>';
+        }
+      }
     });
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
