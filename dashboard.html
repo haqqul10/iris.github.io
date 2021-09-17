@@ -65,7 +65,7 @@
                 class="pb-1"> <span>Profile</span></a>
           </li>
           <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt=""
-              width="49" class="pe-2"> <span>Rizki Agus</span></a>
+              width="49" class="pe-2"> <span class="member_name">Rizki Agus</span></a>
           <div class="nav-link icon_notification_collapse">
             <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
             <div class="table__notification">
@@ -173,7 +173,7 @@
         </div>
       </div>
       <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49"
-          class="pe-2"> <span>Rizki Agus</span></a>
+          class="pe-2"> <span class="member_name">Rizki Agus</span></a>
       <!-- </div> -->
     </div>
   </nav>
@@ -192,7 +192,7 @@
           <div class="card">
             <div class="card-body">
               <h6 class="card-subtitle text-white">Total Money Spent</h6>
-              <h5 class="card-title">$8.921,00</h5>
+              <h5 class="card-title" id="total_money">$0,00</h5>
               <p class="card-text"> <img src="images/icons/Icon.svg" alt="" class="pb-1"> 23.14%</p>
             </div>
           </div>
@@ -202,7 +202,7 @@
             <div class="card-body">
               <img class="card-image" src="images/icons/card complite.svg" alt="" width="48">
               <h6 class="card-subtitle-text text-white">Total checouts</h6>
-              <h5 class="card-title">215</h5>
+              <h5 class="card-title" id="total_checkout">0</h5>
             </div>
             <img class="card-backgroud" src="images/icons/Group 804.svg" alt="" width="93">
           </div>
@@ -212,7 +212,7 @@
             <div class="card-body">
               <img class="card-image" src="images/icons/card cancel.svg" alt="" width="48">
               <h6 class="card-subtitle-text text-white">Total Declines</h6>
-              <h5 class="card-title">124</h5>
+              <h5 class="card-title" id="total_declines">0</h5>
             </div>
             <img class="card-backgroud" src="images/icons/Group 804.svg" alt="" width="93">
           </div>
@@ -221,7 +221,11 @@
           <div class="card">
             <div class="card-body text-white">
               <h6 class="card-subtitle">Your Subscription</h6>
-              <p class="title">Your subscription has 9 days left on <br> <span>21 july 2021</span></p>
+              <p class="title" id="subscription-text">Your subscription has 0 days left on
+                <span>
+                  21 July 2021
+                </span>
+              </p>
               <a class="btn btn-renew">Renew Subscribe</a>
             </div>
           </div>
@@ -274,14 +278,14 @@
                         <th>Date</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="example_tbody">
                       <tr>
                         <td class="text-white" data-label="Item"><img src="images/icons/Group 703.png" alt="" width="48"
                             height="48"> Air Force 1</td>
                         <td data-label="Price">$280</td>
                         <td data-label="Size">44</td>
                         <td data-label="Website">nike.com</td>
-                        <td data-label="Date">21 juni 2021</td>
+                        <td data-label="Date">${value.image}</td>
                       </tr>
                       <tr>
                         <td class="text-white" data-label="Item"><img src="images/icons/sepatu_6.png" alt="" width="48"
@@ -438,6 +442,60 @@
       overlay_modal.addEventListener('click', function () {
         document.getElementById('overlay').style.display = "none";
         nav.classList.remove('show');
+      });
+    });
+
+    $(document).ready(function () {
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      $('#example_tbody').empty();
+
+      $.ajax({
+        type: "GET",
+        url: "https://irisbot.io/api/test/checkouts",
+        success: (result) => {
+          $.each(result.history, (index, value) => {
+            $('#example_tbody').append(
+              `<tr>
+                <td class="text-white" data-label="Item"><img src="${value.image}" alt="" width="48"
+                    height="48"> ${value.item}</td>
+                <td data-label="Price">${value.price}</td>
+                <td data-label="Size">${value.size}</td>
+                <td data-label="Website">${value.store}</td>
+                <td data-label="Date">12 Des 2021</td>
+              </tr>`
+            );
+          });
+          $('#total_money').text(result.amount);
+          $('#total_checkout').text(result.checkouts);
+          $('#total_declines').text(result.declined);
+
+          $.getJSON("https://irisbot.io/api/test/@me", function (data, status) {
+            let expDate = new Date(data.license.expires["$date"]);
+            // let exProfile = new Date(data.user.username);
+            $('.member_name').text(data.user.username);
+            let curDate = new Date();
+            let calcDate = expDate - curDate;
+            let subText = document.getElementById('subscription-text')
+            // Expired
+            if (0 > calcDate) {
+              let text = "Your subscription has expired."
+              subText.innerHTML = text;
+            } else {
+              var timeDifference = expDate.getTime() - curDate.getTime();
+              var dayDifference = (timeDifference / (1000 * 3600 * 24)).toFixed(0);
+              let text = "Your subscription has " + (dayDifference).toString() +
+                " days left on.<br> <span>" + expDate.getDate() + " " + monthNames[expDate.getMonth()] +
+                " " + expDate.getFullYear() + "</span>"
+              subText.innerHTML = text;
+            }
+
+            console.log(expDate.getDate() + " " + monthNames[expDate.getMonth()] + " " + expDate
+              .getFullYear())
+          })
+        }
       });
     });
   </script>
