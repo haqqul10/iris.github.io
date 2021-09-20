@@ -527,25 +527,25 @@
                 <td data-label="Profil">${value.profileName}</td>
                 <td data-label="Status">${getStatusColored(value.status)}</td>
                 <td data-label="Action">
-                  <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                  <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
-                  <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
+                  <a href="#"><img src="./images/icons/resume.svg" alt="" width="20"></a>
+                  <a href="#"><img src="./images/icons/play.svg" alt="" width="20"></a>
+                  <a href="#"><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                 </td>
               </tr>`
             );
 
-            if(index === result.tasks.length - 1){
+            if (index === result.tasks.length - 1) {
               setDatatable();
             }
           })
 
-          if(result.tasks.length === 0){
+          if (result.tasks.length === 0) {
             setDatatable();
           }
         }
       })
 
-      function setDatatable(){
+      function setDatatable() {
         var oTable = $('#example').DataTable({
           "pageLength": 7,
           "sScrollX": "auto",
@@ -569,26 +569,27 @@
           },
           "dom": '<"top"il>rt<"bottom"ilp><"clear">',
         });
-        
+
         $('#search').keyup(function () {
           oTable.search($(this).val()).draw();
         })
       }
 
-      function getStatusColored($status){
+      function getStatusColored($status) {
         $status_original = $status;
         $status = $status.toLowerCase();
 
-        if($status == "paused"){
+        if ($status == "paused") {
           return '<span class="badge bg-warning">Paused</span>';
-        }else if($status == "Stopped"){
+        } else if ($status == "Stopped") {
           return '<span class="badge bg-warning">Stopped</span>';
-        }else if($status == "checked out" || $status == "checking out"){
+        } else if ($status == "checked out" || $status == "checking out") {
           return '<span class="badge bg-success">Checked Out</span>';
-        }else if($status == "error"){
+        } else if ($status == "error") {
           return '<span class="badge bg-danger">Error</span>';
-        }else{
-          return '<span class="badge bg-success" style="background-color: rgba(121, 99, 250, 0.1)!important; color: #7963FA!important;">'+$status_original+'</span>';
+        } else {
+          return '<span class="badge bg-success" style="background-color: rgba(121, 99, 250, 0.1)!important; color: #7963FA!important;">' +
+            $status_original + '</span>';
         }
       }
     });
