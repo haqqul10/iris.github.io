@@ -219,6 +219,22 @@
             </div>
             <div class="modal-body">
               <form class="row text-white pt-4">
+                <div class="">
+                  <label for="munitor_input" class="form-label">Munitor Input</label>
+                  <div class="gradien__form">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected class="select__option">Munitor Input</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <span></span>
+                  </div>
+                  <!-- <div class="gradien__form">
+                    <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
+                    <span></span>
+                  </div> -->
+                </div>
                 <div class="col-12 col-md-6">
                   <label for="side" class="form-label">Side</label>
                   <div class="gradien__form">
@@ -240,13 +256,6 @@
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
-                    <span></span>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="munitor_input" class="form-label">Munitor Input</label>
-                  <div class="gradien__form">
-                    <input type="text" class="form-control" id="monitor_input" placeholder="Munitor Input">
                     <span></span>
                   </div>
                 </div>
@@ -278,11 +287,8 @@
                 <div class="col-12 col-md-6">
                   <label for="profile" class="form-label">Profile</label>
                   <div class="gradien__form">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected class="select__option">Profile</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                    <select class="form-select" aria-label="Default select example" id="profile_select">
+                      <option selected disabled class="select__option">Profile</option>
                     </select>
                     <span></span>
                   </div>
@@ -593,6 +599,14 @@
         }
       }
     });
+
+    var profiles = JSON.parse(window.localStorage.getItem("profiles"));
+    console.log(profiles);
+    $.each(profiles, (index, value) => {
+      $('#profile_select').append(
+        `<option value="${index}">${value.profile_name}</option>`
+      );
+    })
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

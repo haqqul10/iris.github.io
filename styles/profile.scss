@@ -446,9 +446,21 @@ body {
         }
 
         .table-profile {
+
             .scroll {
                 max-height: 560px;
                 overflow-y: auto;
+
+            }
+
+            .kosong {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                color: white;
+                opacity: 70%;
+
             }
 
             .action-knob {
@@ -1025,6 +1037,7 @@ footer {
                     // padding-top: 190px;
                     // margin-bottom: 0;
                     // padding-bottom: 30px;
+                    left: 29px;
 
                     .btn-primary {
                         width: auto;
