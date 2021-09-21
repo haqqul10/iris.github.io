@@ -661,7 +661,7 @@
                 </div>
                 <div class="col-12">
                   <p class="text-mute">*Keep your card info is safe when shipping</p>
-                  <a class=" btn btn-success" id="save_profile_button" onClick="save_profile(this)"> Save Profile </a>
+                  <a class=" btn btn-success" id="save_profile_button" data-update="false" onClick="save_profile(this)"> Save Profile </a>
                 </div>
               </form>
             </div>
@@ -746,7 +746,7 @@
         $('#example_profile_tbody').append(
           `<tr id="list_profile_${index}" class="button__data" data-profile="${value.profile_name}"
               data-card="${value.card.card_num}" data-email="${value.misc.email}"
-              data-phone="${value.misc.phone}" data-webhook="${value.misc.webhook}" data-expiration="${value.card.exp_month}/${value.card.exp_year}" data-cv="${value.card.cvv}">
+              data-phone="${value.misc.phone}" data-webhook="${value.misc.webhook}" data-expiration="${value.card.exp_month}/${value.card.exp_year}" data-cv="${value.card.cvv}" data-index_localstorage="${index}">
               <td data-label="Profile Name">${value.profile_name}</td>
               <td data-label="Card Number" class="card__number">${value.card.card_num}</td>
               <td data-label="Action">
@@ -817,10 +817,15 @@
         },
       };
 
+      if($sp.dataset.update === "true"){
+        let index_localupdate =  parseInt($sp.dataset.index_localstorage);
+        profiles.splice(index_localupdate, 1);
+      }
+
       profiles.push(newProfile);
       var newDetails = JSON.stringify(profiles);
       window.localStorage.setItem("profiles", newDetails);
-
+      
       location.reload();
     }
 
@@ -956,6 +961,10 @@
         buttonData[i].addEventListener('click', function (e) {
           e.preventDefault();
           // if (!$(this).hasClass('active')) {
+
+          $('#save_profile_button').attr('data-update', 'true');
+          $('#save_profile_button').attr('data-index_localstorage', $(this).data('index_localstorage'));
+
           buttonData.removeClass('active');
           $(this).addClass('active');
           var dataProfile = $(this).data('profile');
