@@ -106,26 +106,6 @@ body {
   color: white !important;
 }
 
-.navbar-homepage .btn-login {
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid #7963FA;
-  margin-top: 10px;
-  color: #7963FA !important;
-}
-
-.navbar-homepage .btn-login:hover {
-  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
-  border: 1px solid transparent;
-  border-radius: 5px;
-  color: gainsboro !important;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 0.8s;
-  -webkit-box-shadow: 0px 0px 0px 1px none;
-          box-shadow: 0px 0px 0px 1px none;
-}
-
 .body-404 {
   background-image: linear-gradient(106.41deg, #3B1B74 23.02%, #230D49 76.21%);
   position: relative;
