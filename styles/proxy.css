@@ -561,8 +561,29 @@ body {
   font-weight: 600;
 }
 
-.profile .your-profile-right .profile-information .profile-information-left .alert__proxy a img {
-  margin-top: -5px;
+.profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch {
+  margin-top: -4px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch .form-check-label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  color: #FFFFFF;
+  margin-left: 8px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch .form-check-input {
+  width: 46px;
+  height: 26px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch .form-check-input:checked {
+  background-color: #28C76F;
+  border: none;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .proxy__list {
@@ -576,6 +597,12 @@ body {
 .profile .your-profile-right .profile-information .profile-information-left .table {
   margin-bottom: 0;
   padding: 0;
+  position: relative;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table .action__proxy {
+  background-color: transparent;
+  border: none;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table .form-check .form-check-input {
