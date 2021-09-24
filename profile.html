@@ -661,7 +661,8 @@
                 </div>
                 <div class="col-12">
                   <p class="text-mute">*Keep your card info is safe when shipping</p>
-                  <button class=" btn btn-success" id="save_profile_button" data-update="false" onClick="save_profile(this)"> Save Profile </button>
+                  <button class=" btn btn-success" id="save_profile_button" data-update="false"
+                    onClick="save_profile(this)"> Save Profile </button>
                 </div>
               </form>
             </div>
@@ -778,24 +779,34 @@
       })
     }
 
-    doneInput();
+    setInterval(() => {
+      doneInput();
+    }, 1000);
 
-    $("#profilename, #firtsname, #lastname, #country, #address1, #address2, #city, #zipcode, #state,#firstname_billing, #lastname_billing, #country_billing, #address1_billing, #address2_billing, #city_billing, #zipcode_billing, #state_billing, #CardNumber, #cardCvv, #cardExpiration, #Email, #phonenumber, #webhook").each((index, value) => {
-      $('#'+value.id).change(() => {
-        doneInput();
-        console.log($("#cardExpiration").val())
+    $("#profilename, #firtsname, #lastname, #country, #address1, #address2, #city, #zipcode, #state,#firstname_billing, #lastname_billing, #country_billing, #address1_billing, #address2_billing, #city_billing, #zipcode_billing, #state_billing, #CardNumber, #cardCvv, #cardExpiration, #Email, #phonenumber, #webhook")
+      .each((index, value) => {
+        $('#' + value.id).change(() => {
+          doneInput();
+          console.log($("#cardExpiration").val())
+        })
       })
-    })
 
-    function doneInput(){
-      if($("#profilename").val() !== "" && $("#firtsname").val() !== "" && $("#lastname").val() !== "" && $("#country").val() !== "" && $("#address1").val() !== "" && $("#address2").val() !== "" && $("#city").val() !== "" && $("#zipcode").val() !== "" && $("#state").val() !== "" && $("#firstname_billing").val() !== "" && $("#lastname_billing").val() !== "" && $("#country_billing").val() !== "" && $("#address1_billing").val() !== "" && $("#address2_billing").val() !== "" && $("#city_billing").val() !== "" && $("#zipcode_billing").val() !== "" && $("#state_billing").val() !== "" && $("#CardNumber").val() !== "" && $("#cardCvv").val() !== "" && $("#cardExpiration").val() !== "" && $("#Email").val() !== "" && $("#phonenumber").val() !== "" && $("#webhook").val() !== ""){
-        if($("#cardExpiration").val().includes("/")){
+    function doneInput() {
+      if ($("#profilename").val() !== "" && $("#firtsname").val() !== "" && $("#lastname").val() !== "" && $("#country")
+        .val() !== "" && $("#address1").val() !== "" && $("#address2").val() !== "" && $("#city").val() !== "" && $(
+          "#zipcode").val() !== "" && $("#state").val() !== "" && $("#firstname_billing").val() !== "" && $(
+          "#lastname_billing").val() !== "" && $("#country_billing").val() !== "" && $("#address1_billing").val() !==
+        "" && $("#address2_billing").val() !== "" && $("#city_billing").val() !== "" && $("#zipcode_billing").val() !==
+        "" && $("#state_billing").val() !== "" && $("#CardNumber").val() !== "" && $("#cardCvv").val() !== "" && $(
+          "#cardExpiration").val() !== "" && $("#Email").val() !== "" && $("#phonenumber").val() !== "" && $("#webhook")
+        .val() !== "") {
+        if ($("#cardExpiration").val().includes("/")) {
           $('#save_profile_button').removeAttr("disabled");
-        }else{
+        } else {
           $('#save_profile_button').attr("disabled", 'disabled');
           alert('Card Expiration Must Be Includes "/" Like This "12/12"');
         }
-      }else{
+      } else {
         $('#save_profile_button').attr("disabled", 'disabled');
       }
     }
@@ -849,15 +860,15 @@
         },
       };
 
-      if($sp.dataset.update === "true"){
-        let index_localupdate =  parseInt($sp.dataset.index_localstorage);
+      if ($sp.dataset.update === "true") {
+        let index_localupdate = parseInt($sp.dataset.index_localstorage);
         profiles.splice(index_localupdate, 1);
       }
 
       profiles.push(newProfile);
       var newDetails = JSON.stringify(profiles);
       window.localStorage.setItem("profiles", newDetails);
-      
+
       location.reload();
     }
 
@@ -992,7 +1003,7 @@
       for (var i = 0; i < buttonData.length; i++) {
         buttonData[i].addEventListener('click', function (e) {
           e.preventDefault();
-          
+
           $('#save_profile_button').attr('data-update', 'true');
           $('#save_profile_button').attr('data-index_localstorage', $(this).data('index_localstorage'));
 
