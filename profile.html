@@ -431,9 +431,9 @@
               <form id="step-2" class="text-white setup-content">
                 <div class="row">
                   <div class="col-6 col-md-6">
-                    <label for="firtsname" class="form-label">Firts Name</label>
+                    <label for="firstname" class="form-label">Firts Name</label>
                     <div class="gradien__form">
-                      <input type="text" class="form-control" id="firtsname" placeholder="Firts Name"
+                      <input type="text" class="form-control" id="firstname" placeholder="Firts Name"
                         name="firt_name[1]" value="">
                       <span></span>
                     </div>
@@ -508,9 +508,9 @@
               <form id="step-3" class="setup-content text-white">
                 <div class="row">
                   <div class="col-6 col-md-6">
-                    <label for="firtsname_billing" class="form-label">Firts Name</label>
+                    <label for="firstname_billing" class="form-label">Firts Name</label>
                     <div class="gradien__form">
-                      <input type="text" class="form-control" id="firtsname_billing" placeholder="Firts Name"
+                      <input type="text" class="form-control" id="firstname_billing" placeholder="Firts Name"
                         name="firt_name[2]" value="">
                       <span></span>
                     </div>
@@ -661,7 +661,7 @@
                 </div>
                 <div class="col-12">
                   <p class="text-mute">*Keep your card info is safe when shipping</p>
-                  <a class=" btn btn-success" id="save_profile_button" data-update="false" onClick="save_profile(this)"> Save Profile </a>
+                  <button class=" btn btn-success" id="save_profile_button" data-update="false" onClick="save_profile(this)"> Save Profile </button>
                 </div>
               </form>
             </div>
@@ -735,7 +735,6 @@
     $('#example_profile_tbody').empty();
 
     var profiles = JSON.parse(window.localStorage.getItem("profiles"));
-    console.log(profiles)
     if (profiles === null || profiles.length == 0) {
       profiles = [];
       $('#delete_btn').hide();
@@ -743,10 +742,21 @@
     } else {
       $('.kosong').hide();
       $.each(profiles, (index, value) => {
+        console.log(value);
         $('#example_profile_tbody').append(
           `<tr id="list_profile_${index}" class="button__data" data-profile="${value.profile_name}"
               data-card="${value.card.card_num}" data-email="${value.misc.email}"
-              data-phone="${value.misc.phone}" data-webhook="${value.misc.webhook}" data-expiration="${value.card.exp_month}/${value.card.exp_year}" data-cv="${value.card.cvv}" data-index_localstorage="${index}">
+              data-phone="${value.misc.phone}" data-webhook="${value.misc.webhook}"
+              data-firstname="${value.shipping.first_name}" data-lastname="${value.shipping.last_name}" 
+              data-country="${value.shipping.country}" data-address1="${value.shipping.address_one}" 
+              data-address2="${value.shipping.address_two}" data-city="${value.shipping.city}" 
+              data-zipcode="${value.shipping.postCode}" data-state="${value.shipping.stateAb}"
+              data-firstname_billing="${value.billing.first_name}" data-lastname_billing="${value.billing.last_name}" 
+              data-country_billing="${value.billing.country}" data-address1_billing="${value.billing.address_one}" 
+              data-address2_billing="${value.billing.address_two}" data-city_billing="${value.billing.city}" 
+              data-zipcode_billing="${value.billing.postCode}" data-state_billing="${value.billing.stateAb}"
+              data-expiration="${value.card.exp_month}/${value.card.exp_year}" 
+              data-cv="${value.card.cvv}" data-index_localstorage="${index}">
               <td data-label="Profile Name">${value.profile_name}</td>
               <td data-label="Card Number" class="card__number">${value.card.card_num}</td>
               <td data-label="Action">
@@ -768,6 +778,28 @@
       })
     }
 
+    doneInput();
+
+    $("#profilename, #firtsname, #lastname, #country, #address1, #address2, #city, #zipcode, #state,#firstname_billing, #lastname_billing, #country_billing, #address1_billing, #address2_billing, #city_billing, #zipcode_billing, #state_billing, #CardNumber, #cardCvv, #cardExpiration, #Email, #phonenumber, #webhook").each((index, value) => {
+      $('#'+value.id).change(() => {
+        doneInput();
+        console.log($("#cardExpiration").val())
+      })
+    })
+
+    function doneInput(){
+      if($("#profilename").val() !== "" && $("#firtsname").val() !== "" && $("#lastname").val() !== "" && $("#country").val() !== "" && $("#address1").val() !== "" && $("#address2").val() !== "" && $("#city").val() !== "" && $("#zipcode").val() !== "" && $("#state").val() !== "" && $("#firstname_billing").val() !== "" && $("#lastname_billing").val() !== "" && $("#country_billing").val() !== "" && $("#address1_billing").val() !== "" && $("#address2_billing").val() !== "" && $("#city_billing").val() !== "" && $("#zipcode_billing").val() !== "" && $("#state_billing").val() !== "" && $("#CardNumber").val() !== "" && $("#cardCvv").val() !== "" && $("#cardExpiration").val() !== "" && $("#Email").val() !== "" && $("#phonenumber").val() !== "" && $("#webhook").val() !== ""){
+        if($("#cardExpiration").val().includes("/")){
+          $('#save_profile_button').removeAttr("disabled");
+        }else{
+          $('#save_profile_button').attr("disabled", 'disabled');
+          alert('Card Expiration Must Be Includes "/" Like This "12/12"');
+        }
+      }else{
+        $('#save_profile_button').attr("disabled", 'disabled');
+      }
+    }
+
     function save_profile($sp) {
       const newProfile = {
         profile_name: $("#profilename").val(),
@@ -784,7 +816,7 @@
           stateAb: $("#state").val(),
         },
         billing: {
-          first_name: $("#firtsname_billing").val(),
+          first_name: $("#firstname_billing").val(),
           last_name: $("#lastname_billing").val(),
           country: $("#country_billing").val(),
           address_one: $("#address1_billing").val(),
@@ -960,8 +992,7 @@
       for (var i = 0; i < buttonData.length; i++) {
         buttonData[i].addEventListener('click', function (e) {
           e.preventDefault();
-          // if (!$(this).hasClass('active')) {
-
+          
           $('#save_profile_button').attr('data-update', 'true');
           $('#save_profile_button').attr('data-index_localstorage', $(this).data('index_localstorage'));
 
@@ -974,6 +1005,25 @@
           var dataWebhook = $(this).data('webhook');
           var dataExpiration = $(this).data('expiration');
           var dataCv = $(this).data('cv');
+
+          var firstname = $(this).data('firstname');
+          var lastname = $(this).data('lastname');
+          var country = $(this).data('country');
+          var address1 = $(this).data('address1');
+          var address2 = $(this).data('address2');
+          var city = $(this).data('city');
+          var zipcode = $(this).data('zipcode');
+          var state = $(this).data('state');
+
+          var firstname_billing = $(this).data('firstname_billing');
+          var lastname_billing = $(this).data('lastname_billing');
+          var country_billing = $(this).data('country_billing');
+          var address1_billing = $(this).data('address1_billing');
+          var address2_billing = $(this).data('address2_billing');
+          var city_billing = $(this).data('city_billing');
+          var zipcode_billing = $(this).data('zipcode_billing');
+          var state_billing = $(this).data('state_billing');
+
           $('#profilename').val(dataProfile);
           $('#Email').val(dataEmail);
           $('#phonenumber').val(dataPhone);
@@ -986,6 +1036,26 @@
           $('#cardCvvTitle').text(dataCv);
           $('#cardExpiration').val(dataExpiration);
           $('#cardCvv').val(dataCv);
+
+          $('#firstname').val(firstname);
+          $('#lastname').val(lastname);
+          $('#country').val(country);
+          $('#address1').val(address1);
+          $('#address2').val(address2);
+          $('#city').val(city);
+          $('#zipcode').val(zipcode);
+          $('#state').val(state);
+
+          $('#firstname_billing').val(firstname_billing);
+          $('#lastname_billing').val(lastname_billing);
+          $('#country_billing').val(country_billing);
+          $('#address1_billing').val(address1_billing);
+          $('#address2_billing').val(address2_billing);
+          $('#city_billing').val(city_billing);
+          $('#zipcode_billing').val(zipcode_billing);
+          $('#state_billing').val(state_billing);
+
+          doneInput();
         });
       }
     });
