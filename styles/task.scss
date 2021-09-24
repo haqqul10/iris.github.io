@@ -41,7 +41,7 @@ body {
 
 /*css3 design scrollbar*/
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -583,7 +583,8 @@ body {
             .pagination-default {
                 display: block;
             }
-            .pagination{
+
+            .pagination {
                 align-items: baseline;
             }
         }

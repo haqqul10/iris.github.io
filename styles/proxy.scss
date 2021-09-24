@@ -52,7 +52,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -668,6 +669,9 @@ body {
                     margin-bottom: 0;
                     padding: 0;
                     position: relative;
+                    overflow: auto;
+                    max-height: 375px;
+                    display: block;
 
                     .action__proxy {
                         background-color: transparent;
@@ -685,6 +689,8 @@ body {
                     }
 
                     thead {
+                        position: sticky;
+                        top: 0;
                         background-color: #33275C;
 
                         tr {
