@@ -595,6 +595,7 @@ body {
   background-color: #1B143C;
   border-radius: 6px;
   color: white;
+  margin-bottom: 16px;
 }
 
 .profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control::-webkit-input-placeholder {

@@ -15,6 +15,8 @@
   <!-- MyCSS -->
   <link rel="stylesheet" href="styles/profile.css">
 
+  <link rel="stylesheet" href="libraries/jquery/toastr.min.css">
+
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
   <title>Profile</title>
@@ -697,6 +699,7 @@
   <script src="libraries/bootstrap/js/bootstrap.js"></script>
   <script src="libraries/jquery/jquery-3.5.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libraries/jquery/toastr.min.js"></script>
   <!-- <script src="libraries/jquery/jquery.dataTables.min.js"></script> -->
   <!-- <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script> -->
   <!-- <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script> -->
@@ -800,7 +803,8 @@
           $('#save_profile_button').removeAttr("disabled");
         } else {
           $('#save_profile_button').attr("disabled", 'disabled');
-          alert('Card Expiration Must Be Includes "/" Like This "12/12"');
+          // alert('Card Expiration Must Be Includes "/" Like This "12/12"');
+          toastr.error('Card Expiration Must Be Includes "/" Like This "12/12"', 'Error')
         }
       } else {
         $('#save_profile_button').attr("disabled", 'disabled');
@@ -954,13 +958,13 @@
           }, 0);
 
         $('[name="step_click"]').each((index, value) => {
-          if(index >= nextStepWizard){
+          if (index >= nextStepWizard) {
             value.classList.replace('btn-success', 'btn-default');
           }
 
-          if(index > nextStepWizard){
+          if (index > nextStepWizard) {
             value.classList.add('disabled');
-          }else{
+          } else {
             value.classList.remove('disabled');
           }
         })
@@ -973,8 +977,8 @@
         $target.show();
         $target.find('input:eq(0)').focus();
         // if (!$item.hasClass('disabled')) {
-          // navListItems.addClass('btn-success');
-          // $item.removeClass('btn-success').addClass('btn-default');
+        // navListItems.addClass('btn-success');
+        // $item.removeClass('btn-success').addClass('btn-default');
         // }
       });
 
