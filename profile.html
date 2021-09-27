@@ -214,9 +214,9 @@
                 <table class="table text-white" id="example" class="">
                   <thead style="background-color: #33275C; border-radius: 6px;">
                     <tr>
-                      <th width=150>Profile Name</th>
-                      <th width="135">Card Number</th>
-                      <th width=80>Action</th>
+                      <th width=135>Profile Name</th>
+                      <th width="160">Card Number</th>
+                      <th width=50>Action</th>
                     </tr>
                   </thead>
                   <tbody id="example_profile_tbody">
@@ -639,8 +639,8 @@
                 <div class="form__label">
                   <label for="Card Number" class="form-label">Card Number</label>
                   <div class="gradien__form">
-                    <input type="number" class="form-control" id="CardNumber"
-                      placeholder="4241 &emsp; 9214 &emsp; 7219 &emsp; 3456" maxlength="12" oninput="javascript: if
+                    <input type="text" class="form-control" id="CardNumber"
+                      placeholder="4241 &emsp; 9214 &emsp; 7219 &emsp; 3456" maxlength="19" oninput="javascript: if
                       (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                     <span></span>
                   </div>
@@ -1069,6 +1069,18 @@
           doneInput();
         });
       }
+    });
+
+    // card number space
+    $('#CardNumber').on('keyup', function (e) {
+      var val = $(this).val();
+      var newval = '';
+      val = val.replace(/\s/g, '');
+      for (var i = 0; i < val.length; i++) {
+        if (i % 4 == 0 && i > 0) newval = newval.concat(' ');
+        newval = newval.concat(val[i]);
+      }
+      $(this).val(newval);
     });
   </script>
 

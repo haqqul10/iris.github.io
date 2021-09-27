@@ -632,8 +632,9 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   background-color: #33275C;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='#BBB9C5'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23BBB9C5'/%3e%3c/svg%3e");
   border: none;
+  fill: #BBB9C5;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch .form-check-input:checked {
