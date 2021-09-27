@@ -203,7 +203,7 @@
               <p class="text-white">Your Proxy</p>
             </div>
             <div class="col-12 col-md-6">
-              <form>
+              <form class="form__search">
                 <img src="./images/icons/search.svg" alt="">
                 <input class="form-control" id="search_proxy" type="search" placeholder="Search Proxy"
                   aria-label="Search">
@@ -348,10 +348,84 @@
                 </table>
               </div>
               <div class="action-knob text-center">
-                <a href="" class="btn btn-primary">Create New Group</a>
+                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create
+                  New Group</a>
                 <a href="" class="btn btn-danger">Delete All</a>
               </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
+                        width="24"></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="row text-white pt-4">
+                      <div class="col-12 col-md-6">
+                        <label for="proxyname" class="form-label">Proxy Name</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="proxyname" placeholder="Proxy Name">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="amount" class="form-label">Amount</label>
+                        <div class="gradien__form">
+                          <input type="email" class="form-control" id="amount" placeholder="Amount">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ip" class="form-label">IP</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="ip" placeholder="IP">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="port" class="form-label">Port</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="port" placeholder="Port">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="username" placeholder="Username">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="password" placeholder="Password">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="details" class="form-label">Details</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="details" placeholder="Details">
+                          <span></span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer mx-auto">
+                    <a href="" class=" btn add__new__task"> Add New Proxy </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- akhir modal -->
+
           </div>
         </div>
         <div class="col-11 col-lg-8 your-profile-right">

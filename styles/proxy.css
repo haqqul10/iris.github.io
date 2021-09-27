@@ -346,12 +346,12 @@ body {
   font-size: 20px;
 }
 
-.profile .your-profile-left form {
+.profile .your-profile-left .form__search {
   position: relative;
   z-index: 1;
 }
 
-.profile .your-profile-left form .form-control {
+.profile .your-profile-left .form__search .form-control {
   font-size: 12px;
   height: 44px;
   background-color: transparent;
@@ -361,23 +361,23 @@ body {
   color: white;
 }
 
-.profile .your-profile-left form .form-control::-webkit-input-placeholder {
+.profile .your-profile-left .form__search .form-control::-webkit-input-placeholder {
   color: #8D899E;
 }
 
-.profile .your-profile-left form .form-control:-ms-input-placeholder {
+.profile .your-profile-left .form__search .form-control:-ms-input-placeholder {
   color: #8D899E;
 }
 
-.profile .your-profile-left form .form-control::-ms-input-placeholder {
+.profile .your-profile-left .form__search .form-control::-ms-input-placeholder {
   color: #8D899E;
 }
 
-.profile .your-profile-left form .form-control::placeholder {
+.profile .your-profile-left .form__search .form-control::placeholder {
   color: #8D899E;
 }
 
-.profile .your-profile-left form .form-control:focus {
+.profile .your-profile-left .form__search .form-control:focus {
   position: relative;
   outline: none;
   -webkit-box-shadow: none;
@@ -387,13 +387,13 @@ body {
   background-color: #221B4A;
 }
 
-.profile .your-profile-left form .form-control:focus + label {
+.profile .your-profile-left .form__search .form-control:focus + label {
   width: 100%;
   height: 100%;
   background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
 }
 
-.profile .your-profile-left form .form-control + label {
+.profile .your-profile-left .form__search .form-control + label {
   border-radius: 6px;
   display: block;
   content: "";
@@ -405,7 +405,7 @@ body {
   z-index: -1;
 }
 
-.profile .your-profile-left form img {
+.profile .your-profile-left .form__search img {
   position: absolute;
   top: 22%;
   right: 0;
@@ -549,6 +549,124 @@ body {
   background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border: none;
   color: white;
+}
+
+.profile .your-profile-left .table-profile .modal-lg {
+  width: auto;
+}
+
+.profile .your-profile-left .table-profile .modal-content {
+  background: rgba(121, 99, 250, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 6px;
+  border: none;
+  padding: 16px 18px;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-header {
+  border-bottom: none;
+  padding: 0;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-header .modal-title {
+  font-size: 32px;
+  line-height: 38px;
+  color: white;
+  font-weight: 600;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-header .btn-close {
+  display: none;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body {
+  padding: 0;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form {
+  position: relative;
+  z-index: 1;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control {
+  height: 44px;
+  border: 2px solid #1B143C;
+  background-color: #1B143C;
+  border-radius: 6px;
+  color: white;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control::-webkit-input-placeholder {
+  color: #8D899E;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control:-ms-input-placeholder {
+  color: #8D899E;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control::-ms-input-placeholder {
+  color: #8D899E;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control::placeholder {
+  color: #8D899E;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control:focus {
+  position: relative;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control:focus + span {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-body .gradien__form .form-control + span {
+  border-radius: 6px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-footer {
+  padding: 0;
+  border-top: none;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-footer .add__new__task {
+  background-color: #7963FA;
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  border-color: #7963FA;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 28px;
+  border: none;
+}
+
+.profile .your-profile-left .table-profile .modal-content .modal-footer .add__new__task:hover {
+  background: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8s;
+  border: none;
 }
 
 .profile .your-profile-right {
@@ -1082,13 +1200,13 @@ footer a:hover {
   .profile .your-profile-left .judul-profile p {
     margin-bottom: 0;
   }
-  .profile .your-profile-left form .form-control {
+  .profile .your-profile-left .form__search .form-control {
     width: 171px;
   }
-  .profile .your-profile-left form .form-control:focus + label {
+  .profile .your-profile-left .form__search .form-control:focus + label {
     width: 171px;
   }
-  .profile .your-profile-left form img {
+  .profile .your-profile-left .form__search img {
     left: 8%;
   }
   .profile .your-profile-left .table-profile .action-knob {
@@ -1103,6 +1221,16 @@ footer a:hover {
   }
   .profile .your-profile-left .table-profile .table tbody tr .text-white {
     width: 200px;
+  }
+  .profile .your-profile-left .table-profile .modal-lg {
+    width: 664px;
+  }
+  .profile .your-profile-left .table-profile .modal-lg .modal-content {
+    padding: 56px 64px;
+  }
+  .profile .your-profile-left .table-profile .modal-lg .modal-content .modal-footer .add__new__task {
+    width: 330px;
+    padding: 10px 0;
   }
   .profile .your-profile-right {
     padding-left: 0;
