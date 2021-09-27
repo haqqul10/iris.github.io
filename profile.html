@@ -743,7 +743,6 @@
     } else {
       $('.kosong').hide();
       $.each(profiles, (index, value) => {
-        console.log(value);
         $('#example_profile_tbody').append(
           `<tr id="list_profile_${index}" class="button__data" data-profile="${value.profile_name}"
               data-card="${value.card.card_num}" data-email="${value.misc.email}"
@@ -779,20 +778,17 @@
       })
     }
 
-    setInterval(() => {
-      doneInput();
-    }, 1000);
+    doneInput();
 
-    $("#profilename, #firtsname, #lastname, #country, #address1, #address2, #city, #zipcode, #state,#firstname_billing, #lastname_billing, #country_billing, #address1_billing, #address2_billing, #city_billing, #zipcode_billing, #state_billing, #CardNumber, #cardCvv, #cardExpiration, #Email, #phonenumber, #webhook")
+    $("#profilename, #firstname, #lastname, #country, #address1, #address2, #city, #zipcode, #state,#firstname_billing, #lastname_billing, #country_billing, #address1_billing, #address2_billing, #city_billing, #zipcode_billing, #state_billing, #CardNumber, #cardCvv, #cardExpiration, #Email, #phonenumber, #webhook")
       .each((index, value) => {
         $('#' + value.id).change(() => {
           doneInput();
-          console.log($("#cardExpiration").val())
         })
       })
 
     function doneInput() {
-      if ($("#profilename").val() !== "" && $("#firtsname").val() !== "" && $("#lastname").val() !== "" && $("#country")
+      if ($("#profilename").val() !== "" && $("#firstname").val() !== "" && $("#lastname").val() !== "" && $("#country")
         .val() !== "" && $("#address1").val() !== "" && $("#address2").val() !== "" && $("#city").val() !== "" && $(
           "#zipcode").val() !== "" && $("#state").val() !== "" && $("#firstname_billing").val() !== "" && $(
           "#lastname_billing").val() !== "" && $("#country_billing").val() !== "" && $("#address1_billing").val() !==
@@ -816,7 +812,7 @@
         profile_name: $("#profilename").val(),
         user: "1",
         shipping: {
-          first_name: $("#firtsname").val(),
+          first_name: $("#firstname").val(),
           last_name: $("#lastname").val(),
           country: $("#country").val(),
           address_one: $("#address1").val(),
@@ -920,6 +916,8 @@
           $('input[name=city\\[' + this.value + '\\]]').val('');
           $('input[name=zipcode\\[' + this.value + '\\]]').val('');
         }
+
+        doneInput();
       });
     });
 
