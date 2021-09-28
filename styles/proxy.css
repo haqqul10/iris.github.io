@@ -784,6 +784,11 @@ body {
   border: none;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .table .password {
+  font-size: 17px;
+  color: #908DA4;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .table .form-check .form-check-input {
   background-color: transparent;
   border-color: #5D6180;

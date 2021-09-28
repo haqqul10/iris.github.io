@@ -353,66 +353,24 @@
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Tasks</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Create Group</h5>
                     <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
                         width="24"></a>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <form class="row text-white pt-4">
-                      <div class="col-12 col-md-6">
-                        <label for="proxyname" class="form-label">Proxy Name</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="proxyname" placeholder="Proxy Name">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="amount" class="form-label">Amount</label>
-                        <div class="gradien__form">
-                          <input type="email" class="form-control" id="amount" placeholder="Amount">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="ip" class="form-label">IP</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="ip" placeholder="IP">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="port" class="form-label">Port</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="port" placeholder="Port">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="username" class="form-label">Username</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="username" placeholder="Username">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="gradien__form">
-                          <input type="text" class="form-control" id="password" placeholder="Password">
-                          <span></span>
-                        </div>
-                      </div>
                       <div class="col-12">
-                        <label for="details" class="form-label">Details</label>
+                        <label for="details" class="form-label">Group Name</label>
                         <div class="gradien__form">
-                          <input type="text" class="form-control" id="details" placeholder="Details">
+                          <input type="text" class="form-control" id="details" placeholder="Group Name">
                           <span></span>
                         </div>
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer mx-auto">
-                    <a href="" class=" btn add__new__task"> Add New Proxy </a>
+                    <a href="" class=" btn add__new__task"> Add Group </a>
                   </div>
                 </div>
               </div>
@@ -431,15 +389,15 @@
                   <p class="alert__title">Vision</p>
                   <p class="alert__title_text">23</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
                 <table class="table text-white" id="example" class="">
                   <thead>
                     <tr>
-                      <th class="w-50">IP</th>
+                      <th>IP</th>
                       <th>Port</th>
                       <th>Username</th>
                       <th>Password</th>
@@ -453,7 +411,8 @@
                       <td data-label="Port" class="text-white">1010</td>
                       <td data-label="Username">manchini</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">24ms</td>
                       <td>
@@ -473,7 +432,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">albert</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">24ms</td>
                       <td>
@@ -493,7 +453,8 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">De Jong</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">89ms</td>
                       <td>
@@ -513,7 +474,8 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">Neymar</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">23ms</td>
                       <td>
@@ -533,7 +495,8 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">Xavi</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">28ms</td>
                       <td>
@@ -553,7 +516,8 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">messi</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">24ms</td>
                       <td>
@@ -580,7 +544,7 @@
                   <p class="alert__title">Hype ESP</p>
                   <p class="alert__title_text">20</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
                     <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
                   </div>
                 </div>
@@ -603,7 +567,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">jhonesmit</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">20ms</td>
                       <td>
@@ -631,7 +596,7 @@
                   <p class="alert__title">Indihome</p>
                   <p class="alert__title_text">10</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
                     <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
                   </div>
                 </div>
@@ -654,7 +619,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">carlos</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">29ms</td>
                       <td>
@@ -682,7 +648,7 @@
                   <p class="alert__title">Prabola</p>
                   <p class="alert__title_text">25</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
                     <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
                   </div>
                 </div>
@@ -705,7 +671,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">roberto</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">27ms</td>
                       <td>
@@ -733,7 +700,7 @@
                   <p class="alert__title">Shopee</p>
                   <p class="alert__title_text">13</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
                     <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
                   </div>
                 </div>
@@ -756,7 +723,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">cavani</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">11ms</td>
                       <td>
@@ -784,7 +752,7 @@
                   <p class="alert__title">Tokopedia</p>
                   <p class="alert__title_text">30</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch" checked>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
                     <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
                   </div>
                 </div>
@@ -807,7 +775,8 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">ronaldo</td>
                       <td data-label="Password">
-                        <img src="./images/icons/password_proxy.svg" alt="">
+                        <span class="password" id="password" data-password="manchi000">
+                          &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">34ms</td>
                       <td>
@@ -980,8 +949,13 @@
     $('.checkBoxSwitch').on('change', function () {
       if ($(this).is(':checked')) {
         $('.switch').text('On');
+        var password = $('.table .password').data('password');
+        $('.table span.password').text(password);
+        $('.table span.password').css('font-size', '14px');
       } else {
         $('.switch').text('Off');
+        $('.table span.password').html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
+        $('.table span.password').removeAttr('style');
       }
     });
   </script>
