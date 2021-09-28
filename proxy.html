@@ -432,7 +432,7 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">albert</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="messi000">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">24ms</td>
@@ -453,7 +453,7 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">De Jong</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="iisi11">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">89ms</td>
@@ -474,7 +474,7 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">Neymar</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="hazard">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">23ms</td>
@@ -495,7 +495,7 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">Xavi</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="simoi000">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">28ms</td>
@@ -516,7 +516,7 @@
                       <td data-label="Port" class="text-white">9090</td>
                       <td data-label="Username">messi</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="bencong0">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">24ms</td>
@@ -545,7 +545,7 @@
                   <p class="alert__title_text">20</p>
                   <div class="form-check form-switch">
                     <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -567,7 +567,7 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">jhonesmit</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="jhone11">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">20ms</td>
@@ -597,7 +597,7 @@
                   <p class="alert__title_text">10</p>
                   <div class="form-check form-switch">
                     <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -649,7 +649,7 @@
                   <p class="alert__title_text">25</p>
                   <div class="form-check form-switch">
                     <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -701,7 +701,7 @@
                   <p class="alert__title_text">13</p>
                   <div class="form-check form-switch">
                     <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -753,7 +753,7 @@
                   <p class="alert__title_text">30</p>
                   <div class="form-check form-switch">
                     <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">On</label>
+                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -946,18 +946,25 @@
     })
 
     // checkbox on/off
-    $('.checkBoxSwitch').on('change', function () {
-      if ($(this).is(':checked')) {
-        $('.switch').text('On');
-        var password = $('.table .password').data('password');
-        $('.table span.password').text(password);
-        $('.table span.password').css('font-size', '14px');
-      } else {
-        $('.switch').text('Off');
-        $('.table span.password').html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
-        $('.table span.password').removeAttr('style');
-      }
-    });
+    var checkBoxSwitch = $('.checkBoxSwitch');
+    checkBoxSwitch.each((index, value) => {
+      $(value).on('change', function () {
+        if ($(this).is(':checked')) {
+          $('.switch').text('On');
+          $(value).parent().parent().siblings('.table').find('span.password').each((index2, value2) => {
+            var password = $(value2).data('password');
+            $(value2).text(password);
+            $(value2).css('font-size', '14px');
+          })
+        } else {
+          $('.switch').text('Off');
+          $(value).parent().parent().siblings('.table').find('span.password').each((index3, value3) => {
+            $(value3).html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
+            $(value3).removeAttr('style');
+          })
+        }
+      });
+    })
   </script>
 </body>
 
