@@ -370,21 +370,28 @@
 
                 <div class="stepwizard-row setup-panel">
                   <div class="stepwizard-step col-lg">
-                    <a href="#step-1" type="button" name="step_click" class="btn btn-success btn-circle">1</a>
+                    <!-- <a href="#step-1"><button type="button" class="btn btn-success btn-circle"
+                        name="step_click">1</button></a> -->
+                    <!-- <a href="#step-1" type="button" name="step_click" class="btn btn-success btn-circle">1</a> -->
+                    <a href="#step-1" name="step_click" class="btn btn-success btn-circle">1</a>
                     <p>
                       <small class="small_step">Step 1</small> <br>
                       <span class="span_step">Profile</span>
                     </p>
                   </div>
                   <div class="stepwizard-step col-lg">
-                    <a href="#step-2" type="button" name="step_click" class="btn btn-default btn-circle">2</a>
+                    <!-- <a href="#step-2"><button type="button" class="btn btn-default btn-circle"
+                        name="step_click">2</button></a> -->
+                    <a href="#step-2" name="step_click" class="btn btn-default btn-circle">2</a>
                     <p>
                       <small class="small_step">Step 2</small> <br>
                       <span class="span_step">Shipping</span>
                     </p>
                   </div>
                   <div class="stepwizard-step col-lg">
-                    <a href="#step-3" type="button" name="step_click" class="btn btn-default btn-circle">3</a>
+                    <!-- <a href="#step-3"><button type="button" class="btn btn-default btn-circle"
+                        name="step_click">3</button></a> -->
+                    <a href="#step-3" name="step_click" class="btn btn-default btn-circle">3</a>
                     <p>
                       <small class="small_step">Step 3</small> <br>
                       <span class="span_step">Billing</span>
@@ -411,7 +418,8 @@
                 <div class="form__label">
                   <label for="phonenumber" class="form-label">Phone Number</label>
                   <div class="gradien__form">
-                    <input type="number" class="form-control" id="phonenumber" placeholder="Phone Number">
+                    <input type="number" maxlength="12" pattern="([0-9]|[0-9]|[0-9])" class="form-control required"
+                      id="phonenumber" placeholder="Phone Number">
                     <span class="color__gradient"></span>
                   </div>
                 </div>
@@ -423,10 +431,8 @@
                   </div>
                 </div>
                 <div class="pager float-end">
-                  <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt=""
-                      width="24"></a>
-                  <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt=""
-                      width="24"></a>
+                  <a class="arrow-left prevBtn"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                  <a class="arrow-right nextBtn"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
                 </div>
               </form>
 
@@ -500,10 +506,8 @@
                   <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
                 </div> -->
                 <div class="pager float-end">
-                  <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt=""
-                      width="24"></a>
-                  <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt=""
-                      width="24"></a>
+                  <a class="arrow-left prevBtn"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                  <a class="arrow-right nextBtn"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
                 </div>
               </form>
 
@@ -574,15 +578,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-check float-start" style="padding-bottom: 32px; padding-top: 40px;">
+                <div class="form-check float-start" style="padding-top: 40px; margin-bottom: 0;">
                   <input type="checkbox" class="form-check-input sameas" id="exampleCheck1" value="2" name="sameas">
                   <label class="form-check-label" for="exampleCheck1">Billing same as Shipping</label>
                 </div>
                 <div class="pager float-end">
-                  <a class="arrow-left prevBtn" type="submit"><img src="./images/icons/Icon=Arrow-Left2.svg" alt=""
-                      width="24"></a>
-                  <a class="arrow-right nextBtn" type="submit"><img src="./images/icons/Icon=Arrow-Right2.svg" alt=""
-                      width="24"></a>
+                  <a class="arrow-left prevBtn"><img src="./images/icons/Icon=Arrow-Left2.svg" alt="" width="24"></a>
+                  <a class="arrow-right nextBtn"><img src="./images/icons/Icon=Arrow-Right2.svg" alt="" width="24"></a>
                 </div>
               </form>
             </div>
@@ -641,9 +643,10 @@
                 <div class="form__label">
                   <label for="Card Number" class="form-label">Card Number</label>
                   <div class="gradien__form">
-                    <input type="text" class="form-control" id="CardNumber"
+                    <input type="text" class="form-control required" id="CardNumber"
                       placeholder="4241 &emsp; 9214 &emsp; 7219 &emsp; 3456" maxlength="19" oninput="javascript: if
-                      (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                      (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+                      this.value=this.value.replace(/[^0-9]/g,'');">
                     <span></span>
                   </div>
                 </div>
@@ -712,6 +715,9 @@
       "positionClass": "toast-bottom-right",
     }
 
+    $("#phonenumber").keyup(function () {
+      $("#phonenumber").val(this.value.match(/[0-9]*/));
+    });
 
     // search
     $("#search").on("keyup", function () {
@@ -1107,6 +1113,7 @@
         newval = newval.concat(val[i]);
       }
       $(this).val(newval);
+
     });
   </script>
 

@@ -660,7 +660,7 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-left #webhook {
-  margin-bottom: 54px;
+  margin-bottom: 92px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .form-check .form-check-input {
@@ -675,17 +675,29 @@ body {
   padding-top: 4px;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .pager {
+  padding-top: 45px;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .pager .arrow-left {
   background-color: #33275C;
-  padding: 9px 9px;
+  padding: 13px 12px;
   border-radius: 6px;
   margin-right: 14px;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .pager .arrow-left img {
+  vertical-align: top;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .pager .arrow-right {
   background-color: #7963FA;
-  padding: 9px 9px;
+  padding: 13px 12px;
   border-radius: 6px;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .pager .arrow-right img {
+  vertical-align: top;
 }
 
 .profile .your-profile-right .profile-information .profile-information-right {
@@ -959,6 +971,7 @@ footer a:hover {
   }
   .profile .your-profile-left {
     width: 427px;
+    height: 775px;
   }
   .profile .your-profile-left .judul-profile {
     padding: 20px 15px 24px 40px;
@@ -988,15 +1001,13 @@ footer a:hover {
   .profile .your-profile-right .profile-information {
     margin-left: 5px;
     margin-top: auto;
+    height: 775px;
   }
   .profile .your-profile-right .profile-information .profile-information-left {
     padding-top: 32px;
     padding-left: 32px;
     padding-bottom: 32px;
     padding-right: 40px;
-  }
-  .profile .your-profile-right .profile-information .profile-information-left .pager {
-    padding-top: 38px;
   }
   .profile .your-profile-right .profile-information .profile-information-right {
     padding-right: 32px;

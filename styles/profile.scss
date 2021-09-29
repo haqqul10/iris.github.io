@@ -676,7 +676,7 @@ body {
                 }
 
                 #webhook {
-                    margin-bottom: 54px;
+                    margin-bottom: 92px;
                 }
 
                 .form-check {
@@ -694,17 +694,28 @@ body {
                 }
 
                 .pager {
+                    padding-top: 45px;
+
                     .arrow-left {
                         background-color: $color4;
-                        padding: 9px 9px;
+                        padding: 13px 12px;
                         border-radius: 6px;
                         margin-right: 14px;
+
+                        img {
+                            vertical-align: top;
+                        }
                     }
 
                     .arrow-right {
                         background-color: $color6;
-                        padding: 9px 9px;
+                        padding: 13px 12px;
                         border-radius: 6px;
+
+                        img {
+                            vertical-align: top;
+
+                        }
                     }
                 }
             }
@@ -1023,6 +1034,7 @@ footer {
     .profile {
         .your-profile-left {
             width: 427px;
+            height: 775px;
 
             .judul-profile {
                 padding: 20px 15px 24px 40px;
@@ -1073,6 +1085,7 @@ footer {
             .profile-information {
                 margin-left: 5px;
                 margin-top: auto;
+                height: 775px;
 
                 .profile-information-left {
                     padding-top: 32px;
@@ -1081,7 +1094,7 @@ footer {
                     padding-right: 40px;
 
                     .pager {
-                        padding-top: 38px;
+                        // padding-top: 45px;
                     }
                 }
 

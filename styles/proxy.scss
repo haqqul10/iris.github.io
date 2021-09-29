@@ -738,11 +738,21 @@ body {
 
                         .form-check-label {
                             font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
+                            font-weight: 500;
+                            font-size: 12px;
                             line-height: 125%;
                             color: #FFFFFF;
-                            margin-left: 8px;
+                            width: 64px;
+                            height: 24px;
+                            border: 1px solid #FFFFFF;
+                            border-radius: 4px;
+                            text-align: center;
+                            padding: 3px 0;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
                         }
 
                         .form-check-input {
@@ -755,6 +765,7 @@ body {
                             // background-size: 18px;
                             border: none;
                             fill: #BBB9C5;
+                            display: none;
 
                             &:checked {
                                 background-color: #28C76F;

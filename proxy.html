@@ -389,8 +389,9 @@
                   <p class="alert__title">Vision</p>
                   <p class="alert__title_text">23</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch1">
+                    <label class="form-check-label switch" for="checkBoxSwitch1" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -446,6 +447,7 @@
                           '>
                           <img src="./images/icons/more-horizontal-proxy.svg" alt="" class="more__horizontal__proxy">
                         </button>
+
                       </td>
                     </tr>
                     <tr>
@@ -544,8 +546,9 @@
                   <p class="alert__title">Hype ESP</p>
                   <p class="alert__title_text">20</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch2">
+                    <label class="form-check-label switch" for="checkBoxSwitch2" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -596,8 +599,9 @@
                   <p class="alert__title">Indihome</p>
                   <p class="alert__title_text">10</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch3">
+                    <label class="form-check-label switch" for="checkBoxSwitch3" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -648,8 +652,9 @@
                   <p class="alert__title">Prabola</p>
                   <p class="alert__title_text">25</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch4">
+                    <label class="form-check-label switch" for="checkBoxSwitch4" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -671,7 +676,7 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">roberto</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="roberto">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">27ms</td>
@@ -700,8 +705,9 @@
                   <p class="alert__title">Shopee</p>
                   <p class="alert__title_text">13</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch5">
+                    <label class="form-check-label switch" for="checkBoxSwitch5" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -752,8 +758,9 @@
                   <p class="alert__title">Tokopedia</p>
                   <p class="alert__title_text">30</p>
                   <div class="form-check form-switch">
-                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch">
-                    <label class="form-check-label switch" for="checkBoxSwitch" id="switch">Off</label>
+                    <input class="form-check-input checkBoxSwitch" type="checkbox" id="checkBoxSwitch6">
+                    <label class="form-check-label switch" for="checkBoxSwitch6" id="switch">Hide <img
+                        src="./images/icons/Icon=Eye-Off.svg" alt=""></label>
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
@@ -775,7 +782,7 @@
                       <td data-label="Port" class="text-white">8080</td>
                       <td data-label="Username">ronaldo</td>
                       <td data-label="Password">
-                        <span class="password" id="password" data-password="manchi000">
+                        <span class="password" id="password" data-password="aman000">
                           &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull; </span>
                       </td>
                       <td data-label="Ping">34ms</td>
@@ -948,16 +955,17 @@
     // checkbox on/off
     var checkBoxSwitch = $('.checkBoxSwitch');
     checkBoxSwitch.each((index, value) => {
+      // console.log(value, $(value).parent().parent().siblings('.table').find('span.password'));
       $(value).on('change', function () {
         if ($(this).is(':checked')) {
-          $('.switch').text('On');
+          $('.switch').html('Show <img src="./images/icons/Icon=Eye.svg" alt="">');
           $(value).parent().parent().siblings('.table').find('span.password').each((index2, value2) => {
             var password = $(value2).data('password');
             $(value2).text(password);
             $(value2).css('font-size', '14px');
           })
         } else {
-          $('.switch').text('Off');
+          $('.switch').html('Hide <img src="./images/icons/Icon=Eye-Off.svg" alt="">');
           $(value).parent().parent().siblings('.table').find('span.password').each((index3, value3) => {
             $(value3).html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
             $(value3).removeAttr('style');
