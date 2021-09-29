@@ -253,7 +253,7 @@ body {
   text-align: center;
   font-weight: 700;
   font-family: 'Larsseit-bold';
-  line-height: 60px;
+  line-height: 42px;
   font-size: 32px;
   margin-bottom: 24px;
 }
@@ -917,6 +917,7 @@ body {
     margin-top: 170px;
     line-height: 60px;
     font-size: 48px;
+    line-height: 60px;
   }
   .support .container .title__support img {
     margin-right: 15px;

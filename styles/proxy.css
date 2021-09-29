@@ -1345,63 +1345,6 @@ footer a:hover {
   .navbar-dashboard {
     height: 80px;
   }
-  .navbar-dashboard .container .collapse {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    left: 0;
-    position: absolute;
-    background-color: #221B4A;
-    width: 70%;
-    height: 100vh;
-    z-index: -1;
-    top: 0;
-    -webkit-transition: all 0.6s;
-    transition: all 0.6s;
-    padding-top: 210px;
-    padding-left: 20px;
-    padding-right: 20px;
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  .navbar-dashboard .container .collapse .navbar-nav {
-    height: 100vh;
-    width: 100%;
-    display: inline;
-    z-index: -1;
-  }
-  .navbar-dashboard .container .collapse .navbar-nav .nav-item {
-    position: relative;
-    padding: 8px 0;
-    margin-right: 0;
-  }
-  .navbar-dashboard .container .collapse .navbar-nav .nav-item .active {
-    padding-left: 8px;
-  }
-  .navbar-dashboard .container .collapse .navbar-nav .nav-item .nav-link {
-    text-align: left;
-    padding-left: 19px;
-  }
-  .navbar-dashboard .container .collapse .logo_collapse {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-  .navbar-dashboard .container .collapse .icon__delete__responsive {
-    display: block;
-    position: absolute;
-    top: 27px;
-    right: 20px;
-    cursor: pointer;
-  }
-  .navbar-dashboard .container .collapse .my__profile__collapse {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-  }
   .navbar-dashboard .container .icon_notification_collapse {
     padding: 0;
   }

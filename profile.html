@@ -650,14 +650,17 @@
                 <div class="col-6 col-md-6">
                   <label for="Card Expiration" class="form-label">Card Expiration</label>
                   <div class="gradien__form">
-                    <input type="text" class="form-control" id="cardExpiration" placeholder="12/13">
+                    <input type="text" class="form-control" id="cardExpiration" placeholder="12/13" maxlength="5"
+                      oninput="javascript: if
+                      (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                     <span></span>
                   </div>
                 </div>
                 <div class="col-6 col-md-6">
                   <label for="CVV" class="form-label cvv">CVV</label>
                   <div class="gradien__form">
-                    <input type="text" class="form-control" id="cardCvv" placeholder="123">
+                    <input type="text" class="form-control" id="cardCvv" placeholder="123" maxlength="3" oninput="javascript: if
+                      (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                     <span></span>
                   </div>
                 </div>

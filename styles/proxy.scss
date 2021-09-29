@@ -1425,72 +1425,72 @@ footer {
         height: 80px;
 
         .container {
-            .collapse {
-                display: flex;
-                left: 0;
-                position: absolute;
-                background-color: #221B4A;
-                width: 70%;
-                height: 100vh;
-                // opacity: 0;
-                z-index: -1;
-                top: 0;
-                transition: all 0.6s;
-                padding-top: 210px;
-                padding-left: 20px;
-                padding-right: 20px;
-                transform: translateX(-200%);
+            // .collapse {
+            //     display: flex;
+            //     left: 0;
+            //     position: absolute;
+            //     background-color: #221B4A;
+            //     width: 70%;
+            //     height: 100vh;
+            //     // opacity: 0;
+            //     z-index: -1;
+            //     top: 0;
+            //     transition: all 0.6s;
+            //     padding-top: 210px;
+            //     padding-left: 20px;
+            //     padding-right: 20px;
+            //     transform: translateX(-200%);
 
 
 
-                .navbar-nav {
-                    height: 100vh;
-                    width: 100%;
-                    display: inline;
-                    z-index: -1;
+            //     .navbar-nav {
+            //         height: 100vh;
+            //         width: 100%;
+            //         display: inline;
+            //         z-index: -1;
 
-                    .nav-item {
-                        position: relative;
-                        // z-index: -1;
-                        padding: 8px 0;
-                        margin-right: 0;
+            //         .nav-item {
+            //             position: relative;
+            //             // z-index: -1;
+            //             padding: 8px 0;
+            //             margin-right: 0;
 
-                        .active {
-                            padding-left: 8px;
-                        }
+            //             .active {
+            //                 padding-left: 8px;
+            //             }
 
-                        .nav-link {
-                            text-align: left;
-                            padding-left: 19px;
-                        }
+            //             .nav-link {
+            //                 text-align: left;
+            //                 padding-left: 19px;
+            //             }
 
-                    }
-                }
+            //         }
+            //     }
 
-                .logo_collapse {
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
-                }
+            //     .logo_collapse {
+            //         position: absolute;
+            //         top: 20px;
+            //         left: 20px;
+            //     }
 
-                .icon__delete__responsive {
-                    display: block;
-                    position: absolute;
-                    top: 27px;
-                    right: 20px;
-                    cursor: pointer;
-                }
+            //     .icon__delete__responsive {
+            //         display: block;
+            //         position: absolute;
+            //         top: 27px;
+            //         right: 20px;
+            //         cursor: pointer;
+            //     }
 
-                .my__profile__collapse {
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 17px;
-                    position: absolute;
-                    bottom: 40px;
-                    left: 20px;
-                }
+            //     .my__profile__collapse {
+            //         font-size: 14px;
+            //         font-weight: 400;
+            //         line-height: 17px;
+            //         position: absolute;
+            //         bottom: 40px;
+            //         left: 20px;
+            //     }
 
-            }
+            // }
 
             .icon_notification_collapse {
                 padding: 0;
