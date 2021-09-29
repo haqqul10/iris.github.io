@@ -1057,6 +1057,7 @@ footer a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 423px;
+    height: auto;
     margin-left: 0;
   }
   .profile .your-profile-right .profile-information .profile-information-left {
@@ -1123,6 +1124,11 @@ footer a:hover {
     text-align: left;
     padding-left: 19px;
   }
+  .navbar-dashboard .container .collapse .logo_collapse {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
   .navbar-dashboard .container .collapse .icon__delete__responsive {
     display: block;
     position: absolute;
@@ -1130,17 +1136,12 @@ footer a:hover {
     right: 20px;
     cursor: pointer;
   }
-  .navbar-dashboard .container .collapse .logo_collapse {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
   .navbar-dashboard .container .collapse .my__profile__collapse {
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     left: 20px;
   }
   .navbar-dashboard .container .icon_notification_collapse {
@@ -1149,7 +1150,7 @@ footer a:hover {
   .navbar-dashboard .container .icon_notification_collapse .icon_notification_hover {
     cursor: pointer;
     position: absolute;
-    bottom: 50px;
+    bottom: 93px;
     right: 20px;
   }
   .navbar-dashboard .container .icon_notification_collapse:hover .table__notification {
@@ -1172,7 +1173,7 @@ footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    bottom: 90px;
+    bottom: 135px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     padding-top: 24px;

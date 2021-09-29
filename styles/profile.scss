@@ -1156,15 +1156,19 @@ footer {
     // insert mobile and iPad Pro 12.9" CSS here    
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1390px) {
 
     .profile {
         .your-profile-right {
+
             // margin-top: 0;
+
         }
 
     }
 }
+
+
 
 @media only screen and (max-width: 1390px) and (min-width: 1024px) {
     .profile {
@@ -1176,6 +1180,7 @@ footer {
             .profile-information {
                 flex-direction: column;
                 width: 423px;
+                height: auto;
                 margin-left: 0;
 
                 .profile-information-left {
@@ -1229,6 +1234,8 @@ footer {
                 padding-right: 20px;
                 transform: translateX(-200%);
 
+
+
                 .navbar-nav {
                     height: 100vh;
                     width: 100%;
@@ -1253,6 +1260,12 @@ footer {
                     }
                 }
 
+                .logo_collapse {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                }
+
                 .icon__delete__responsive {
                     display: block;
                     position: absolute;
@@ -1261,20 +1274,15 @@ footer {
                     cursor: pointer;
                 }
 
-                .logo_collapse {
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
-                }
-
                 .my__profile__collapse {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 17px;
                     position: absolute;
-                    bottom: 40px;
+                    bottom: 80px;
                     left: 20px;
                 }
+
             }
 
             .icon_notification_collapse {
@@ -1283,7 +1291,7 @@ footer {
                 .icon_notification_hover {
                     cursor: pointer;
                     position: absolute;
-                    bottom: 50px;
+                    bottom: 93px;
                     right: 20px;
 
                 }
@@ -1300,7 +1308,7 @@ footer {
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
-                    bottom: 90px;
+                    bottom: 135px;
                     transition: all 0.3s;
                     padding-top: 24px;
                     display: none;
@@ -1421,6 +1429,7 @@ footer {
                         // z-index: 2;
                     }
                 }
+
             }
 
             .menu-toggle {
