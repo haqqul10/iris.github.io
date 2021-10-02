@@ -685,7 +685,7 @@ body {
     .your-profile-right {
         justify-content: center;
 
-        .profile-information {  
+        .profile-information {
             border-radius: 6px;
             background-color: $color2;
             margin-top: 25px;
@@ -730,7 +730,7 @@ body {
 
                 overflow: hidden;
                 text-align: center;
-                
+
                 &::before {
                     background-color: #1B143C;
                     content: "";
@@ -840,14 +840,15 @@ body {
                             background-color: $color1;
                             border-radius: 6px;
                             color: white;
-            
+                            resize: none;
+
                             &::placeholder {
                                 color: #8D899E;
                                 font-size: 16px;
                                 font-weight: 400;
                                 line-height: 20px;
                             }
-            
+
                             &:focus {
                                 // box-shadow: 0 0 0 0;
                                 position: relative;
@@ -855,14 +856,14 @@ body {
                                 box-shadow: none;
                                 border-radius: 6px;
                                 border: 2px solid transparent;
-            
+
                                 +span {
                                     width: 100%;
                                     height: 100%;
                                     background: linear-gradient(228.14deg, #C233DF 32.72%, rgba(166, 50, 230, 0.83) 44.41%, rgba(119, 49, 242, 0.92) 61.25%, #5D30F9 70.77%);
                                 }
                             }
-            
+
                             +span {
                                 border-radius: 6px;
                                 display: block;
@@ -873,7 +874,7 @@ body {
                                 right: 0;
                                 bottom: 0;
                                 z-index: -1;
-            
+
                             }
                         }
                     }
@@ -920,7 +921,7 @@ body {
                     line-height: 20px;
                 }
 
-                .add__proxy{
+                .add__proxy {
                     background: #7963FA;
                     font-size: 16px;
                     width: 128px;
@@ -1335,7 +1336,7 @@ footer {
                     }
                 }
 
-                
+
                 .table {
                     tbody {
                         tr {

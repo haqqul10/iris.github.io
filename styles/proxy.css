@@ -842,6 +842,7 @@ body {
   background-color: #1B143C;
   border-radius: 6px;
   color: white;
+  resize: none;
 }
 
 .profile .your-profile-right .profile-information .modal-content .modal-body .gradien__form .text__area__gradien::-webkit-input-placeholder {
