@@ -386,8 +386,11 @@
         <div class="col-11 col-lg-8 your-profile-right">
           <div class="row profile-information">
             <!-- profile information left -->
-            <div class="col-12 col-md-12 col-lg-7 profile-information-left">
-              <p class="text-white">Group Details</p>
+            <div class="col-12 col-md-12 col-lg-12 profile-information-left">
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-white">Group Details</p>
+                <a href="" class="btn btn-primary add__proxy" data-bs-toggle="modal" data-bs-target="#proxyModal">Add Proxy</a>
+              </div>
               <div class="collapse fade show " id="step_1">
                 <div class="alert alert__proxy" role="alert">
                   <p class="alert__title">Vision</p>
@@ -811,59 +814,71 @@
                 </div>
               </div>
             </div>
-
-
             <!-- akhir profile information left -->
 
-            <!-- profile information right -->
-            <div class="col-12 col-md-12 col-lg-5 profile-information-right">
-              <p class="text-white">Proxy Details</p>
-              <form class="row text-white">
-                <div class="mb-3">
-                  <label for="IP" class="form-label">IP</label>
-                  <div class="gradien__form">
-                    <input type="text" class="form-control" id="IP" placeholder="IP">
-                    <span></span>
+            <!-- Modal Proxy -->
+            <div class="modal fade" id="proxyModal" tabindex="-1" aria-labelledby="proxyModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Proxy</h5>
+                    <a href="" data-bs-dismiss="modal" aria-label="Close"><img src="images/icons/Icon-delete.svg" alt=""
+                        width="24"></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="row text-white pt-4">
+                      <div class="col-6 col-md-6">
+                        <label for="IP" class="form-label">IP</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="IP" placeholder="IP">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="port" class="form-label">Port</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="port" placeholder="Port">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="gradien__form">
+                          <input type="text" class="form-control" id="username" placeholder="Username">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="gradien__form">
+                          <input type="password" class="form-control" id="password" placeholder="Password">
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <!-- <hr class="hr__or"> -->
+                        <div class="hr__or">
+                          <span>OR</span> 
+                        </div>
+                      </div>
+                      <div class="mt-2">
+                        <label for="detail" class="form-label">Detail</label>
+                        <div class="gradien__form">
+                          <textarea class="form-control text__area__gradien" id="detail" rows="4"
+                            placeholder="Details"></textarea>
+                          <span></span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer mx-auto">
+                    <a href="" class="btn add__new__task"> Add New Proxy </a>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="port" class="form-label">Port</label>
-                  <div class="gradien__form">
-                    <input type="text" class="form-control" id="port" placeholder="Port">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="col-6 col-md-6">
-                  <label for="username" class="form-label">Username</label>
-                  <div class="gradien__form">
-                    <input type="text" class="form-control" id="username" placeholder="Username">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="col-6 col-md-6">
-                  <label for="password" class="form-label">Password</label>
-                  <div class="gradien__form">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <hr class="hr__or">
-                </div>
-                <div class="mt-2">
-                  <label for="detail" class="form-label">Detail</label>
-                  <div class="gradien__form">
-                    <textarea class="form-control text__area__gradien" id="detail" rows="4"
-                      placeholder="Your Information Details"></textarea>
-                    <span></span>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <a href="" class=" btn btn-success"> Save Profile </a>
-                </div>
-              </form>
+              </div>
             </div>
-            <!-- akhir profile information right -->
+            <!-- akhir modal -->
           </div>
         </div>
       </div>
