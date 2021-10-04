@@ -970,7 +970,7 @@ body {
                     }
 
                     .form-switch {
-                        margin-top: -4px;
+                        padding-left: 16px;
 
                         .form-check-label {
                             font-style: normal;
@@ -1033,6 +1033,7 @@ body {
                     .action__proxy {
                         background-color: transparent;
                         border: none;
+                        transform: rotate(90deg);
 
                     }
 
@@ -1055,6 +1056,30 @@ body {
 
                         tr {
                             border-radius: 6px;
+
+                            th:nth-child(1) {
+                                width: 20%;
+                            }
+
+                            th:nth-child(2) {
+                                width: 20%;
+                            }
+
+                            th:nth-child(3) {
+                                width: 20%;
+                            }
+
+                            th:nth-child(4) {
+                                width: 20%;
+                            }
+
+                            th:nth-child(5) {
+                                width: 20%;
+                            }
+
+                            th:nth-child(6) {
+                                width: 20%;
+                            }
                         }
                     }
 
@@ -1064,6 +1089,30 @@ body {
                         tr {
                             .ip__address {
                                 width: auto;
+                            }
+
+                            td:nth-child(1) {
+                                width: 20%;
+                            }
+
+                            td:nth-child(2) {
+                                width: 20%;
+                            }
+
+                            td:nth-child(3) {
+                                width: 20%;
+                            }
+
+                            td:nth-child(4) {
+                                width: 20%;
+                            }
+
+                            td:nth-child(5) {
+                                width: 20%;
+                            }
+
+                            td:nth-child(6) {
+                                width: 20%;
                             }
                         }
 

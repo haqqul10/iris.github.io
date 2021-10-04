@@ -997,7 +997,7 @@ body {
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch {
-  margin-top: -4px;
+  padding-left: 16px;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .alert__proxy .form-switch .form-check-label {
@@ -1057,6 +1057,8 @@ body {
 .profile .your-profile-right .profile-information .profile-information-left .table .action__proxy {
   background-color: transparent;
   border: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table .password {
@@ -1080,12 +1082,60 @@ body {
   border-radius: 6px;
 }
 
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(1) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(2) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(3) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(4) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(5) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table thead tr th:nth-child(6) {
+  width: 20%;
+}
+
 .profile .your-profile-right .profile-information .profile-information-left .table tbody {
   vertical-align: 0;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table tbody tr .ip__address {
   width: auto;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(1) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(2) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(3) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(4) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(5) {
+  width: 20%;
+}
+
+.profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(6) {
+  width: 20%;
 }
 
 .profile .your-profile-right .profile-information .profile-information-left .table tbody a {
