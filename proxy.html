@@ -987,18 +987,21 @@
     // checkbox on/off
     var checkBoxSwitch = $('.checkBoxSwitch');
     checkBoxSwitch.each((index, value) => {
-      // console.log(value, $(value).parent().parent().siblings('.table').find('span.password'));
       $(value).on('change', function () {
         if ($(this).is(':checked')) {
           $('.switch').html('Show <img src="./images/icons/Icon=Eye.svg" alt="">');
-          $(value).parent().parent().siblings('.table').find('span.password').each((index2, value2) => {
+          // console.log(value, $(value).parent().parent().siblings('.table').find('span.password'));
+          $(value).parent().parent().parent().siblings('.table').find('span.password').each((index2,
+            value2) => {
+            // console.log($(value2));
             var password = $(value2).data('password');
             $(value2).text(password);
             $(value2).css('font-size', '14px');
           })
         } else {
           $('.switch').html('Hide <img src="./images/icons/Icon=Eye-Off.svg" alt="">');
-          $(value).parent().parent().siblings('.table').find('span.password').each((index3, value3) => {
+          $(value).parent().parent().parent().siblings('.table').find('span.password').each((index3,
+            value3) => {
             $(value3).html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
             $(value3).removeAttr('style');
           })
