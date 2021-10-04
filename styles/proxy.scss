@@ -1054,6 +1054,7 @@ body {
                         position: sticky;
                         top: 0;
                         background-color: #33275C;
+                        z-index: 1;
 
                         tr {
                             border-radius: 6px;
@@ -1090,30 +1091,6 @@ body {
                         tr {
                             .ip__address {
                                 width: auto;
-                            }
-
-                            td:nth-child(1) {
-                                width: 20%;
-                            }
-
-                            td:nth-child(2) {
-                                width: 20%;
-                            }
-
-                            td:nth-child(3) {
-                                width: 20%;
-                            }
-
-                            td:nth-child(4) {
-                                width: 20%;
-                            }
-
-                            td:nth-child(5) {
-                                width: 20%;
-                            }
-
-                            td:nth-child(6) {
-                                width: 20%;
                             }
                         }
 
@@ -1448,7 +1425,8 @@ footer {
                     height: 736px;
 
                     .action-knob {
-                        left: 70px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
 
                         .btn-primary {
                             width: 165px;
@@ -1905,4 +1883,45 @@ footer {
         border: none;
     }
 
+}
+
+// table min
+@media screen and (min-width:576px) {
+    .profile {
+        .your-profile-right {
+            .profile-information {
+                .profile-information-left {
+                    .table {
+                        tbody {
+                            tr {
+                                td:nth-child(1) {
+                                    width: 20%;
+                                }
+
+                                td:nth-child(2) {
+                                    width: 20%;
+                                }
+
+                                td:nth-child(3) {
+                                    width: 20%;
+                                }
+
+                                td:nth-child(4) {
+                                    width: 20%;
+                                }
+
+                                td:nth-child(5) {
+                                    width: 20%;
+                                }
+
+                                td:nth-child(6) {
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
