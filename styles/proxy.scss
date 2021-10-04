@@ -1834,7 +1834,27 @@ footer {
         .your-profile-left {
             background-color: transparent;
         }
+
+        .your-profile-right {
+            .profile-information {
+                .profile-information-left {
+                    .collapse {
+                        .title__table__proxy {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .action__proxy.desktop {
+                                background-color: transparent;
+                                border: none;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
     .table {
         margin-top: 24px;
@@ -1895,6 +1915,14 @@ footer {
         .your-profile-right {
             .profile-information {
                 .profile-information-left {
+                    .collapse {
+                        .title__table__proxy {
+                            .action__proxy.desktop {
+                                display: none;
+                            }
+                        }
+                    }
+
                     .table {
                         tbody {
                             tr {

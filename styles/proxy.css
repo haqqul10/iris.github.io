@@ -1706,6 +1706,18 @@ footer a:hover {
   .profile .your-profile-left {
     background-color: transparent;
   }
+  .profile .your-profile-right .profile-information .profile-information-left .collapse .title__table__proxy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile .your-profile-right .profile-information .profile-information-left .collapse .title__table__proxy .action__proxy.desktop {
+    background-color: transparent;
+    border: none;
+  }
   .table {
     margin-top: 24px;
   }
@@ -1752,6 +1764,9 @@ footer a:hover {
 }
 
 @media screen and (min-width: 576px) {
+  .profile .your-profile-right .profile-information .profile-information-left .collapse .title__table__proxy .action__proxy.desktop {
+    display: none;
+  }
   .profile .your-profile-right .profile-information .profile-information-left .table tbody tr td:nth-child(1) {
     width: 20%;
   }
