@@ -403,7 +403,7 @@ body {
 }
 
 .task-judul .container h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -851,6 +851,9 @@ footer a {
   .task-judul .container {
     margin-bottom: 0px;
     padding: 0;
+  }
+  .task-judul .container h2 {
+    font-size: 32px;
   }
   .task-judul .container .flex-right {
     -webkit-box-pack: end;

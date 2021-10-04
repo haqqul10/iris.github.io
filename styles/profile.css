@@ -237,6 +237,7 @@ body {
 
 .card-dashboard .container h2 {
   margin-bottom: 5px;
+  font-size: 25px;
 }
 
 .card-dashboard .container p {
@@ -969,6 +970,9 @@ footer a:hover {
   }
   .navbar-dashboard .my__profile__collapse {
     display: none;
+  }
+  .card-dashboard .container h2 {
+    font-size: 32px;
   }
   .profile .your-profile-left {
     width: 427px;

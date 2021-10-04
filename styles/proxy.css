@@ -318,7 +318,7 @@ body {
 }
 
 .card-dashboard h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -1294,6 +1294,9 @@ footer a:hover {
   }
   .card-dashboard .flex-right {
     margin-top: auto;
+  }
+  .card-dashboard h2 {
+    font-size: 32px;
   }
   .profile .your-profile-left {
     height: 736px;

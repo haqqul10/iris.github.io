@@ -358,7 +358,7 @@ body {
 }
 
 .task-judul .container h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -704,6 +704,9 @@ footer a {
   }
   .navbar-dashboard .my__profile__collapse {
     display: none;
+  }
+  .task-judul .container h2 {
+    font-size: 32px;
   }
   .task-judul .container .flex-right {
     -webkit-box-pack: end;

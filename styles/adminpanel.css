@@ -497,7 +497,7 @@ body {
 }
 
 .card-dashboard h2 {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 8px;
   line-height: 38px;
@@ -881,6 +881,9 @@ footer a:hover {
   }
   .card-dashboard .flex-right .modal-lg .modal__content__Keys {
     padding: 56px 64px;
+  }
+  .card-dashboard h2 {
+    font-size: 32px;
   }
   .card__admin__panel .container {
     padding: 0;

@@ -263,6 +263,7 @@ body {
 
         h2 {
             margin-bottom: 5px;
+            font-size: 25px;
         }
 
         p {
@@ -1027,6 +1028,10 @@ footer {
     // card dashboard
     .card-dashboard {
         .container {
+            h2 {
+                font-size: 32px;
+            }
+
             .title__header__profile {}
         }
     }
