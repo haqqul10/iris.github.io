@@ -20,10 +20,50 @@
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
   <title>Task</title>
+
+  <style>
+    .section-loader {
+      min-height: 100vh;
+      background: rgba(9, 4, 35,0.7);
+      animation: changeBg 5s linear infinite; 
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+    }
+
+    .loader img {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      animation: rotate 2s linear infinite;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @media screen and (max-width: 576px) {
+      .loader img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 
-<body class="dashboard" style="overflow-x: hidden; overflow-y: scroll;">
-
+<body class="dashboard" style="overflow-x: hidden; overflow-y: hidden;">
+  <div class="section-loader">
+    <div class="loader">
+      <img src="./images/loading/Loading.svg" alt="">
+    </div>
+  </div>
+  
   <div id="overlay"></div>
 
   <!-- halaman navbar -->
@@ -542,13 +582,22 @@
             );
 
             if (index === result.tasks.length - 1) {
+              $('.dashboard').css('overflow-y', 'scroll');
+              $('.section-loader').hide();
               setDatatable();
             }
           })
 
           if (result.tasks.length === 0) {
+            $('.dashboard').css('overflow-y', 'scroll');
+            $('.section-loader').hide();
             setDatatable();
           }
+        },
+        error: () => {
+          $('.dashboard').css('overflow-y', 'scroll');
+          $('.section-loader').hide();
+          setDatatable();
         }
       })
 
