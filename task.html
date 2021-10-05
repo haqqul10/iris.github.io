@@ -383,7 +383,6 @@
                     <td data-label="Profil">jonh</td>
                     <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -397,7 +396,6 @@
                     <td data-label="Profil">erik</td>
                     <td data-label="Status"><span class="badge bg-success">Completed</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -411,7 +409,6 @@
                     <td data-label="Profil">liet</td>
                     <td data-label="Status"><span class="badge bg-success">Completed</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -425,7 +422,6 @@
                     <td data-label="Profil">albert jonh</td>
                     <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -439,7 +435,6 @@
                     <td data-label="Profil">putri</td>
                     <td data-label="Status"><span class="badge bg-success">Completed</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -453,7 +448,6 @@
                     <td data-label="Profil">samsmith</td>
                     <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -467,7 +461,6 @@
                     <td data-label="Profil">jonh</td>
                     <td data-label="Status"><span class="badge bg-danger">Cancel</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -481,7 +474,6 @@
                     <td data-label="Profil">jonh</td>
                     <td data-label="Status"><span class="badge bg-warning">On Progress</span></td>
                     <td data-label="Action">
-                      <a href=""><img src="./images/icons/resume.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/play.svg" alt="" width="20"></a>
                       <a href=""><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
                     </td>
@@ -555,6 +547,23 @@
       e.stopImmediatePropagation();
     });
 
+    // Icon Hover
+    function hover(element, type) {
+      if (type === 1) {
+        element.setAttribute('src', './images/icons/Icon=Play-icon-hover.svg');
+      } else {
+        element.setAttribute('src', './images/icons/Icon=Trash-icon-hover.svg');
+      }
+    }
+
+    function unHover(element, type) {
+      if (type === 1) {
+        element.setAttribute('src', './images/icons/play.svg');
+      } else {
+        element.setAttribute('src', './images/icons/Icon_delete.svg');
+      }
+    }
+
     // datatable
     $(document).ready(function () {
       $('#example_tbody').empty();
@@ -574,9 +583,8 @@
                 <td data-label="Profil">${value.profileName}</td>
                 <td data-label="Status">${getStatusColored(value.status)}</td>
                 <td data-label="Action">
-                  <a href="#"><img src="./images/icons/resume.svg" alt="" width="20"></a>
-                  <a href="#"><img src="./images/icons/play.svg" alt="" width="20"></a>
-                  <a href="#"><img src="./images/icons/Icon_delete.svg" alt="" width="20"></a>
+                  <a href="#"><img src="./images/icons/play.svg" alt="" width="20" onmouseover="hover(this,1);" onmouseout="unHover(this,1);"></a>
+                  <a href="#"><img src="./images/icons/Icon_delete.svg" alt="" width="20" onmouseover="hover(this,2);" onmouseout="unHover(this,2);"></a>
                 </td>
               </tr>`
             );

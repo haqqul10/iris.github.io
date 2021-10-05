@@ -257,11 +257,13 @@ body {
 }
 
 .card-dashboard .flex-right .modal__content__Keys {
-  background: rgba(121, 99, 250, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(11, 4, 37, 0.2);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-image-slice: 1;
+  border-width: 1.5px;
+  border-image-source: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
-  border: none;
   padding: 16px 18px;
 }
 
@@ -308,11 +310,13 @@ body {
 }
 
 .card-dashboard .flex-right .modal__content__newtask {
-  background: rgba(121, 99, 250, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(11, 4, 37, 0.2);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-image-slice: 1;
+  border-width: 1.5px;
+  border-image-source: linear-gradient(263.29deg, #861C9B -9.37%, #4818EC 113.75%);
   border-radius: 6px;
-  border: none;
   padding: 16px 18px;
 }
 
