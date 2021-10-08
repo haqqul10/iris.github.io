@@ -18,7 +18,15 @@
   <!-- MyCSS -->
   <link rel="stylesheet" href="styles/main.css">
 
+  <link rel="stylesheet" href="libraries/jquery/toastr.min.css">
+
   <title>Sign Up</title>
+
+  <style>
+    .grecaptcha-badge{
+      z-index: 999;
+    }
+  </style>
 </head>
 
 <body class="body-login">
@@ -39,7 +47,7 @@
             <div class="col-12 col-md-10 col-lg-6 right">
               <img src="./images/icons/Logo-login.svg" alt="" width="82" height="40">
               <h4 class="text-white">Create Your Iris Account</h4>
-              <form class="text-white">
+              <form class="text-white" id="my-form">
 
                 <div class="login-container__form-item">
                   <label for="email" class="form-label">Email address</label>
@@ -81,9 +89,8 @@
                 </div>
 
                 <div class="col-12 col-lg-12">
-                  <input type="submit" name="login-submit" id="register-submit" value="Sign Up"
-                    class="btn btn-primary mb-4" data-sitekey="6LcuExEcAAAAAHNTTWTyz2JBZCY0C7-WO22TK76r"
-                    data-callback="onSubmit">
+                  <button type="submit" name="register-submit" id="register-submit" value="Sign Up" 
+                  class="btn btn-primary mb-4 g-recaptcha">Sign Up</button>
                 </div>
 
                 <p class="login-container__form-link">Already an user? <a href="login.html" class="forget-password">
@@ -107,6 +114,14 @@
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="libraries/jquery/jquery-3.5.1.js"></script>
+  <script src="libraries/jquery/toastr.min.js"></script>
+
+  <script>
+    toastr.options = {
+      "positionClass": "toast-bottom-right",
+    }
+  </script>
 
   <script>
     const togglePassword = document.querySelector('#togglePassword');
@@ -121,14 +136,30 @@
   </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></scrip>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></s>
     -->
 
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcOurccAAAAAERdc7FHm4WyG7H3BG3JLq7wzme7"></script>
   <script>
-    var onSubmit = function (token) {
-      // e.preventDefault();
-      var request = $.ajax({
+    var submit_myform = function(event) {
+      event.preventDefault();
+      var token_recaptcha = "";
+
+      grecaptcha.ready(function() {
+      // do request for recaptcha token
+      // response is promise with passed token
+          grecaptcha.execute('6LcOurccAAAAAERdc7FHm4WyG7H3BG3JLq7wzme7', {action:'validate_captcha'})
+                    .then(function(token) {
+              // add token value to form
+              token_recaptcha = token;
+              // document.getElementById('g-recaptcha-response').value = token;
+          });
+      });
+
+      if($('#exampleCheck1:checked').length === 1){
+        console.log(token_recaptcha);
+        var request = $.ajax({
           url: "/api/register",
           method: "POST",
           data: {
@@ -136,7 +167,7 @@
             username: $("#username").val(),
             license: $("#license").val(),
             password: $("#password").val(),
-            captcha: token
+            captcha: token_recaptcha
           },
           timeout: 5000,
         })
@@ -179,7 +210,16 @@
             500
           );
         });
+      }else{
+        toastr.error('Please Confirm The Terms & Conditions Checkbox.', 'Error')
+      }
     };
+
+    // your form
+    var form = document.getElementById("my-form");
+
+    // attach event listener
+    form.addEventListener("submit", submit_myform, true);
   </script>
 </body>
 
