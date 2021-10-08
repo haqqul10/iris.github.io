@@ -39,7 +39,7 @@
             <div class="col-12 col-md-10 col-lg-6 right">
               <img src="./images/icons/Logo-login.svg" alt="" width="82" height="40">
               <h4 class="text-white">Create Your Iris Account</h4>
-              <form class="text-white">
+              <form class="text-white" id="my-form">
 
                 <div class="login-container__form-item">
                   <label for="email" class="form-label">Email address</label>
@@ -81,9 +81,10 @@
                 </div>
 
                 <div class="col-12 col-lg-12">
-                  <input type="submit" name="login-submit" id="register-submit" value="Sign Up"
-                    class="btn btn-primary mb-4" data-sitekey="6LcuExEcAAAAAHNTTWTyz2JBZCY0C7-WO22TK76r"
-                    data-callback="onSubmit">
+                  <input type="submit" name="register-submit" id="register-submit" value="Sign Up" 
+                  class="btn btn-primary mb-4 g-recaptcha" 
+                  data-sitekey="6LcOurccAAAAAERdc7FHm4WyG7H3BG3JLq7wzme7" data-callback="onSubmit"
+                  data-action="submit">
                 </div>
 
                 <p class="login-container__form-link">Already an user? <a href="login.html" class="forget-password">
@@ -107,6 +108,9 @@
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="libraries/jquery/jquery-3.5.1.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcOurccAAAAAERdc7FHm4WyG7H3BG3JLq7wzme7"></script>
 
   <script>
     const togglePassword = document.querySelector('#togglePassword');
@@ -126,9 +130,17 @@
     -->
 
   <script>
-    var onSubmit = function (token) {
-      // e.preventDefault();
-      var request = $.ajax({
+    var my_func = function(event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LcOurccAAAAAERdc7FHm4WyG7H3BG3JLq7wzme7', {action: 'homepage'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+              console.log(token)
+          });
+        });
+        console.log("success");
+        console.log(event);
+        var request = $.ajax({
           url: "/api/register",
           method: "POST",
           data: {
@@ -180,6 +192,12 @@
           );
         });
     };
+
+    // your form
+    var form = document.getElementById("my-form");
+
+    // attach event listener
+    form.addEventListener("submit", my_func, true);
   </script>
 </body>
 
