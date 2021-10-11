@@ -153,65 +153,68 @@
                     .then(function(token) {
               // add token value to form
               token_recaptcha = token;
+              storeRegister();
               // document.getElementById('g-recaptcha-response').value = token;
           });
       });
 
-      if($('#exampleCheck1:checked').length === 1){
-        console.log(token_recaptcha);
-        var request = $.ajax({
-          url: "/api/register",
-          method: "POST",
-          data: {
-            email: $("#email").val(),
-            username: $("#username").val(),
-            license: $("#license").val(),
-            password: $("#password").val(),
-            captcha: token_recaptcha
-          },
-          timeout: 5000,
-        })
-        .done(function (data, textStatus, xhr) {
-          console.log("good: " + textStatus);
-          window.location.replace("/dashboard");
-        })
-        .fail(function (data, textStatus, xhr) {
-          console.log("bad: " + textStatus);
-          $("#email").effect(
-            "shake", {
-              direction: "left",
-              times: 3,
-              distance: 5
+      async function storeRegister(){
+        if($('#exampleCheck1:checked').length === 1){
+          console.log(token_recaptcha);
+          var request = $.ajax({
+            url: "/api/register",
+            method: "POST",
+            data: {
+              email: $("#email").val(),
+              username: $("#username").val(),
+              license: $("#license").val(),
+              password: $("#password").val(),
+              captcha: token_recaptcha
             },
-            500
-          );
-          $("#license").effect(
-            "shake", {
-              direction: "left",
-              times: 3,
-              distance: 5
-            },
-            500
-          );
-          $("#username").effect(
-            "shake", {
-              direction: "left",
-              times: 3,
-              distance: 5
-            },
-            500
-          );
-          $("#password").effect(
-            "shake", {
-              direction: "left",
-              times: 3,
-              distance: 5
-            },
-            500
-          );
-        });
-      }else{
-        toastr.error('Please Confirm The Terms & Conditions Checkbox.', 'Error')
+            timeout: 5000,
+          })
+          .done(function (data, textStatus, xhr) {
+            console.log("good: " + textStatus);
+            window.location.replace("/dashboard");
+          })
+          .fail(function (data, textStatus, xhr) {
+            console.log("bad: " + textStatus);
+            $("#email").effect(
+              "shake", {
+                direction: "left",
+                times: 3,
+                distance: 5
+              },
+              500
+            );
+            $("#license").effect(
+              "shake", {
+                direction: "left",
+                times: 3,
+                distance: 5
+              },
+              500
+            );
+            $("#username").effect(
+              "shake", {
+                direction: "left",
+                times: 3,
+                distance: 5
+              },
+              500
+            );
+            $("#password").effect(
+              "shake", {
+                direction: "left",
+                times: 3,
+                distance: 5
+              },
+              500
+            );
+          });
+        }else{
+          toastr.error('Please Confirm The Terms & Conditions Checkbox.', 'Error')
+        }
       }
     };
 
