@@ -131,7 +131,7 @@ body {
 
 .navbar-dashboard .container .navbar-nav .nav-item .active {
   background-color: #7963FA;
-  border-radius: 6px;
+  border-radius: 30px;
   padding: 10px 16px;
 }
 

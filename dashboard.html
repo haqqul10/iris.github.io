@@ -104,8 +104,8 @@
             <a class="nav-link" href="profile.html"> <img src="images/icons/Icon_profile.svg" alt="" width="24"
                 class="pb-1"> <span>Profile</span></a>
           </li>
-          <a href="" class="nav-link text-white my__profile__collapse"> <img src="images/icons/Mask Group.png" alt=""
-              width="49" class="pe-2"> <span class="member_name">Rizki Agus</span></a>
+          <a href="" class="nav-link text-white my__profile__collapse"> <img class="profile_img" src="images/icons/Profile_Icon.svg" alt=""
+              width="49" class="pe-2"> <span class="profile_name">-</span></a>
           <div class="nav-link icon_notification_collapse">
             <img src="images/icons/Icon=Notification.svg" alt="" width="25" class="icon_notification_hover pb-1">
             <div class="table__notification">
@@ -212,8 +212,8 @@
           <a href="" class="view__all">View All</a>
         </div>
       </div>
-      <a href="" class="nav-link text-white my__profile"> <img src="images/icons/Mask Group.png" alt="" width="49"
-          class="pe-2"> <span class="member_name">Rizki Agus</span></a>
+      <a href="" class="nav-link text-white my__profile"> <img class="profile_img" src="images/icons/Profile_Icon.svg" alt="" width="49"
+          class="pe-2"> <span class="profile_name">-</span></a>
       <!-- </div> -->
     </div>
   </nav>
@@ -462,6 +462,8 @@
   <!-- Include jQuery Popup Overlay -->
   <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
+  <script src="scripts/main.js"></script>
+
   <script>
     // animation humberger
     $(document).ready(function () {
@@ -515,7 +517,8 @@
           $.getJSON("https://irisbot.io/api/test/@me", function (data, status) {
             let expDate = new Date(data.license.expires["$date"]);
             // let exProfile = new Date(data.user.username);
-            $('.member_name').text(data.user.username);
+            // $('.member_name').text(data.user.username);
+            localStorage.setItem('profile_name', data.user.username);
             let curDate = new Date();
             let calcDate = expDate - curDate;
             let subText = document.getElementById('subscription-text')
@@ -531,9 +534,6 @@
                 " " + expDate.getFullYear() + "</span>"
               subText.innerHTML = text;
             }
-
-            console.log(expDate.getDate() + " " + monthNames[expDate.getMonth()] + " " + expDate
-              .getFullYear())
           })
 
           $('.dashboard').css('overflow-y', 'scroll');
