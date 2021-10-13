@@ -132,6 +132,24 @@ body {
             font-size: 14px;
             font-weight: 400;
             line-height: 17px;
+            display: flex;
+            align-items: center;
+
+            .rounded_profile{
+                border-radius: 50%;
+                background: #33275C;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                margin-right: 12px;
+                align-items: center;
+
+                img{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
         }
 
         .navbar-nav {
@@ -1610,6 +1628,24 @@ footer {
                     position: absolute;
                     bottom: 80px;
                     left: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    .rounded_profile{
+                        border-radius: 50%;
+                        background: #33275C;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        margin-right: 12px;
+                        align-items: center;
+        
+                        img{
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
                 }
 
             }
@@ -1811,8 +1847,20 @@ footer {
             .my__profile {
                 padding: 0;
 
-                img {
-                    padding-bottom: 0;
+                .rounded_profile{
+                    border-radius: 50%;
+                    background: #33275C;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 12px;
+                    align-items: center;
+    
+                    img{
+                        width: 28px;
+                        height: 28px;
+                    }
                 }
 
                 span {

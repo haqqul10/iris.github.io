@@ -1,12 +1,3 @@
-// Handle Photo Task
-function handlePhotoTask($task_photo = null){
-    if($task_photo !== null){
-        return $task_photo;
-    }else{
-        return "images/icons/Shoe_Icon.svg";
-    }
-}
-
 $('#example_tbody').empty();
 
 $.ajax({
@@ -17,7 +8,7 @@ $.ajax({
             $('#example_tbody').append(
                 `<tr>
                     <td><input type="checkbox" class="form-check-input"></td>
-                    <td class="text-white items" data-label="Item"><img src="${handlePhotoTask(value.item.image)}" alt="" width="35"
+                    <td class="text-white items" data-label="Item"><img src="${handlePhotoShoes(value.item.image)}" alt="" width="35"
                         class="img-shoe"> ${value.item.name}</td>
                     <td data-label="Size">${value.module.size}</td>
                     <td data-label="Store">${value.module.name}</td>
