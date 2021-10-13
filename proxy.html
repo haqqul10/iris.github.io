@@ -226,7 +226,7 @@
           <div class="row table-profile">
             <div class="col">
               <div class="scroll">
-                <table class="table text-white" id="example" class="">
+                <table class="table text-white" class="">
                   <thead style="background-color: #33275C; border-radius: 6px;">
                     <tr>
                       <th>Proxy List</th>
@@ -442,7 +442,7 @@
                   </div>
                 </div>
                 <p class="proxy__list">Proxy List</p>
-                <table class="table text-white" id="example" class="" style="width:100%;">
+                <table class="table text-white" id="scroll-proxy" class="" style="width:100%;">
                   <thead>
                     <tr>
                       <th>IP</th>
@@ -581,6 +581,16 @@
             .length === 0) {
             $(this).popover('hide');
           }
+        }); 
+      });
+
+      $('#scroll-proxy').scroll(function (e) {
+        $('[data-bs-toggle="popover"]').each(function () {
+          // hide any open popovers when the anywhere else in the body is clicked
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target)
+            .length === 0) {
+            $(this).popover('hide');
+          }
         });
       });
     }
@@ -619,6 +629,7 @@
 
     // animation humberger
     $(document).ready(function () {
+
       const menuToggle = document.querySelector('.menu-toggle input');
       const nav = document.querySelector('.navbar-collapse');
       const delete_icon = document.querySelector('.icon__delete__responsive');
