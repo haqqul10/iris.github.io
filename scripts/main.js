@@ -10,4 +10,12 @@ if(PROFILE_NAME !== null){
     $('.profile_name').text(PROFILE_NAME);
 }
 
+// Handle Photo Shoes
+function handlePhotoShoes($shoes_photo = null){
+    if($shoes_photo !== null){
+        return $shoes_photo;
+    }else{
+        return "images/icons/Shoe_Icon.svg";
+    }
+}
 // Comment
