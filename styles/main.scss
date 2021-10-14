@@ -51,6 +51,15 @@ body {
     border-radius: 10px;
 }
 
+// auto complete browser
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
 // home page
 .body-homepage {
     background-color: $color3;
