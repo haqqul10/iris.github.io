@@ -15,6 +15,8 @@
   <!-- MyCSS -->
   <link rel="stylesheet" href="styles/proxy.css">
 
+  <link rel="stylesheet" href="libraries/jquery/toastr.min.css">
+
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
 
   <title>Proxy</title>
@@ -415,6 +417,14 @@
   <script src="libraries/jquery/jquery-3.5.1.js"></script>
 
   <script src="scripts/main.js"></script>
+  <script src="libraries/jquery/toastr.min.js"></script>
+
+  <script>
+    toastr.options = {
+      "positionClass": "toast-bottom-right",
+    }
+  </script>
+
   <!-- <script src="./libraries/bootstrap/js/bootstrap.min.js"></script> -->
   <!-- <script src="libraries/jquery/jquery.dataTables.min.js"></script> -->
   <!-- <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script> -->
@@ -452,7 +462,7 @@
                   <td data-label="Proxy List" class="text-white">${value.name}</td>
                   <td data-label="Amount" class="amound amount_proxy_${value.group_id}">0</td>
                   <td data-label="Action">
-                    <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    <a onClick="delete_group_proxy('${value.group_id}')"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                         fill="none">
                         <path d="M2.5 5H4.16667H17.5" stroke="#BBB9C5" stroke-width="1.5" stroke-linecap="round"
                           stroke-linejoin="round" />
@@ -508,7 +518,7 @@
                   <td data-label="Proxy List" class="text-white">${value.name}</td>
                   <td data-label="Amount" class="amound amount_proxy_${value.group_id}">0</td>
                   <td data-label="Action">
-                    <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    <a onClick="delete_group_proxy('${value.group_id}')"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                         fill="none">
                         <path d="M2.5 5H4.16667H17.5" stroke="#BBB9C5" stroke-width="1.5" stroke-linecap="round"
                           stroke-linejoin="round" />
@@ -572,9 +582,9 @@
           $(`.amount_proxy_${value.group}`).text(amount_proxy);
 
           let popover_content = `
-              <div class="top">Test <a href=""><img src="./images/icons/icon_play_proxy.svg" class=""></a>
+              <div class="top">Test <a><img src="./images/icons/icon_play_proxy.svg" class=""></a>
               </div> <hr>
-              <div class="buttom">Delete <a href=""><img src="./images/icons/icon_delete_proxy.svg" class=""></a>
+              <div class="buttom">Delete <a href="#!" id="${value.proxy_id}" class="delete_list_proxy_btn"><img src="./images/icons/icon_delete_proxy.svg" class=""></a>
               </div>`;
 
           $('#list_proxy_'+value.group).append(`
@@ -601,6 +611,11 @@
             $('.section-loader').hide();
             openCheckboxSwitch();
             openPopOver();
+
+            $(document).on("click", ".delete_list_proxy_btn", function() {
+                let proxy_id = $(this).attr('id');
+                delete_list_proxy(proxy_id);
+            });
           }
         })
 
@@ -704,6 +719,32 @@
         nav.classList.remove('show');
       });
     });
+
+    function delete_group_proxy($group_id){
+      $.ajax({
+        type: "GET",
+        url: "https://irisbot.io/api/test/proxies/group/delete/"+$group_id,
+        success: (result) => {
+          toastr.success('Group Proxy Was Deleted.', 'Success Delete Group');
+        },
+        error: () => {
+          toastr.success('Group Proxy Was Deleted.', 'Success Delete Group');
+        }
+      })
+    }
+
+    function delete_list_proxy($proxy_id){
+      $.ajax({
+        type: "GET",
+        url: "https://irisbot.io/api/test/proxies/group/delete/"+$proxy_id,
+        success: (result) => {
+          toastr.success('Proxy Was Deleted.', 'Success Delete Proxy');
+        },
+        error: () => {
+          toastr.success('Proxy Was Deleted.', 'Success Delete Proxy');
+        }
+      })
+    }
   </script>
 </body>
 
