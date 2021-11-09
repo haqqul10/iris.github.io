@@ -1,12 +1,12 @@
 //   Retrieve API
 $.ajax({
-    type: "GET",
-    url: "https://irisbot.io/api/test/proxies",
-    success: (result) => {
-        $('#my_proxy').empty();
-        $('#header_group_details').empty();
+  type: "GET",
+  url: "https://irisbot.io/api/test/proxies",
+  success: (result) => {
+    $("#my_proxy").empty();
+    $("#header_group_details").empty();
 
-        $('#header_group_details').append(`
+    $("#header_group_details").append(`
         <div class="d-flex justify-content-between align-items-center">
             <p class="text-white">Group Details</p>
             <a href="" class="btn btn-primary add__proxy" data-bs-toggle="modal" data-bs-target="#proxyModal">Add
@@ -15,9 +15,9 @@ $.ajax({
         <div id="collapsed_proxy"></div>
         `);
 
-        $.each(result.groups, (index, value) => {
-        if(index === 0){
-            $('#my_proxy').append(`
+    $.each(result.groups, (index, value) => {
+      if (index === 0) {
+        $("#my_proxy").append(`
             <tr data-bs-toggle="collapse" data-bs-target="#step_${index}" aria-expanded="true"
                 aria-controls="collapseExample">
                 <td data-label="Proxy List" class="text-white">${value.name}</td>
@@ -39,7 +39,7 @@ $.ajax({
                 </tr>
             `);
 
-            $('#collapsed_proxy').append(`
+        $("#collapsed_proxy").append(`
             <div class="collapse fade show " id="step_${index}">
                 <div class="alert alert__proxy" role="alert">
                 <p class="alert__title">${value.name}</p>
@@ -72,8 +72,8 @@ $.ajax({
                 </div>
             </div>
             `);
-        }else{
-            $('#my_proxy').append(`
+      } else {
+        $("#my_proxy").append(`
             <tr data-bs-toggle="collapse" data-bs-target="#step_${index}" aria-expanded="false"
                 aria-controls="collapseExample" class="collapsed">
                 <td data-label="Proxy List" class="text-white">${value.name}</td>
@@ -95,7 +95,7 @@ $.ajax({
                 </tr>
             `);
 
-            $('#collapsed_proxy').append(`
+        $("#collapsed_proxy").append(`
             <div class="collapse fade" id="step_${index}">
                 <div class="alert alert__proxy" role="alert">
                 <p class="alert__title">${value.name}</p>
@@ -128,28 +128,29 @@ $.ajax({
                 </div>
             </div>
             `);
-        }
+      }
 
-        if(index === result.groups.length - 1){
-            $('.collapse').on('show.bs.collapse', function (e) {
-                var btnCollapse = $(e.relatedTarget);
-                $('.collapse').collapse('hide')
-                })
-            }
-        })
+      if (index === result.groups.length - 1) {
+        $(".collapse").on("show.bs.collapse", function (e) {
+          var btnCollapse = $(e.relatedTarget);
+          $(".collapse").collapse("hide");
+        });
+      }
+    });
 
-        $.each(result.proxies, (index, value) => {
-            let amount_proxy = (parseInt($(`.amount_proxy_${value.group}`)[0].innerHTML) + 1);
-            $(`.amount_proxy_${value.group}`).text(amount_proxy);
+    $.each(result.proxies, (index, value) => {
+      let amount_proxy =
+        parseInt($(`.amount_proxy_${value.group}`)[0].innerHTML) + 1;
+      $(`.amount_proxy_${value.group}`).text(amount_proxy);
 
-            let popover_content = `
+      let popover_content = `
                 <div class="top cursor-pointer">Test <a><img src="./images/icons/icon_play_proxy.svg" class=""></a>
                 </div> <hr>
                 <div class="buttom delete_list_proxy_btn cursor-pointer" id="${value.proxy_id}">Delete <a href="#!"><img src="./images/icons/icon_delete_proxy.svg" class=""></a>
                 </div>
                 `;
 
-            $('#list_proxy_'+value.group).append(`
+      $("#list_proxy_" + value.group).append(`
                 <tr>
                 <td data-label="IP" class="text-white ip__address">${value.ip}</td>
                 <td data-label="Port" class="text-white">${value.port}</td>
@@ -168,128 +169,163 @@ $.ajax({
                 </tr>
             `);
 
-            if(index === result.proxies.length - 1){
-                $('.dashboard').css('overflow-y', 'scroll');
-                $('.section-loader').hide();
-                openCheckboxSwitch();
-                openPopOver();
-
-                $(document).on("click", ".delete_list_proxy_btn", function() {
-                    let proxy_id = $(this).attr('id');
-                    delete_list_proxy(proxy_id);
-                });
-            } 
-        })
-
-        if(result.proxies.length === 0){
-            $('.dashboard').css('overflow-y', 'scroll');
-            $('.section-loader').hide();
-            openCheckboxSwitch();
-            openPopOver();
-        }
-    },
-    error: () => {
-        $('.dashboard').css('overflow-y', 'scroll');
-        $('.section-loader').hide();
+      if (index === result.proxies.length - 1) {
+        $(".dashboard").css("overflow-y", "scroll");
+        $(".section-loader").hide();
         openCheckboxSwitch();
         openPopOver();
+
+        $(document).on("click", ".delete_list_proxy_btn", function () {
+          let proxy_id = $(this).attr("id");
+          delete_list_proxy(proxy_id);
+        });
+      }
+    });
+
+    if (result.proxies.length === 0) {
+      $(".dashboard").css("overflow-y", "scroll");
+      $(".section-loader").hide();
+      openCheckboxSwitch();
+      openPopOver();
     }
-})
-
-
+  },
+  error: () => {
+    $(".dashboard").css("overflow-y", "scroll");
+    $(".section-loader").hide();
+    $("#my_proxy").append(`
+        <tr style="background: #221B4A">
+            <td style="color: #fff; pointer: default" colspan="3">No data available in table.</td>
+        </tr>
+    `);
+    $("#header_group_details").append(`
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="text-white">Group Details</p>
+        </div>
+        <div class="mt-4 ms-3">
+            <p style="color: #fff; font-weight: normal; font-size: 18px;" class="pt-2">No data available in table.</p>
+        </div>
+    `);
+    openCheckboxSwitch();
+    openPopOver();
+  },
+});
 
 // ALL FUNCTION
-async function openPopOver(){
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl, {
-            html: true,
-        })
+async function openPopOver() {
+  var popoverTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="popover"]')
+  );
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl, {
+      html: true,
     });
+  });
 
-    $('body').on('click', function (e) {
+  $("body").on("click", function (e) {
     $('[data-bs-toggle="popover"]').each(function () {
-        // hide any open popovers when the anywhere else in the body is clicked
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target)
-        .length === 0) {
-            $(this).popover('hide');
-            }
-        }); 
+      // hide any open popovers when the anywhere else in the body is clicked
+      if (
+        !$(this).is(e.target) &&
+        $(this).has(e.target).length === 0 &&
+        $(".popover").has(e.target).length === 0
+      ) {
+        $(this).popover("hide");
+      }
     });
+  });
 
-    $('#scroll-proxy').scroll(function (e) {
+  $("#scroll-proxy").scroll(function (e) {
     $('[data-bs-toggle="popover"]').each(function () {
-        // hide any open popovers when the anywhere else in the body is clicked
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target)
-        .length === 0) {
-            $(this).popover('hide');
-            }
-        });
+      // hide any open popovers when the anywhere else in the body is clicked
+      if (
+        !$(this).is(e.target) &&
+        $(this).has(e.target).length === 0 &&
+        $(".popover").has(e.target).length === 0
+      ) {
+        $(this).popover("hide");
+      }
     });
+  });
 }
 
-async function openCheckboxSwitch(){
-    var checkBoxSwitch = $('.checkBoxSwitch');
-    checkBoxSwitch.each((index_cbs, value_cbs) => {
-        $(value_cbs).on('change', function () {
-            if ($(this).is(':checked')) {
-                $('.switch').html('Show <img src="./images/icons/Icon=Eye.svg" alt="">');
-                $(value_cbs).parent().parent().parent().siblings('.table').find('span.password').each((index_cbs2,
-                    value_cbs2) => {
-                    var password = $(value_cbs2).data('password');
-                    $(value_cbs2).text(password);
-                    $(value_cbs2).css('font-size', '14px');
-                })
-            } else {
-                $('.switch').html('Hide <img src="./images/icons/Icon=Eye-Off.svg" alt="">');
-                $(value_cbs).parent().parent().parent().siblings('.table').find('span.password').each((index_cbs3,
-                    value_cbs3) => {
-                    $(value_cbs3).html('&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;');
-                    $(value_cbs3).removeAttr('style');
-                })
-            }
-        });
-    })
+async function openCheckboxSwitch() {
+  var checkBoxSwitch = $(".checkBoxSwitch");
+  checkBoxSwitch.each((index_cbs, value_cbs) => {
+    $(value_cbs).on("change", function () {
+      if ($(this).is(":checked")) {
+        $(".switch").html(
+          'Show <img src="./images/icons/Icon=Eye.svg" alt="">'
+        );
+        $(value_cbs)
+          .parent()
+          .parent()
+          .parent()
+          .siblings(".table")
+          .find("span.password")
+          .each((index_cbs2, value_cbs2) => {
+            var password = $(value_cbs2).data("password");
+            $(value_cbs2).text(password);
+            $(value_cbs2).css("font-size", "14px");
+          });
+      } else {
+        $(".switch").html(
+          'Hide <img src="./images/icons/Icon=Eye-Off.svg" alt="">'
+        );
+        $(value_cbs)
+          .parent()
+          .parent()
+          .parent()
+          .siblings(".table")
+          .find("span.password")
+          .each((index_cbs3, value_cbs3) => {
+            $(value_cbs3).html(
+              "&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+            );
+            $(value_cbs3).removeAttr("style");
+          });
+      }
+    });
+  });
 }
 
-function delete_group_proxy($group_id){
-    $.ajax({
-        type: "DELETE",
-        url: "https://irisbot.io/api/test/proxies/group/delete/"+$group_id,
-        success: (result) => {
-            toastr.success('Group Proxy Was Deleted.', 'Success Delete Group');
-        },
-        error: () => {
-            toastr.success('Group Proxy Was Deleted.', 'Success Delete Group');
-        }
-    })
+function delete_group_proxy($group_id) {
+  $.ajax({
+    type: "DELETE",
+    url: "https://irisbot.io/api/test/proxies/group/delete/" + $group_id,
+    success: (result) => {
+      toastr.success("Group Proxy Was Deleted.", "Success Delete Group");
+    },
+    error: () => {
+      toastr.success("Group Proxy Was Deleted.", "Success Delete Group");
+    },
+  });
 }
 
-function delete_list_proxy($proxy_id){
-    $.ajax({
-        type: "DELETE",
-        url: "https://irisbot.io/api/test/proxies/group/delete/"+$proxy_id,
-        success: (result) => {
-            toastr.success('Proxy Was Deleted.', 'Success Delete Proxy');
-        },
-        error: () => {
-            toastr.success('Proxy Was Deleted.', 'Success Delete Proxy');
-        }
-    })
+function delete_list_proxy($proxy_id) {
+  $.ajax({
+    type: "DELETE",
+    url: "https://irisbot.io/api/test/proxies/group/delete/" + $proxy_id,
+    success: (result) => {
+      toastr.success("Proxy Was Deleted.", "Success Delete Proxy");
+    },
+    error: () => {
+      toastr.success("Proxy Was Deleted.", "Success Delete Proxy");
+    },
+  });
 }
 
-function create_group(){
-    $.ajax({
-        type: "POST",
-        url: "https://irisbot.io/api/test/proxies/group/create",
-        data: {
-            name: $('#details').val()
-        },
-        success: (result) => {
-            toastr.success('New Group Was Created.', 'Success Create New Group');
-        },
-        error: () => {
-            toastr.success('New Group Was Created.', 'Success Create New Group');
-        }
-    })
+function create_group() {
+  $.ajax({
+    type: "POST",
+    url: "https://irisbot.io/api/test/proxies/group/create",
+    data: {
+      name: $("#details").val(),
+    },
+    success: (result) => {
+      toastr.success("New Group Was Created.", "Success Create New Group");
+    },
+    error: () => {
+      toastr.success("New Group Was Created.", "Success Create New Group");
+    },
+  });
 }

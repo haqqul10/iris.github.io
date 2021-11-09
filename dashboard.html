@@ -550,6 +550,11 @@
         error: () => {
           $('.dashboard').css('overflow-y', 'scroll');
           $('.section-loader').hide();
+          $('#example_tbody').append(`
+            <tr>
+              <td colspan="5">No data available on table.</td>  
+            </tr>
+          `);
         }
       });
     });
