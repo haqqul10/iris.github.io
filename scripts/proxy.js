@@ -201,8 +201,8 @@ $.ajax({
         <div class="d-flex justify-content-between align-items-center">
             <p class="text-white">Group Details</p>
         </div>
-        <div class="mt-4 ms-3">
-            <p style="color: #fff; font-weight: normal; font-size: 18px;" class="pt-2">No data available in table.</p>
+        <div class="mt-4">
+            <p style="color: #fff; font-weight: normal; font-size: 16px;" class="pt-2">No proxies on file. Create a new group and they will appear here.</p>
         </div>
     `);
     openCheckboxSwitch();

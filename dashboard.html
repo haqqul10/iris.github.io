@@ -15,7 +15,7 @@
   <!-- MyCSS -->
   <link rel="stylesheet" href="styles/dashboard.css">
 
-  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 
   <title>Dashboard</title>
 
@@ -467,6 +467,9 @@
   <script src="libraries/bootstrap/js/bootstrap.js"></script>
   <script src="libraries/jquery/jquery-3.5.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libraries/jquery/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+  <script src="libraries/jquery/dataTables.bootstrap5.min.js"></script>
   <!-- Include jQuery Popup Overlay -->
   <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
 
@@ -551,12 +554,13 @@
           $('.dashboard').css('overflow-y', 'scroll');
           $('.section-loader').hide();
           $('#example_tbody').append(`
-            <tr>
-              <td colspan="5">No data available on table.</td>  
+            <tr class="text-center">
+              <td colspan="5">No data available on table.</td> 
             </tr>
           `);
         }
       });
+
     });
   </script>
 
